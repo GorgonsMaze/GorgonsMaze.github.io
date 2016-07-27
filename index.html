@@ -1,0 +1,1337 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ian Arsenault | Providence RI</title>
+    <!-- Broswer Tab Logo -->
+    <!--<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />-->
+    <link rel="shortcut icon" type="image/x-icon" href="images/assets/ian.ico" />
+    <!--Import Google Icon Font-
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">-->
+    <link rel="stylesheet" type="text/css" href="font/material-design-icons/Material-Design-Icons.eot" />
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    <!-- Raleway Font -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,800" rel="stylesheet">
+    <!-- Parisienne Font -->
+    <link href='https://fonts.googleapis.com/css?family=Parisienne' rel='stylesheet' type='text/css'>
+    <!-- Kristi Font -->
+    <link href='https://fonts.googleapis.com/css?family=Kristi' rel='stylesheet' type='text/css'>
+    <!-- Devicon  -->
+    <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/devicons/1.8.0/css/devicons.min.css" rel="stylesheet" type="text/css">
+    <!-- My stylesheet -->
+    <link type="text/css" rel="stylesheet" href="css/style.css" />
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAZ-d-T3vJzzvCv3TpPuNlpXNpUvLGK_zU&callback=initMap"></script>
+    <!--<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAZ-d-T3vJzzvCv3TpPuNlpXNpUvLGK_zU&callback=initMap"></script>-->
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+
+    <script type="text/javascript">
+
+        function initTabMap() {
+            // Basic options for a simple Google Map
+            // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
+            var mapOptions1 = {
+                // How zoomed in you want the map to start at (always required)
+                zoom: 10,
+
+                // The latitude and longitude to center the map (always required)
+                center: new google.maps.LatLng(41.82399, -71.41283), // New York
+
+                // How you would like to style the map.
+                // This is where you would paste any style found on Snazzy Maps.
+                styles: [{"featureType":"all","elementType":"labels","stylers":[{"visibility":"on"}]},{"featureType":"all","elementType":"labels.text.fill","stylers":[{"saturation":36},{"color":"#000000"},{"lightness":40}]},{"featureType":"all","elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#000000"},{"lightness":16}]},{"featureType":"all","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#000000"},{"lightness":20}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#000000"},{"lightness":17},{"weight":1.2}]},{"featureType":"administrative.locality","elementType":"labels.text.fill","stylers":[{"color":"#c4c4c4"}]},{"featureType":"administrative.neighborhood","elementType":"labels.text.fill","stylers":[{"color":"#707070"}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":20}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":21},{"visibility":"on"}]},{"featureType":"poi.business","elementType":"geometry","stylers":[{"visibility":"on"}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#be2026"},{"lightness":"0"},{"visibility":"on"}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"visibility":"off"}]},{"featureType":"road.highway","elementType":"labels.text.fill","stylers":[{"visibility":"off"}]},{"featureType":"road.highway","elementType":"labels.text.stroke","stylers":[{"visibility":"off"},{"hue":"#ff000a"}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":18}]},{"featureType":"road.arterial","elementType":"geometry.fill","stylers":[{"color":"#575757"}]},{"featureType":"road.arterial","elementType":"labels.text.fill","stylers":[{"color":"#ffffff"}]},{"featureType":"road.arterial","elementType":"labels.text.stroke","stylers":[{"color":"#2c2c2c"}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":16}]},{"featureType":"road.local","elementType":"labels.text.fill","stylers":[{"color":"#999999"}]},{"featureType":"road.local","elementType":"labels.text.stroke","stylers":[{"saturation":"-52"}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":19}]},{"featureType":"water","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":17}]}]
+            };
+
+
+            // Get the HTML DOM element that will contain your map
+            // We are using a div with id="map" seen below in the <body>
+            var mapElement1 = document.getElementById('map_2');
+
+
+            // Create the Google Map using our element and options defined above
+            var map1 = new google.maps.Map(mapElement1, mapOptions1); /* Tab Map */
+
+            /* Providence Marker */
+            var marker1 = new google.maps.Marker({
+                position: new google.maps.LatLng(41.82399, -71.41283),
+                map: map1,
+                title: 'Somewhere around here!'
+            });
+
+        }
+
+/*
+        function displayMap() {
+            document.getElementById('map_2').style.display="block";
+            google.maps.visualRefresh = true;
+
+
+        }*/
+
+
+        function init() {
+            // Basic options for a simple Google Map
+            // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
+            var mapOptions = {
+                // How zoomed in you want the map to start at (always required)
+                zoom: 10,
+
+                // The latitude and longitude to center the map (always required)
+                center: new google.maps.LatLng(41.82399, -71.41283), // New York
+
+                // How you would like to style the map.
+                // This is where you would paste any style found on Snazzy Maps.
+                styles: [{"featureType":"all","elementType":"labels","stylers":[{"visibility":"on"}]},{"featureType":"all","elementType":"labels.text.fill","stylers":[{"saturation":36},{"color":"#000000"},{"lightness":40}]},{"featureType":"all","elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#000000"},{"lightness":16}]},{"featureType":"all","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#000000"},{"lightness":20}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#000000"},{"lightness":17},{"weight":1.2}]},{"featureType":"administrative.locality","elementType":"labels.text.fill","stylers":[{"color":"#c4c4c4"}]},{"featureType":"administrative.neighborhood","elementType":"labels.text.fill","stylers":[{"color":"#707070"}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":20}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":21},{"visibility":"on"}]},{"featureType":"poi.business","elementType":"geometry","stylers":[{"visibility":"on"}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#be2026"},{"lightness":"0"},{"visibility":"on"}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"visibility":"off"}]},{"featureType":"road.highway","elementType":"labels.text.fill","stylers":[{"visibility":"off"}]},{"featureType":"road.highway","elementType":"labels.text.stroke","stylers":[{"visibility":"off"},{"hue":"#ff000a"}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":18}]},{"featureType":"road.arterial","elementType":"geometry.fill","stylers":[{"color":"#575757"}]},{"featureType":"road.arterial","elementType":"labels.text.fill","stylers":[{"color":"#ffffff"}]},{"featureType":"road.arterial","elementType":"labels.text.stroke","stylers":[{"color":"#2c2c2c"}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":16}]},{"featureType":"road.local","elementType":"labels.text.fill","stylers":[{"color":"#999999"}]},{"featureType":"road.local","elementType":"labels.text.stroke","stylers":[{"saturation":"-52"}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":19}]},{"featureType":"water","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":17}]}]
+            };
+
+
+            // Get the HTML DOM element that will contain your map
+            // We are using a div with id="map" seen below in the <body>
+            var mapElement = document.getElementById('map');
+
+
+            // Create the Google Map using our element and options defined above
+            var map = new google.maps.Map(mapElement, mapOptions);
+
+
+            /* Providence Marker */
+            var marker1 = new google.maps.Marker({
+                position: new google.maps.LatLng(41.82399, -71.41283),
+                map: map,
+                title: 'Somewhere around here!'
+            });
+
+        }
+
+        function waitForMap() {
+            setTimeout(function () {
+               if($('#phone6s').is(':visible')) {
+                   initTabMap();
+               } else {
+                   waitForMap();
+               }
+            }, 100);
+        }
+
+        waitForMap();
+
+        // When the window has finished loading create our google map below
+        google.maps.event.addDomListener(window, 'load', init);
+        //google.maps.event.addDomListener(window, 'load', initTabMap);
+
+
+
+        //google.maps.event.trigger(map2, 'resize');
+    </script>
+</head>
+<body>
+
+
+<div class="main-content">
+
+    <!-- Begin Navbar -->
+    <div class="navbar-fixed scrollspy" id="top-scroll">
+        <nav class="white">
+            <div class="nav-wrapper">
+                <!-- <img id="logo" src="images/assets/ian.jpg"> -->
+                <a href="#!" class="black-text brand-logo railwayBold" id="navLogo">ianarsenault.i0</a>
+                <a href="#" data-activates="mobile-demo" class="button-collapse hambrgr" id="hamburger"><i class="material-icons hammy animated">menu</i><span class="xedOut animated rotateIn rotateOut"><i class="fa fa-times fa-3x" aria-hidden="true"></i></span></a>
+                <!--
+                <a href="#" data-activates="mobile-demo" class="button-collapse hambrgr" id="hamburger"><i class="material-icons">menu</i></a>
+                <!-- Hidden X icon until side-nav is activated -
+                <a href="#" data-activates="mobile-demo" class="button-collapse hambrgr" id="side-nav-x"><i class="fa fa-times fa-3x" aria-hidden="true"></i></a>-->
+                <ul class="right hide-on-med-and-down railway navlist scroll-content" id="navSize">
+                    <li><a href="#about" class="navLnkColor tooltipped fart" data-position="bottom" data-delay="50" data-tooltip="Resume + Education + Location & More!">About</a></li>
+                    <!-- Drop Down Nav Button -->
+                    <li><a href="#projects" class="dropdown-button navLnkColor" data-constrainwidth="false" data-hover="true" data-beloworigin="true" data-activates='dropdown1' id="navProj">Projects</a></li><!--<span class="new badge">4</span>-->
+                    <!-- Drop down Structure -->
+                    <ul id='dropdown1' class='dropdown-content'>
+                        <li><a href="" class="navButtons" data-hover="true">HTML & CSS<span class="badge">1</span></a></li>
+                        <li><a href="" class="navButtons" data-hover="true">Javascript<span class="badge">1</span></a></li>
+                        <li><a href="" class="navButtons" data-hover="true">C#<span class="new badge">1</span></a></li>
+                        <li><a href="" class="navButtons" data-hover="true">PHP<span class="badge">1</span></a></li>
+                        <li><a href="" class="navButtons" data-hover="true">SQL<span class="badge">1</span></a></li>
+                        <li><a href="" class="navButtons" data-hover="true">C++<span class="badge">1</span></a></li>
+                        <li><a href="" class="navButtons" data-hover="true">Full Websites<span class="badge">1</span></a></li>
+                    </ul>
+                    <li><a href="#tools" class="navLnkColor">Tools</a></li>
+                    <li><a href="#blog" class="navLnkColor">Blog</a></li>
+                    <li><a href="#contact" class="navLnkColor">Contact</a></li>
+
+                </ul>
+                <ul class="side-nav white z-depth-0" id="mobile-demo">
+                    <!-- only have if side-nav doens't have nav above/hamburger showing -->
+                    <!--<li class="right-align"><a href="#" id="exit"><span id="close-hvr">X</span></a></li>-->
+                    <li ><a href="#about" id="side-navBtns">About</a></li>
+                    <li><a href="#projects" id="side-navBtns">Projects   <span class="side-badge"></span>     <span class="new badge">4</span></a></li>
+                    <li><a href="#tools" id="side-navBtns">Tools</a></li>
+                    <li><a href="#blog" id="side-navBtns">Blog</a></li>
+                    <li><a href="#contact" id="side-navBtns">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div> <!-- / nav-bar -->
+    <!-- http://www.landescape.it/wp-content/uploads/mg_4655.jpg-->
+    <!-- http://www.vitoschnabel.com/attachment/en/55cd07616aa72cc608d19704/News/56422f1dc5aa2c0d716bb577 -->
+    <!-- https://newevolutiondesigns.com/images/freebies/polygon-wallpaper-21.jpg -->
+    <div class="parallax-container valign-wrapper">
+        <div class="para-text valign center-block">
+            <h1 class="railway white-text parisienne center-align">Monsieur Arsenault</h1>
+            <div class="center-align">
+                <h4 class="railway white-text">Software Engineering + Web Development Student</h4>
+            </div>
+        </div>
+        <div class="parallax">
+            <img src="https://cdn3.artstation.com/p/assets/images/images/000/802/383/large/stephanie-stutz-the-red-mountains-by-toilettenmassaker-d6dux3c.jpg?1433405705" >
+        </div>
+    </div><!-- end of Parallax -->
+
+
+
+
+
+
+    <!-- Box Logo - Name
+    <img src="http://i.imgur.com/3i8bZ5I.jpg?1" alt="ianImagelogo">
+    -->
+
+    <div class="container">
+        <!-- About Me Section -->
+        <section id="about" class="section scrollspy">
+            <div class="row">
+                <!--
+                <div class="center-align">
+                    <img width="271" height="271" src="http://i.imgur.com/kSnJSMb.png" alt="Gillfoyle">
+                </div> -->
+                <div class="row" id="about-tab-row">
+                    <div class="col s12 railwayBold">
+                        <ul class="tabs scrollable">
+                            <li class="tab col s3"><a href="#education" id="education-bar"><i class="fa fa-graduation-cap hide-on-small-and-down" aria-hidden="true"></i>
+                                Education</a></li>
+                            <li class="tab col s3"><a href="#skills" id="skills-bar"><i class="fa fa-bar-chart hide-on-small-and-down" aria-hidden="true"></i>
+                                Skills</a></li>
+                            <li class="tab col s3"><a class="active" href="#aboutme" id="about-bar"><i class="fa fa-user-secret hide-on-small-and-down" aria-hidden="true"></i>
+                                About <span class="hide-on-small-and-down">Me</span></a></li>
+                            <li class="tab col s3"><a href="#resume" id="resume-bar"><i class="fa fa-cogs hide-on-small-and-down" aria-hidden="true"></i>
+                                Resume</a></li>
+                            <li class="tab col s3"><a href="#location" id="google-map-tab"><i class="fa fa-home hide-on-small-and-down" aria-hidden="true"></i>
+                                Location</a></li>
+
+
+                            <!-- <li class="tab col s3"><a href="#test5" id="google-map-tab" onclick="displayMap()"><i class="fa fa-home hide-on-small-and-down" aria-hidden="true"></i>
+                                Location</a></li>-->
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div id="education" class="col s12">
+                        <div class="row">
+                            <div class="col s10 offset-s1 m6 l4">
+                                <div class="center-align">
+                                    <!--<i class="material-icons md-48">whatshot</i>-->
+                                    <img src="http://www.davehughesdevelopment.com/img/fcc-logo.png" class="responsive-img" id="fcc-logo">
+                                    <!--<img src="https://upload.wikimedia.org/wikipedia/en/thumb/4/40/Bristol_Community_College_logo.svg/220px-Bristol_Community_College_logo.svg.png" class="responsive-img" />-->
+                                </div>
+                                <!--<ul class="collection">
+                                    <li class="collection-item"><input type="checkbox" class="filled-in" id="filled-in-box" checked="checked" disabled="disabled"/>
+                                        <label for="filled-in-box">Filled in</label>
+                                        Alvin</li>
+                                    <li class="collection-item">Alvin</li>
+                                    <li class="collection-item">Alvin</li>
+                                    <li class="collection-item">Alvin</li>
+                                </ul>-->
+                                <p class="edu-content">In my free time I've been keeping up with Free Code Camp's course for Full-Stack Web Development.
+                                    I'm currently about  60% through the Front-End Course, working on the Front-End projects and Algorithm Challenges.
+                                    You can check my projects and algorithm solutions by clicking the link below</p>
+                                <div class="center-align hide-on-large-only">
+                                    <a href="https://www.freecodecamp.com/gorgonsmaze" class="waves-effect waves-light btn red">FCC Profile <i class="material-icons right">portrait</i></a>
+                                </div>
+                            </div>
+                            <div class="col s10 offset-s1 m6 l4">
+                                <div class="center-align">
+                                    <!--<i class="fa fa-university fa-3x" aria-hidden="true"></i>-->
+                                    <img src="http://www.neit.edu/images/redesign-logo.png" class="responsive-img" id="neit-logo" />
+                                </div>
+                                <p class="edu-content">Currently enrolled in the IT-Software Engineering program at NEIT, where I've been
+                                    adamantly learning about many different topics in the web development and software engineering world. I've maintained
+                                    a accumulative GPA of 3.9+/4.0 every semester and have been inducted into the Phi Theta Kappa Honor Society</p>
+                                <div class="center-align hide-on-large-only">
+                                    <!-- Modal Trigger for course list of NEIT-->
+                                    <a class="modal-trigger waves-effect waves-light btn red" href="#modal1">Courses Completed <i class="material-icons right">list</i></a>
+                                </div>
+                                <p></p>
+                            </div>
+                            <div class="col s10 offset-s1 m6 offset-m3 l4">
+                                <div class="center-align">
+                                    <!--<i class="material-icons md-48">style</i>-->
+                                    <img src="http://ecwp.s3.amazonaws.com/wp-content/uploads/sites/5/PTK-logo1.jpg" class="responsive-img" id="phi-theta-logo"/>
+                                </div>
+                                <p class="edu-content">Member of NEIT International Honor Society, Phi Theta Kappa, which requires an accumulative average of
+                                    3.80 or higher for atleast 24 quarter hours of coursework towards an associates degree.  </p>
+
+                                <div class="row center-align hide-on-large-only">
+                                    <a href="http://www.neit.edu/blog/index.php/2016/04/phi-theta-kappa-students-are-honored/" class="waves-effect waves-light btn red">Honor Society <i class="material-icons right">trending_up</i></a>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="row hide-on-med-and-down">
+                            <!-- FCC Button - on large -->
+                            <div class="col l4">
+                                <div class="center-align">
+                                    <a href="https://www.freecodecamp.com/gorgonsmaze" class="waves-effect waves-light btn red">FCC Profile <i class="material-icons right">portrait</i></a>
+                                </div>
+                            </div>
+                            <!-- NEIT Button - on large -->
+                            <div class="col l4">
+                                <div class="center-align">
+                                    <a class="modal-trigger waves-effect waves-light btn red" href="#modal1">Courses Completed <i class="material-icons right">list</i></a>
+
+                                </div>
+                            </div>
+                            <!-- Honor Societ Button - on large -->
+                            <div class="col l4">
+                                <div class="center-align">
+                                    <a href="#" class="waves-effect waves-light btn red">Honor Society <i class="material-icons right">trending_up</i></a>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!-- Modal Structure -->
+                        <div id="modal1" class="modal modal-fixed-footer">
+                            <div class="modal-content">
+                                <!-- Modal Heading -->
+                                <div class="center-align">
+                                    <h4>IT Software Engineering - Associates</h4>
+                                    <p>Associates Degree Graduation Date: September 2016</p>
+                                    <h6>Status Key:</h6>
+                                    <div class="row">
+                                        <div class="col s6 right-align">
+                                            <p><i class="material-icons icon-star-center" id="red-star">star_border</i> = Completed</p>
+                                        </div>
+                                        <div class="col s6 left-align">
+                                            <p><i class="material-icons icon-star-center" id="orange-star">star_border</i> = Currently in session</p>
+                                        </div>
+                                    </div><!-- end of Modal Heading -->
+                                </div>
+                                <hr />
+                                <!-- Start of Current- Session Course Table -->
+                                <h5 class="course-head center-align">Currently In-Session:</h5>
+                                <table class="centered striped">
+                                    <thead>
+                                    <tr>
+                                        <th data-field="course">Course</th>
+                                        <th data-field="course-id">ID</th>
+                                        <th data-field="grade">Grade</th>
+                                        <th data-field="status">Status</th>
+                                    </tr>
+                                    </thead>
+
+                                    <tbody>
+                                    <tr>
+                                        <td>SE AS Capstone Project</td>
+                                        <td>SE265.06</td>
+                                        <td></td>
+                                        <td><i class="material-icons" id="orange-star">star_border</i></td>
+                                    </tr>
+                                    <tr>
+                                        <td>IT Ethics & Professional Development</td>
+                                        <td>IT267.16</td>
+                                        <td></td>
+                                        <td><i class="material-icons" id="orange-star">star_border</i></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Intro to Information Security</td>
+                                        <td>NE267.16</td>
+                                        <td></td>
+                                        <td><i class="material-icons" id="orange-star">star_border</i></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Web Development using ASP.NET</td>
+                                        <td>SE256.06</td>
+                                        <td></td>
+                                        <td><i class="material-icons" id="orange-star">star_border</i></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+
+                                <hr />
+
+                                <!-- Completed Courses -->
+
+                                <div class="center-align">
+                                    <h5 class="course-head">Completed Courses:</h5>
+                                    <p>Courses are listed in order of completion from top down</p>
+                                </div>
+
+                                <!-- Courses Table - Modal -->
+                                <table class="striped centered">
+                                    <thead>
+                                    <tr>
+                                        <th data-field="course">Course</th>
+                                        <th data-field="course-id">ID</th>
+                                        <th data-field="grade">Grade</th>
+                                        <th data-field="status">Status</th>
+                                    </tr>
+                                    </thead>
+
+                                    <tbody>
+                                    <tr>
+                                        <td>IT Visual Communication</td>
+                                        <td>IT121.11</td>
+                                        <td>A</td>
+                                        <td><i class="material-icons" id="red-star">star_border</i></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Tech Math</td>
+                                        <td>MA125.41M</td>
+                                        <td>A</td>
+                                        <td><i class="material-icons" id="red-star">star_border</i></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Computer & Network Fundamentals</td>
+                                        <td>NE115.11</td>
+                                        <td>A</td>
+                                        <td><i class="material-icons" id="red-star">star_border</i></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Programming in C++</td>
+                                        <td>SE114.11</td>
+                                        <td>A</td>
+                                        <td><i class="material-icons" id="red-star">star_border</i></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Windows Networking Essentials</td>
+                                        <td>NE121.12</td>
+                                        <td>A</td>
+                                        <td><i class="material-icons" id="red-star">star_border</i></td>
+                                    </tr>
+                                    <tr>
+                                        <td>HTML and Javascript</td>
+                                        <td>SE111.12</td>
+                                        <td>A</td>
+                                        <td><i class="material-icons" id="red-star">star_border</i></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Intermediate Prog. Using C++</td>
+                                        <td>SE124.12</td>
+                                        <td>A</td>
+                                        <td><i class="material-icons" id="red-star">star_border</i></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Business Math</td>
+                                        <td>MA121.11M</td>
+                                        <td>A</td>
+                                        <td><i class="material-icons" id="red-star">star_border</i></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Effective Team Managment & Projects</td>
+                                        <td>MGM115.13</td>
+                                        <td>A</td>
+                                        <td><i class="material-icons" id="red-star">star_border</i></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Networking for Small Business</td>
+                                        <td>NE131.13</td>
+                                        <td>A</td>
+                                        <td><i class="material-icons" id="red-star">star_border</i></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Database Management - SQL</td>
+                                        <td>SE133.13</td>
+                                        <td>A</td>
+                                        <td><i class="material-icons" id="red-star">star_border</i></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Physics I & Lab</td>
+                                        <td>PHY200.02M</td>
+                                        <td>A</td>
+                                        <td><i class="material-icons" id="red-star">star_border</i></td>
+                                    </tr>
+                                    <tr>
+                                        <td>C#</td>
+                                        <td>SE245.04</td>
+                                        <td>A</td>
+                                        <td><i class="material-icons" id="red-star">star_border</i></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Systems Analysis & Design - UML</td>
+                                        <td>SE252.04</td>
+                                        <td>A</td>
+                                        <td><i class="material-icons" id="red-star">star_border</i></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Web Dev using PHP & MySQL</td>
+                                        <td>SE266.04</td>
+                                        <td>A</td>
+                                        <td><i class="material-icons" id="red-star">star_border</i></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Advanced Javascript</td>
+                                        <td>SE241.15</td>
+                                        <td>A</td>
+                                        <td><i class="material-icons" id="red-star">star_border</i></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Advanced C#</td>
+                                        <td>SE255.15</td>
+                                        <td>A</td>
+                                        <td><i class="material-icons" id="red-star">star_border</i></td>
+                                    </tr>
+                                    <tr>
+                                        <td>User Interface Design UI/UX</td>
+                                        <td>SE264.05</td>
+                                        <td>A</td>
+                                        <td><i class="material-icons" id="red-star">star_border</i></td>
+                                    </tr>
+                                    </tbody>
+                                </table><!-- end Complete Course List -->
+
+                            </div>
+                            <div class="modal-footer">
+                                <a href="#!" class="modal-action modal-close waves-effect waves-light btn-flat red white-text">Exit</a>
+                            </div>
+                        </div><!-- end of Modal table -->
+
+                    </div>
+
+                    <div id="skills" class="col s12">
+                        <div class="row">
+
+
+                            <div class="card hoverable-dark z-depth-2" id="skill-card">
+                                <div class="card-content">
+
+                                    <!-- Skill Table -->
+                                    <table class="centered">
+                                        <thead>
+                                        <tr>
+                                            <th class="x-space" data-field="skill">Skill</th>
+                                            <th class="center-align" data-field="noob">Noob</th>
+                                            <th class="center-align" data-field="beginner">Beginner</th>
+                                            <th class="center-align" data-field="intermediate">Intermediate</th>
+                                            <th class="center-align" data-field="expert">Expert</th>
+                                            <th class="center-align" data-field="master">Master</th>
+                                        </tr>
+                                        </thead>
+
+                                        <tbody>
+                                        <tr>
+                                            <td class="x-space" >HTML/CSS</td>
+                                            <td colspan="3">
+                                                <div class="progress">
+                                                    <div class="progress-bar-1"></div>
+                                                </div>
+                                            </td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Javascript</td>
+                                            <td colspan="3">
+                                                <div class="progress">
+                                                    <div class="progress-bar-2" ></div>
+                                                </div>
+                                            </td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>C#</td>
+                                            <td colspan="3">
+                                                <div class="progress">
+                                                    <div class="progress-bar-3"></div>
+                                                </div>
+                                            </td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>C++</td>
+                                            <td colspan="2">
+                                                <div class="progress">
+                                                    <div class="progress-bar-4"></div>
+                                                </div>
+                                            </td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>PHP + MySQL</td>
+                                            <td colspan="2">
+                                                <div class="progress">
+                                                    <div class="progress-bar-5" ></div>
+                                                </div>
+                                            </td>
+                                            <td></td>
+                                        </tr>
+                                        </tbody>
+                                    </table> <!-- /skill table -->
+
+
+
+                                </div>
+                                <div class="card-action center-align">
+                                    <a href="#" class="waves-effect waves-yellow btn white graph-btn z-depth-0" id="refresh-graph">Replay Graph Animation</a>
+                                </div>
+                            </div>
+
+                        </div><!-- /row-->
+                    </div><!-- /skill tab -->
+
+                    <div id="aboutme" class="col s12">
+                        <div class="row">
+                            <div class="col s4">
+                                <div class="center-align">
+                                    <i class="material-icons md-48">whatshot</i>
+                                </div>
+                                <h5 class="center-align">Personal Goals</h5>
+                                <p>Being very goal orientated I plan to pursue </p>
+                            </div>
+                            <div class="col s4">
+                                <div class="center-align">
+                                    <i class="material-icons md-48">person</i>
+                                </div>
+                                <h5 class="center-align">Hello, World!</h5>
+                                <p>My name is Ian, and I'm an aspiring software engineer/web developer. I have an interest and deep motivation for
+                                    designing and solving problems with code. I'm currently majoring in IT - Software Engineering, and in my free time
+                                    learning about UX/UI. You can find me nomading around the greater Providence + Boston area. </p>
+                            </div>
+                            <div class="col s4">
+                                <div class="center-align">
+                                    <i class="material-icons md-48">style</i>
+                                </div>
+                                <h5 class="center-align">Interests</h5>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc molestie placerat diam,
+                                    eu dignissim massa aliquam eget. Proin nunc mauris, convallis ut felis rutrum, tempor
+                                    pharetra magna. Fusce at sollicitudin neque, in mollis quam. Etiam finibus a erat rutrum pellentesque. </p>
+                            </div>
+                        </div>
+                        <div class="row center-align">
+                            <a href="#message-me" class="btn waves-effect waves-light red section scrollspy"  name="action">Contact Me
+                                <i class="material-icons right">send</i>
+                            </a>
+
+                        </div>
+                    </div>
+
+
+                    <div id="resume" class="col s12">
+                        <div class="row">
+                            <div class="col s12">
+
+                                <div class="card hoverable-dark ">
+                                    <div class="card-content black-text">
+                                        <div class="center-align">
+                                            <i class="material-icons md-48">find_in_page</i>
+                                        </div>
+                                        <h5 class="center-align">Resume</h5>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc molestie placerat diam,
+                                            eu dignissim massa aliquam eget. Proin nunc mauris, convallis ut felis rutrum, tempor
+                                            pharetra magna. Fusce at sollicitudin neque, in mollis quam. Etiam finibus a erat rutrum pellentesque. </p>
+                                    </div>
+                                    <div class="card-action center-align">
+                                        <a href="#">Download Resume   <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="location" class="col s12">
+                        <div class="row">
+                            <div class="grey-block">
+                                <div id="map_2"></div>
+                                <img id="phone6s" src="images/assets/iphone.png" alt="iphone6s" class="hoverable-dark-2"/>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div> <!--  /row -->
+        </section> <!-- /about me -->
+    </div><!-- End container -->
+
+    <!-- Test for projects and a-side nav bar -->
+    <!--<div class="section">
+        <div class="row">
+            <div class="col l3 grey">
+                kjlkljkl
+            </div>
+            <div class="col l9 yellow">
+                kjlkjkljlk
+            </div>
+        </div>
+    </div>-->
+
+    <!-- Project Section -->
+    <section  id="projects" class="section scrollspy">
+        <h4 class="center-align railwayBold">Projects</h4>
+
+        <div class="row">
+            <!-- Testing Card -->
+            <div class="col s10 offset-s1 m6 l4">
+                <div class="card railway z-depth-2">
+                    <div class="card-image z-depth-1">
+                        <div class="img-card-container">
+                            <img src="images/projects/grid/grid-comp-white.png">
+                        </div>
+                    </div>
+                    <div class="center-align activator">
+                        <a class="btn-floating btn-large waves-effect waves-light btn-card-hvr" id="card-hvr-btn"><i class="material-icons hvr-bob">add</i></a>
+                    </div>
+                    <div class="card-content center-align">
+                        <h5 class=" activator grey-text text-darken-4">Random Grid Generator</h5>
+
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Random Grid Generator<a class="btn-floating btn waves-effect waves-light transparent z-depth-1 right"><i class="material-icons right red-text">close</i></a></span>
+                        <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                    </div>
+                    <div class="card-action center-align">
+                        <a href="#">View Project</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testing Card -->
+            <div class="col s10 offset-s1 m6 l4">
+                <div class="card railway z-depth-2">
+                    <div class="card-image z-depth-1">
+                        <div class="img-card-container">
+                            <img src="images/projects/math/math-white.png">
+                        </div>
+                    </div>
+                    <div class="center-align activator">
+                        <a class="btn-floating btn-large waves-effect waves-light  z-depth-3 btn-card-hvr" id="card-hvr-btn"><i class="material-icons hvr-bob">add</i></a>
+                    </div>
+                    <div class="card-content center-align">
+                        <h5 class=" activator grey-text text-darken-4">Basic Arithmetic Quiz</h5>
+
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Basic Arithmetic Quiz<a class="btn-floating btn waves-effect waves-light red z-depth-1 right"><i class="fa fa-angle-double-down  fa-lg right" aria-hidden="true"></i></a></span>
+                        <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                    </div>
+                    <div class="card-action center-align">
+                        <a href="#">View Project</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testing Card -->
+            <div class="col s10 offset-s1 m6 l4">
+                <div class="card railway z-depth-2">
+                    <div class="card-image z-depth-1">
+                        <div class="img-card-container">
+                            <img src="images/projects/canvas-race/race-comp-white.png">
+                        </div>
+                    </div>
+                    <div class="center-align activator">
+                        <a class="btn-floating btn-large waves-effect waves-light  z-depth-3 btn-card-hvr" id="card-hvr-btn"><i class="material-icons hvr-bob">add</i></a>
+                    </div>
+                    <div class="card-content center-align">
+                        <h5 class=" activator grey-text text-darken-4">Canvas Car Race</h5>
+
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Canvas Car Race<a class="btn-floating btn waves-effect waves-light red z-depth-1 right"><i class="fa fa-angle-double-down  fa-lg right" aria-hidden="true"></i></a></span>
+                        <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                    </div>
+                    <div class="card-action center-align">
+                        <a href="#">View Project</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testing Card -->
+            <div class="col s10 offset-s1 m6 l4">
+                <div class="card railway z-depth-2">
+                    <div class="card-image z-depth-1">
+                        <div class="img-card-container">
+                            <img src="images/projects/grid/grid-comp-white.png">
+                        </div>
+                    </div>
+                    <div class="center-align activator">
+                        <a class="btn-floating btn-large waves-effect waves-light  z-depth-3 btn-card-hvr" id="card-hvr-btn"><i class="material-icons hvr-bob">add</i></a>
+                    </div>
+                    <div class="card-content center-align">
+                        <h5 class=" activator grey-text text-darken-4">Random Grid Generator</h5>
+
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Random Grid Generator<a class="btn-floating btn waves-effect waves-light red z-depth-1 right"><i class="fa fa-angle-double-down  fa-lg right" aria-hidden="true"></i></a></span>
+                        <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                    </div>
+                    <div class="card-action center-align">
+                        <a href="#">View Project</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testing Card -->
+            <div class="col s10 offset-s1 m6 l4">
+                <div class="card railway z-depth-2">
+                    <div class="card-image z-depth-1">
+                        <div class="img-card-container">
+                            <img src="images/projects/grid/grid-comp-white.png">
+                        </div>
+                    </div>
+                    <div class="center-align activator">
+                        <a class="btn-floating btn-large waves-effect waves-light  z-depth-3 btn-card-hvr" id="card-hvr-btn"><i class="material-icons hvr-bob">add</i></a>
+                    </div>
+                    <div class="card-content center-align">
+                        <h5 class=" activator grey-text text-darken-4">Random Grid Generator</h5>
+
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Random Grid Generator<a class="btn-floating btn waves-effect waves-light red z-depth-1 right"><i class="fa fa-angle-double-down  fa-lg right" aria-hidden="true"></i></a></span>
+                        <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                    </div>
+                    <div class="card-action center-align">
+                        <a href="#">View Project</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testing Card -->
+            <div class="col s10 offset-s1 m6 l4">
+                <div class="card railway z-depth-2">
+                    <div class="card-image z-depth-1">
+                        <div class="img-card-container">
+                            <img src="images/projects/grid/grid-comp.jpg">
+                        </div>
+                    </div>
+                    <div class="center-align activator">
+                        <a class="btn-floating btn-large waves-effect waves-light  z-depth-3 btn-card-hvr" id="card-hvr-btn"><i class="material-icons hvr-bob">add</i></a>
+                    </div>
+                    <div class="card-content center-align">
+                        <h5 class=" activator grey-text text-darken-4">Random Grid Generator</h5>
+
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Random Grid Generator<a class="btn-floating btn waves-effect waves-light red z-depth-1 right"><i class="fa fa-angle-double-down  fa-lg right" aria-hidden="true"></i></a></span>
+                        <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                    </div>
+                    <div class="card-action center-align">
+                        <a href="#">View Project</a>
+                    </div>
+                </div>
+            </div>
+
+            <ul class="pagination">
+                <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
+                <li class="active"><a href="#!">1</a></li>
+                <li class="waves-effect"><a href="#!">2</a></li>
+                <li class="waves-effect"><a href="#!">3</a></li>
+                <li class="waves-effect"><a href="#!">4</a></li>
+                <li class="waves-effect"><a href="#!">5</a></li>
+                <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
+            </ul>
+        </div>
+    </section> <!-- /project section -->
+
+    <!--
+</div>--><!-- End container -->
+
+
+    <!-- http://www.landescape.it/wp-content/uploads/mg_4655.jpg-->
+    <!-- http://www.vitoschnabel.com/attachment/en/55cd07616aa72cc608d19704/News/56422f1dc5aa2c0d716bb577 -->
+    <!-- https://newevolutiondesigns.com/images/freebies/polygon-wallpaper-21.jpg -->
+    <section class="section">
+        <!-- Begin Parallax -->
+        <div class="parallax-container-tools" id="tools-parallax">
+            <div class="parallax">
+                <img src="https://d3ui957tjb5bqd.cloudfront.net/images/screenshots/products/49/493/493536/jzjca5equ11cyyzycacltapl7mljeufervd0hpipu2vefiqyqdkcu1wtqf3mzd81-o.jpg?1432150718" alt="brickwall">
+                <!-- Tools Section -->
+                <h4 class="railway white-text railwayBold center-align" id="tool-header">Tools</h4>
+                <section id="tools" class="section scrollspy">
+                    <div class="row" id="tool-row">
+                        <div class="col s3 tool-icons center-align" id="html-tool">
+                            <i class="devicon-html5-plain colored large hvr-float"></i>
+                            <div class="icon-text fadeInDown" id="html5-text"><div class="center-align">HTML5</div></div>
+                        </div>
+                        <div class="col s3 tool-icons center-align">
+                            <i class="devicon-css3-plain colored large hvr-float"></i>
+                            <div class="icon-text fadeInDown" id="css3-text">CSS3</div>
+                        </div>
+                        <div class="col s3 tool-icons center-align">
+                            <i class="devicon-javascript-plain colored large hvr-float"></i>
+                            <div class="icon-text fadeInDown" id="javascript-text">Javascript</div>
+                        </div>
+                        <div class="col s3 tool-icons center-align">
+                            <i class="devicon-jquery-plain colored large hvr-float"></i>
+                            <div class="icon-text fadeInDown" id="jquery-text">jQuery</div>
+                        </div>
+                    </div>
+                    <div class="row railway" id="tool-row">
+                        <div class="col s3 tool-icons center-align">
+                            <i class="devicon-bootstrap-plain colored large hvr-float"></i>
+                            <div class="icon-text" id="bootstrap-text">Bootstrap</div>
+                        </div>
+                        <div class="col s3 tool-icons center-align">
+                            <i class="devicon-cplusplus-plain colored large hvr-float"></i>
+                            <div class="icon-text" id="cplusplus-text">C++</div>
+                        </div>
+                        <div class="col s3 tool-icons center-align">
+                            <i class="devicon-csharp-plain colored large hvr-float"></i>
+                            <div class="icon-text" id="csharp-text">C#</div>
+                        </div>
+                        <div class="col s3 tool-icons center-align">
+                            <i class="devicon-github-plain colored large hvr-float"></i>
+                            <div class="icon-text" id="github-text">Github</div>
+                        </div>
+                    </div>
+                    <div class="row railway" id="tool-row">
+                        <div class="col s3 tool-icons center-align">
+                            <i class="devicon-git-plain colored large hvr-float"></i>
+                            <div class="icon-text" id="git-text">Git</div>
+                        </div>
+                        <div class="col s3 tool-icons center-align">
+                            <i class="devicon-dot-net-plain colored large hvr-float"></i>
+                            <div class="icon-text" id="aspnet-text">ASP.NET</div>
+                        </div>
+                        <div class="col s3 tool-icons center-align">
+                            <i class="devicon-php-plain colored large hvr-float"></i>
+                            <div class="icon-text" id="php-text">PHP</div>
+                        </div>
+                        <div class="col s3 tool-icons center-align">
+                            <i class="devicon-mysql-plain colored large hvr-float"></i>
+                            <div class="icon-text" id="mysql-text">MySQL</div>
+                        </div>
+                    </div>
+                    <div class="row railway" id="tool-row">
+                        <!--<div class="col s4 m3 tool-icons center-align">
+                            <div class="card-panel white vstudio-icon">
+                                <img src="http://findicons.com/files/icons/2779/simple_icons/4096/visualstudio.png" class="vs-icon hvr-float">
+                                <div class="icon-text" id="visualstudio-text">Visual Studio 12-15</div>
+                            </div>
+                        </div>-->
+                        <div class="col s3 tool-icons center-align">
+                            <i class="devicon-jetbrains-plain colored large hvr-float"></i>
+                            <div class="icon-text" id="jetbrains-text">Webstorm</div>
+                        </div>
+                        <div class="col s3 tool-icons center-align">
+                            <i class="devicon-trello-plain colored large hvr-float"></i>
+                            <div class="icon-text" id="trello-text">Trello</div>
+                        </div>
+                        <div class="col s3 tool-icons center-align">
+                            <i class="devicon-photoshop-line colored large hvr-float"></i>
+                            <div class="icon-text" id="photoshop-text">Adobe Photoshop</div>
+                        </div>
+                        <div class="col s3 center-align tool-icons">
+                            <i class="devicons devicons-materializecss large hvr-float"></i>
+                            <div class="icon-text" id="materialize-text">Materialize CSS</div>
+                        </div>
+                    </div>
+
+                    <!--
+                    <i class="devicon-heroku-plain-wordmark colored"></i>
+                    <i class="devicon-sass-original colored"></i>
+                    <i class="devicon-dot-net-plain-wordmark colored"></i>
+                    <i class="devicon-dot-net-plain colored"></i>
+                    <i class="devicon-illustrator-line colored"></i>
+                     <i class="devicon-foundation-plain colored large hvr-float"></i>
+                    <i class="devicon-phpstorm-plain colored large"></i>
+                    <i class="devicon-jetbrains-plain colored large"></i>
+                    <i class="devicon-apache-plain-wordmark colored large"></i>
+                    <i class="devicon-atom-original colored large"></i>-->
+
+                </section> <!-- /tool section -->
+            </div> <!-- end parallax -->
+        </div><!-- end parallax container -->
+    </section>
+
+
+    <!-- Blog Section -->
+    <section  id="" class=" ">
+        <div class="row railway" id="tool-row">
+            <div class="col s4 m3 tool-icons center-align" id="html-tool">
+                <div class="card-panel white">
+                    <i class="devicon-html5-plain colored large hvr-float"></i>
+                    <div class="icon-text fadeInDown" id="html5-text"><div class="center-align">HTML5</div></div>
+                </div>
+            </div>
+            <div class="col s4 m3 tool-icons center-align">
+                <div class="card-panel white">
+                    <i class="devicon-css3-plain colored large hvr-float"></i>
+                    <div class="icon-text fadeInDown" id="css3-text">CSS3</div>
+                </div>
+            </div>
+            <div class="col s4 m3 tool-icons center-align">
+                <div class="card-panel white">
+                    <i class="devicon-javascript-plain colored large hvr-float"></i>
+                    <div class="icon-text fadeInDown" id="javascript-text">Javascript</div>
+                </div>
+            </div>
+            <div class="col s4 m3 tool-icons center-align">
+                <div class="card-panel white">
+                    <i class="devicon-jquery-plain colored large hvr-float"></i>
+                    <div class="icon-text fadeInDown" id="jquery-text">jQuery</div>
+                </div>
+            </div>
+
+
+            <div class="col s4 m3 tool-icons center-align">
+                <div class="card-panel white">
+                    <i class="devicon-bootstrap-plain colored large hvr-float"></i>
+                    <div class="icon-text" id="bootstrap-text">Bootstrap</div>
+                </div>
+            </div>
+            <div class="col s4 m3 tool-icons center-align">
+                <div class="card-panel white">
+                    <i class="devicon-cplusplus-plain colored large hvr-float"></i>
+                    <div class="icon-text" id="cplusplus-text">C++</div>
+                </div>
+            </div>
+            <div class="col s4 m3 tool-icons center-align">
+                <div class="card-panel white">
+                    <i class="devicon-csharp-plain colored large hvr-float"></i>
+                    <div class="icon-text " id="csharp-text">C#</div>
+                </div>
+            </div>
+            <div class="col s4 m3 tool-icons center-align">
+                <div class="card-panel white">
+                    <i class="devicon-github-plain colored large hvr-float"></i>
+                    <div class="icon-text" id="github-text">Github</div>
+                </div>
+            </div>
+
+            <div class="col s4 m3 tool-icons center-align">
+                <div class="card-panel white">
+                    <i class="devicon-git-plain colored large hvr-float"></i>
+                    <div class="icon-text" id="git-text">Git</div>
+                </div>
+            </div>
+            <div class="col s4 m3 tool-icons center-align">
+                <div class="card-panel white">
+                    <i class="devicon-foundation-plain colored large hvr-float"></i>
+                    <div class="icon-text" id="foundation-text">Foundation</div>
+                </div>
+            </div>
+            <div class="col s4 m3 tool-icons center-align">
+                <div class="card-panel white">
+                    <i class="devicon-php-plain colored large hvr-float"></i>
+                    <div class="icon-text" id="php-text">PHP</div>
+                </div>
+            </div>
+            <div class="col s4 m3 tool-icons center-align">
+                <div class="card-panel white">
+                    <i class="devicon-mysql-plain colored large hvr-float"></i>
+                    <div class="icon-text" id="mysql-text">MySQL</div>
+                </div>
+            </div>
+
+
+            <div class="col s4 m3 tool-icons center-align">
+                <div class="card-panel white">
+                    <img src="http://findicons.com/files/icons/2779/simple_icons/4096/visualstudio.png" class="vs-icon hvr-float">
+                    <div class="icon-text" id="visualstudio-text">Visual Studio 12-15</div>
+                </div>
+            </div>
+
+            <!--<div class="col s4 m3 tool-icons center-align">
+                <div class="card-panel white">
+                    <i class="devicon-sass-original colored large hvr-float"></i>
+                    <div class="icon-text" id="sass-text">Sass</div>
+                </div>
+            </div>-->
+            <div class="col s4 m3 tool-icons center-align">
+                <div class="card-panel white">
+                    <i class="devicon-trello-plain colored large hvr-float"></i>
+                    <div class="icon-text" id="illustrator-text">Trello</div>
+                </div>
+            </div>
+            <div class="col s4 m3 tool-icons center-align">
+                <div class="card-panel white">
+                    <i class="devicon-photoshop-line colored large hvr-float"></i>
+                    <div class="icon-text" id="photoshop-text">Adobe Photoshop</div>
+                </div>
+            </div>
+            <div class="col s4 offset-s4 m3 center-align tool-icons">
+                <div class="card-panel white">
+                    <i class="devicons devicons-materializecss large hvr-float"></i>
+                    <div class="icon-text" id="materialize-text">Materialize CSS</div>
+                </div>
+            </div>
+        </div>
+    </section> <!--/blog section -->
+
+
+
+
+
+
+    <!-- Blog Section -->
+    <section  id="blog" class="section scrollspy">
+        <h4 class="center-align railwayBold">Blogging!</h4>
+
+    </section> <!--/blog section -->
+
+    <div class="container">
+    </div> <!-- END CONTAINER -->
+
+
+
+    <!--
+    <div class="homepage-hero-module">
+        <div class="video-container">
+            <div class="title-container center-align">
+                <h2 class="railwayBold">Projects</h2>
+                <h5>3 New projects including write-ups about particular programs</h5>
+            </div>
+            <video autoplay loop class="fillWidth">
+                <source src="video/Aloha-Mundo/MP4/Aloha-Mundo.mp4" type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser.
+                <source src="video/Aloha-Mundo/WEBM/Aloha-Mundo.webm" type="video/webm" />Your browser does not support the video tag. I suggest you upgrade your browser.
+            </video>
+        </div>
+    </div>-->
+
+
+    <!-- Contact Me Section -->
+    <section id="contact" class="section scrollspy grey lighten-3">
+        <div class="center-align">
+            <h4 class="railwayBold">Contact Me</h4>
+        </div>
+        <!-- Container of Social Media  Icons -->
+        <div class="container">
+            <div class="row soc-icon-row">
+                <!--<a class="btn tooltipped" data-bg-color="red" data-fg-color="red" data-position="bottom" data-delay="50" data-tooltip="I am tooltip">Hover me!</a>
+                <a class="btn tooltipped"  data-tooltip-bg="blue" data-tooltip-fg="white" data-position="bottom" data-delay="50" data-tooltip="I am tooltip">Hover me!</a>
+                <a class="btn tooltipped"  data-html="true" data-position="bottom" data-delay="50" data-tooltip="<p style='color:#000000'>Something</p>">Hover me!</a>-->
+
+                <div class="col s1 offset-s2" id="slack-tool">
+                    <!-- HEX COLOR OF ICON IMAGE FOR TOOLTIP #F7F7F7 -->
+                    <a href="#" class="hvr-float tooltipped" data-tooltip-bg="#F7F7F7" data-tooltip-fg="#D91C60" data-position="bottom" data-delay="50" data-tooltip="Slack">
+                        <img src="images/icons/slack-256.png" class="responsive-img">
+                    </a>
+                </div>
+                <div class="col s1">
+                    <!-- HEX COLOR OF ICON IMAGE FOR TOOLTIP #3F91CB -->
+                    <a href="#" class="hvr-float tooltipped" data-tooltip-bg="#3F91CB" data-tooltip-fg="#ffffff" data-position="bottom" data-delay="50" data-tooltip="Github">
+                        <img src="images/icons/github.png" class="responsive-img">
+                    </a>
+                </div>
+                <div class="col s1">
+                    <!-- HEX COLOR OF ICON IMAGE FOR TOOLTIP #482C16 -->
+                    <a href="#" class="hvr-float tooltipped" data-tooltip-bg="#482C16" data-tooltip-fg="#ffffff" data-position="bottom" data-delay="50" data-tooltip="Free Code Camp">
+                        <img src="images/icons/FCC.png" class="responsive-img">
+                    </a>
+                </div>
+                <div class="col s1">
+                    <!-- HEX COLOR OF ICON IMAGE FOR TOOLTIP #40BFF5 -->
+                    <a href="#" class="hvr-float tooltipped" data-tooltip-bg="#40BFF5" data-tooltip-fg="white" data-position="bottom" data-delay="50" data-tooltip=@IanArsenault>
+                        <img src="images/icons/twitter.png" class="responsive-img">
+                    </a>
+                </div>
+                <div class="col s1">
+                    <!-- HEX COLOR OF ICON IMAGE FOR TOOLTIP #238CC8 -->
+                    <a href="#" class="hvr-float tooltipped" data-tooltip-bg="#238CC8" data-tooltip-fg="#ffffff" data-position="bottom" data-delay="50" data-tooltip="LinkedIn">
+                        <img src="images/icons/linkedin.png" class="responsive-img">
+                    </a>
+
+                </div>
+                <div class="col s1">
+                    <!-- HEX COLOR OF ICON IMAGE FOR TOOLTIP #C85041 -->
+                    <a href="#" class="hvr-float tooltipped" data-tooltip-bg="#EB5E4C" data-tooltip-fg="#ffffff" data-position="bottom" data-delay="50" data-tooltip="Google+">
+                        <img src="images/icons/googleplus.png" class="responsive-img">
+                    </a>
+                </div>
+                <div class="col s1">
+                    <!-- HEX COLOR OF ICON IMAGE FOR TOOLTIP #13C1F3 -->
+                    <a href="#" class="hvr-float tooltipped" data-tooltip-bg="#13C1F3" data-tooltip-fg="#ffffff" data-position="bottom" data-delay="50" data-tooltip="Skype">
+                        <img src="images/icons/skype.png" class="responsive-img">
+                    </a>
+                </div>
+                <div class="col s1">
+                    <!-- HEX COLOR OF ICON IMAGE FOR TOOLTIP #FFFFFF -->
+                    <a href="#" class="hvr-float tooltipped" data-tooltip-bg="#FFFFFF" data-tooltip-fg="#49A6D9" data-position="bottom" data-delay="50" data-tooltip="Signals Encrypted Chat">
+                        <img src="images/icons/signals-white.png" class="responsive-img">
+                    </a>
+                </div>
+            </div>
+        </div><!-- end of social media icons -->
+
+
+        <!-- CONTACT ME FORM -->
+        <div class="row scrollspy" id="message-me">
+            <div class="col s12 m8 offset-m2 l6">
+                <div class="card white card-form z-depth-2">
+                    <form class="col s12 contact-form">
+                        <div class="row center-align railwayBold">
+                            <h5>Send Ian a message</h5>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="name_of" placeholder="Mr. Bigglesworth" type="text" class="validate" required="" aria-required="true">
+                                <label for="name_of">Name</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input placeholder="John@yourdomain.com" id="email_of" type="text" class="validate" required="" aria-required="true">
+                                <label for="email_of">Email</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <textarea placeholder="Write your message here!" id="message" class="materialize-textarea" class="validate" required="" aria-required="true"></textarea>
+                                <label for="message">Message</label>
+                            </div>
+                        </div>
+
+                        <div class="center-align">
+                            <button class="btn waves-effect waves-light red" type="submit" name="action">Submit
+                                <i class="material-icons right">send</i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- GOOGLE MAP -->
+            <div class="col s12 m12 l6">
+                <div id="map"></div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Begin Footer --
+    <footer class="page-footer">
+        <div class="container">
+            <div class="row white-text">
+                <div class=" col l6 s12">
+                    <h5>Footer Content</h5>
+                    <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <h5 class="white-text">Links</h5>
+                    <ul>
+                        <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                &copy; 2016 Copyright Ian Arsenault
+                <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+            </div>
+        </div>
+    </footer> <!-- / footer -->
+
+    <!-- Floating button bottom right = scroll back to top on click -->
+    <div class="fixed-action-btn" style="bottom: 25px; right: 24px; z-index: 1000;" id="fixBotRight">
+        <a href="#top-scroll" class="btn-floating btn-large waves-effect waves-light red s-top-btn">
+            <i class="large material-icons">navigation</i>
+        </a>
+    </div> <!-- end floating button -->
+
+
+    <!-- Banner Footer -->
+    <img class="responsive-img center-block" src="images/assets/ian-banner.jpg">
+
+
+    <!-- Bottom-sheet Modal Trigger Button
+    <div class="center-align">
+        <a class="waves-effect waves-light btn modal-trigger red" id="btn-small" href="#modal2"><i class="material-icons md-36">open_in_browser</i></a>
+    </div>
+    <i class="material-icons">blur_on</i><i class="material-icons">view_comfy</i><i class="material-icons">dehaze</i><i class="material-icons">grain</i>
+    <i class="material-icons">more_horiz</i>-->
+    <!-- Bottom-sheet Modal Trigger Button-->
+    <div class="center-align">
+        <a class="waves-effect waves-light btn modal-trigger transparent" id="btn-small" href="#modal2"><i class="material-icons red-text md-36">view_comfy</i></a>
+    </div>
+
+
+    <!-- Modal Structure -->
+    <div id="modal2" class="modal bottom-sheet">
+        <div class="center-align">
+            <a class="waves-effect waves-light btn modal-trigger modal-action modal-close white z-depth-0" id="bottom-modal-btn" href="#modal2"><i class="material-icons red-text md-36">more_horiz</i></a>
+        </div>
+
+        <div class="modal-content">
+            <div class="row center-block">
+                <div class="col s12 m6 l4">
+                    <div class="card red" id="btm-sheet-card">
+                        <div class="card-content white-text">
+                            <span class="card-title">Stuff 1</span>
+                        </div>
+                        <div class="card-action">
+                            <a href="#">This is a link</a>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col s12 m6 l4">
+                    <div class="card red">
+                        <div class="card-content white-text">
+                            <div class="center-align">
+                                <i class="material-icons md-48">credit_card</i>
+                            </div>
+                            <span class="card-title">Credits</span>
+                        </div>
+                        <div class="card-action">
+                            <a href="#">This is a link</a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col s12 m8 offset-m2 l4">
+                    <div class="card red">
+                        <div class="card-content white-text">
+                            <span class="card-title">Stuff 3</span>
+                        </div>
+                        <div class="card-action">
+                            <a href="#">This is a link</a>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+
+</div><!-- end main content -->
+
+
+<!-- Free Pick links
+https://www.artstation.com/artwork/rJeO6
+https://newevolutiondesigns.com/25-hd-polygon-wallpapers
+<a href="http://www.freepik.com/free-photo/abstract-red-and-black-lights-background_892973.htm">Designed by Freepik</a>
+<a href="http://www.freepik.com/free-vector/designer-tools-pack_836115.htm">Designed by Freepik</a>
+<a href="http://www.freepik.com/free-photo/working-with-a-coffee_881236.htm">Designed by Freepik</a>
+
+<a href="http://www.freepik.com/free-photo/purple-parking-lot-with-no-cars_889054.htm">Designed by Freepik</a>
+
+
+icons
+<a href="http://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a>v>
+<div>Icons made by <a href="http://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+<a href="http://www.freepik.com/free-vector/great-isometric-user-experience_851898.htm">Designed by Freepik</a>
+
+<a href='http://www.freepik.com/free-vector/man-illustrations_795185.htm'>Designed by Freepik</a>
+-->
+
+
+<!--Import jQuery before materialize.js-->
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="js/materialize.min.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+<!-- Fonts Awesome -->
+<script src="https://use.fontawesome.com/351ac21fcd.js"></script>
+
+</body>
+</html>
