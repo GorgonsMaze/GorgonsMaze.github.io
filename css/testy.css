@@ -1,0 +1,613 @@
+/*******************************************
+*     Ian Arsenault Portfolio Website     **
+*******************************************/
+
+/* Font Import */
+@import url(https://fonts.googleapis.com/css?family=Poiret+One); /* Straight Letter */
+@import url(https://fonts.googleapis.com/css?family=Alex+Brush); /* Cursive */
+@import url(https://fonts.googleapis.com/css?family=Raleway:800,500); /* Railway Straight */
+.railway {
+    font-family: 'Raleway', sans-serif;
+    font-weight:500;
+}
+.railwayBold {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 800;
+}
+.poiret {
+    font-family: 'Poiret One', cursive;
+}
+.alexBrush {
+    font-family: 'Alex Brush', cursive;
+} /* end of Font */
+
+
+.main-content {
+    display: none;
+}
+
+/* red row background tint shadow */
+.red-tint {
+    -webkit-box-shadow: -2px 43px 207px 0px rgba(176,0,0,1);
+    -moz-box-shadow: -2px 43px 207px 0px rgba(176,0,0,1);
+    box-shadow: -2px 43px 207px 0px rgba(176,0,0,1);
+}
+
+/*******************************************
+*             Navbar Section             **
+*******************************************/
+
+/* Side-nav Hamburger Icon */
+.hambrgr {
+    color:#000;
+}
+.hambrgr:hover {
+    color: #e53935;
+}
+#hamburger {
+    padding-left: 15px;
+}
+
+#side-nav-x {
+    color:#000;
+    margin-left: -30px;
+}
+#side-nav-x:hover {
+    color: #e53935;
+}
+
+
+.xedOut {
+    margin-top: -60px;
+    float: left;
+    margin-left: 6px;
+}
+
+/* Hamburger animation
+#hamburger:hover {
+    animation-name: rotate;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+}
+@-webkit-keyframes rotate {
+    from {-webkit-transform: rotate(0deg); }
+    to {-webkit-transform: rotate(360deg);}
+} /* end of hamburger rotate animation */
+
+#navLogo {
+    margin-left: 20px;
+}
+
+.side-nav {
+    margin-top:64px;
+    width: 185px;
+}
+
+@media only screen and (min-width: 301px) {
+    nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
+        height: 64px;
+        line-height: 64px;
+    }
+    .navbar-fixed {
+        height: 64px;
+    }
+}
+
+
+
+.navLnkColor {
+    color: #000000;
+}
+/* Pushes right nav buttons away from right side */
+.nav-wrapper {
+    margin-right: 20px;
+}
+
+/* Badge - New style */
+span.badge.new {
+    font-weight: 300;
+    font-size: 0.8rem;
+    color: #fff;
+    background-color: #e53935;
+    border-radius: 2px;
+    padding: 5px;
+}
+.side-badge{
+    margin-left: 20px;
+}
+#side-badge {
+    margin-left: 10px;
+}
+/* Nav Drop Down Buttons Text Color */
+.navBtn {
+    background-color: #ffebee;
+    /*text-decoration: underline;*/
+}
+
+.activer {
+    background-color: #eeeeee;
+}
+
+/* Drop Down Text Hover Color */
+#dropBtn:hover {
+    /* color: #00e676;
+     background-color: #212121;*/
+}
+.dropdown-content li > a, .dropdown-content li > span {
+    font-size: 16px;
+    color: #000000;
+    display: block;
+    line-height: 22px;
+    padding: 14px 16px;
+}
+
+.dropdown-content li:hover {
+    background-color: transparent;
+}  /* end Navbar Sstyling */
+
+/* Side Navigation */
+#side-navBtns {
+    color:black;
+}
+#exit {
+    color: #e53935;
+    font-size: 1.5rem;
+    font-weight:900;
+    height: 45px;
+}
+#exit:hover {
+    background-color: #fff;
+}
+#close-hvr:hover {
+    color: #b71c1c;
+}
+
+
+/****************************************
+  Scrollspy Navbar active button styling
+*****************************************/
+
+.scroll-content.fixed:not(.navButtons) {
+    position: fixed;
+}
+
+.scroll-content li:not(.navButtons)  {
+    padding: 2px 0;
+}
+
+.scroll-content a:not(.navButtons) {
+    display: inline-block;
+    font-weight: 300;
+    color: #000000;
+    padding-left: 20px;
+    height: 1.5rem;
+    line-height: 1.5rem;
+    letter-spacing: .4;
+    display: inline-block;
+}
+
+.scroll-content a:hover:not(.navButtons)  {
+    color: #000000;
+    background-color:white;
+    padding-left: 18px;
+    padding-bottom: 35px;
+    border-left: 2px solid #ff9800;
+    border-bottom: 2px solid #ff9800;
+}
+
+.scroll-content a.active:not(.navButtons)  {
+    font-weight: 500;
+    padding-left: 18px;
+    padding-bottom: 35px;
+    border-left: 2px solid #ea4a4f;
+    border-bottom: 2px solid #ea4a4f;
+}
+/* end of nav button scrollspy active styling */
+
+#navProj:hover {
+    color: #000000;
+    background-color:white;
+    padding-left: 18px;
+    padding-bottom: 35px;
+    border-left: 2px solid #ff9800;
+    border-bottom: 2px solid #ff9800;
+}
+#dropdown1 {
+    margin-top: 2px;
+}
+
+
+.input-field .prefix.active {
+    color: black;
+}
+
+
+
+
+/* Cards for About Me Section */
+
+.card-about {
+    position: relative;
+    margin: 0.5rem 0 1rem 0;
+    background-color: #fff;
+    transition: box-shadow .25s;
+    border-radius: 2px;
+}
+
+.card-about .card-title {
+    font-size: 24px;
+    font-weight: 300;
+}
+
+.card-about .card-title.activator {
+    cursor: pointer;
+}
+
+.card-about .card-content {
+    padding: 0;
+    border-radius: 0 0 2px 2px;
+}
+
+.card-about .card-content p {
+    margin: 0;
+    color: inherit;
+}
+
+.card-about .card-content .card-title {
+    line-height: 48px;
+}
+
+.card-about .card-action {
+    position: relative;
+    background-color: inherit;
+    border-top: 1px solid rgba(160, 160, 160, 0.2);
+    padding: 20px;
+    z-index: 2;
+}
+
+.card-about .card-action a:not(.btn):not(.btn-large):not(.btn-floating) {
+    color: #ffab40;
+    margin-right: 20px;
+    transition: color .3s ease;
+    text-transform: uppercase;
+}
+
+.card-about:hover {
+    box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.cardimages {
+    padding: 10px;
+}
+
+.card-image-holder {
+    padding: 60px 0 60px 0;
+
+}
+
+.hoverable-dark:hover {
+    -webkit-box-shadow: 0px 62px 41px 0px rgba(201,201,201,1);
+    -moz-box-shadow: 0px 62px 41px 0px rgba(201,201,201,1);
+    box-shadow: 0px 62px 41px 0px rgba(201,201,201,1);
+}
+/* Progress Bar Loader */
+/* Transition speed for progress bar */
+.progress {
+    position: relative;
+    height: 20px;
+    display: block;
+    width: 100%;
+    background-color: #ffebee;
+    border-radius: 15px;
+    margin: 0.5rem 0 1rem 0;
+    overflow: hidden;
+}
+.progress-bar {
+    float: left;
+    height: 100%;
+    background-color: #b71c1c;
+    -webkit-transition: width 3s ease;
+    -o-transition: width 3s ease;
+    transition: width 3s ease;
+}  /* end progress bar styling */
+
+
+.hoverable:hover {
+    transition: box-shadow .25s;
+    box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+.modal.modal-fixed-footer {
+    padding: 0;
+    height: 55%;
+}
+
+
+.modal {
+    border: 4px solid #b71c1c ;
+}
+
+/* Animate CSS */
+/*!
+ * http://daneden.me/animate
+ * Version - 3.5.1
+ * Licensed under the MIT license - http://opensource.org/licenses/MIT
+ *
+ * Copyright (c) 2016 Daniel Eden
+ */
+
+
+
+/*******************************************
+*            About Me Section           **
+*******************************************/
+#about {
+    height: 1700px;
+}
+/*******************************************
+*             Project Section            **
+*******************************************/
+#card-hvr-btn {
+    margin-top: -30px;
+}
+
+#overlay {
+    background: rgb(0, 0, 0); /* fallback color */
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.overlay {
+    background: rgb(0, 0, 0); /* fallback color */
+    background: rgba(0, 0, 0, 0.7);
+}
+
+
+.card .card-image .img-card-container img.hover {
+    background-color: rgba(0, 0, 0, 0.05);
+    z-index: auto;
+}
+
+
+/*******************************************
+*              Tools Section             **
+*******************************************/
+/*******************************************
+*           Blog Section Website         **
+*******************************************/
+/*******************************************
+*            Contact Me Section          **
+*******************************************/
+/*******************************************
+*              Blog Section              **
+*******************************************/
+
+/*******************************************
+*           Animation Section           **
+*******************************************/
+
+.animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+@-webkit-keyframes fadeInDown {
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(0, -100%, 0);
+        transform: translate3d(0, -100%, 0);
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(0, -100%, 0);
+        transform: translate3d(0, -100%, 0);
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+
+.fadeInDown {
+    -webkit-animation-name: fadeInDown;
+    animation-name: fadeInDown;
+}
+
+
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 100%, 0);
+        transform: translate3d(0, 100%, 0);
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+
+.fadeInUp {
+    -webkit-animation-name: fadeInUp;
+    animation-name: fadeInUp;
+}
+
+
+
+
+@-webkit-keyframes fadeOutUp {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+        -webkit-transform: translate3d(0, -100%, 0);
+        transform: translate3d(0, -100%, 0);
+    }
+}
+
+@keyframes fadeOutUp {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+        -webkit-transform: translate3d(0, -100%, 0);
+        transform: translate3d(0, -100%, 0);
+    }
+}
+
+.fadeOutUp {
+    -webkit-animation-name: fadeOutUp;
+    animation-name: fadeOutUp;
+}
+
+
+
+
+@-webkit-keyframes rotateOut {
+    from {
+        -webkit-transform-origin: center;
+        transform-origin: center;
+        opacity: 1;
+    }
+
+    to {
+        -webkit-transform-origin: center;
+        transform-origin: center;
+        -webkit-transform: rotate3d(0, 0, 1, 200deg);
+        transform: rotate3d(0, 0, 1, 200deg);
+        opacity: 0;
+    }
+}
+
+@keyframes rotateOut {
+    from {
+        -webkit-transform-origin: center;
+        transform-origin: center;
+        opacity: 1;
+    }
+
+    to {
+        -webkit-transform-origin: center;
+        transform-origin: center;
+        -webkit-transform: rotate3d(0, 0, 1, 200deg);
+        transform: rotate3d(0, 0, 1, 200deg);
+        opacity: 0;
+    }
+}
+
+.rotateOut {
+    -webkit-animation-name: rotateOut;
+    animation-name: rotateOut;
+}
+
+
+
+@-webkit-keyframes rotateIn {
+    from {
+        -webkit-transform-origin: center;
+        transform-origin: center;
+        -webkit-transform: rotate3d(0, 0, 1, -200deg);
+        transform: rotate3d(0, 0, 1, -200deg);
+        opacity: 0;
+    }
+
+    to {
+        -webkit-transform-origin: center;
+        transform-origin: center;
+        -webkit-transform: none;
+        transform: none;
+        opacity: 1;
+    }
+}
+
+@keyframes rotateIn {
+    from {
+        -webkit-transform-origin: center;
+        transform-origin: center;
+        -webkit-transform: rotate3d(0, 0, 1, -200deg);
+        transform: rotate3d(0, 0, 1, -200deg);
+        opacity: 0;
+    }
+
+    to {
+        -webkit-transform-origin: center;
+        transform-origin: center;
+        -webkit-transform: none;
+        transform: none;
+        opacity: 1;
+    }
+}
+
+.rotateIn {
+    -webkit-animation-name: rotateIn;
+    animation-name: rotateIn;
+}
+
+
+
+/* Colors */
+.greysee {
+    background-color: #454545;
+}
+
+/* Tooltip styling */
+.material-tooltip {
+    padding: 16px 8px;
+    font-size: 1rem;
+    z-index: 2000;
+    border-radius: 2px;
+    background-color: #e53935;
+    color: #fff;
+    min-height: 36px;
+    line-height: 120%;
+    opacity: 0;
+    display: none;
+    position: absolute;
+    text-align: center;
+    max-width: 5000px;
+    overflow: hidden;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+    will-change: top, left;
+    -webkit-box-shadow: 3px 38px 64px 5px rgba(0, 0, 0, 0.41);
+    -moz-box-shadow: 3px 38px 64px 5px rgba(0, 0, 0, 0.41);
+    box-shadow: 3px 38px 64px 5px rgba(0, 0, 0, 0.41);
+}
+
+.backdrop {
+    position: absolute;
+    margin-top: 30px;
+    opacity: 0;
+    display: none;
+    height: 7px;
+    width: 14px;
+    border-radius: 0 0 14px 14px;
+    background-color: transparent;
+    z-index: -1;
+    -webkit-transform-origin: 50% 10%;
+    transform-origin: 50% 10%;
+    will-change: transform, opacity;
+}
+

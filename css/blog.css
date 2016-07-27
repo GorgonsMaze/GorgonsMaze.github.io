@@ -1,0 +1,207 @@
+/* Colors
+Main Color - #303841
+Secondary Color - #3A4750
+Button Color - #D72323
+Background Color - #EEEEEE
+*/
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #EEEEEE;
+}
+
+/*******************************************
+**      Material Design Icon Styling       *
+******************************************/
+@font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Material Icons'), local('MaterialIcons-Regular'), url(https://fonts.gstatic.com/s/materialicons/v17/2fcrYFNaTjcS6g4U3t-Y5RV6cRhDpPC5P4GCEJpqGoc.woff) format('woff');
+}
+
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Rules for sizing the icon. */
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
+
+/* Rules for using icons as black on a light background. */
+.material-icons.md-dark { color: rgba(0, 0, 0, 0.54); }
+.material-icons.md-dark.md-inactive { color: rgba(0, 0, 0, 0.26); }
+
+/* Rules for using icons as white on a dark background. */
+.material-icons.md-light { color: rgba(255, 255, 255, 1); }
+.material-icons.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }
+
+
+.main-content {
+    display: none;
+}
+
+/****  Nav Bar ****/
+
+nav {
+    color: #fff;
+    background-color: #303841;
+    width: 100%;
+    height: 350px;
+    line-height: 56px;
+}
+
+.nav-wrapper {
+    padding: 0 10px 0 10px;
+}
+
+#search-nav {
+    color: #ffffff;
+    height: 76px;
+    background-color: #3A4750;
+}
+.btn-like {
+    background-color: white;
+    transition: all 0.9s;
+}
+
+#heart {
+    color: #90caf9;
+}
+
+#heart2 {
+    color:#90caf9;
+}
+
+.btn-like:hover {
+    background-color:#EEEEEE;
+}
+
+.heart-click {
+    color: #D72323;
+}
+.btn-click {
+   background-color: white;
+}
+
+.colr-pink {
+    color:pink;
+}
+
+
+.card {
+    border-radius: 0;
+}
+
+.side-nav {
+    background-color: #303841;
+    color: #ffffff;
+
+}
+
+/** Side Nav Animations *****/
+#side-home {
+    color: white;
+    background-color: #303841;
+    padding-left: 75px;
+    margin-left:-60px;
+}
+
+#side-bio {
+    color: white;
+    background-color: #303841;
+    padding-left: 75px;
+    margin-left:-60px;
+}
+
+#side-posts {
+    color: white;
+    background-color: #303841;
+    padding-left: 75px;
+    margin-left:-60px;
+}
+
+#side-articles {
+    color: white;
+    background-color: #303841;
+    padding-left: 75px;
+    margin-left:-60px;
+}
+
+#side-pictures {
+    color: white;
+    background-color: #303841;
+    padding-left: 75px;
+    margin-left:-60px;
+}
+
+.side-btn-animation {
+    color: #ffee58;
+    text-decoration: underline;
+    position: relative;
+    -webkit-animation: backandforth 0.9s ease 0s;
+    -moz-animation: backandforth 0.9s ease 0s;
+    animation: backandforth 0.9s ease 0s;
+    animation-iteration-count:1;
+    -webkit-animation-iteration-count:1;
+    -webkit-backface-visibility: hidden;
+    -webkit-transform-style: preserve-3d;
+}
+/*
+.back-and-forth {
+    position: relative;
+    -webkit-animation: backandforth 0.9s ease 0s;
+    -webkit-animation-iteration-count:1;
+    animation: backandforth 0.9s ease 0s;
+    animation-iteration-count:1;
+    -webkit-backface-visibility: hidden;
+    -webkit-transform-style: preserve-3d;
+}*/
+
+@-webkit-keyframes backandforth {0%{left:0;} 50%{left:50%;} 100%{left:0;}}
+
+@keyframes backandforth {0%{left:0;} 50%{left:50%;} 100%{left:0;}}
+
+.side-img-back {
+    background-color:#303841;
+}
+.side-nav-img {
+    height: 128px;
+    width:128px;
+    margin: 15px 0 15px 50px;
+}
+
+/* Search Field */
+.input-field input[type=search] {
+    display: block;
+    line-height: inherit;
+    padding-left: 4rem;
+    width: calc(100% - 4rem);
+    height:100%;
+}
+
+.i {
+    margin-top: -5px;
+    padding-right: -5px;
+}
+
+.b {
+    margin-left: -10px;
+}
+
+

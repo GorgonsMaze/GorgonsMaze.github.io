@@ -1,0 +1,1480 @@
+/*******************************************
+*     Ian Arsenault Portfolio Website     **
+*******************************************/
+/* change this back if it breaks the site!!!!! */
+html,
+body,
+#map {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+@media (min-width:992px) {
+    #aside {
+        width:250px;
+    }
+}
+
+@media (max-width:992px) {
+    #aside.pinned, #aside.pin-bottom {
+        position:static !important;
+        top: auto !important;
+    }
+}
+/* Gets rid of shadows on floating buttons */
+.btn-large, .btn-floating {
+    box-shadow: 0 0 0 0 rgba(0,0,0,0),0 0 0 0 rgba(0,0,0,0);
+}
+
+.s-top-btn {
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+}
+.toc-wrapper{
+    position:absolute;
+    margin-top:42px;
+    height:100%;
+    background-color: lightgrey;
+}
+.toc-wrapper.pin-bottom{
+    margin-top:84px;
+}
+.table-of-contents.fixed{
+    position:fixed;
+}
+.table-of-contents li{
+    padding:2px 0;}
+.table-of-contents a{
+    display:inline-block;
+    font-weight:300;
+    color:#757575;
+    padding-left:20px;
+    height:1.5rem;
+    line-height:1.5rem;
+    letter-spacing:.4;
+}
+.table-of-contents a:hover{
+    color:#a8a8a8;
+    padding-left:19px;
+    border-left:1px solid #ea4a4f;
+}
+.table-of-contents a.active{
+    font-weight:500;
+    padding-left:18px;
+    border-left:2px solid #ea4a4f;
+}
+/* Font Import */
+@import url(https://fonts.googleapis.com/css?family=Poiret+One);/* Straight Letter */
+@import url(https://fonts.googleapis.com/css?family=Alex+Brush); /* Cursive */
+@import url(https://fonts.googleapis.com/css?family=Raleway:800,500); /* Railway Straight */
+@import url(https://fonts.googleapis.com/css?family=Parisienne);
+
+.railway {
+    font-family: 'Raleway', sans-serif;
+    font-weight:500;
+}
+.railwayBold {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 800;
+}
+.poiret {
+    font-family: 'Poiret One', cursive;
+}
+.alexBrush {
+    font-family: 'Alex Brush', cursive;
+} /* end of Font */
+
+.parisienne {
+    font-family: 'Parisienne', cursive;
+}
+.kristi {
+    font-family: 'Kristi', cursive;
+}
+
+/*******************************************
+**           Devicon Setup              **
+******************************************/
+.devicon-git-plain {
+    max-width: 2em;
+}
+
+/* if you want to change the original color */
+.devicon-git-plain path {
+    fill: #4691f6;
+}
+
+/*******************************************
+**      Material Design Icon Styling       *
+******************************************/
+@font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Material Icons'), local('MaterialIcons-Regular'), url(https://fonts.gstatic.com/s/materialicons/v17/2fcrYFNaTjcS6g4U3t-Y5RV6cRhDpPC5P4GCEJpqGoc.woff) format('woff');
+}
+
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Rules for sizing the icon. */
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
+
+/* Rules for using icons as black on a light background. */
+.material-icons.md-dark { color: rgba(0, 0, 0, 0.54); }
+.material-icons.md-dark.md-inactive { color: rgba(0, 0, 0, 0.26); }
+
+/* Rules for using icons as white on a dark background. */
+.material-icons.md-light { color: rgba(255, 255, 255, 1); }
+.material-icons.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }
+
+
+.main-content {
+    display: none;
+}
+
+
+/*******************************************
+*             Navbar Section             **
+*******************************************/
+/* Set index so parallax container doesn't over-ride */
+.navbar-fixed {
+    z-index: 1000;
+    opacity: 1;
+}
+
+#logo {
+    padding-top: 10px;
+    height: 50px;
+    width:35px;
+}
+/* Side-nav Hamburger Icon */
+.hambrgr {
+    color:#000;
+}
+.hambrgr:hover {
+    color: #e53935;
+}
+#hamburger {
+    padding-left: 15px;
+}
+
+#side-nav-x {
+    color:#000;
+    margin-left: -30px;
+}
+#side-nav-x:hover {
+    color: #e53935;
+}
+
+
+.xedOut {
+    margin-top: -60px;
+    float: left;
+    margin-left: 6px;
+}
+
+/* Hamburger animation
+#hamburger:hover {
+    animation-name: rotate;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+}
+@-webkit-keyframes rotate {
+    from {-webkit-transform: rotate(0deg); }
+    to {-webkit-transform: rotate(360deg);}
+} /* end of hamburger rotate animation */
+
+#navLogo {
+    margin-left: 20px;
+}
+
+.side-nav {
+    margin-top:64px;
+    width: 185px;
+}
+
+@media only screen and (min-width: 301px) {
+    nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
+        height: 64px;
+        line-height: 64px;
+    }
+    .navbar-fixed {
+        height: 64px;
+    }
+}
+
+
+
+.navLnkColor {
+    color: #000000;
+}
+/* Pushes right nav buttons away from right side */
+.nav-wrapper {
+    margin-right: 20px;
+}
+
+/* Badge - New style */
+span.badge.new {
+    font-weight: 300;
+    font-size: 0.8rem;
+    color: #fff;
+    background-color: #e53935;
+    border-radius: 2px;
+    padding: 5px;
+}
+.side-badge{
+    margin-left: 20px;
+}
+#side-badge {
+    margin-left: 10px;
+}
+/* Nav Drop Down Buttons Text Color */
+.navBtn {
+    background-color: #ffebee;
+    /*text-decoration: underline;*/
+}
+
+/* Drop Down Text Hover Color */
+#dropBtn:hover {
+    /* color: #00e676;
+     background-color: #212121;*/
+}
+.dropdown-content li > a, .dropdown-content li > span {
+    font-size: 16px;
+    color: #000000;
+    display: block;
+    line-height: 22px;
+    padding: 14px 16px;
+}
+
+.dropdown-content li:hover {
+    background-color: transparent;
+}  /* end Navbar Sstyling */
+
+/* Side Navigation */
+#side-navBtns {
+    color:black;
+}
+#exit {
+    color: #e53935;
+    font-size: 1.5rem;
+    font-weight:900;
+    height: 45px;
+}
+#exit:hover {
+    background-color: #fff;
+}
+#close-hvr:hover {
+    color: #b71c1c;
+}
+
+
+/****************************************
+  Scrollspy Navbar active button styling
+*****************************************/
+
+.scroll-content.fixed:not(.navButtons) {
+    position: fixed;
+}
+
+.scroll-content li:not(.navButtons)  {
+    padding: 2px 0;
+}
+
+.scroll-content a:not(.navButtons) {
+    display: inline-block;
+    font-weight: 300;
+    color: #000000;
+    padding-left: 20px;
+    height: 1.5rem;
+    line-height: 1.5rem;
+    letter-spacing: .4;
+    display: inline-block;
+}
+
+.scroll-content a:hover:not(.navButtons)  {
+    color: #000000;
+    background-color:white;
+    padding-left: 18px;
+    padding-bottom: 35px;
+    border-left: 2px solid #ff9800;
+    border-bottom: 2px solid #ff9800;
+}
+
+.scroll-content a.active:not(.navButtons)  {
+    font-weight: 500;
+    padding-left: 18px;
+    padding-bottom: 35px;
+    border-left: 2px solid #ea4a4f;
+    border-bottom: 2px solid #ea4a4f;
+}
+/* end of nav button scrollspy active styling */
+
+#navProj:hover {
+    color: #000000;
+    background-color:white;
+    padding-left: 18px;
+    padding-bottom: 35px;
+    border-left: 2px solid #ff9800;
+    border-bottom: 2px solid #ff9800;
+}
+#dropdown1 {
+    margin-top: 2px;
+}
+
+
+
+
+/********************************************
+**      Parallax & Hero-Video Section      **
+********************************************/
+.homepage-hero-module {
+    border-right: none;
+    border-left: none;
+    position: relative;
+}
+
+.no-video .video-container video,
+.touch .video-container video {
+    display: none;
+}
+
+.no-video .video-container .poster,
+.touch .video-container .poster {
+    display: block !important;
+}
+
+.video-container {
+    position: relative;
+    bottom: 0%;
+    left: 0%;
+    height: 50%;
+    width: 100%;
+    overflow: hidden;
+    background: transparent;
+}
+
+.video-container .title-container {
+    z-index: 997;
+    position: absolute;
+    top: 35%;
+    width: 100%;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px #000;
+}
+
+.video-container .filter {
+    z-index: 100;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.4);
+    width: 100%;
+    color: #ffffff;
+}
+
+.video-container video {
+    position: absolute;
+    z-index: 0;
+    height: 100%;
+}
+
+.video-container video.fillWidth {
+    width: 100%;
+}
+
+.para-text {
+    /*margin: 25%;*/
+}
+
+/* Cards for About Me Section */
+.card-about {
+    position: relative;
+    margin: 0.5rem 0 1rem 0;
+    background-color: #fff;
+    transition: box-shadow .25s;
+    border-radius: 2px;
+}
+
+.card-about .card-title {
+    font-size: 24px;
+    font-weight: 300;
+}
+
+.card-about .card-title.activator {
+    cursor: pointer;
+}
+
+.card-about .card-content {
+    padding: 0;
+    border-radius: 0 0 2px 2px;
+}
+
+.card-about .card-content p {
+    margin: 0;
+    color: inherit;
+}
+
+.card-about .card-content .card-title {
+    line-height: 48px;
+}
+
+.card-about .card-action {
+    position: relative;
+    background-color: inherit;
+    border-top: 1px solid rgba(160, 160, 160, 0.2);
+    padding: 20px;
+    z-index: 2;
+}
+
+.card-about .card-action a:not(.btn):not(.btn-large):not(.btn-floating) {
+    color: #ffab40;
+    margin-right: 20px;
+    transition: color .3s ease;
+    text-transform: uppercase;
+}
+
+.card-about:hover {
+    box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.cardimages {
+    padding: 10px;
+}
+
+.card-image-holder {
+    padding: 60px 0 60px 0;
+}
+
+
+.hoverable-dark:hover {
+    /*box-shadow: 0 27px 24px 0 rgba(0, 0, 0, 0.2), 0 40px 77px 0 rgba(0, 0, 0, 0.22);*/
+    -webkit-box-shadow: 0px 62px 41px 0px rgba(201,201,201,1);
+    -moz-box-shadow: 0px 62px 41px 0px rgba(201,201,201,1);
+    box-shadow: 0px 62px 41px 0px rgba(201,201,201,1);
+}
+
+.grey-block:hover #map_2:hover + #phone6s {
+    box-shadow: 0 27px 24px 0 rgba(0, 0, 0, 0.2), 0 40px 77px 0 rgba(0, 0, 0, 0.22);
+}
+.hoverable-dark-2 {
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.4s ease-in-out, border 0.12s ease-in-out;
+}
+
+.hoverable-dark-2:hover {
+    box-shadow: 0 27px 24px 0 rgba(0, 0, 0, 0.2), 0 40px 77px 0 rgba(0, 0, 0, 0.22);
+    border: 2px solid red;
+}
+
+
+#map_2:hover + .hoverable-dark-2  {
+    box-shadow: 0 27px 24px 0 rgba(0, 0, 0, 0.2), 0 40px 77px 0 rgba(0, 0, 0, 0.22);
+    border: 2px solid red;
+}
+
+/* Progress Bar Loader */
+/* Transition speed for progress bar */
+.progress {
+    position: relative;
+    height: 20px;
+    display: block;
+    width: 100%;
+    /*  background-color: #ffebee;*/
+    /*border-radius: 15px;*/
+    margin: 0.5rem 0 1rem 0;
+    overflow: hidden;
+}
+
+.progress-bar {
+    float: left;
+    height: 100%;
+    background-color: #b71c1c;
+    -webkit-transition: width 3s ease;
+    -o-transition: width 3s ease;
+    transition: width 3s ease;
+}  /* end progress bar styling */
+
+
+.hoverable:hover {
+    transition: box-shadow .25s;
+    box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+.modal.modal-fixed-footer {
+    padding: 0;
+    height: 55%;
+}
+
+
+
+
+
+/*******************************************
+*            About Me Section           **
+*******************************************/
+#about {
+    height: 700px;
+}
+/* Carousel Styling -- NOT CURRENTLY IN USE */
+.carousel {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 500px;
+    -webkit-perspective: 500px;
+    perspective: 500px;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transform-origin: 0% 50%;
+    transform-origin: 0% 50%;
+}
+
+.carousel .carousel-item {
+    width: 450px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    /*border-right: 2px solid #e53935;
+    border-left: 2px solid #e53935;*/
+    padding-top:15px;
+    padding-bottom: 10px;
+}/* END Carousel Styling -- NOT CURRENTLY IN USE */
+
+/* ICON Centering
+.bee {
+    vertical-align: middle;
+    padding-bottom: 5px;
+    margin-right: 5px;
+}*/
+
+.tabs .tab a {
+    color: #424242;
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    transition: color .28s ease;
+}
+
+.tabs .tab a:hover {
+    color: #9e9e9e;
+}
+
+.tabs .indicator {
+    position: absolute;
+    bottom: 0;
+    height: 5px;
+    background-color: #f44336;
+    will-change: left, right;
+}
+
+#about-tab-row {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+/* Keeps skill graph card from displaying
+    quickly when the page loads */
+#skill-card {
+    display:none;
+}
+/* Progress Bar Loader */
+/* Transition speed for progress bar */
+.progress {
+    position: relative;
+    min-height: 1.25em;
+    display: block;
+    width: 100%;
+    background-color: #ffffff;
+    /*border-radius: 15px;*/
+    margin: 0.5rem 0 1rem 0;
+    overflow: hidden;
+}
+/*  HTML/CSS Skills Graph Bar */
+.progress-bar-1 {
+    float: left;
+    height: 100%;
+    background-color: #b71c1c;
+    -webkit-transition: width 3s ease;
+    -o-transition: width 3s ease;
+    transition: width 3s ease;
+}
+/* Javascript Skills Graph Bar */
+.progress-bar-2 {
+    float: left;
+    height: 100%;
+    background-color: #b71c1c;
+    -webkit-transition: width 3s ease;
+    -o-transition: width 3s ease;
+    transition: width 3s ease;
+}
+/* C# Skills Graph Bar */
+.progress-bar-3 {
+    float: left;
+    height: 100%;
+    background-color: #b71c1c;
+    -webkit-transition: width 3s ease;
+    -o-transition: width 3s ease;
+    transition: width 3s ease;
+}
+/*  C++ Skills Graph Bar */
+.progress-bar-4 {
+    float: left;
+    height: 100%;
+    background-color: #b71c1c;
+    -webkit-transition: width 3s ease;
+    -o-transition: width 3s ease;
+    transition: width 3s ease;
+}
+/* PHP MYSQL Skills Graph Bar */
+.progress-bar-5 {
+    float: left;
+    height: 100%;
+    background-color: #b71c1c;
+    -webkit-transition: width 3s ease;
+    -o-transition: width 3s ease;
+    transition: width 3s ease;
+} /* end progress bar styling */
+
+/* Gets rid of empty right space on Skills Table Language Column */
+td .x-space {
+
+}
+
+/* Btn styling for Skills graph */
+.graph-btn {
+    color: #ffab40;
+    background-color: transparent;
+}
+
+
+/* Google Map Styling for iPhone device -- inside Location in about me */
+#map_2 {
+    /*display: none;*/
+    z-index:120;
+    position: absolute;
+    margin: 0 auto;
+    height: 502px;
+    width: 285px;
+    /*box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+    background-color: #000000;
+}
+
+/* Iphone 6s Image Positioning and styling */
+#phone6s {
+    visibility: visible;
+    position: relative;
+    height: 652px;
+    width: 325px;
+    margin-left: auto;
+    margin-right: auto;
+    left: -20px;
+    margin-top: -74px;
+    border-radius: 45px 45px 45px 45px;
+    -moz-border-radius: 45px 45px 45px 45px;
+    -webkit-border-radius: 45px 45px 45px 45px;
+
+}
+
+/* Block holding iphone image and google maps */
+.grey-block {
+    height: 502px;
+    width: 285px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 200px;
+    margin-top: 100px;
+}
+#fcc-logo {
+    height: 40px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+/* Neit logo in Education - About Me */
+#neit-logo {
+    height: 60px;
+    width: 295px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.fcc-btn {
+    margin-left: 30px;
+}
+/*
+#course-list-neit {
+    margin-left: -25px;
+}*/
+/* PTK logo in Education - About Me */
+#phi-theta-logo {
+    height: 85px;
+    padding-bottom: 5px;
+    margin-bottom:13px;
+}
+
+#red-star {
+    color: red;
+}
+
+#orange-star {
+    color: #ff9800;
+}
+
+.course-head {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.icon-star-center {
+    vertical-align: middle;
+}
+
+
+/*******************************************
+*             Project Section            **
+*******************************************/
+#projects {
+    margin-top: 60px;
+}
+/* Card Reveal Button */
+.btn-floating:hover {
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0), 0 0 0 0 rgba(0, 0, 0, 0);
+}
+/* Card Reveal Button Styling - Transitions */
+#card-hvr-btn {
+    margin-top: -30px;
+    -webkit-transition: -webkit-transform 1s ease-in-out;
+    transition: rotate 360deg 1s ease-in-out;
+}
+/* Card Reveal Button Styling - Hover Rotation */
+#card-hvr-btn:hover {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+}
+/* Card Reveal Button OG Color */
+.btn-card-hvr {
+    background-color: #f44336;
+}
+/* Card Reveal Button Hover Color */
+.btn-card-hvr:hover {
+    background-color: #fb8c00;
+}
+/* Overlay */
+#overlay {
+    background: rgb(0, 0, 0); /* fallback color */
+    background: rgba(0, 0, 0, 0.7);
+}
+/* Zoom Affect transitioning */
+.zooming {
+    background-position: center;
+    transition: all .5s ease;
+}
+/* Zoom affect on hover */
+.zooming:hover {
+    cursor: pointer;
+    background-size: 150%;
+}
+
+/* Needed for the zoom affect on card-image to work */
+.card {
+    overflow: hidden;
+    transform: translate3d(0,0,0);
+}
+/* Needed for the card-image zoom affect to work on chrome */
+.card-image {
+    overflow: hidden;
+    transform: translate3d(0,0,0);
+}
+/* Card image zoom transition */
+.img-card-container  {
+    overflow: hidden;
+    max-width: 100%;
+    -webkit-transition: all 0.9s ease; /* Safari and Chrome */
+    -moz-transition: all 0.9s ease; /* Firefox */
+    -ms-transition: all 0.9s ease; /* IE 9 */
+    -o-transition: all 0.9s ease; /* Opera */
+    transition: all 0.9s ease;
+}
+/* Card image zoom scale styling */
+.img-card-container:hover  {
+    -webkit-transform:scale(1.25); /* Safari and Chrome */
+    -moz-transform:scale(1.25); /* Firefox */
+    -ms-transform:scale(1.25); /* IE 9 */
+    -o-transform:scale(1.25); /* Opera */
+    transform:scale(1.25);
+}
+
+
+/*******************************************
+*              Tools Section             **
+*******************************************/
+#tools {
+    margin-top: 30px;
+    position: relative;
+    z-index: 998;
+    background-color: rgba(255,255,255,0.9);
+    padding-bottom: 30px;
+}
+#tool-header{
+    position: relative;
+    /*margin:;*/
+}
+#tools-parallax {
+    margin-top: 30px;
+    margin-bottom:30px;
+    position: relative;
+    z-index: 900;
+}
+
+@media only screen and (min-width: 1100px) {
+    #tools {
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+}
+/* Tool Icon padding + Syling */
+.tool-icons {
+    margin-bottom: 5px;
+    overflow: visible;
+    /*background-color:rgba(255,255,255,.9);*/
+}
+/* Row holding 4 tool icons each */
+#tool-row {
+    margin-top: 30px;
+}
+/* Setting rows position to relative for animation */
+.row .col.s3 {
+    position: relative;
+}
+/* Text for Icons */
+.icon-text {
+    font-size:1.2rem;
+    text-align: center;
+    position: absolute;
+    /* Keeps icon text centered */
+    right:0;
+    left:0;
+    color: #000000;
+}
+#mat-icon {
+    height:84px;
+    width: 106px;
+    padding: 20px;
+    background-color: #f44336;
+}
+#mat-icon-after {
+    height:84px;
+    width: 106px;
+    padding: 20px;
+    background-color: #ffffff;
+}
+.mat-svg {
+    height:84px;
+    width: 106px;
+    /*width: 100%; height: auto;
+     height: 96px;
+     width: 106px;
+     margin-bottom: -15px;*/
+    fill:#f44336;
+}
+.mat-svg:hover {
+    fill: none;
+}
+image #svg_1 {
+    fill:#f44336;
+}
+/* Icon Hover Styling */
+.devicon-html5-plain.colored,.devicon-css3-plain.colored,.devicon-javascript-plain.colored,
+.devicon-jquery-plain.colored,.devicon-bootstrap-plain.colored,.devicon-cplusplus-plain.colored,
+.devicon-csharp-plain.colored,.devicon-jetbrains-plain.colored,.devicon-git-plain.colored,
+.devicon-foundation-plain.colored,.devicon-php-plain.colored,.devicon-mysql-plain.colored,
+.devicon-sass-original.colored,.devicon-photoshop-line.colored,.devicon-illustrator-line.colored,
+.devicon-github-plain.colored,.devicon-trello-plain.colored,.devicon-dot-net-plain.colored {
+    color: #f44336;
+    transition: 0.3s;
+}
+/*************************/
+.devicons.devicons-materializecss{
+    /*color: #f44336;*/
+    color: #ffffff;
+    background-color: #f44336;
+    transition: 0.3s;
+}
+
+/****************************/
+.devicon-html5-plain.colored:hover {
+    color: #ef6c00;
+}
+
+.devicon-css3-plain.colored:hover {
+    color: #3d8fc6;
+}
+.devicon-javascript-plain.colored:hover {
+    color: #f0db4f;
+    background-color: #000;
+}
+.devicon-jquery-plain.colored:hover {
+    color: #0769ad;
+}
+.devicon-bootstrap-plain.colored:hover {
+    color: #59407f;
+}
+.devicon-cplusplus-plain.colored:hover {
+    color: #9c033a;
+}
+.devicon-csharp-plain.colored:hover {
+    color: #68217a;
+}
+.devicon-jetbrains-plain.colored:hover {
+    color: #F68B1F;
+}
+.devicon-git-plain.colored:hover {
+    color: #f34f29;
+}
+.devicon-foundation-plain.colored:hover {
+    color: #008cba;
+}
+.devicon-php-plain.colored:hover {
+    color: #6181b6;
+}
+.devicon-mysql-plain.colored:hover {
+    color: #00618a;
+}
+.devicon-sass-original.colored:hover{
+    color: #cc6699;
+}
+.devicons.devicons-materializecss:hover {
+    /* color: #EA717A;
+     background-color: #ffffff;
+     -webkit-box-shadow:inset 0px 0px 0px 5px #EA717A;
+     -moz-box-shadow:inset 0px 0px 0px 5px #EA717A;
+     box-shadow:inset 0px 0px 0px 5px #EA717A;*/
+    color:#f44336;
+    background-color: transparent;
+}
+.devicon-photoshop-line.colored:hover {
+    color: #80b5e2;
+}
+.devicon-illustrator-line.colored:hover{
+    color: #faa625;
+    transition: 0.3s;
+}
+.devicon-github-plain.colored:hover {
+    /*color: #181616;*/
+    color:#4a148c;
+}
+
+/* Visual Studio Icon */
+.vs-icon{
+    background-color:#f44336;
+    height:90px;
+    width:90px;
+    transition: 0.3s;
+}
+.vs-icon:hover {
+    background-color: #4a148c;
+}
+.devicon-trello-plain.colored:hover {
+    color: #23719f;
+}
+.devicon-dot-net-plain.colored:hover {
+    color: #1384c8;
+}
+/*******************************************
+*           Blog Section Website         **
+*******************************************/
+#blog {
+    /*
+        background-image: url("../images/assets/computer-setup.jpeg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 100%;*/
+}
+
+/*******************************************
+*            Contact Me Section          **
+*******************************************/
+.soc-icon-row {
+    padding: 70px 0 70px 0;
+}
+.card-form {
+    margin-top: 0;
+    padding: 30px;
+}
+
+/* Set a size for our map container, the Google Map will take up 100% of this container */
+#map {
+    height: 510px;
+    width: 100%;
+    box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: #000000;
+}
+
+@media only screen and (max-width:992px){
+    /* styles for mobile browsers smaller than 480px; (iPhone) */
+    #map {
+        margin-top: 20px;
+        height: 510px;
+        box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        background-color: #000000;
+    }
+}
+
+/* label color */
+.input-field label {
+    color: #000000;
+}
+/* label focus color */
+.input-field input[type=text]:focus + label {
+    color: #f44336 ;
+}
+/* Text &  underline color */
+.input-field input[type=text] {
+    color: #f44336;
+    border-bottom: 2px solid #000000;
+}
+/*  Text & underline focus color*/
+.input-field input[type=text]:focus {
+    color: #000000;
+    border-bottom: 2px solid #f44336;
+    box-shadow: 0 0 0 0 #f44336;
+}
+
+/* valid color */
+.input-field input[type=text].valid {
+    border-bottom: 2px solid #000;
+    box-shadow: 0 0 0 0;
+}
+/* Valid focus color */
+.input-field input[type=text]:focus.valid {
+    border-bottom: 2px solid #f44336;
+    box-shadow: 0 0 0 0 #f44336;
+}
+/* invalid color */
+.input-field input[type=text].invalid {
+    border-bottom: 1px solid #000;
+    box-shadow: 0 1px 0 0 #000;
+}
+
+/* icon prefix focus color */
+.input-field .prefix.active {
+    color: #f44336 ;
+}
+
+/* Text Area border size and color on focus */
+textarea.materialize-textarea:focus:not([readonly]) {
+    color: #000;
+    border-bottom: 2px solid #f44336;
+    box-shadow: 0 0 0 0 #f44336;
+}
+
+/* Text area label color on focus */
+textarea.materialize-textarea:focus:not([readonly]) + label {
+    color: #f44336;
+}
+
+/* Text area border and text color when not active/focuses */
+textarea.materialize-textarea {
+    color: #f44336;
+    border-bottom: 2px solid #000000;
+
+}
+
+/* Float */
+.hvr-float {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+}
+.hvr-float:hover, .hvr-float:focus, .hvr-float:active {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+}
+
+/*******************************************
+*              Blog Section              **
+*******************************************/
+
+/*******************************************
+*           Animation Section           **
+*******************************************/
+/* Animate CSS */
+/*
+ *   http://daneden.me/animate
+ * Version - 3.5.1
+ * Licensed under the MIT license - http://opensource.org/licenses/MIT
+ *
+ * Copyright (c) 2016 Daniel Eden
+ */
+
+
+.animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-backface-visibility: hidden;
+}
+
+@-webkit-keyframes fadeInDown {
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(0, -100%, 0);
+        transform: translate3d(0, -100%, 0);
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(0, -100%, 0);
+        transform: translate3d(0, -100%, 0);
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+
+.fadeInDown {
+    -webkit-animation-name: fadeInDown;
+    animation-name: fadeInDown;
+}
+
+
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 100%, 0);
+        transform: translate3d(0, 100%, 0);
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+
+.fadeInUp {
+    -webkit-animation-name: fadeInUp;
+    animation-name: fadeInUp;
+}
+
+
+
+
+@-webkit-keyframes fadeOutUp {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+        -webkit-transform: translate3d(0, -100%, 0);
+        transform: translate3d(0, -100%, 0);
+    }
+}
+
+@keyframes fadeOutUp {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+        -webkit-transform: translate3d(0, -100%, 0);
+        transform: translate3d(0, -100%, 0);
+    }
+}
+
+.fadeOutUp {
+    -webkit-animation-name: fadeOutUp;
+    animation-name: fadeOutUp;
+}
+
+
+
+
+@-webkit-keyframes rotateOut {
+    from {
+        -webkit-transform-origin: center;
+        transform-origin: center;
+        opacity: 1;
+    }
+
+    to {
+        -webkit-transform-origin: center;
+        transform-origin: center;
+        -webkit-transform: rotate3d(0, 0, 1, 200deg);
+        transform: rotate3d(0, 0, 1, 200deg);
+        opacity: 0;
+    }
+}
+
+@keyframes rotateOut {
+    from {
+        -webkit-transform-origin: center;
+        transform-origin: center;
+        opacity: 1;
+    }
+
+    to {
+        -webkit-transform-origin: center;
+        transform-origin: center;
+        -webkit-transform: rotate3d(0, 0, 1, 200deg);
+        transform: rotate3d(0, 0, 1, 200deg);
+        opacity: 0;
+    }
+}
+
+.rotateOut {
+    -webkit-animation-name: rotateOut;
+    animation-name: rotateOut;
+}
+
+
+
+@-webkit-keyframes rotateIn {
+    from {
+        -webkit-transform-origin: center;
+        transform-origin: center;
+        -webkit-transform: rotate3d(0, 0, 1, -200deg);
+        transform: rotate3d(0, 0, 1, -200deg);
+        opacity: 0;
+    }
+
+    to {
+        -webkit-transform-origin: center;
+        transform-origin: center;
+        -webkit-transform: none;
+        transform: none;
+        opacity: 1;
+    }
+}
+
+@keyframes rotateIn {
+    from {
+        -webkit-transform-origin: center;
+        transform-origin: center;
+        -webkit-transform: rotate3d(0, 0, 1, -200deg);
+        transform: rotate3d(0, 0, 1, -200deg);
+        opacity: 0;
+    }
+
+    to {
+        -webkit-transform-origin: center;
+        transform-origin: center;
+        -webkit-transform: none;
+        transform: none;
+        opacity: 1;
+    }
+}
+
+.rotateIn {
+    -webkit-animation-name: rotateIn;
+    animation-name: rotateIn;
+}
+
+
+
+@-webkit-keyframes slideInUp {
+    from {
+        -webkit-transform: translate3d(0, 100%, 0);
+        transform: translate3d(0, 100%, 0);
+        visibility: visible;
+    }
+
+    to {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes slideInUp {
+    from {
+        -webkit-transform: translate3d(0, 100%, 0);
+        transform: translate3d(0, 100%, 0);
+        visibility: visible;
+    }
+
+    to {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.slideInUp {
+    -webkit-animation-name: slideInUp;
+    animation-name: slideInUp;
+}
+
+
+@-webkit-keyframes zoomInDown {
+    from {
+        opacity: 0;
+        -webkit-transform: scale3d(.1, .1, .1) translate3d(0, -1000px, 0);
+        transform: scale3d(.1, .1, .1) translate3d(0, -1000px, 0);
+        -webkit-animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
+        animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
+    }
+
+    60% {
+        opacity: 1;
+        -webkit-transform: scale3d(.475, .475, .475) translate3d(0, 60px, 0);
+        transform: scale3d(.475, .475, .475) translate3d(0, 60px, 0);
+        -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
+        animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
+    }
+}
+
+@keyframes zoomInDown {
+    from {
+        opacity: 0;
+        -webkit-transform: scale3d(.1, .1, .1) translate3d(0, -1000px, 0);
+        transform: scale3d(.1, .1, .1) translate3d(0, -1000px, 0);
+        -webkit-animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
+        animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
+    }
+
+    60% {
+        opacity: 1;
+        -webkit-transform: scale3d(.475, .475, .475) translate3d(0, 60px, 0);
+        transform: scale3d(.475, .475, .475) translate3d(0, 60px, 0);
+        -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
+        animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
+    }
+}
+
+.zoomInDown {
+    -webkit-animation-name: zoomInDown;
+    animation-name: zoomInDown;
+}
+
+
+/* Colors */
+.greysee {
+    background-color: #454545;
+}
+
+#btn-small {
+    border-color: red;
+    border-style: solid;
+    border-width: 1px 1px 0px 1px;
+}
+
+/* course list modal */
+#modal1 {
+    height: 1000px;
+}
+.modal {
+    background-color: #ffffff;
+    overflow: visible;
+}
+
+.modal.bottom-sheet {
+    top: auto;
+    bottom: -100%;
+    margin: 0;
+    width: 100%;
+    max-height: 45%;
+    border-radius: 0;
+    will-change: bottom, opacity;
+}
+
+/* Modal Button that closes */
+#bottom-modal-btn {
+    margin-top: -58px;
+    border-color: red;
+    border-style: solid;
+    border-width: 1px 1px 0px 1px;
+
+}
+.parallax-container {
+    position: relative;
+    overflow: hidden;
+    height: 600px;
+    margin-top: -63px;
+
+}
+
+.parallax-container-tools {
+    position: relative;
+    overflow: hidden;
+    height: 700px;
+    margin-top: -63px;
+
+}
+
+#fixBotRight {
+    display: none;
+}
+
+
+
+.material-tooltip {
+    padding: 16px 8px;
+    font-size: 1rem;
+    z-index: 2000;
+    border-radius: 2px;
+    background-color: #e53935;
+    color: #fff;
+    min-height: 36px;
+    line-height: 120%;
+    opacity: 0;
+    display: none;
+    position: absolute;
+    text-align: center;
+    max-width: 5000px;
+    overflow: hidden;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+    will-change: top, left;
+    -webkit-box-shadow: 3px 38px 64px 5px rgba(0, 0, 0, 0.41);
+    -moz-box-shadow: 3px 38px 64px 5px rgba(0, 0, 0, 0.41);
+    box-shadow: 3px 38px 64px 5px rgba(0, 0, 0, 0.41);
+}
+
+.backdrop {
+    background-color: transparent;
+}
+
