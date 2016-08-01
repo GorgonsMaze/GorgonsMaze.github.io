@@ -489,6 +489,7 @@ span.badge.new {
     border: 2px solid red;
 }
 
+
 /* Progress Bar Loader */
 /* Transition speed for progress bar */
 .progress {
@@ -524,14 +525,46 @@ span.badge.new {
 }
 
 
+/* Hover box shadow for skills card in about me */
+.shadow-hvr:hover {
+    transition: box-shadow .25s;
+    -webkit-box-shadow: 0px 79px 77px -20px rgba(199,199,199,1);
+    -moz-box-shadow: 0px 79px 77px -20px rgba(199,199,199,1);
+    box-shadow: 0px 79px 77px -20px rgba(199,199,199,1);
+}
 
+/* Resume Styling */
+.resume-display {
+    height: 1250px;
+    position: relative;
+    padding-bottom:30px;
 
-
+}
 /*******************************************
 *            About Me Section           **
 *******************************************/
 #about {
-    height: 700px;
+ /*   height: 700px;*/
+}
+
+.signature {
+    font-size: 24px;
+}
+.card-text {
+    margin-left: 10px;
+    margin-right:10px;
+}
+/*
+#about-img {
+    background: #ffffff;
+    background: url("https://hd.unsplash.com/photo-1457419655743-2e0acc6b5122") no-repeat;
+    background-position: 50%;
+}
+*/
+
+#background-card {
+    padding-left: 10px;
+    padding-right: 10px;
 }
 /* Carousel Styling -- NOT CURRENTLY IN USE */
 .carousel {
@@ -730,6 +763,12 @@ td .x-space {
     margin-bottom:13px;
 }
 
+@media only screen and (max-width: 600px) {
+    .btm-padding {
+        margin-bottom: 30px !important;
+    }
+}
+
 #red-star {
     color: red;
 }
@@ -747,12 +786,73 @@ td .x-space {
     vertical-align: middle;
 }
 
+/* School Modal */
 
+
+
+@media only screen and (max-width: 1000px) {
+    #modal1 {
+        width:80%;
+    }
+}
+
+@media only screen and (max-width: 840px) {
+    #modal1 {
+        width:99%;
+    }
+
+}
+
+
+/* Phone Speech Bubble */
+p.bubble {
+    position: relative;
+    width:200px;
+    height:100px;
+    text-align: center;
+    background-color: #ffffff;
+    border:8px solid #000000;
+    -webkit-border-radius:10px;
+    -moz-border-radius:10px;
+    border-radius:10px;
+    padding: 30px;
+    font-size: larger;
+    /*-webkit-box-shadow: 3px 3px 5px #b7b7b7;
+    -moz-box-shadow: 3px 3px 5px #b7b7b7;
+    box-shadow: 3px 3px 5px #b7b7b7;*/
+}
+p.bubble:before {
+    content: '';
+    position: absolute;
+    width:0;
+    height:0;
+    left: 30px;
+    top: 100px;
+    border: 25px solid;
+    border-color: #2c2c2c transparent transparent #2c2c2c;
+    margin-top:-16px;
+}
+p.bubble:after {
+    content: '';
+    position: absolute;
+    width:0;
+    height:0;
+    left:38px;
+    top:100px;
+    border:15px solid;
+    border-color: #ffffff transparent transparent #ffffff;
+    margin-top:-16px;
+}
+
+.outside-bubble {
+    margin: 30px;
+}
 /*******************************************
 *             Project Section            **
 *******************************************/
 #projects {
     margin-top: 60px;
+    clear: both;
 }
 /* Card Reveal Button */
 .btn-floating:hover {
@@ -822,6 +922,14 @@ td .x-space {
     transform:scale(1.25);
 }
 
+/* Pagination Styling */
+.pagination li.active {
+    background-color: #f44336;
+    color: #ffffff;
+}
+.pagination {
+    margin-top: 60px;
+}
 
 /*******************************************
 *              Tools Section             **
@@ -1118,6 +1226,33 @@ textarea.materialize-textarea {
 .hvr-float:hover, .hvr-float:focus, .hvr-float:active {
     -webkit-transform: translateY(-8px);
     transform: translateY(-8px);
+}
+
+
+
+@media only screen and (min-width:1438px){
+    /* add padding to map and form on outer left and right */
+
+    .form-padding {
+        padding: 0 25px 0 50px !important;
+    }
+
+    .map-padding {
+        padding: 0 50px 0 25px !important;
+    }
+}
+
+
+@media only screen and (min-width:1600px){
+    /* add padding to map and form on outer left and right */
+
+    .form-padding {
+        padding: 0 50px 0 100px !important;
+    }
+
+    .map-padding {
+        padding: 0 100px 0 50px !important;
+    }
 }
 
 /*******************************************
