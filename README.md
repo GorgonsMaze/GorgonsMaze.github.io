@@ -1,32 +1,35 @@
 # gorgonsmaze.github.io
 
-![Statys](https://img.shields.io/badge/Complete-67%25-orange.svg)
+![Statys](https://img.shields.io/badge/Complete-75%25-orange.svg)
 
 Portfolio Website for Ian Arsenault.
 
 Currently being built to host personal projects, write-ups about programs, and display personal information in relation to software engineering and web development
 
 #To-Do's [Main]
-* About Section
-   * About
-    - [x] Education
-    - [x] Skills
-    - [x] Location
-   * Resume
+* Respnsiveness
+ * Social Media Icons
+ * Tool Icons
+ * Navigation Bar for scroll devices
+ * modal on mobile devices
 * Project Section
   * Pushpin side-bar with tabs or ajax load of project display cards
 * Blog Section
-  * Blog post with link to blog page/ blog site 
-* Footer with credits and information about site - assets used etc  
+  * Blog post with link to blog page/ blog site
+* Email through Contact Form
+* Footer with credits and information about site - assets used etc
+* Google Maps Scroll Issue's with full width/screen
  
 # Completed [Main]
+- [x] About Section
+    - [x] About
+    - [x] Education
+    - [x] Skills
+    - [x] Location
+    - [x] Resume
 - [x]  Contact Section
-  * Social media links
-  * Contact form to send me an email
-  * Google Maps for location
-- [x]  Tool Section
-  * tool animation - color change / name reveal
-  * tool icons
+- [x]  Tools Section
+
   
 
 # Completed [Specific Details]
@@ -39,4 +42,8 @@ Currently being built to host personal projects, write-ups about programs, and d
 - [x] Image zoom on hover inside card
 - [x] Button animations with css - hover
 - [x] Preloader animation for skills graph + Preloader for page
-- [x] Navbar Scroll functionalit
+- [x] Navbar Scroll functionality
+- [x] tool animation - color change / name reveal
+- [x] Social media links
+- [x] Contact form to send me an email
+- [x] Google Maps for location
