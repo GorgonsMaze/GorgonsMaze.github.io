@@ -7,6 +7,7 @@ Portfolio Website for Ian Arsenault.
 Currently being built to host personal projects, write-ups about programs, and display personal information in relation to software engineering and web development
 
 #To-Do's [Main]
+* Parallax text long shadow and animation on load and scroll
 * Respnsiveness
  * Social Media Icons
  * Tool Icons
