@@ -554,6 +554,16 @@ span.badge.new {
     margin-left: 10px;
     margin-right:10px;
 }
+.grey-transition {
+    -webkit-transition: background-color 3s ease-out;
+    -moz-transition: background-color 3s ease-out;
+    -ms-transition: background-color 3s ease-out;
+    -o-transition: background-color 3s ease-out;
+    transition: background-color 3s ease-out;
+}
+.grey-transition:hover {
+    background-color: #ededed;
+}
 /*
 #about-img {
     background: #ffffff;
