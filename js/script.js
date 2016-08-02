@@ -1,12 +1,6 @@
-
-
-
 /**
  * Created by ianarsenault on 6/21/16.
  */
-
-
-
 $(document).ready(function(){
     $(".main-content").fadeIn(1000);
 
@@ -28,9 +22,7 @@ $(document).ready(function(){
 
     $('.parallax').parallax();
 
-
     $('ul.tabs').tabs();
-
 
     /* the "href" attribute of .modal-trigger must specify
      * the modal ID that wants to be triggered  */
@@ -65,7 +57,6 @@ $(document).ready(function(){
     });
 
 
-
     $("#skills-bar, #refresh-graph").on('click', function(e) {
         /* Restart animation from beginning */
         $( "div" ).css({
@@ -95,11 +86,9 @@ $(document).ready(function(){
         e.preventDefault();
     });
 
-
     /*$(".progress-bar").animate( {
      width: "100%"
      }, 200 );*/
-
 
     /* Icon text fades on load */
     $(".icon-text").fadeOut();
@@ -110,8 +99,6 @@ $(document).ready(function(){
      }, function () {
      $('#html5-text').removeClass('animated');
      }); */
-
-
 
     /* Tools */
     $(".devicon-html5-plain").hover(function () {
@@ -270,8 +257,7 @@ $(document).ready(function(){
         padding: 0,
         width: 0
     });
-
-
+    
     /* Fixed Navbar Scroll */
     var lastScrollTop = 0;
     var navbar = $('.navbar-fixed');
