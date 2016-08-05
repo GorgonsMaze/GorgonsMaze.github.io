@@ -1,3 +1,41 @@
+
+.p-container {
+    height: 500px;
+}
+.fixed-img {
+    background: url("https://web3canvas.com/wp-content/uploads/2014/02/littlevisuals-high-quality-hd-banner-images-stock-photos-free-laptop-topview-download.jpg") no-repeat;
+    position: fixed;
+    width: 100%;
+    left: 0;
+    background-size: 100%;
+    background-position: 0 0; /* x y position change */
+    height: 100%;
+    z-index: -1;
+    margin-bottom:0;
+}
+#blankspace {
+    height: 1500px;
+    background-color: grey !important;
+    z-index:100;
+    clear: both;
+}
+
+@media (max-width:776px) {
+    .p-container {
+        height: 400px;
+    }
+}
+
+@media (max-width:618px) {
+    .p-container {
+        height: 300px;
+    }
+}
+@media (max-width:465px) {
+    .p-container {
+        height: 250px;
+    }
+}
 /*******************************************
 *     Ian Arsenault Portfolio Website     **
 *******************************************/
@@ -307,7 +345,6 @@ span.badge.new {
     height: 1.5rem;
     line-height: 1.5rem;
     letter-spacing: .4;
-    display: inline-block;
 }
 
 .scroll-content a:hover:not(.navButtons)  {
@@ -325,9 +362,26 @@ span.badge.new {
     padding-bottom: 35px;
     border-left: 2px solid #ea4a4f;
     border-bottom: 2px solid #ea4a4f;
+    transition: padding-bottom 0.5s ease-in-out;
 }
 /* end of nav button scrollspy active styling */
+/*.scroll-content a {
+    display: inline-block;
+    font-weight: 300;
+    color: #000000;
+    padding-left: 20px;
+}
+.scroll-content a:hover  {
+    color: greenyellow;
+    background-color:black;
+}
 
+.scroll-content a.active  {
+    font-weight: 500;
+    background-color: blue;
+    color: white;
+}*/
+/* Navigation project hover
 #navProj:hover {
     color: #000000;
     background-color:white;
@@ -338,7 +392,7 @@ span.badge.new {
 }
 #dropdown1 {
     margin-top: 2px;
-}
+} */
 
 
 
@@ -545,6 +599,17 @@ span.badge.new {
 *******************************************/
 #about {
  /*   height: 700px;*/
+}
+
+.grey-transition {
+    -webkit-transition: background-color 3s ease-out;
+    -moz-transition: background-color 3s ease-out;
+    -ms-transition: background-color 3s ease-out;
+    -o-transition: background-color 3s ease-out;
+    transition: background-color 3s ease-out;
+}
+.grey-transition:hover {
+    background-color: #ededed;
 }
 
 .signature {
