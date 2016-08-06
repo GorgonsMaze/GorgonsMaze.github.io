@@ -263,24 +263,28 @@ $(document).ready(function(){
     var navbar = $('.navbar-fixed');
     $(window).scroll(function() {
         var y = $(this).scrollTop();
-        /*if (y > lastScrollTop) {
+        // If scrolltop point is greater than last scroll position
+        if (y > lastScrollTop) {
             // scrolling down code
             //alert("down");
+            // Change navbar opacity to almost transparent
             navbar.css({
-                visibility: "hidden",
+                //visibility: "hidden",
                 transition: "opacity 0.5s linear",
-                opacity: 0
+                opacity: 0.2
             });
         } else {
             // scrolling up code
             //alert("up");
+            // If it's scrolling up lose opacity
             navbar.css({
                 visibility: "visible",
                 transition: "opacity 0.5s linear",
                 opacity: 1
             });
 
-        }*/
+        }
+        // If scroll point  is at the same last scrollpoint after .5 seconds lose opacity
         lastScrollTop = y;
         var scrolly = $('body').scrollTop();
         setTimeout(function () {
