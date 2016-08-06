@@ -106,6 +106,22 @@
         // When the window has finished loading create our google map below
         google.maps.event.addDomListener(window, 'load', init);
         //google.maps.event.addDomListener(window, 'load', initTabMap);
+
+        google.maps.event.addListener(map, 'mousedown', function (event) {
+            this.setOptions({scrollwheel:true});
+        });
+
+        google.maps.event.addListener(map, 'mouseover', function(event){
+            self = this;
+            timer = setTimeout(function() {
+                self.setOptions({scrollwheel:true});
+            }, 1000);
+        });
+
+        google.maps.event.addListener(map, 'mouseout', function(event){
+            this.setOptions({scrollwheel:false});
+            clearTimeout(timer);
+        });
     </script>
 </head>
 <body>
