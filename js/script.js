@@ -263,7 +263,7 @@ $(document).ready(function(){
     var navbar = $('.navbar-fixed');
     $(window).scroll(function() {
         var y = $(this).scrollTop();
-        if (y > lastScrollTop) {
+        /*if (y > lastScrollTop) {
             // scrolling down code
             //alert("down");
             navbar.css({
@@ -280,7 +280,7 @@ $(document).ready(function(){
                 opacity: 1
             });
 
-        }
+        }*/
         lastScrollTop = y;
         var scrolly = $('body').scrollTop();
         setTimeout(function () {
