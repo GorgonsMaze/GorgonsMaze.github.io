@@ -89,6 +89,22 @@
                 title: 'Somewhere around here!'
             });
 
+            google.maps.event.addListener(map, 'mousedown', function (event) {
+                this.setOptions({scrollwheel:true});
+            });
+
+            google.maps.event.addListener(map, 'mouseover', function(event){
+                self = this;
+                timer = setTimeout(function() {
+                    self.setOptions({scrollwheel:true});
+                }, 1000);
+            });
+
+            google.maps.event.addListener(map, 'mouseout', function(event){
+                this.setOptions({scrollwheel:false});
+                clearTimeout(timer);
+            });
+
         }
 
         function waitForMap() {
@@ -107,21 +123,6 @@
         google.maps.event.addDomListener(window, 'load', init);
         //google.maps.event.addDomListener(window, 'load', initTabMap);
 
-        google.maps.event.addListener(map, 'mousedown', function (event) {
-            this.setOptions({scrollwheel:true});
-        });
-
-        google.maps.event.addListener(map, 'mouseover', function(event){
-            self = this;
-            timer = setTimeout(function() {
-                self.setOptions({scrollwheel:true});
-            }, 1000);
-        });
-
-        google.maps.event.addListener(map, 'mouseout', function(event){
-            this.setOptions({scrollwheel:false});
-            clearTimeout(timer);
-        });
     </script>
 </head>
 <body>
@@ -177,9 +178,9 @@
     <!-- https://newevolutiondesigns.com/images/freebies/polygon-wallpaper-21.jpg -->
     <div class="parallax-container valign-wrapper">
         <div class="para-text valign center-block">
-            <h1 class="railway white-text parisienne center-align">Monsieur Arsenault</h1>
+            <h1 class="railway white-text parisienne center-align cursive-hdr">Monsieur Arsenault</h1>
             <div class="center-align">
-                <h4 class="railway white-text">Software Engineering + Web Development Student</h4>
+                <h4 class="railwayBold white-text plain-txt">Software Engineering + Web Development Student</h4>
             </div>
         </div>
         <div class="parallax">
@@ -647,6 +648,24 @@
                     <div class="card-reveal">
                         <span class="card-title grey-text text-darken-4">Random Grid Generator<a class="btn-floating btn waves-effect waves-light transparent z-depth-1 right"><i class="material-icons right red-text">close</i></a></span>
                         <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                        <div id="card-footer">
+                            <div class="chip">
+                                <img src="images/chipicons/html5logo.png" alt="HTML5  chip">
+                                HTML5
+                            </div>
+                            <div class="chip">
+                                <img src="images/chipicons/csslogo.png" alt="CSS chip">
+                                CSS3
+                            </div>
+                            <div class="chip">
+                                <img src="images/chipicons/javascriptlogo.svg" alt="Javascript chip">
+                                Javascript
+                            </div>
+                            <div class="chip">
+                                <img src="images/chipicons/materializelogo.png" alt="Materialize CSS chip">
+                                Materialize CSS
+                            </div>
+                        </div>
                     </div>
                     <div class="card-action center-align">
                         <a href="#!">View Project</a>
@@ -672,6 +691,24 @@
                     <div class="card-reveal">
                         <span class="card-title grey-text text-darken-4">Basic Arithmetic Quiz<a class="btn-floating btn waves-effect waves-light transparent z-depth-1 right"><i class="material-icons right red-text">close</i></a></span>
                         <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                        <div id="card-footer">
+                            <div class="chip">
+                                <img src="images/chipicons/html5logo.png" alt="HTML5  chip">
+                                HTML5
+                            </div>
+                            <div class="chip">
+                                <img src="images/chipicons/csslogo.png" alt="CSS chip">
+                                CSS3
+                            </div>
+                            <div class="chip">
+                                <img src="images/chipicons/javascriptlogo.svg" alt="Javascript chip">
+                                Javascript
+                            </div>
+                            <div class="chip">
+                                <img src="images/chipicons/materializelogo.png" alt="Materialize CSS chip">
+                                Materialize CSS
+                            </div>
+                        </div>
                     </div>
                     <div class="card-action center-align">
                         <a href="#!">View Project</a>
@@ -697,6 +734,28 @@
                     <div class="card-reveal">
                         <span class="card-title grey-text text-darken-4">Canvas Car Race<a class="btn-floating btn waves-effect waves-light transparent z-depth-1 right"><i class="material-icons right red-text">close</i></a></span>
                         <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                        <div id="card-footer">
+                            <div class="chip">
+                                <img src="images/chipicons/html5logo.png" alt="HTML5  chip">
+                                HTML5
+                            </div>
+                            <div class="chip">
+                                <img src="images/chipicons/csslogo.png" alt="CSS chip">
+                                CSS3
+                            </div>
+                            <div class="chip">
+                                <img src="images/chipicons/javascriptlogo.svg" alt="Javascript chip">
+                                Javascript
+                            </div>
+                            <div class="chip">
+                                <img src="images/chipicons/jquerylogo.png" alt="Jquery chip">
+                                jQuery
+                            </div>
+                            <div class="chip">
+                                <img src="images/chipicons/materializelogo.png" alt="Materialize CSS chip">
+                                Materialize CSS
+                            </div>
+                        </div>
                     </div>
                     <div class="card-action center-align">
                         <a href="#!">View Project</a>
@@ -709,19 +768,49 @@
                 <div class="card railway z-depth-2">
                     <div class="card-image z-depth-1">
                         <div class="img-card-container">
-                            <img src="images/projects/grid/grid-comp-white.png">
+                            <img src="images/projects/mylifedb/mylfie.jpg">
                         </div>
                     </div>
                     <div class="center-align activator">
                         <a class="btn-floating btn-large waves-effect waves-light  z-depth-3 btn-card-hvr" id="card-hvr-btn"><i class="material-icons hvr-bob">add</i></a>
                     </div>
                     <div class="card-content center-align">
-                        <h5 class=" activator grey-text text-darken-4">Random Grid Generator</h5>
+                        <h5 class=" activator grey-text text-darken-4">To-Do Profile Database</h5>
 
                     </div>
                     <div class="card-reveal">
-                        <span class="card-title grey-text text-darken-4">Random Grid Generator<a class="btn-floating btn waves-effect waves-light transparent z-depth-1 right"><i class="material-icons right red-text">close</i></a></span>
+                        <span class="card-title grey-text text-darken-4">To-Do Profile Database<a class="btn-floating btn waves-effect waves-light transparent z-depth-1 right"><i class="material-icons right red-text">close</i></a></span>
                         <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                        <div id="card-footer">
+                            <div class="chip">
+                                <img src="images/chipicons/html5logo.png" alt="HTML5  chip">
+                                HTML5
+                            </div>
+                            <div class="chip">
+                                <img src="images/chipicons/csslogo.png" alt="CSS chip">
+                                CSS3
+                            </div>
+                            <div class="chip">
+                                <img src="images/chipicons/javascriptlogo.svg" alt="Javascript chip">
+                                Javascript
+                            </div>
+                            <div class="chip">
+                                <img src="images/chipicons/jquerylogo.png" alt="Jquery chip">
+                                jQuery
+                            </div>
+                            <div class="chip">
+                                <img src="images/chipicons/materializelogo.png" alt="Materialize CSS chip">
+                                Materialize CSS
+                            </div>
+                            <div class="chip">
+                                <img src="images/chipicons/phplogo.png" alt="PHP chip">
+                                PHP
+                            </div>
+                            <div class="chip">
+                                <img src="images/chipicons/mysqllogo.png" alt="MySQL chip">
+                                MySQL
+                            </div>
+                        </div>
                     </div>
                     <div class="card-action center-align">
                         <a href="#!">View Project</a>
@@ -734,19 +823,37 @@
                 <div class="card railway z-depth-2">
                     <div class="card-image z-depth-1">
                         <div class="img-card-container">
-                            <img src="images/projects/grid/grid-comp-white.png">
+                            <img src="images/projects/actorportal/actorsportal.jpg">
                         </div>
                     </div>
                     <div class="center-align activator">
                         <a class="btn-floating btn-large waves-effect waves-light  z-depth-3 btn-card-hvr" id="card-hvr-btn"><i class="material-icons hvr-bob">add</i></a>
                     </div>
                     <div class="card-content center-align">
-                        <h5 class=" activator grey-text text-darken-4">Random Grid Generator</h5>
+                        <h5 class=" activator grey-text text-darken-4">Actors Portal Storage</h5>
 
                     </div>
                     <div class="card-reveal">
-                        <span class="card-title grey-text text-darken-4">Random Grid Generator<a class="btn-floating btn waves-effect waves-light transparent z-depth-1 right"><i class="material-icons right red-text">close</i></a></span>
+                        <span class="card-title grey-text text-darken-4">Actors Portal Storage<a class="btn-floating btn waves-effect waves-light transparent z-depth-1 right"><i class="material-icons right red-text">close</i></a></span>
                         <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                        <div id="card-footer">
+                            <div class="chip">
+                                <img src="images/chipicons/html5logo.png" alt="HTML5  chip">
+                                HTML5
+                            </div>
+                            <div class="chip">
+                                <img src="images/chipicons/csslogo.png" alt="CSS chip">
+                                CSS3
+                            </div>
+                            <div class="chip">
+                                <img src="images/chipicons/javascriptlogo.svg" alt="Javascript chip">
+                                Javascript
+                            </div>
+                            <div class="chip">
+                                <img src="images/chipicons/bootstraplogo.png" alt="Bootstrap chip">
+                                Bootsrap
+                            </div>
+                        </div>
                     </div>
                     <div class="card-action center-align">
                         <a href="#!">View Project</a>
@@ -757,21 +864,43 @@
             <!-- Testing Card -->
             <div class="col s10 offset-s1 m6 l4">
                 <div class="card railway z-depth-2">
-                    <div class="card-image z-depth-1">
+                    <div class="card-image z-depth-1 hoverable">
                         <div class="img-card-container">
-                            <img src="images/projects/grid/grid-comp.jpg">
+                            <img src="images/projects/division/division-safe-house.png">
                         </div>
                     </div>
                     <div class="center-align activator">
-                        <a class="btn-floating btn-large waves-effect waves-light  z-depth-3 btn-card-hvr" id="card-hvr-btn"><i class="material-icons hvr-bob">add</i></a>
+                        <a class="btn-floating btn-large waves-effect waves-light  z-depth-3 btn-card-hvr" id="card-hvr-btn"><i class="material-icons hvr-bob">description</i></a>
                     </div>
                     <div class="card-content center-align">
-                        <h5 class=" activator grey-text text-darken-4">Random Grid Generator</h5>
+                        <h5 class=" activator grey-text text-darken-4">The Division Safehouse</h5>
 
                     </div>
                     <div class="card-reveal">
-                        <span class="card-title grey-text text-darken-4">Random Grid Generator<a class="btn-floating btn waves-effect waves-light transparent z-depth-1 right"><i class="material-icons right red-text">close</i></a></span>
+                        <span class="card-title grey-text text-darken-4">The Division Safehouse<a class="btn-floating btn waves-effect waves-light transparent z-depth-1 right"><i class="material-icons right red-text">close</i></a></span>
                         <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                        <div id="card-footer">
+                            <div class="chip">
+                                <img src="images/chipicons/html5logo.png" alt="HTML5  chip">
+                                HTML5
+                            </div>
+                            <div class="chip">
+                                <img src="images/chipicons/csslogo.png" alt="CSS chip">
+                                CSS3
+                            </div>
+                            <div class="chip">
+                                <img src="images/chipicons/javascriptlogo.svg" alt="Javascript chip">
+                                Javascript
+                            </div>
+                            <div class="chip">
+                                <img src="images/chipicons/jquerylogo.png" alt="Jquery chip">
+                                jQuery
+                            </div>
+                            <div class="chip">
+                                <img src="images/chipicons/materializelogo.png" alt="Materialize CSS chip">
+                                Materialize CSS
+                            </div>
+                        </div>
                     </div>
                     <div class="card-action center-align">
                         <a href="#!">View Project</a>
@@ -795,7 +924,6 @@
 
     <!--
 </div>--><!-- End container -->
-
 
     <!-- http://www.landescape.it/wp-content/uploads/mg_4655.jpg-->
     <!-- http://www.vitoschnabel.com/attachment/en/55cd07616aa72cc608d19704/News/56422f1dc5aa2c0d716bb577 -->
@@ -905,7 +1033,7 @@
     </section>
 
 
-    <!-- Blog Section -->
+    <!-- Different Tool Icons Section
     <section  id="" class=" ">
         <div class="row railway" id="tool-row">
             <div class="col s4 m3 tool-icons center-align" id="html-tool">
@@ -992,12 +1120,12 @@
                 </div>
             </div>
 
-            <!--<div class="col s4 m3 tool-icons center-align">
+            <<div class="col s4 m3 tool-icons center-align">
                 <div class="card-panel white">
                     <i class="devicon-sass-original colored large hvr-float"></i>
                     <div class="icon-text" id="sass-text">Sass</div>
                 </div>
-            </div>-->
+            </div>
             <div class="col s4 m3 tool-icons center-align">
                 <div class="card-panel white">
                     <i class="devicon-trello-plain colored large hvr-float"></i>
@@ -1017,7 +1145,7 @@
                 </div>
             </div>
         </div>
-    </section> <!--/blog section -->
+    </section> --><!--/other tool section -->
 
 
 
@@ -1051,18 +1179,18 @@
 
 
     <!-- Contact Me Section -->
-    <section id="contact" class="section scrollspy grey lighten-3">
+    <section id="contact" class="section scrollspy">
         <div class="center-align">
             <h4 class="railwayBold">Contact Me</h4>
         </div>
         <!-- Container of Social Media  Icons -->
         <div class="container">
             <div class="row soc-icon-row">
+                <div class="col s2" id="icon-row-padding">&nbsp;</div>
                 <!--<a class="btn tooltipped" data-bg-color="red" data-fg-color="red" data-position="bottom" data-delay="50" data-tooltip="I am tooltip">Hover me!</a>
                 <a class="btn tooltipped"  data-tooltip-bg="blue" data-tooltip-fg="white" data-position="bottom" data-delay="50" data-tooltip="I am tooltip">Hover me!</a>
                 <a class="btn tooltipped"  data-html="true" data-position="bottom" data-delay="50" data-tooltip="<p style='color:#000000'>Something</p>">Hover me!</a>-->
-
-                <div class="col s1 offset-s2" id="slack-tool">
+                <div class="col s1" id="slack-tool">
                     <!-- HEX COLOR OF ICON IMAGE FOR TOOLTIP #F7F7F7 -->
                     <a href="#" class="hvr-float tooltipped" data-tooltip-bg="#F7F7F7" data-tooltip-fg="#D91C60" data-position="bottom" data-delay="50" data-tooltip="Slack">
                         <img src="images/icons/slack-256.png" class="responsive-img">
@@ -1105,12 +1233,11 @@
                         <img src="images/icons/skype.png" class="responsive-img">
                     </a>
                 </div>
-                <div class="col s1">
-                    <!-- HEX COLOR OF ICON IMAGE FOR TOOLTIP #FFFFFF -->
+                <!--<div class="col s1">
                     <a href="#" class="hvr-float tooltipped" data-tooltip-bg="#FFFFFF" data-tooltip-fg="#49A6D9" data-position="bottom" data-delay="50" data-tooltip="Signals Encrypted Chat">
                         <img src="images/icons/signals-white.png" class="responsive-img">
                     </a>
-                </div>
+                </div>-->
             </div>
         </div><!-- end of social media icons -->
 
