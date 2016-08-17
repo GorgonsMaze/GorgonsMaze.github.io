@@ -24,6 +24,7 @@ Currently being built to host personal projects, write-ups about programs, and d
 * Blog Section
   * Blog post with link to blog page/ blog site
 * Google Maps Scroll Issue's with full width/screen
+* Change icons of project card reveal
  
 # Completed [Main]
 - [x] About Section
