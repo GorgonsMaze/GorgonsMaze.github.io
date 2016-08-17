@@ -52,7 +52,6 @@
                 map: map1,
                 title: 'Somewhere around here!'
             });
-
         }
 
         function init() {
@@ -100,6 +99,7 @@
 
         }
 
+        // Intializes 2nd  hidden google map on tab click
         function waitForMap() {
             setTimeout(function () {
                if($('#phone6s').is(':visible')) {
@@ -119,7 +119,7 @@
 </head>
 <body>
 
-
+<!-- MAIN CONTENT -->
 <div class="main-content">
     <!-- Begin Navbar -->
     <div class="navbar-fixed scrollspy" id="top-scroll">
@@ -164,9 +164,7 @@
             </div>
         </nav>
     </div> <!-- / nav-bar -->
-    <!-- http://www.landescape.it/wp-content/uploads/mg_4655.jpg-->
-    <!-- http://www.vitoschnabel.com/attachment/en/55cd07616aa72cc608d19704/News/56422f1dc5aa2c0d716bb577 -->
-    <!-- https://newevolutiondesigns.com/images/freebies/polygon-wallpaper-21.jpg -->
+    <!-- Parallax Container -->
     <div class="parallax-container valign-wrapper">
         <div class="para-text valign center-block">
             <h1 class="railway white-text parisienne center-align cursive-hdr">Monsieur Arsenault</h1>
@@ -179,11 +177,8 @@
             http://stephaniestutz.ch https://www.facebook.com/stephaniestutzart# -->
             <img src="https://cdn3.artstation.com/p/assets/images/images/000/802/383/large/stephanie-stutz-the-red-mountains-by-toilettenmassaker-d6dux3c.jpg?1433405705" >
         </div>
-    </div><!-- end of Parallax -->
+    </div><!-- end of Parallax Container -->
 
-    <!-- Box Logo - Name
-    <img src="http://i.imgur.com/3i8bZ5I.jpg?1" alt="ianImagelogo">
-    -->
     <div class="container">
         <!-- About Me Section -->
         <section id="about" class="section scrollspy">
@@ -573,7 +568,7 @@
                             <div class="col s12">
                                 <div class="card">
                                     <div class="card-content black-text resume-display">
-                                        <embed src="images/assets/WebResumeIan.pdf" width="100%" height="100%"></embed>
+                                        <embed src="images/assets/WebIanResume.pdf" width="100%" height="100%"></embed>
                                     </div>
                                     <div class="card-action center-align">
                                         <!-- Check the download functionality in all browsers before live -->
@@ -907,17 +902,13 @@
         </div>
     </section> <!-- /project section -->
 
-    <!--
-</div>--><!-- End container -->
-
-    <!-- http://www.landescape.it/wp-content/uploads/mg_4655.jpg-->
-    <!-- http://www.vitoschnabel.com/attachment/en/55cd07616aa72cc608d19704/News/56422f1dc5aa2c0d716bb577 -->
-    <!-- https://newevolutiondesigns.com/images/freebies/polygon-wallpaper-21.jpg -->
     <section class="section">
         <!-- Begin Parallax -->
         <div class="parallax-container-tools" id="tools-parallax">
             <div class="parallax">
-                <img src="https://d3ui957tjb5bqd.cloudfront.net/images/screenshots/products/49/493/493536/jzjca5equ11cyyzycacltapl7mljeufervd0hpipu2vefiqyqdkcu1wtqf3mzd81-o.jpg?1432150718" alt="brickwall">
+                <!--<img src="https://d3ui957tjb5bqd.cloudfront.net/images/screenshots/products/49/493/493536/jzjca5equ11cyyzycacltapl7mljeufervd0hpipu2vefiqyqdkcu1wtqf3mzd81-o.jpg?1432150718" alt="brickwall">-->
+                <img src="images/assets/brickred.jpg" alt="brickwall">
+
                 <!-- Tools Section -->
                 <h4 class="railway white-text railwayBold center-align" id="tool-header">Tools</h4>
                 <section id="tools" class="section scrollspy">
@@ -1321,46 +1312,37 @@
         </div>
 
         <div class="modal-content">
-            <div class="row center-block">
-                <div class="col s12 m6 l4">
-                    <div class="card red" id="btm-sheet-card">
-                        <div class="card-content white-text">
-                            <span class="card-title">Stuff 1</span>
-                        </div>
-                        <div class="card-action">
-                            <a href="#">This is a link</a>
-
-                        </div>
+            <div class="row">
+                <h4 class="center-align railwayBold">Credits</h4>
+                <div class="col s12 m4 offset-m2">
+                    <div class="col s3">
+                        <!-- Credit for art due to Stephani Stutz Graphic Artist, Zürich, Switzerland http://stephaniestutz.ch/ -->
+                        <img class="responsive-img" src="images/assets/red-mountains.jpg" alt="Stephanie Stutz Red Mountains Low Poly" />
                     </div>
-                </div>
-
-                <div class="col s12 m6 l4">
-                    <div class="card red">
-                        <div class="card-content white-text">
-                            <div class="center-align">
-                                <i class="material-icons md-48">credit_card</i>
+                    <div class="col s9">
+                        <div class="valign-wrapper">
+                            <div class="valign">
+                                <a class="center-align" href="http://stephaniestutz.ch/">Stephanie Stutz</a>
+                                <p>Graphic Artist, Zurich, Switzerland</p>
                             </div>
-                            <span class="card-title">Credits</span>
-                        </div>
-                        <div class="card-action">
-                            <a href="#">This is a link</a>
                         </div>
                     </div>
+
                 </div>
-
-
-                <div class="col s12 m8 offset-m2 l4">
-                    <div class="card red">
-                        <div class="card-content white-text">
-                            <span class="card-title">Stuff 3</span>
-                        </div>
-                        <div class="card-action">
-                            <a href="#">This is a link</a>
+                <div class="col s12 m4 offset-m1">
+                    <div class="col s3">
+                        <img class="responsive-img ban-img-foot" src="images/assets/ian-banner.jpg" alt="Red Polygon Banner" />
+                    </div>
+                    <div class="col s9">
+                        <div class="valign-wrapper">
+                            <div class="valign">
+                                <a class="center-align"  href="http://www.freepik.com/free-photos-vectors/banner">Banner vector designed by Freepik</a>
+                                <p>Free Vector and Photo website</p>
+                            </div>
                         </div>
                     </div>
+
                 </div>
-
-
             </div>
         </div>
     </div>
@@ -1368,20 +1350,6 @@
 
 </div><!-- end main content -->
 
-
-<!-- Free Pick links
-https://www.artstation.com/artwork/rJeO6
-https://newevolutiondesigns.com/25-hd-polygon-wallpapers
-<a href="http://www.freepik.com/free-photo/abstract-red-and-black-lights-background_892973.htm">Designed by Freepik</a>
-<a href="http://www.freepik.com/free-vector/designer-tools-pack_836115.htm">Designed by Freepik</a>
-<a href="http://www.freepik.com/free-photo/working-with-a-coffee_881236.htm">Designed by Freepik</a>
-
-icons
-<a href="http://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a>v>
-<div>Icons made by <a href="http://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
-<a href="http://www.freepik.com/free-vector/great-isometric-user-experience_851898.htm">Designed by Freepik</a>
-
--->
 
 
 <!--Import jQuery before materialize.js-->

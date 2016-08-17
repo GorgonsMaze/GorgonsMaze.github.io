@@ -6,8 +6,14 @@ Portfolio Website for Ian Arsenault.
 
 Currently being built to host personal projects, write-ups about programs, and display personal information in relation to software engineering and web development
 
+
+![Image](http://i.imgur.com/oGVINmF.png)
+
+
+
 #To-Do's [Main]
-* Parallax text long shadow and animation on load and scroll
+* Email through Contact Form (** IMPORTANT**)
+* Parallax text animation on load and scroll
 * Respnsiveness
  * Social Media Icons
  * Tool Icons
@@ -17,9 +23,8 @@ Currently being built to host personal projects, write-ups about programs, and d
   * Pushpin side-bar with tabs or ajax load of project display cards
 * Blog Section
   * Blog post with link to blog page/ blog site
-* Email through Contact Form
-* Footer with credits and information about site - assets used etc
 * Google Maps Scroll Issue's with full width/screen
+* Change icons of project card reveal
  
 # Completed [Main]
 - [x] About Section
@@ -48,3 +53,5 @@ Currently being built to host personal projects, write-ups about programs, and d
 - [x] Social media links
 - [x] Contact form to send me an email
 - [x] Google Maps for location
+- [x] Parallax text long shadow 
+- [x] Footer with credits and information about site - assets used etc 
