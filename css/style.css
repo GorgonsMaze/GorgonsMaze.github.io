@@ -1641,6 +1641,10 @@ textarea.materialize-textarea {
     border-width: 1px 1px 0px 1px;
 
 }
+
+.ban-img-foot {
+    margin-top: 15px;
+}
 .parallax-container {
     position: relative;
     overflow: hidden;

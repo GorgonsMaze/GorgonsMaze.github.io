@@ -1,6 +1,39 @@
 /**
  * Created by ianarsenault on 6/21/16.
  */
+
+var skillsBar = function () {
+    // on button click refresh skills bar table animation
+    $("#skills-bar, #refresh-graph").on('click', function(e) {
+        /* Restart animation from beginning */
+        $( "div" ).css({
+            width: ""
+        });
+        /* HTML CSS Progress Bar Animation */
+        $(".progress-bar-1").animate({
+            width: "85%"
+        }, 500);
+        /* Javacsript Progress Bar Animation */
+        $(".progress-bar-2").animate({
+            width: "68%"
+        }, 500);
+        /* C# Progress Bar Animation */
+        $(".progress-bar-3").animate({
+            width: "60%"
+        }, 500);
+        /* C++ Progress Bar Animation */
+        $(".progress-bar-4").animate({
+            width: "30%"
+        }, 500);
+        /* PHP MySQL Progress Bar Animation */
+        $(".progress-bar-5").animate({
+            width: "39%"
+        }, 500);
+
+        e.preventDefault();
+    });
+};
+
 $(document).ready(function(){
     $(".main-content").fadeIn(1000);
 
@@ -57,34 +90,9 @@ $(document).ready(function(){
     });
 
 
-    $("#skills-bar, #refresh-graph").on('click', function(e) {
-        /* Restart animation from beginning */
-        $( "div" ).css({
-            width: ""
-        });
-        /* HTML CSS Progress Bar Animation */
-        $(".progress-bar-1").animate({
-            width: "85%"
-        }, 500);
-        /* Javacsript Progress Bar Animation */
-        $(".progress-bar-2").animate({
-            width: "68%"
-        }, 500);
-        /* C# Progress Bar Animation */
-        $(".progress-bar-3").animate({
-            width: "60%"
-        }, 500);
-        /* C++ Progress Bar Animation */
-        $(".progress-bar-4").animate({
-            width: "30%"
-        }, 500);
-        /* PHP MySQL Progress Bar Animation */
-        $(".progress-bar-5").animate({
-            width: "39%"
-        }, 500);
 
-        e.preventDefault();
-    });
+    // Skillsbar animation
+    skillsBar();
 
     /*$(".progress-bar").animate( {
      width: "100%"
