@@ -14,7 +14,7 @@ Currently being built to host personal projects, write-ups about programs, and d
 #To-Do's [Main]
 * Email through Contact Form (** IMPORTANT**)
 * Parallax text animation on load and scroll
-* Respnsiveness
+* Responsiveness
  * Social Media Icons
  * Tool Icons
  * Navigation Bar for scroll devices
