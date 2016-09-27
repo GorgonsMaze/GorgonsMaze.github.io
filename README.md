@@ -9,7 +9,12 @@ Currently being built to host personal projects, write-ups about programs, and d
 
 ![Image](http://i.imgur.com/oGVINmF.png)
 
-
+#To-Do's [Important]
+* Project Section updates
+ * Work on ajax calls for multiple project sections by language
+ * Pushpin side-nav for project language links
+ * Update Project links and format projects to have link back to portfolio
+* Fix Side-Nav hamburger>X animation to work with clicks outside transform button
 
 #To-Do's [Main]
 * Email through Contact Form (** IMPORTANT**)
