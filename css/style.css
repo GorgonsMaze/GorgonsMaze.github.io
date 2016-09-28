@@ -822,6 +822,19 @@ td .x-space {
     margin-top: 20px;
 }
 
+#hackr-logo {
+    height: 60px;
+    width: 295px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+#codecademy-logo {
+    height: 60px;
+    width: 295px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
 .fcc-btn {
     margin-left: 30px;
 }
@@ -935,16 +948,21 @@ p.bubble:after {
 #card-hvr-btn {
     margin-top: -30px;
     -webkit-transition: -webkit-transform 1s ease-in-out;
-    transition: rotate 360deg 1s ease-in-out;
+    transition: transform 1s ease-in-out;
 }
 /* Card Reveal Button Styling - Hover Rotation */
 #card-hvr-btn:hover {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
+    -webkit-transform: rotate(270deg);
+    transform: rotate(270deg);
 }
 /* Card Reveal Button OG Color */
 .btn-card-hvr {
     background-color: #f44336;
+    -webkit-transition: background-color 0.3s ease-in-out;
+    -moz-transition: background-color 0.3s ease-in-out;
+    -ms-transition: background-color 0.3s ease-in-out;
+    -o-transition: background-color 0.3s ease-in-out;
+    transition: background-color 0.3s ease-in-out;
 }
 /* Card Reveal Button Hover Color */
 .btn-card-hvr:hover {
@@ -1686,9 +1704,9 @@ textarea.materialize-textarea {
     top: 0;
     pointer-events: none;
     will-change: top, left;
-    -webkit-box-shadow: 3px 38px 64px 5px rgba(0, 0, 0, 0.41);
-    -moz-box-shadow: 3px 38px 64px 5px rgba(0, 0, 0, 0.41);
-    box-shadow: 3px 38px 64px 5px rgba(0, 0, 0, 0.41);
+    /*-webkit-box-shadow: 3px 38px 64px 5px rgba(0, 0, 0, 0.41);*/
+    /*-moz-box-shadow: 3px 38px 64px 5px rgba(0, 0, 0, 0.41);*/
+    /*box-shadow: 3px 38px 64px 5px rgba(0, 0, 0, 0.41);*/
 }
 
 .backdrop {
