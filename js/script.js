@@ -339,9 +339,9 @@ $(document).ready(function(){
      *   GET RID OF THIS WHEN WEBSITE IS LIVE
      */
     /* Prevent default on links for now */
-    $(".hvr-float").on('click', function (e) {
-        e.preventDefault();
-    });
+    // $(".hvr-float").on('click', function (e) {
+    //     e.preventDefault();
+    // });
     /* Checking to see if which carousel-item is in the center of window
      and adding css styling to it - background-color or box-shadow
      */
