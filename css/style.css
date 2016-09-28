@@ -822,6 +822,19 @@ td .x-space {
     margin-top: 20px;
 }
 
+#hackr-logo {
+    height: 60px;
+    width: 295px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+#codecademy-logo {
+    height: 60px;
+    width: 295px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
 .fcc-btn {
     margin-left: 30px;
 }
