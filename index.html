@@ -1,16 +1,27 @@
 <!DOCTYPE html>
+<!--
+
+8888888                          d8888                                               888888
+  888                           d88888                                               888888
+  888                          d88P888                                               888888
+  888   8888b. 88888b.        d88P 888888d888.d8888b  .d88b. 88888b.  8888b. 888  888888888888
+  888      "88b888 "88b      d88P  888888P"  88K     d8P  Y8b888 "88b    "88b888  888888888
+  888  .d888888888  888     d88P   888888    "Y8888b.88888888888  888.d888888888  888888888
+  888  888  888888  888    d8888888888888         X88Y8b.    888  888888  888Y88b 888888Y88b.
+8888888"Y888888888  888   d88P     888888     88888P' "Y8888 888  888"Y888888 "Y88888888 "Y888
+-->
 <html>
 <head>
     <title>Ian Arsenault | Providence RI</title>
     <!-- Broswer Tab Logo -->
     <!--<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />-->
-    <link rel="shortcut icon" type="image/x-icon" href="images/assets/ian.ico" />
+    <link rel="shortcut icon" type="image/x-icon" href="images/assets/ian.ico"/>
     <!--Import Google Icon Font-
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">-->
-    <link rel="stylesheet" type="text/css" href="font/material-design-icons/Material-Design-Icons.eot" />
+    <link rel="stylesheet" type="text/css" href="font/material-design-icons/Material-Design-Icons.eot"/>
     <!--Import materialize.css-->
-    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection"/>
     <!-- Raleway Font -->
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,800" rel="stylesheet">
     <!-- Parisienne Font -->
@@ -19,12 +30,14 @@
     <link href='https://fonts.googleapis.com/css?family=Kristi' rel='stylesheet' type='text/css'>
     <!-- Devicon  -->
     <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/devicons/1.8.0/css/devicons.min.css" rel="stylesheet" type="text/css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/devicons/1.8.0/css/devicons.min.css" rel="stylesheet"
+          type="text/css">
     <!-- My stylesheet -->
-    <link type="text/css" rel="stylesheet" href="css/style.css" />
+    <link type="text/css" rel="stylesheet" href="css/style.css"/>
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAA4YVEtwYE0avddYGEfBNoWsXZNT-qkms&callback=initMap"></script>
+    <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAA4YVEtwYE0avddYGEfBNoWsXZNT-qkms&callback=initMap"></script>
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
     <script type="text/javascript">
         function initTabMap() {
@@ -37,14 +50,111 @@
                 center: new google.maps.LatLng(41.82399, -71.41283), // New York
 
                 // Map Styling
-                styles: [{"featureType":"all","elementType":"labels","stylers":[{"visibility":"on"}]},{"featureType":"all","elementType":"labels.text.fill","stylers":[{"saturation":36},{"color":"#000000"},{"lightness":40}]},{"featureType":"all","elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#000000"},{"lightness":16}]},{"featureType":"all","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#000000"},{"lightness":20}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#000000"},{"lightness":17},{"weight":1.2}]},{"featureType":"administrative.locality","elementType":"labels.text.fill","stylers":[{"color":"#c4c4c4"}]},{"featureType":"administrative.neighborhood","elementType":"labels.text.fill","stylers":[{"color":"#707070"}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":20}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":21},{"visibility":"on"}]},{"featureType":"poi.business","elementType":"geometry","stylers":[{"visibility":"on"}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#be2026"},{"lightness":"0"},{"visibility":"on"}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"visibility":"off"}]},{"featureType":"road.highway","elementType":"labels.text.fill","stylers":[{"visibility":"off"}]},{"featureType":"road.highway","elementType":"labels.text.stroke","stylers":[{"visibility":"off"},{"hue":"#ff000a"}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":18}]},{"featureType":"road.arterial","elementType":"geometry.fill","stylers":[{"color":"#575757"}]},{"featureType":"road.arterial","elementType":"labels.text.fill","stylers":[{"color":"#ffffff"}]},{"featureType":"road.arterial","elementType":"labels.text.stroke","stylers":[{"color":"#2c2c2c"}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":16}]},{"featureType":"road.local","elementType":"labels.text.fill","stylers":[{"color":"#999999"}]},{"featureType":"road.local","elementType":"labels.text.stroke","stylers":[{"saturation":"-52"}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":19}]},{"featureType":"water","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":17}]}]
+                styles: [{
+                    "featureType": "all",
+                    "elementType": "labels",
+                    "stylers": [{"visibility": "on"}]
+                }, {
+                    "featureType": "all",
+                    "elementType": "labels.text.fill",
+                    "stylers": [{"saturation": 36}, {"color": "#000000"}, {"lightness": 40}]
+                }, {
+                    "featureType": "all",
+                    "elementType": "labels.text.stroke",
+                    "stylers": [{"visibility": "on"}, {"color": "#000000"}, {"lightness": 16}]
+                }, {
+                    "featureType": "all",
+                    "elementType": "labels.icon",
+                    "stylers": [{"visibility": "off"}]
+                }, {
+                    "featureType": "administrative",
+                    "elementType": "geometry.fill",
+                    "stylers": [{"color": "#000000"}, {"lightness": 20}]
+                }, {
+                    "featureType": "administrative",
+                    "elementType": "geometry.stroke",
+                    "stylers": [{"color": "#000000"}, {"lightness": 17}, {"weight": 1.2}]
+                }, {
+                    "featureType": "administrative.locality",
+                    "elementType": "labels.text.fill",
+                    "stylers": [{"color": "#c4c4c4"}]
+                }, {
+                    "featureType": "administrative.neighborhood",
+                    "elementType": "labels.text.fill",
+                    "stylers": [{"color": "#707070"}]
+                }, {
+                    "featureType": "landscape",
+                    "elementType": "geometry",
+                    "stylers": [{"color": "#000000"}, {"lightness": 20}]
+                }, {
+                    "featureType": "poi",
+                    "elementType": "geometry",
+                    "stylers": [{"color": "#000000"}, {"lightness": 21}, {"visibility": "on"}]
+                }, {
+                    "featureType": "poi.business",
+                    "elementType": "geometry",
+                    "stylers": [{"visibility": "on"}]
+                }, {
+                    "featureType": "road.highway",
+                    "elementType": "geometry.fill",
+                    "stylers": [{"color": "#be2026"}, {"lightness": "0"}, {"visibility": "on"}]
+                }, {
+                    "featureType": "road.highway",
+                    "elementType": "geometry.stroke",
+                    "stylers": [{"visibility": "off"}]
+                }, {
+                    "featureType": "road.highway",
+                    "elementType": "labels.text.fill",
+                    "stylers": [{"visibility": "off"}]
+                }, {
+                    "featureType": "road.highway",
+                    "elementType": "labels.text.stroke",
+                    "stylers": [{"visibility": "off"}, {"hue": "#ff000a"}]
+                }, {
+                    "featureType": "road.arterial",
+                    "elementType": "geometry",
+                    "stylers": [{"color": "#000000"}, {"lightness": 18}]
+                }, {
+                    "featureType": "road.arterial",
+                    "elementType": "geometry.fill",
+                    "stylers": [{"color": "#575757"}]
+                }, {
+                    "featureType": "road.arterial",
+                    "elementType": "labels.text.fill",
+                    "stylers": [{"color": "#ffffff"}]
+                }, {
+                    "featureType": "road.arterial",
+                    "elementType": "labels.text.stroke",
+                    "stylers": [{"color": "#2c2c2c"}]
+                }, {
+                    "featureType": "road.local",
+                    "elementType": "geometry",
+                    "stylers": [{"color": "#000000"}, {"lightness": 16}]
+                }, {
+                    "featureType": "road.local",
+                    "elementType": "labels.text.fill",
+                    "stylers": [{"color": "#999999"}]
+                }, {
+                    "featureType": "road.local",
+                    "elementType": "labels.text.stroke",
+                    "stylers": [{"saturation": "-52"}]
+                }, {
+                    "featureType": "transit",
+                    "elementType": "geometry",
+                    "stylers": [{"color": "#000000"}, {"lightness": 19}]
+                }, {
+                    "featureType": "water",
+                    "elementType": "geometry",
+                    "stylers": [{"color": "#000000"}, {"lightness": 17}]
+                }]
             };
 
             // get the DOM element that will contain the 2nd map
             var mapElement1 = document.getElementById('map_2');
 
             // Create the Google Map using our element and options defined above
-            var map1 = new google.maps.Map(mapElement1, mapOptions1); /* Tab Map */
+            var map1 = new google.maps.Map(mapElement1, mapOptions1);
+            /* Tab Map */
 
             /* Providence Marker */
             var marker1 = new google.maps.Marker({
@@ -65,7 +175,103 @@
                 center: new google.maps.LatLng(41.82399, -71.41283), // New York
 
                 // Styling
-                styles: [{"featureType":"all","elementType":"labels","stylers":[{"visibility":"on"}]},{"featureType":"all","elementType":"labels.text.fill","stylers":[{"saturation":36},{"color":"#000000"},{"lightness":40}]},{"featureType":"all","elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#000000"},{"lightness":16}]},{"featureType":"all","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#000000"},{"lightness":20}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#000000"},{"lightness":17},{"weight":1.2}]},{"featureType":"administrative.locality","elementType":"labels.text.fill","stylers":[{"color":"#c4c4c4"}]},{"featureType":"administrative.neighborhood","elementType":"labels.text.fill","stylers":[{"color":"#707070"}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":20}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":21},{"visibility":"on"}]},{"featureType":"poi.business","elementType":"geometry","stylers":[{"visibility":"on"}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#be2026"},{"lightness":"0"},{"visibility":"on"}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"visibility":"off"}]},{"featureType":"road.highway","elementType":"labels.text.fill","stylers":[{"visibility":"off"}]},{"featureType":"road.highway","elementType":"labels.text.stroke","stylers":[{"visibility":"off"},{"hue":"#ff000a"}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":18}]},{"featureType":"road.arterial","elementType":"geometry.fill","stylers":[{"color":"#575757"}]},{"featureType":"road.arterial","elementType":"labels.text.fill","stylers":[{"color":"#ffffff"}]},{"featureType":"road.arterial","elementType":"labels.text.stroke","stylers":[{"color":"#2c2c2c"}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":16}]},{"featureType":"road.local","elementType":"labels.text.fill","stylers":[{"color":"#999999"}]},{"featureType":"road.local","elementType":"labels.text.stroke","stylers":[{"saturation":"-52"}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":19}]},{"featureType":"water","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":17}]}]
+                styles: [{
+                    "featureType": "all",
+                    "elementType": "labels",
+                    "stylers": [{"visibility": "on"}]
+                }, {
+                    "featureType": "all",
+                    "elementType": "labels.text.fill",
+                    "stylers": [{"saturation": 36}, {"color": "#000000"}, {"lightness": 40}]
+                }, {
+                    "featureType": "all",
+                    "elementType": "labels.text.stroke",
+                    "stylers": [{"visibility": "on"}, {"color": "#000000"}, {"lightness": 16}]
+                }, {
+                    "featureType": "all",
+                    "elementType": "labels.icon",
+                    "stylers": [{"visibility": "off"}]
+                }, {
+                    "featureType": "administrative",
+                    "elementType": "geometry.fill",
+                    "stylers": [{"color": "#000000"}, {"lightness": 20}]
+                }, {
+                    "featureType": "administrative",
+                    "elementType": "geometry.stroke",
+                    "stylers": [{"color": "#000000"}, {"lightness": 17}, {"weight": 1.2}]
+                }, {
+                    "featureType": "administrative.locality",
+                    "elementType": "labels.text.fill",
+                    "stylers": [{"color": "#c4c4c4"}]
+                }, {
+                    "featureType": "administrative.neighborhood",
+                    "elementType": "labels.text.fill",
+                    "stylers": [{"color": "#707070"}]
+                }, {
+                    "featureType": "landscape",
+                    "elementType": "geometry",
+                    "stylers": [{"color": "#000000"}, {"lightness": 20}]
+                }, {
+                    "featureType": "poi",
+                    "elementType": "geometry",
+                    "stylers": [{"color": "#000000"}, {"lightness": 21}, {"visibility": "on"}]
+                }, {
+                    "featureType": "poi.business",
+                    "elementType": "geometry",
+                    "stylers": [{"visibility": "on"}]
+                }, {
+                    "featureType": "road.highway",
+                    "elementType": "geometry.fill",
+                    "stylers": [{"color": "#be2026"}, {"lightness": "0"}, {"visibility": "on"}]
+                }, {
+                    "featureType": "road.highway",
+                    "elementType": "geometry.stroke",
+                    "stylers": [{"visibility": "off"}]
+                }, {
+                    "featureType": "road.highway",
+                    "elementType": "labels.text.fill",
+                    "stylers": [{"visibility": "off"}]
+                }, {
+                    "featureType": "road.highway",
+                    "elementType": "labels.text.stroke",
+                    "stylers": [{"visibility": "off"}, {"hue": "#ff000a"}]
+                }, {
+                    "featureType": "road.arterial",
+                    "elementType": "geometry",
+                    "stylers": [{"color": "#000000"}, {"lightness": 18}]
+                }, {
+                    "featureType": "road.arterial",
+                    "elementType": "geometry.fill",
+                    "stylers": [{"color": "#575757"}]
+                }, {
+                    "featureType": "road.arterial",
+                    "elementType": "labels.text.fill",
+                    "stylers": [{"color": "#ffffff"}]
+                }, {
+                    "featureType": "road.arterial",
+                    "elementType": "labels.text.stroke",
+                    "stylers": [{"color": "#2c2c2c"}]
+                }, {
+                    "featureType": "road.local",
+                    "elementType": "geometry",
+                    "stylers": [{"color": "#000000"}, {"lightness": 16}]
+                }, {
+                    "featureType": "road.local",
+                    "elementType": "labels.text.fill",
+                    "stylers": [{"color": "#999999"}]
+                }, {
+                    "featureType": "road.local",
+                    "elementType": "labels.text.stroke",
+                    "stylers": [{"saturation": "-52"}]
+                }, {
+                    "featureType": "transit",
+                    "elementType": "geometry",
+                    "stylers": [{"color": "#000000"}, {"lightness": 19}]
+                }, {
+                    "featureType": "water",
+                    "elementType": "geometry",
+                    "stylers": [{"color": "#000000"}, {"lightness": 17}]
+                }]
             };
 
             // get the DOM element that will contain the map
@@ -82,18 +288,18 @@
             });
 
             google.maps.event.addListener(map, 'mousedown', function (event) {
-                this.setOptions({scrollwheel:true});
+                this.setOptions({scrollwheel: true});
             });
 
-            google.maps.event.addListener(map, 'mouseover', function(event){
+            google.maps.event.addListener(map, 'mouseover', function (event) {
                 self = this;
-                timer = setTimeout(function() {
-                    self.setOptions({scrollwheel:true});
+                timer = setTimeout(function () {
+                    self.setOptions({scrollwheel: true});
                 }, 1000);
             });
 
-            google.maps.event.addListener(map, 'mouseout', function(event){
-                this.setOptions({scrollwheel:false});
+            google.maps.event.addListener(map, 'mouseout', function (event) {
+                this.setOptions({scrollwheel: false});
                 clearTimeout(timer);
             });
 
@@ -102,11 +308,11 @@
         // Intializes 2nd  hidden google map on tab click
         function waitForMap() {
             setTimeout(function () {
-               if($('#phone6s').is(':visible')) {
-                   initTabMap();
-               } else {
-                   waitForMap();
-               }
+                if ($('#phone6s').is(':visible')) {
+                    initTabMap();
+                } else {
+                    waitForMap();
+                }
             }, 100);
         }
 
@@ -127,15 +333,15 @@
             <div class="nav-wrapper">
                 <!-- <img id="logo" src="images/assets/ian.jpg"> -->
                 <a href="#!" class="black-text brand-logo railwayBold" id="navLogo">ianarsenault.i0</a>
-                <a href="#" data-activates="mobile-demo" class="button-collapse hambrgr" id="hamburger"><i class="material-icons hammy animated">menu</i><span class="xedOut animated rotateIn rotateOut"><i class="fa fa-times fa-3x" aria-hidden="true"></i></span></a>
-                <!--
-                <a href="#" data-activates="mobile-demo" class="button-collapse hambrgr" id="hamburger"><i class="material-icons">menu</i></a>
-                <!-- Hidden X icon until side-nav is activated -
-                <a href="#" data-activates="mobile-demo" class="button-collapse hambrgr" id="side-nav-x"><i class="fa fa-times fa-3x" aria-hidden="true"></i></a>-->
+                <a href="#" data-activates="mobile-demo" class="button-collapse hambrgr" id="hamburger"><i
+                        class="material-icons hammy animated">menu</i><span
+                        class="xedOut animated rotateIn rotateOut"><i class="fa fa-times fa-3x" aria-hidden="true"></i></span></a>
                 <ul class="right hide-on-med-and-down railway navlist scroll-content" id="navSize">
-                    <li><a href="#about" class="navLnkColor tooltipped fart" data-position="bottom" data-delay="50" data-tooltip="Resume + Education + Location & More!">About</a></li>
+                    <li><a href="#about" class="navLnkColor tooltipped fart" data-position="bottom" data-delay="50"
+                           data-tooltip="Resume + Education + Location & More!">About</a></li>
                     <!-- Drop Down Nav Button -->
-                    <!--<li><a href="#projects" class="dropdown-button navLnkColor" data-constrainwidth="false" data-hover="true" data-beloworigin="true" data-activates='dropdown1' id="navProj">Projects</a></li>--><!--<span class="new badge">4</span>-->
+                    <!--<li><a href="#projects" class="dropdown-button navLnkColor" data-constrainwidth="false" data-hover="true" data-beloworigin="true" data-activates='dropdown1' id="navProj">Projects</a></li>-->
+                    <!--<span class="new badge">4</span>-->
                     <!-- Drop down Structure -->
                     <!--<ul id='dropdown1' class='dropdown-content'>
                         <li><a href="" class="navButtons" data-hover="true">HTML & CSS<span class="badge">1</span></a></li>
@@ -155,8 +361,9 @@
                 <ul class="side-nav white z-depth-0" id="mobile-demo">
                     <!-- only have if side-nav doens't have nav above/hamburger showing -->
                     <!--<li class="right-align"><a href="#" id="exit"><span id="close-hvr">X</span></a></li>-->
-                    <li ><a href="#about" id="side-navBtns">About</a></li>
-                    <li><a href="#projects" id="side-navBtns">Projects   <span class="side-badge"></span>     <span class="new badge">4</span></a></li>
+                    <li><a href="#about" id="side-navBtns">About</a></li>
+                    <li><a href="#projects" id="side-navBtns">Projects <span class="side-badge"></span> <span
+                            class="new badge">4</span></a></li>
                     <li><a href="#tools" id="side-navBtns">Tools</a></li>
                     <li><a href="#blog" id="side-navBtns">Blog</a></li>
                     <li><a href="#contact" id="side-navBtns">Contact</a></li>
@@ -175,7 +382,7 @@
         <div class="parallax">
             <!-- Low Poly Landscape design by Stephani Stutz - Switzerland
             http://stephaniestutz.ch https://www.facebook.com/stephaniestutzart# -->
-            <img src="https://cdn3.artstation.com/p/assets/images/images/000/802/383/large/stephanie-stutz-the-red-mountains-by-toilettenmassaker-d6dux3c.jpg?1433405705" >
+            <img src="https://cdn3.artstation.com/p/assets/images/images/000/802/383/large/stephanie-stutz-the-red-mountains-by-toilettenmassaker-d6dux3c.jpg?1433405705">
         </div>
     </div><!-- end of Parallax Container -->
 
@@ -186,15 +393,20 @@
                 <div class="row" id="about-tab-row">
                     <div class="col s12 railwayBold">
                         <ul class="tabs scrollable">
-                            <li class="tab col s3"><a href="#education" id="education-bar"><i class="fa fa-graduation-cap hide-on-small-and-down" aria-hidden="true"></i>
+                            <li class="tab col s3"><a href="#education" id="education-bar"><i
+                                    class="fa fa-graduation-cap hide-on-small-and-down" aria-hidden="true"></i>
                                 Education</a></li>
-                            <li class="tab col s3"><a href="#skills" id="skills-bar"><i class="fa fa-bar-chart hide-on-small-and-down" aria-hidden="true"></i>
+                            <li class="tab col s3"><a href="#skills" id="skills-bar"><i
+                                    class="fa fa-bar-chart hide-on-small-and-down" aria-hidden="true"></i>
                                 Skills</a></li>
-                            <li class="tab col s3"><a class="active" href="#aboutme" id="about-bar"><i class="fa fa-user-secret hide-on-small-and-down" aria-hidden="true"></i>
+                            <li class="tab col s3"><a class="active" href="#aboutme" id="about-bar"><i
+                                    class="fa fa-user-secret hide-on-small-and-down" aria-hidden="true"></i>
                                 About <span class="hide-on-small-and-down">Me</span></a></li>
-                            <li class="tab col s3"><a href="#resume" id="resume-bar"><i class="fa fa-cogs hide-on-small-and-down" aria-hidden="true"></i>
+                            <li class="tab col s3"><a href="#resume" id="resume-bar"><i
+                                    class="fa fa-cogs hide-on-small-and-down" aria-hidden="true"></i>
                                 Resume</a></li>
-                            <li class="tab col s3"><a href="#location" id="google-map-tab"><i class="fa fa-home hide-on-small-and-down" aria-hidden="true"></i>
+                            <li class="tab col s3"><a href="#location" id="google-map-tab"><i
+                                    class="fa fa-home hide-on-small-and-down" aria-hidden="true"></i>
                                 Location</a></li>
                         </ul>
                     </div>
@@ -204,25 +416,93 @@
                         <div class="row railway">
                             <div class="col s10 offset-s1 m6 l6 btm-padding">
                                 <div class="center-align">
-                                    <img src="http://www.neit.edu/images/redesign-logo.png" class="responsive-img" id="neit-logo" />
+                                    <img src="images/school/neitlogo.jpg" class="responsive-img"
+                                         id="neit-logo"/>
                                 </div>
-                                <p class="edu-content">Currently enrolled in the IT-Software Engineering program at NEIT, where I've been
-                                    adamantly learning about many different topics in the web development and software engineering world. I've maintained
-                                    a accumulative GPA of 3.9+/4.0 every semester and have been inducted into the Phi Theta Kappa Honor Society</p>
+                                <p class="edu-content">Currently enrolled in the IT-Software Engineering program at
+                                    NEIT, where I've been
+                                    adamantly learning about many different topics in the web development and software
+                                    engineering world. I've maintained
+                                    a accumulative GPA of 3.9+/4.0 every semester and have been inducted into the Phi
+                                    Theta Kappa Honor Society</p>
                                 <div class="center-align hide-on-med-and-up">
                                     <!-- Modal Trigger for course list of NEIT-->
-                                    <a class="modal-trigger waves-effect waves-light btn red" href="#modal1">Courses Completed <i class="material-icons right">list</i></a>
+                                    <a class="modal-trigger waves-effect waves-light btn red" href="#modal1">Courses
+                                        Completed <i class="material-icons right">list</i></a>
                                 </div>
                             </div><!-- /neit column -->
                             <div class="col s10 offset-s1 m6 l6 btm-padding">
                                 <div class="center-align">
-                                    <img src="http://www.davehughesdevelopment.com/img/fcc-logo.png" class="responsive-img" id="fcc-logo">
+                                    <img src="images/school/fcc.jpg"
+                                         class="responsive-img" id="fcc-logo">
                                 </div>
-                                <p class="edu-content">In my free time I've been keeping up with Free Code Camp's course for Full-Stack Web Development.
-                                    I'm currently about  60% through the Front-End Course, working on the Front-End projects and Algorithm Challenges.
+                                <p class="edu-content">In my free time I've been keeping up with Free Code Camp's course
+                                    for Full-Stack Web Development.
+                                    I'm currently about 60% through the Front-End Course, working on the Front-End
+                                    projects and Algorithm Challenges.
                                     You can check my projects and algorithm solutions by clicking the link below</p>
                                 <div class="center-align hide-on-med-and-up">
-                                    <a href="https://www.freecodecamp.com/gorgonsmaze" class="waves-effect waves-light btn red">FCC Profile <i class="material-icons right">portrait</i></a>
+                                    <a href="https://www.freecodecamp.com/gorgonsmaze"
+                                       class="waves-effect waves-light btn red">FCC Profile <i
+                                            class="material-icons right">portrait</i></a>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!-- Education Buttons for medium and up display -->
+                        <div class="row hide-on-small-and-down" style="margin-bottom: 50px;">
+                            <!-- NEIT Button - on large -->
+                            <div class="col m6 l6">
+                                <div class="center-align">
+                                    <a class="modal-trigger waves-effect waves-light btn red" href="#modal1">Courses
+                                        Completed <i class="material-icons right">list</i></a>
+
+                                </div>
+                            </div>
+                            <!-- FCC Button - on large -->
+                            <div class="col m6 l6">
+                                <div class="center-align">
+                                    <a href="https://www.freecodecamp.com/gorgonsmaze"
+                                       class="waves-effect waves-light btn red">FCC Profile <i
+                                            class="material-icons right">portrait</i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col s10 offset-s1 m6 l6 btm-padding">
+                                <div class="center-align">
+                                    <img src="images/school/codecademy.jpg"
+                                         class="responsive-img"
+                                         id="codecademy-logo"/>
+                                </div>
+                                <p class="edu-content">Codecademy is something I use whenever I want to get a quick
+                                    refresher
+                                    on a particular programming language.
+                                    It's very easy to use, and it's fun to go through the whole curriculumn. So far I've
+                                    completed 5 skills, and just started learning React.JS</p>
+                                <div class="center-align hide-on-med-and-up">
+                                    <a class="waves-effect waves-light btn red"
+                                       href="https://www.codecademy.com/IanArsenault" target="_blank">Codecademy Profile
+                                        <i class="material-icons right">portrait</i></a>
+                                </div>
+                            </div>
+
+                            <div class="col s10 offset-s1 m6 l6 btm-padding">
+                                <div class="center-align">
+                                    <img src="images/school/hackerrank.jpg"
+                                         class="responsive-img" id="hackr-logo">
+                                </div>
+                                <p class="edu-content">HackerRank is an extraordinary tool for me, as it's what many
+                                    tech
+                                    companies are using to find the best applicatis for software jobs. Since getting my
+                                    Associates degree
+                                    I've been practicing on it every day.</p>
+                                <div class="center-align hide-on-med-and-up">
+                                    <a href="https://www.hackerrank.com/zzzian"
+                                       class="waves-effect waves-light btn red">HackerRank Profile <i
+                                            class="material-icons right">portrait</i></a>
                                 </div>
                             </div>
                         </div>
@@ -233,14 +513,17 @@
                             <!-- NEIT Button - on large -->
                             <div class="col m6 l6">
                                 <div class="center-align">
-                                    <a class="modal-trigger waves-effect waves-light btn red" href="#modal1">Courses Completed <i class="material-icons right">list</i></a>
-
+                                    <a class="waves-effect waves-light btn red"
+                                       href="https://www.codecademy.com/IanArsenault" target="_blank">Codecademy Profile
+                                        <i class="material-icons right">portrait</i></a>
                                 </div>
                             </div>
                             <!-- FCC Button - on large -->
                             <div class="col m6 l6">
                                 <div class="center-align">
-                                    <a href="https://www.freecodecamp.com/gorgonsmaze" class="waves-effect waves-light btn red">FCC Profile <i class="material-icons right">portrait</i></a>
+                                    <a href="https://www.hackerrank.com/zzzian"
+                                       class="waves-effect waves-light btn red">HackerRank Profile <i
+                                            class="material-icons right">portrait</i></a>
                                 </div>
                             </div>
                         </div>
@@ -252,18 +535,20 @@
                                 <!-- Modal Heading -->
                                 <div class="center-align">
                                     <h4>IT Software Engineering - Associates</h4>
-                                    <p>Associates Degree Graduation Date: September 2016</p>
+                                    <p>Associate in Science - <i>09/22/2016</i></p>
                                     <h6>Status Key:</h6>
                                     <div class="row">
                                         <div class="col s6 right-align">
-                                            <p><i class="material-icons icon-star-center" id="red-star">star_border</i> = Completed</p>
+                                            <p><i class="material-icons icon-star-center" id="red-star">star_border</i>
+                                                = Completed</p>
                                         </div>
                                         <div class="col s6 left-align">
-                                            <p><i class="material-icons icon-star-center" id="orange-star">star_border</i> = Currently in session</p>
+                                            <p><i class="material-icons icon-star-center"
+                                                  id="orange-star">star_border</i> = Currently in session</p>
                                         </div>
                                     </div><!-- end of Modal Heading -->
                                 </div>
-                                <hr />
+                                <hr/>
                                 <!-- Start of Current- Session Course Table -->
                                 <h5 class="course-head center-align">Currently In-Session:</h5>
                                 <table class="centered striped">
@@ -281,30 +566,18 @@
                                         <td>SE AS Capstone Project</td>
                                         <td>SE265.06</td>
                                         <td></td>
-                                        <td><i class="material-icons" id="orange-star">star_border</i></td>
-                                    </tr>
-                                    <tr>
-                                        <td>IT Ethics & Professional Development</td>
-                                        <td>IT267.16</td>
-                                        <td></td>
-                                        <td><i class="material-icons" id="orange-star">star_border</i></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Intro to Information Security</td>
-                                        <td>NE267.16</td>
-                                        <td></td>
-                                        <td><i class="material-icons" id="orange-star">star_border</i></td>
+                                        <td><i class="material-icons" id="red-star">star_border</i></td>
                                     </tr>
                                     <tr>
                                         <td>Web Development using ASP.NET</td>
                                         <td>SE256.06</td>
                                         <td></td>
-                                        <td><i class="material-icons" id="orange-star">star_border</i></td>
+                                        <td><i class="material-icons" id="red-star">star_border</i></td>
                                     </tr>
                                     </tbody>
                                 </table>
 
-                                <hr />
+                                <hr/>
 
                                 <!-- Completed Courses -->
 
@@ -433,12 +706,25 @@
                                         <td>A</td>
                                         <td><i class="material-icons" id="red-star">star_border</i></td>
                                     </tr>
+                                    <tr>
+                                        <td>IT Ethics & Professional Development</td>
+                                        <td>IT267.16</td>
+                                        <td>A</td>
+                                        <td><i class="material-icons" id="red-star">star_border</i></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Intro to Information Security</td>
+                                        <td>NE267.16</td>
+                                        <td>A</td>
+                                        <td><i class="material-icons" id="red-star">star_border</i></td>
+                                    </tr>
                                     </tbody>
                                 </table><!-- end Complete Course List -->
 
                             </div>
                             <div class="modal-footer">
-                                <a href="#!" class="modal-action modal-close waves-effect waves-light btn-flat red white-text">Exit</a>
+                                <a href="#!"
+                                   class="modal-action modal-close waves-effect waves-light btn-flat red white-text">Exit</a>
                             </div>
                         </div><!-- end of Modal table -->
 
@@ -479,7 +765,7 @@
                                             <td>Javascript</td>
                                             <td colspan="3">
                                                 <div class="progress">
-                                                    <div class="progress-bar-2" ></div>
+                                                    <div class="progress-bar-2"></div>
                                                 </div>
                                             </td>
                                             <td></td>
@@ -495,7 +781,7 @@
                                             <td></td>
                                         </tr>
                                         <tr>
-                                            <td>C++</td>
+                                            <td>ASP.NET</td>
                                             <td colspan="2">
                                                 <div class="progress">
                                                     <div class="progress-bar-4"></div>
@@ -507,14 +793,13 @@
                                             <td>PHP + MySQL</td>
                                             <td colspan="2">
                                                 <div class="progress">
-                                                    <div class="progress-bar-5" ></div>
+                                                    <div class="progress-bar-5"></div>
                                                 </div>
                                             </td>
                                             <td></td>
                                         </tr>
                                         </tbody>
                                     </table> <!-- /skill table -->
-
 
 
                                 </div>
@@ -537,21 +822,32 @@
                                             </div>-->
                                             <h5 class="center-align">Hello, World!</h5>
                                             <br/>
-                                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;My name is Ian, and I'm an aspiring software engineer + web developer. I started programming back in 2015,
-                                                and have grown to enjoy pushing myself when it comes to learning new languages, techniques, and trying out different developer tools.
-                                                I also have a deep motivation and love for trying to solve problems with code. I'm currently majoring in IT - Software Engineering, and when I have spare time,
-                                                learning about UX/UI.</p>
+                                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;My name is Ian, and I'm an aspiring
+                                                software engineer + web developer. I started programming back in 2015,
+                                                and have grown to enjoy pushing myself when it comes to learning new
+                                                languages, techniques, and trying out different developer tools.
+                                                I also have a deep motivation and love for trying to solve problems with
+                                                code. I'm currently majoring in IT - Software Engineering, and received
+                                                my Associate in Science.</p>
                                             <br/>
-                                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;In my free time I enjoy reading books about different aspects of technology, such as cyber security,
-                                                programming, and the history of encryption. When I'm not doing homework, you can find me hiking the trails, watching the Bruins, and playing Battlefield on PS4.</p>
+                                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;In my free time I enjoy reading books about
+                                                different aspects of technology, such as cyber security,
+                                                programming, and the history of encryption. When I'm not programming,
+                                                you can find me hiking the trails, watching the Bruins, and playing
+                                                Battlefield on PS4.</p>
                                             <br/>
-                                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If you'd like to get in touch about a job opportunity, or if you think I'd be a good fit at your company, feel free to contact me by clicking the contact button below.</p>
-                                            <p class="center-align">-<span class="kristi signature">Ian Arsenault</span></p>
+                                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If you'd like to get in touch about a job
+                                                opportunity, or if you think I'd be a good fit at your company, feel
+                                                free to contact me by clicking the contact button below.</p>
+                                            <p class="center-align">-<span class="kristi signature">Ian Arsenault</span>
+                                            </p>
 
                                         </div>
                                         <div class="card-action">
                                             <div class="center-align">
-                                                <a href="#message-me" class="btn waves-effect waves-light red section scrollspy"  name="action">Contact Me
+                                                <a href="#message-me"
+                                                   class="btn waves-effect waves-light red section scrollspy"
+                                                   name="action">Contact Me
                                                     <i class="material-icons right">send</i>
                                                 </a>
                                             </div>
@@ -572,7 +868,8 @@
                                     </div>
                                     <div class="card-action center-align">
                                         <!-- Check the download functionality in all browsers before live -->
-                                        <a href="images/assets/WebIanResume.pdf" download="IanArsenaultResume">Download Resume   <i class="fa fa-file-pdf-o" aria-hidden="true"></i></a>
+                                        <a href="images/assets/WebIanResume.pdf" download="IanArsenaultResume">Download
+                                            Resume <i class="fa fa-file-pdf-o" aria-hidden="true"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -583,7 +880,8 @@
                         <div class="row">
                             <div class="grey-block">
                                 <div id="map_2"></div>
-                                <img id="phone6s" src="images/assets/iphone.png" alt="iphone6s" class="hoverable-dark-2"/>
+                                <img id="phone6s" src="images/assets/iphone.png" alt="iphone6s"
+                                     class="hoverable-dark-2"/>
                             </div>
                         </div>
 
@@ -606,8 +904,79 @@
     </div>-->
 
     <!-- Project Section -->
-    <section  id="projects" class="section scrollspy">
+    <section id="projects" class="section scrollspy">
         <h4 class="center-align railwayBold">Projects</h4>
+
+        <div class="row">
+            <div class="col s10 offset-s1 m6 offset-m3 l4 offset-l4">
+                <div class="card railway z-depth-2">
+                    <div class="card-image z-depth-1">
+                        <div class="img-card-container">
+                            <img src="images/projects/protech/protech.jpg" height="190">
+                        </div>
+                    </div>
+                    <div class="center-align activator">
+                        <a class="btn-floating btn-large waves-effect waves-light btn-card-hvr" id="card-hvr-btn"><i
+                                class="material-icons hvr-bob">add</i></a>
+                    </div>
+                    <div class="card-content center-align">
+                        <h5 class=" activator grey-text text-darken-4">Protech Solutions</h5>
+
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Protech Solutions <a
+                                class="btn-floating btn waves-effect waves-light transparent z-depth-1 right"><i
+                                class="material-icons right red-text">close</i></a></span>
+                        <p>Website for a technology company that allows customers to find information about the products
+                            as well as purchase and download a Electronic Health Records Application.</p>
+                        <p><a href="http://ianarsenault.me/CapstoneOverview/" target="_blank">Project Documentation</a>
+                        </p>
+                        <div id="card-footer">
+                            <div class="chip">
+                                <img src="images/chipicons/html5logo.png" alt="HTML5  chip">
+                                HTML5
+                            </div>
+                            <div class="chip">
+                                <img src="images/chipicons/csslogo.png" alt="CSS chip">
+                                CSS3
+                            </div>
+                            <div class="chip">
+                                <img src="images/chipicons/jquerylogo.png" alt="Jquery chip">
+                                jQuery
+                            </div>
+                            <div class="chip">
+                                <img src="images/chipicons/javascriptlogo.svg" alt="Javascript chip">
+                                Javascript
+                            </div>
+                            <div class="chip">
+                                <img src="images/chipicons/phplogo.png" alt="PHP chip">
+                                PHP
+                            </div>
+                            <div class="chip">
+                                <img src="images/chipicons/mysqllogo.png" alt="MySQL chip">
+                                MySQL
+                            </div>
+                            <div class="chip">
+                                <img src="images/chipicons/materializelogo.png" alt="Materialize CSS chip">
+                                Materialize CSS
+                            </div>
+                            <div class="chip">
+                                <img src="images/chipicons/csharplogo.png" alt="C-Sharp chip">
+                                C#
+                            </div>
+                            <div class="chip">
+                                <img src="images/chipicons/sqllogo.png" alt="SQL chip">
+                                SQL
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-action center-align">
+                        <a href="http://ict.neit.edu/001241129/public_html/ASCapstoneProject/index.php" target="_blank">View
+                            Project</a>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <div class="row">
             <!-- Testing Card -->
@@ -619,15 +988,24 @@
                         </div>
                     </div>
                     <div class="center-align activator">
-                        <a class="btn-floating btn-large waves-effect waves-light btn-card-hvr" id="card-hvr-btn"><i class="material-icons hvr-bob">add</i></a>
+                        <a class="btn-floating btn-large waves-effect waves-light btn-card-hvr" id="card-hvr-btn"><i
+                                class="material-icons hvr-bob">add</i></a>
                     </div>
                     <div class="card-content center-align">
                         <h5 class=" activator grey-text text-darken-4">Random Grid Generator</h5>
 
                     </div>
                     <div class="card-reveal">
-                        <span class="card-title grey-text text-darken-4">Random Grid Generator<a class="btn-floating btn waves-effect waves-light transparent z-depth-1 right"><i class="material-icons right red-text">close</i></a></span>
-                        <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                        <span class="card-title grey-text text-darken-4">Random Grid Generator<a
+                                class="btn-floating btn waves-effect waves-light transparent z-depth-1 right"><i
+                                class="material-icons right red-text">close</i></a></span>
+                        <p>On this project I was tasked to create a form that allows the user to submit a number between
+                            1 and 100, which would then create a grid of rows and columns based on the number the user
+                            inputs.
+                            Also, If the random number is a multiple of 2 we display the cell blue. If the random number
+                            that's
+                            displayed in each cell is a multiple of 3 we display the cell red.
+                        </p>
                         <div id="card-footer">
                             <div class="chip">
                                 <img src="images/chipicons/html5logo.png" alt="HTML5  chip">
@@ -648,7 +1026,7 @@
                         </div>
                     </div>
                     <div class="card-action center-align">
-                        <a href="#!">View Project</a>
+                        <a href="http://ianarsenault.me/random-grid-generator/" target="_blank">View Project</a>
                     </div>
                 </div>
             </div>
@@ -662,15 +1040,20 @@
                         </div>
                     </div>
                     <div class="center-align activator">
-                        <a class="btn-floating btn-large waves-effect waves-light  z-depth-3 btn-card-hvr" id="card-hvr-btn"><i class="material-icons hvr-bob">add</i></a>
+                        <a class="btn-floating btn-large waves-effect waves-light  z-depth-3 btn-card-hvr"
+                           id="card-hvr-btn"><i class="material-icons hvr-bob">add</i></a>
                     </div>
                     <div class="card-content center-align">
                         <h5 class=" activator grey-text text-darken-4">Basic Arithmetic Quiz</h5>
 
                     </div>
                     <div class="card-reveal">
-                        <span class="card-title grey-text text-darken-4">Basic Arithmetic Quiz<a class="btn-floating btn waves-effect waves-light transparent z-depth-1 right"><i class="material-icons right red-text">close</i></a></span>
-                        <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                        <span class="card-title grey-text text-darken-4">Basic Arithmetic Quiz<a
+                                class="btn-floating btn waves-effect waves-light transparent z-depth-1 right"><i
+                                class="material-icons right red-text">close</i></a></span>
+                        <p>Program that dynamically creates 20 random basic arithmetic problems. Displaying the final
+                            grade + number of correct problems solved.</p>
+                        <p><b><i>To-Do's:</i></b> Need to fix issue with showing score if form isn't completed</p>
                         <div id="card-footer">
                             <div class="chip">
                                 <img src="images/chipicons/html5logo.png" alt="HTML5  chip">
@@ -705,15 +1088,21 @@
                         </div>
                     </div>
                     <div class="center-align activator">
-                        <a class="btn-floating btn-large waves-effect waves-light  z-depth-3 btn-card-hvr" id="card-hvr-btn"><i class="material-icons hvr-bob">add</i></a>
+                        <a class="btn-floating btn-large waves-effect waves-light  z-depth-3 btn-card-hvr"
+                           id="card-hvr-btn"><i class="material-icons hvr-bob">add</i></a>
                     </div>
                     <div class="card-content center-align">
                         <h5 class=" activator grey-text text-darken-4">Canvas Car Race</h5>
 
                     </div>
                     <div class="card-reveal">
-                        <span class="card-title grey-text text-darken-4">Canvas Car Race<a class="btn-floating btn waves-effect waves-light transparent z-depth-1 right"><i class="material-icons right red-text">close</i></a></span>
-                        <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                        <span class="card-title grey-text text-darken-4">Canvas Car Race<a
+                                class="btn-floating btn waves-effect waves-light transparent z-depth-1 right"><i
+                                class="material-icons right red-text">close</i></a></span>
+                        <p>A program that uses HTML5 Canvas and Javascript to display an interactive racing game. Which
+                            keeps the scores of who wins each race using local storage.</p>
+                        <p><b><i>To-Do's:</i></b> Need to fix some bugs + allow for user to clear scoreboard on click
+                        </p>
                         <div id="card-footer">
                             <div class="chip">
                                 <img src="images/chipicons/html5logo.png" alt="HTML5  chip">
@@ -738,7 +1127,8 @@
                         </div>
                     </div>
                     <div class="card-action center-align">
-                        <a href="#!">View Project</a>
+                        <a href="http://ict.neit.edu/001241129/public_html/se251/ianawebsite/assignments/Assignment6/Lab7.html"
+                           target="_blank<!---->">View Project</a>
                     </div>
                 </div>
             </div>
@@ -752,15 +1142,24 @@
                         </div>
                     </div>
                     <div class="center-align activator">
-                        <a class="btn-floating btn-large waves-effect waves-light  z-depth-3 btn-card-hvr" id="card-hvr-btn"><i class="material-icons hvr-bob">add</i></a>
+                        <a class="btn-floating btn-large waves-effect waves-light  z-depth-3 btn-card-hvr"
+                           id="card-hvr-btn"><i class="material-icons hvr-bob">add</i></a>
                     </div>
                     <div class="card-content center-align">
                         <h5 class=" activator grey-text text-darken-4">To-Do Profile Database</h5>
 
                     </div>
                     <div class="card-reveal">
-                        <span class="card-title grey-text text-darken-4">To-Do Profile Database<a class="btn-floating btn waves-effect waves-light transparent z-depth-1 right"><i class="material-icons right red-text">close</i></a></span>
-                        <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                        <span class="card-title grey-text text-darken-4">To-Do Profile Database<a
+                                class="btn-floating btn waves-effect waves-light transparent z-depth-1 right"><i
+                                class="material-icons right red-text">close</i></a></span>
+                        <p>The website is being built to host users to-do profiles. Where the can add + update + delete
+                            existing <i>To-Do's</i> Also working on a way to allow users to upload photos to host their
+                            own
+                            image library.</p>
+                        <p><b>Note:</b> If you want to login to the <i>To-Do</i> profile you can use the following</p>
+                        <p><b>Username:</b> ian &nbsp; <b>Password:</b> password</p>
+                        <p><b><i>To-Do's:</i></b> Fix Sign-up issues + AJAX for <i>To-Do</i> form data display</p>
                         <div id="card-footer">
                             <div class="chip">
                                 <img src="images/chipicons/html5logo.png" alt="HTML5  chip">
@@ -793,7 +1192,8 @@
                         </div>
                     </div>
                     <div class="card-action center-align">
-                        <a href="#!">View Project</a>
+                        <a href="http://ict.neit.edu/001241129/public_html/se251/ianawebsite/assignments/FinalProject/index.php"
+                           target="_blank">View Project</a>
                     </div>
                 </div>
             </div>
@@ -807,15 +1207,21 @@
                         </div>
                     </div>
                     <div class="center-align activator">
-                        <a class="btn-floating btn-large waves-effect waves-light  z-depth-3 btn-card-hvr" id="card-hvr-btn"><i class="material-icons hvr-bob">add</i></a>
+                        <a class="btn-floating btn-large waves-effect waves-light  z-depth-3 btn-card-hvr"
+                           id="card-hvr-btn"><i class="material-icons hvr-bob">add</i></a>
                     </div>
                     <div class="card-content center-align">
                         <h5 class=" activator grey-text text-darken-4">Actors Portal Storage</h5>
 
                     </div>
                     <div class="card-reveal">
-                        <span class="card-title grey-text text-darken-4">Actors Portal Storage<a class="btn-floating btn waves-effect waves-light transparent z-depth-1 right"><i class="material-icons right red-text">close</i></a></span>
-                        <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                        <span class="card-title grey-text text-darken-4">Actors Portal Storage<a
+                                class="btn-floating btn waves-effect waves-light transparent z-depth-1 right"><i
+                                class="material-icons right red-text">close</i></a></span>
+                        <p>A website that allows for the user to input basica actor information, and use JSON to store
+                            the form data in a table of links for each actor. Allowing for the data to be pulled back
+                            into the form to update or delete.</p>
+                        <p><b><i>To-Do's:</i></b> Fix the bootstrap styling + update to PHP MySQL</p>
                         <div id="card-footer">
                             <div class="chip">
                                 <img src="images/chipicons/html5logo.png" alt="HTML5  chip">
@@ -836,7 +1242,8 @@
                         </div>
                     </div>
                     <div class="card-action center-align">
-                        <a href="#!">View Project</a>
+                        <a href="http://ict.neit.edu/001241129/public_html/se251/ianawebsite/assignments/Assignment5/Lab6A/Assignment6A.html"
+                           target="_blank">View Project</a>
                     </div>
                 </div>
             </div>
@@ -850,15 +1257,23 @@
                         </div>
                     </div>
                     <div class="center-align activator">
-                        <a class="btn-floating btn-large waves-effect waves-light  z-depth-3 btn-card-hvr" id="card-hvr-btn"><i class="material-icons hvr-bob">description</i></a>
+                        <a class="btn-floating btn-large waves-effect waves-light  z-depth-3 btn-card-hvr"
+                           id="card-hvr-btn"><i class="material-icons hvr-bob">description</i></a>
                     </div>
                     <div class="card-content center-align">
                         <h5 class=" activator grey-text text-darken-4">The Division Safehouse</h5>
 
                     </div>
                     <div class="card-reveal">
-                        <span class="card-title grey-text text-darken-4">The Division Safehouse<a class="btn-floating btn waves-effect waves-light transparent z-depth-1 right"><i class="material-icons right red-text">close</i></a></span>
-                        <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                        <span class="card-title grey-text text-darken-4">The Division Safehouse<a
+                                class="btn-floating btn waves-effect waves-light transparent z-depth-1 right"><i
+                                class="material-icons right red-text">close</i></a></span>
+                        <p>A website the encompasses all things <i>The Division</i> (a video game). Allows user to learn
+                            about
+                            gear and weapons, news & updates, screenshots, and more. Also has a page where players
+                            can post their gamertag and find other people to team with on game missions and Raids.</p>
+                        <p><b><i>To-Do's:</i></b> Fix Looking For Group page + update site to PHP MySQL to store user
+                            information</p>
                         <div id="card-footer">
                             <div class="chip">
                                 <img src="images/chipicons/html5logo.png" alt="HTML5  chip">
@@ -883,7 +1298,8 @@
                         </div>
                     </div>
                     <div class="card-action center-align">
-                        <a href="#!">View Project</a>
+                        <a href="http://ict.neit.edu/001241129/public_html/TheDivisionSafeHouse/index.html"
+                           target="_blank">View Project</a>
                     </div>
                 </div>
             </div>
@@ -915,7 +1331,9 @@
                     <div class="row" id="tool-row">
                         <div class="col s3 tool-icons center-align" id="html-tool">
                             <i class="devicon-html5-plain colored large hvr-float"></i>
-                            <div class="icon-text fadeInDown" id="html5-text"><div class="center-align">HTML5</div></div>
+                            <div class="icon-text fadeInDown" id="html5-text">
+                                <div class="center-align">HTML5</div>
+                            </div>
                         </div>
                         <div class="col s3 tool-icons center-align">
                             <i class="devicon-css3-plain colored large hvr-float"></i>
@@ -1124,19 +1542,14 @@
     </section> --><!--/other tool section -->
 
 
-
-
-
-
     <!-- Blog Section -->
-    <section  id="blog" class="section scrollspy">
+    <section id="blog" class="section scrollspy">
         <h4 class="center-align railwayBold">Blogging!</h4>
 
     </section> <!--/blog section -->
 
     <div class="container">
     </div> <!-- END CONTAINER -->
-
 
 
     <!--
@@ -1162,102 +1575,116 @@
         <!-- Container of Social Media  Icons -->
         <div class="container">
             <div class="row soc-icon-row">
-                <div class="col s2" id="icon-row-padding">&nbsp;</div>
                 <!--<a class="btn tooltipped" data-bg-color="red" data-fg-color="red" data-position="bottom" data-delay="50" data-tooltip="I am tooltip">Hover me!</a>
                 <a class="btn tooltipped"  data-tooltip-bg="blue" data-tooltip-fg="white" data-position="bottom" data-delay="50" data-tooltip="I am tooltip">Hover me!</a>
                 <a class="btn tooltipped"  data-html="true" data-position="bottom" data-delay="50" data-tooltip="<p style='color:#000000'>Something</p>">Hover me!</a>-->
-                <div class="col s1" id="slack-tool">
-                    <!-- HEX COLOR OF ICON IMAGE FOR TOOLTIP #F7F7F7 -->
-                    <a href="#" class="hvr-float tooltipped" data-tooltip-bg="#F7F7F7" data-tooltip-fg="#D91C60" data-position="bottom" data-delay="50" data-tooltip="Slack">
-                        <img src="images/icons/slack-256.png" class="responsive-img">
-                    </a>
-                </div>
-                <div class="col s1">
+                <!--<div class="col s1" id="slack-tool">-->
+                <!--&lt;!&ndash; HEX COLOR OF ICON IMAGE FOR TOOLTIP #F7F7F7 &ndash;&gt;-->
+                <!--<a href="#" class="hvr-float tooltipped" data-tooltip-bg="#F7F7F7" data-tooltip-fg="#D91C60"-->
+                <!--data-position="bottom" data-delay="50" data-tooltip="Slack">-->
+                <!--<img src="images/icons/slack-256.png" class="responsive-img">-->
+                <!--</a>-->
+                <!--</div>-->
+                <div class="col s1 offset-s4">
                     <!-- HEX COLOR OF ICON IMAGE FOR TOOLTIP #3F91CB -->
-                    <a href="#" class="hvr-float tooltipped" data-tooltip-bg="#3F91CB" data-tooltip-fg="#ffffff" data-position="bottom" data-delay="50" data-tooltip="Github">
+                    <a href="https://github.com/GorgonsMaze" target="_blank" class="hvr-float tooltipped"
+                       data-tooltip-bg="#3F91CB" data-tooltip-fg="#ffffff" data-position="bottom" data-delay="50"
+                       data-tooltip="Github">
                         <img src="images/icons/github.png" class="responsive-img">
                     </a>
                 </div>
                 <div class="col s1">
                     <!-- HEX COLOR OF ICON IMAGE FOR TOOLTIP #482C16 -->
-                    <a href="#" class="hvr-float tooltipped" data-tooltip-bg="#482C16" data-tooltip-fg="#ffffff" data-position="bottom" data-delay="50" data-tooltip="Free Code Camp">
+                    <a href="https://www.freecodecamp.com/gorgonsmaze" target="_blank" class="hvr-float tooltipped"
+                       data-tooltip-bg="#482C16"
+                       data-tooltip-fg="#ffffff" data-position="bottom" data-delay="50" data-tooltip="Free Code Camp">
                         <img src="images/icons/FCC.png" class="responsive-img">
                     </a>
                 </div>
                 <div class="col s1">
                     <!-- HEX COLOR OF ICON IMAGE FOR TOOLTIP #40BFF5 -->
-                    <a href="#" class="hvr-float tooltipped" data-tooltip-bg="#40BFF5" data-tooltip-fg="white" data-position="bottom" data-delay="50" data-tooltip=@IanArsenault>
+                    <a href="https://twitter.com/ianarsnau" target="_blank" class="hvr-float tooltipped"
+                       data-tooltip-bg="#40BFF5"
+                       data-tooltip-fg="white" data-position="bottom" data-delay="50" data-tooltip=@ianarsnau>
                         <img src="images/icons/twitter.png" class="responsive-img">
                     </a>
                 </div>
                 <div class="col s1">
                     <!-- HEX COLOR OF ICON IMAGE FOR TOOLTIP #238CC8 -->
-                    <a href="#" class="hvr-float tooltipped" data-tooltip-bg="#238CC8" data-tooltip-fg="#ffffff" data-position="bottom" data-delay="50" data-tooltip="LinkedIn">
+                    <a href="https://www.linkedin.com/in/ian-arsenault-074a54b7" class="hvr-float tooltipped"
+                       data-tooltip-bg="#238CC8" data-tooltip-fg="#ffffff"
+                       data-position="bottom" data-delay="50" data-tooltip="LinkedIn">
                         <img src="images/icons/linkedin.png" class="responsive-img">
                     </a>
-
                 </div>
-                <div class="col s1">
-                    <!-- HEX COLOR OF ICON IMAGE FOR TOOLTIP #C85041 -->
-                    <a href="#" class="hvr-float tooltipped" data-tooltip-bg="#EB5E4C" data-tooltip-fg="#ffffff" data-position="bottom" data-delay="50" data-tooltip="Google+">
-                        <img src="images/icons/googleplus.png" class="responsive-img">
-                    </a>
-                </div>
-                <div class="col s1">
-                    <!-- HEX COLOR OF ICON IMAGE FOR TOOLTIP #13C1F3 -->
-                    <a href="#" class="hvr-float tooltipped" data-tooltip-bg="#13C1F3" data-tooltip-fg="#ffffff" data-position="bottom" data-delay="50" data-tooltip="Skype">
-                        <img src="images/icons/skype.png" class="responsive-img">
-                    </a>
-                </div>
+                <!--<div class="col s1">-->
+                <!--&lt;!&ndash; HEX COLOR OF ICON IMAGE FOR TOOLTIP #C85041 &ndash;&gt;-->
+                <!--<a href="#" class="hvr-float tooltipped" data-tooltip-bg="#EB5E4C" data-tooltip-fg="#ffffff"-->
+                <!--data-position="bottom" data-delay="50" data-tooltip="Google+">-->
+                <!--<img src="images/icons/googleplus.png" class="responsive-img">-->
+                <!--</a>-->
+                <!--</div>-->
+                <!--<div class="col s1">-->
+                <!--&lt;!&ndash; HEX COLOR OF ICON IMAGE FOR TOOLTIP #13C1F3 &ndash;&gt;-->
+                <!--<a href="#" class="hvr-float tooltipped" data-tooltip-bg="#13C1F3" data-tooltip-fg="#ffffff"-->
+                <!--data-position="bottom" data-delay="50" data-tooltip="Skype">-->
+                <!--<img src="images/icons/skype.png" class="responsive-img">-->
+                <!--</a>-->
+                <!--</div>-->
                 <!--<div class="col s1">
                     <a href="#" class="hvr-float tooltipped" data-tooltip-bg="#FFFFFF" data-tooltip-fg="#49A6D9" data-position="bottom" data-delay="50" data-tooltip="Signals Encrypted Chat">
                         <img src="images/icons/signals-white.png" class="responsive-img">
                     </a>
                 </div>-->
             </div>
-        </div><!-- end of social media icons -->
 
+            <!-- CONTACT ME FORM -->
+            <div class="row scrollspy" id="message-me">
+                <div class="col s12 m8 offset-m2 l6 form-padding">
+                    <div class="card white card-form z-depth-2">
+                        <form class="col s12 contact-form" action="https://formspree.io/ian_arsenault@protonmail.com"
+                              method="POST">
+                            <div class="row center-align railwayBold">
+                                <h5>Send me a message</h5>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <input id="name_of" placeholder="Mr. Bigglesworth" name="name" type="text"
+                                           class="validate" required="" aria-required="true" length="30">
+                                    <label for="name_of" data-error="Please fill in your name" data-success="Sucess!">Name</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <input placeholder="Name@yourdomain.com" id="email_of" name="_replyto" type="text"
+                                           class="validate" required="" aria-required="true" length="48">
+                                    <label for="email_of" data-error="Please re-enter your email"
+                                           data-success="Success!">Email</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <textarea placeholder="Write your message here!" id="message" name="message"
+                                              class="materialize-textarea validate" required="" aria-required="true"
+                                              length="240"></textarea>
+                                    <label for="message" data-error="Please type in a message" data-success="Success!">Message</label>
+                                </div>
+                            </div>
 
-        <!-- CONTACT ME FORM -->
-        <div class="row scrollspy" id="message-me">
-            <div class="col s12 m8 offset-m2 l6 form-padding">
-                <div class="card white card-form z-depth-2">
-                    <form class="col s12 contact-form">
-                        <div class="row center-align railwayBold">
-                            <h5>Send me a message</h5>
-                        </div>
-                        <div class="row">
-                            <div class="input-field col s12">
-                                <input id="name_of" placeholder="Mr. Bigglesworth" type="text" class="validate" required="" aria-required="true">
-                                <label for="name_of">Name</label>
+                            <div class="center-align">
+                                <button class="btn waves-effect waves-light red" type="submit" value="Send">Send
+                                    <i class="material-icons right">send</i>
+                                </button>
                             </div>
-                        </div>
-                        <div class="row">
-                            <div class="input-field col s12">
-                                <input placeholder="Name@yourdomain.com" id="email_of" type="text" class="validate" required="" aria-required="true">
-                                <label for="email_of">Email</label>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="input-field col s12">
-                                <textarea placeholder="Write your message here!" id="message" class="materialize-textarea validate" required="" aria-required="true"></textarea>
-                                <label for="message">Message</label>
-                            </div>
-                        </div>
-
-                        <div class="center-align">
-                            <button class="btn waves-effect waves-light red" type="submit" name="action">Submit
-                                <i class="material-icons right">send</i>
-                            </button>
-                        </div>
-                    </form>
+                        </form>
+                    </div>
                 </div>
-            </div>
-            <!-- GOOGLE MAP -->
-            <div class="col s12 m12 l6 map-padding">
-                <div id="map"></div>
-            </div>
+                <!-- GOOGLE MAP -->
+                <div class="col s12 m12 l6 map-padding">
+                    <div id="map"></div>
+                </div>
 
+            </div>
         </div>
     </section>
 
@@ -1301,14 +1728,16 @@
 
     <!-- Bottom-sheet Modal Trigger Button-->
     <div class="center-align">
-        <a class="waves-effect waves-light btn modal-trigger transparent" id="btn-small" href="#modal2"><i class="material-icons red-text md-36">view_comfy</i></a>
+        <a class="waves-effect waves-light btn modal-trigger transparent" id="btn-small" href="#modal2"><i
+                class="material-icons red-text md-36">view_comfy</i></a>
     </div>
 
 
     <!-- Modal Structure -->
     <div id="modal2" class="modal bottom-sheet">
         <div class="center-align">
-            <a class="waves-effect waves-light btn modal-trigger modal-action modal-close white z-depth-0" id="bottom-modal-btn" href="#modal2"><i class="material-icons red-text md-36">more_horiz</i></a>
+            <a class="waves-effect waves-light btn modal-trigger modal-action modal-close white z-depth-0"
+               id="bottom-modal-btn" href="#modal2"><i class="material-icons red-text md-36">more_horiz</i></a>
         </div>
 
         <div class="modal-content">
@@ -1317,7 +1746,8 @@
                 <div class="col s12 m4 offset-m2">
                     <div class="col s3">
                         <!-- Credit for art due to Stephani Stutz Graphic Artist, Zürich, Switzerland http://stephaniestutz.ch/ -->
-                        <img class="responsive-img" src="images/assets/red-mountains.jpg" alt="Stephanie Stutz Red Mountains Low Poly" />
+                        <img class="responsive-img" src="images/assets/red-mountains.jpg"
+                             alt="Stephanie Stutz Red Mountains Low Poly"/>
                     </div>
                     <div class="col s9">
                         <div class="valign-wrapper">
@@ -1331,12 +1761,14 @@
                 </div>
                 <div class="col s12 m4 offset-m1">
                     <div class="col s3">
-                        <img class="responsive-img ban-img-foot" src="images/assets/ian-banner.jpg" alt="Red Polygon Banner" />
+                        <img class="responsive-img ban-img-foot" src="images/assets/ian-banner.jpg"
+                             alt="Red Polygon Banner"/>
                     </div>
                     <div class="col s9">
                         <div class="valign-wrapper">
                             <div class="valign">
-                                <a class="center-align"  href="http://www.freepik.com/free-photos-vectors/banner">Banner vector designed by Freepik</a>
+                                <a class="center-align" href="http://www.freepik.com/free-photos-vectors/banner">Banner
+                                    vector designed by Freepik</a>
                                 <p>Free Vector and Photo website</p>
                             </div>
                         </div>
@@ -1346,10 +1778,7 @@
             </div>
         </div>
     </div>
-
-
 </div><!-- end main content -->
-
 
 
 <!--Import jQuery before materialize.js-->
@@ -1360,10 +1789,17 @@
 <script src="https://use.fontawesome.com/351ac21fcd.js"></script>
 
 <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
     ga('create', 'UA-81735550-1', 'auto');
     ga('send', 'pageview');

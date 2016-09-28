@@ -27,7 +27,7 @@ var skillsBar = function () {
         }, 500);
         /* PHP MySQL Progress Bar Animation */
         $(".progress-bar-5").animate({
-            width: "39%"
+            width: "59%"
         }, 500);
 
         e.preventDefault();
@@ -235,7 +235,6 @@ $(document).ready(function(){
      });
      }); */
 
-
     // Carousel Initialization */
     $('.carousel').carousel();
     // Initializes drop down nav buttons
@@ -257,6 +256,7 @@ $(document).ready(function(){
     });
     // Scrollspy function
     $('.scrollspy').scrollSpy();
+   // $('.scrollspy').scrollSpy({'scrollOffset': 0});
 
     // for HTML5 "required" attribute
     $("select[required]").css({
@@ -372,7 +372,6 @@ $(document).ready(function(){
 
 });
 
-
 function scaleVideoContainer() {
 
     var height = $(window).height() + 5;
@@ -417,4 +416,5 @@ function scaleBannerVideoSize(element){
         $('.homepage-hero-module .video-container video').addClass('fadeIn animated');
 
     });
+
 }
