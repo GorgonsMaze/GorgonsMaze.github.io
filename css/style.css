@@ -940,6 +940,11 @@ p.bubble:after {
     margin-top: 60px;
     clear: both;
 }
+
+.btn-flat {
+    line-height:0!important;
+    height: 0!important;
+}
 /* Card Reveal Button */
 .btn-floating:hover {
     box-shadow: 0 0 0 0 rgba(0, 0, 0, 0), 0 0 0 0 rgba(0, 0, 0, 0);
