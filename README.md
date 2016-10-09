@@ -10,14 +10,15 @@ Currently being built to host personal projects, write-ups about programs, and d
 ![Image](http://i.imgur.com/oGVINmF.png)
 
 #To-Do's [Important]
-* Project Section updates
+* Update Skills table
+* Update resume
+* Update Project Section
  * Work on ajax calls for multiple project sections by language
  * Pushpin side-nav for project language links
  * Update Project links and format projects to have link back to portfolio
 * Fix Side-Nav hamburger>X animation to work with clicks outside transform button
 
 #To-Do's [Main]
-* Email through Contact Form (** IMPORTANT**)
 * Parallax text animation on load and scroll
 * Responsiveness
  * Social Media Icons
@@ -31,32 +32,4 @@ Currently being built to host personal projects, write-ups about programs, and d
 * Google Maps Scroll Issue's with full width/screen
 * Change icons of project card reveal
  
-# Completed [Main]
-- [x] About Section
-    - [x] About
-    - [x] Education
-    - [x] Skills
-    - [x] Location
-    - [x] Resume
-- [x]  Contact Section
-- [x]  Tools Section
 
-  
-
-# Completed [Specific Details]
-- [x] Parallax with logo/header title
-- [x] Side-Nav hamburger>X animation
-- [x] Tooltip color change - mulitple tooltips > different colors
-- [x] Google Maps API and Styling
-- [x] Create a Favicon for browser tab
-- [x] Select colors
-- [x] Image zoom on hover inside card
-- [x] Button animations with css - hover
-- [x] Preloader animation for skills graph + Preloader for page
-- [x] Navbar Scroll functionality
-- [x] tool animation - color change / name reveal
-- [x] Social media links
-- [x] Contact form to send me an email
-- [x] Google Maps for location
-- [x] Parallax text long shadow 
-- [x] Footer with credits and information about site - assets used etc 
