@@ -4,9 +4,9 @@
 
 var skillsBar = function () {
     // on button click refresh skills bar table animation
-    $("#skills-bar, #refresh-graph").on('click', function(e) {
+    $("#skills-bar, #refresh-graph").on('click', function (e) {
         /* Restart animation from beginning */
-        $( "div" ).css({
+        $("div").css({
             width: ""
         });
         /* HTML CSS Progress Bar Animation */
@@ -34,33 +34,7 @@ var skillsBar = function () {
     });
 };
 
-$(document).ready(function(){
-    $(".main-content").fadeIn(1000);
-
-    //$("nav").hide();
-
-    // hides scroll-to-top button
-    //$("#fixBotRight").hide();
-    // Hide side-nav X
-    $(".xedOut").hide();
-
-
-    /* about me card hvr
-     $("#about-card").hover(function () {
-     $("#about-card").addClass('z-depth-2');
-     }, function () {
-     $("#about-card").removeClass('z-depth-2');
-     });
-     */
-
-    $('.parallax').parallax();
-
-    $('ul.tabs').tabs();
-
-    /* the "href" attribute of .modal-trigger must specify
-     * the modal ID that wants to be triggered  */
-    $('.modal-trigger').leanModal();
-
+function aboutmeFades() {
     /* Education Tab - Content Fade */
     $("#education-bar").on('click', function () {
         $("#education").fadeIn('slow');
@@ -88,26 +62,58 @@ $(document).ready(function(){
     $("#google-map-tab").on('click', function () {
         $("#location").fadeIn('slow');
     });
+}
 
 
+function scaleVideoContainer() {
 
-    // Skillsbar animation
-    skillsBar();
+    var height = $(window).height() + 5;
+    var unitHeight = parseInt(height) + 'px';
+    $('.homepage-hero-module').css('height', unitHeight);
 
-    /*$(".progress-bar").animate( {
-     width: "100%"
-     }, 200 );*/
+}
 
-    /* Icon text fades on load */
-    $(".icon-text").fadeOut();
+function initBannerVideoSize(element) {
 
-    /*(".devicon-html5-plain").hover(function () {
-     $('#html5-text').fadeIn().addClass('animated');
-     $(this).css('visibility','visible')
-     }, function () {
-     $('#html5-text').removeClass('animated');
-     }); */
+    $(element).each(function () {
+        $(this).data('height', $(this).height());
+        $(this).data('width', $(this).width());
+    });
 
+    scaleBannerVideoSize(element);
+
+}
+
+function scaleBannerVideoSize(element) {
+
+    var windowWidth = $(window).width(),
+        windowHeight = $(window).height() + 5,
+        videoWidth,
+        videoHeight;
+
+    console.log(windowHeight);
+
+    $(element).each(function () {
+        var videoAspectRatio = $(this).data('height') / $(this).data('width');
+
+        $(this).width(windowWidth);
+
+        if (windowWidth < 1000) {
+            videoHeight = windowHeight;
+            videoWidth = videoHeight / videoAspectRatio;
+            $(this).css({'margin-top': 0, 'margin-left': -(videoWidth - windowWidth) / 2 + 'px'});
+
+            $(this).width(videoWidth).height(videoHeight);
+        }
+
+        $('.homepage-hero-module .video-container video').addClass('fadeIn animated');
+
+    });
+
+}
+
+
+function devicons() {
     /* Tools */
     $(".devicon-html5-plain").hover(function () {
         $('#html5-text').fadeIn().addClass('animated');
@@ -210,9 +216,11 @@ $(document).ready(function(){
     }, function () {
         $('#materialize-text').fadeOut().removeClass('animated');
     });
+}
 
+function tooltipColor() {
     /* Function to change color of tooltips */
-    $(".tooltipped").hover(function() {
+    $(".tooltipped").hover(function () {
         var tooltipId = $(this).data('tooltip-id');
         var fg = $(this).data('tooltip-fg');
         var bg = $(this).data('tooltip-bg');
@@ -221,55 +229,14 @@ $(document).ready(function(){
             color: fg
         });
     });
+}
 
-    /* For the animate method to work you need to link
-     jquery-color  https://cdnjs.com/libraries/jquery-color
+function navbarScroll() {
 
-     $(".tooltipped").hover(function() {
-     var tooltipId = $(this).data('tooltip-id');
-     var fg = $(this).data('tooltip-fg');
-     var bg = $(this).data('tooltip-bg');
-     $('#' + tooltipId).animate({
-     backgroundColor: bg,
-     color: fg
-     });
-     }); */
-
-    // Carousel Initialization */
-    $('.carousel').carousel();
-    // Initializes drop down nav buttons
-    $(".dropdown-button").dropdown();
-    // Side-nav on mobile Initialization
-    //$(".button-collapse").sideNav();
-    $('.button-collapse').sideNav({
-            closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
-        }
-    );
-    // Accordian Initialization
-    $('.collapsible').collapsible({
-        accordion: false // false changes collapsible behavior to expandable instead of accordion
-    });
-    // Close side-nav bar on 'x' click
-    $("#exit").on('click', function () {
-        // Hide sideNav
-        $('.button-collapse').sideNav('hide');
-    });
-    // Scrollspy function
-    $('.scrollspy').scrollSpy();
-   // $('.scrollspy').scrollSpy({'scrollOffset': 0});
-
-    // for HTML5 "required" attribute
-    $("select[required]").css({
-        display: "inline",
-        height: 0,
-        padding: 0,
-        width: 0
-    });
-    
     /* Fixed Navbar Scroll */
     var lastScrollTop = 0;
     var navbar = $('.navbar-fixed');
-    $(window).scroll(function() {
+    $(window).scroll(function () {
         var y = $(this).scrollTop();
         // If scrolltop point is greater than last scroll position
         if (y > lastScrollTop) {
@@ -296,7 +263,7 @@ $(document).ready(function(){
         lastScrollTop = y;
         var scrolly = $('body').scrollTop();
         setTimeout(function () {
-            if(scrolly == $('body').scrollTop()) {
+            if (scrolly == $('body').scrollTop()) {
                 navbar.css({
                     visibility: "visible",
                     transition: "opacity 0.5s linear",
@@ -319,12 +286,11 @@ $(document).ready(function(){
 
     });
 
+}
 
-    //$('.button-collapse').sideNav({ closeOnClick: true });
-
-
+function hamburgerTransition() {
     /* On Side-nav Hamburger click > transition to X button */
-    $(".hammy").on('click',function () {
+    $(".hammy").on('click', function () {
         $(".hammy").removeClass('rotateIn').addClass('rotateOut');
         $(".xedOut").show();
     });
@@ -333,18 +299,100 @@ $(document).ready(function(){
         $(".xedOut").hide();
         $(".hammy").removeClass('rotateOut').addClass('rotateIn');
     });
+}
 
-    /* Checking to see if which carousel-item is in the center of window
-     and adding css styling to it - background-color or box-shadow
-     */
-    var windowCenter = $(window).width() /2;
+function siteNewsAlert() {
+    setTimeout(function () {
+        Materialize.toast('Newly designed website coming soon!', 6500, 'red white-text').fadeIn(5000);
+    }, 5000);
+    setTimeout(function () {
+        Materialize.toast('Updating old projects + adding new ones!', 4500, 'red white-text');
+    }, 8000);
 
-    if($('#caro-card') >= windowCenter) {
-        $('#caro-card').addClass('reddy');
-    }
-    else if ($('#caro-card') <= windowCenter) {
-        $('#caro-card').removeClass('reddy');
-    }
+}
+
+function windowResize() {
+    var $window = $(window);
+    $window.on('resize', function () {
+        if ($window.width() >= 1400) {
+            $("#projects").addClass('container');
+        } else {
+            $("#projects").removeClass('container');
+        }
+    }).resize(); // resize will run this code automatically on load
+}
+
+$(document).ready(function () {
+    $(".main-content").fadeIn(1000);
+    // Function to alert user of site changes or news
+    siteNewsAlert();
+
+    // Window resize function
+    windowResize();
+
+    // Hide side-nav X
+    $(".xedOut").hide();
+
+    // Parallax initialization
+    $('.parallax').parallax();
+
+    // Tabs initialization
+    $('ul.tabs').tabs();
+
+    // Modal Initialization
+    $('.modal-trigger').leanModal();
+
+    // About Me Section fade-in's
+    aboutmeFades();
+
+    // Skillsbar animation
+    skillsBar();
+
+    // Scrolling function for navbar and fixed scrollTop button
+    navbarScroll();
+
+    /* Icon text fades on load */
+    $(".icon-text").fadeOut();
+
+    // Devicon/tool function that hides/fades-in icons
+    devicons();
+
+    // Tooltip color change function
+    tooltipColor();
+
+    // Transition function for hamburger icon
+    hamburgerTransition();
+
+    // Carousel Initialization */
+    $('.carousel').carousel();
+    // Initializes drop down nav buttons
+    $(".dropdown-button").dropdown();
+    // Side-nav on mobile Initialization
+    //$(".button-collapse").sideNav();
+    $('.button-collapse').sideNav({
+            closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
+        }
+    );
+    // Accordian Initialization
+    $('.collapsible').collapsible({
+        accordion: false // false changes collapsible behavior to expandable instead of accordion
+    });
+    // Close side-nav bar on 'x' click
+    $("#exit").on('click', function () {
+        // Hide sideNav
+        $('.button-collapse').sideNav('hide');
+    });
+    // Scrollspy function
+    $('.scrollspy').scrollSpy();
+    //$('.scrollspy').scrollSpy({'scrollOffset': 400});
+
+    // for HTML5 "required" attribute
+    $("select[required]").css({
+        display: "inline",
+        height: 0,
+        padding: 0,
+        width: 0
+    });
 
 
     /* Hero Video */
@@ -354,59 +402,33 @@ $(document).ready(function(){
     initBannerVideoSize('.video-container .filter');
     initBannerVideoSize('.video-container video');
 
-    $(window).on('resize', function() {
+    $(window).on('resize', function () {
         scaleVideoContainer();
         scaleBannerVideoSize('.video-container .poster img');
         scaleBannerVideoSize('.video-container .filter');
         scaleBannerVideoSize('.video-container video');
     });
 
+    /* For the animate method to work you need to link
+     jquery-color  https://cdnjs.com/libraries/jquery-color
 
+     $(".tooltipped").hover(function() {
+     var tooltipId = $(this).data('tooltip-id');
+     var fg = $(this).data('tooltip-fg');
+     var bg = $(this).data('tooltip-bg');
+     $('#' + tooltipId).animate({
+     backgroundColor: bg,
+     color: fg
+     });
+     }); */
+
+
+    //$('.button-collapse').sideNav({ closeOnClick: true });
+    /*$(".progress-bar").animate( {
+     width: "100%"
+     }, 200 );*/
+    //$("nav").hide();
+
+    // hides scroll-to-top button
+    //$("#fixBotRight").hide();
 });
-
-function scaleVideoContainer() {
-
-    var height = $(window).height() + 5;
-    var unitHeight = parseInt(height) + 'px';
-    $('.homepage-hero-module').css('height',unitHeight);
-
-}
-
-function initBannerVideoSize(element){
-
-    $(element).each(function(){
-        $(this).data('height', $(this).height());
-        $(this).data('width', $(this).width());
-    });
-
-    scaleBannerVideoSize(element);
-
-}
-
-function scaleBannerVideoSize(element){
-
-    var windowWidth = $(window).width(),
-        windowHeight = $(window).height() + 5,
-        videoWidth,
-        videoHeight;
-
-    console.log(windowHeight);
-
-    $(element).each(function(){
-        var videoAspectRatio = $(this).data('height')/$(this).data('width');
-
-        $(this).width(windowWidth);
-
-        if(windowWidth < 1000){
-            videoHeight = windowHeight;
-            videoWidth = videoHeight / videoAspectRatio;
-            $(this).css({'margin-top' : 0, 'margin-left' : -(videoWidth - windowWidth) / 2 + 'px'});
-
-            $(this).width(videoWidth).height(videoHeight);
-        }
-
-        $('.homepage-hero-module .video-container video').addClass('fadeIn animated');
-
-    });
-
-}
