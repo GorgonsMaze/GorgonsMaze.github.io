@@ -339,19 +339,6 @@
                 <ul class="right hide-on-med-and-down railway navlist scroll-content" id="navSize">
                     <li><a href="#about" class="navLnkColor tooltipped fart" data-position="bottom" data-delay="50"
                            data-tooltip="Resume + Education + Location & More!">About</a></li>
-                    <!-- Drop Down Nav Button -->
-                    <!--<li><a href="#projects" class="dropdown-button navLnkColor" data-constrainwidth="false" data-hover="true" data-beloworigin="true" data-activates='dropdown1' id="navProj">Projects</a></li>-->
-                    <!--<span class="new badge">4</span>-->
-                    <!-- Drop down Structure -->
-                    <!--<ul id='dropdown1' class='dropdown-content'>
-                        <li><a href="" class="navButtons" data-hover="true">HTML & CSS<span class="badge">1</span></a></li>
-                        <li><a href="" class="navButtons" data-hover="true">Javascript<span class="badge">1</span></a></li>
-                        <li><a href="" class="navButtons" data-hover="true">C#<span class="new badge">1</span></a></li>
-                        <li><a href="" class="navButtons" data-hover="true">PHP<span class="badge">1</span></a></li>
-                        <li><a href="" class="navButtons" data-hover="true">SQL<span class="badge">1</span></a></li>
-                        <li><a href="" class="navButtons" data-hover="true">C++<span class="badge">1</span></a></li>
-                        <li><a href="" class="navButtons" data-hover="true">Full Websites<span class="badge">1</span></a></li>
-                    </ul>-->
                     <li><a href="#projects" class="navLnkColor">Projects</a></li>
                     <li><a href="#tools" class="navLnkColor">Tools</a></li>
                     <li><a href="#blog" class="navLnkColor">Blog</a></li>
@@ -552,23 +539,23 @@
                                 <!--&lt;!&ndash; Start of Current- Session Course Table &ndash;&gt;-->
                                 <!--<h5 class="course-head center-align">Currently In-Session:</h5>-->
                                 <!--<table class="centered striped">-->
-                                    <!--<thead>-->
-                                    <!--<tr>-->
-                                        <!--<th data-field="course">Course</th>-->
-                                        <!--<th data-field="course-id">ID</th>-->
-                                        <!--<th data-field="grade">Grade</th>-->
-                                        <!--<th data-field="status">Status</th>-->
-                                    <!--</tr>-->
-                                    <!--</thead>-->
+                                <!--<thead>-->
+                                <!--<tr>-->
+                                <!--<th data-field="course">Course</th>-->
+                                <!--<th data-field="course-id">ID</th>-->
+                                <!--<th data-field="grade">Grade</th>-->
+                                <!--<th data-field="status">Status</th>-->
+                                <!--</tr>-->
+                                <!--</thead>-->
 
-                                    <!--<tbody>-->
-                                    <!--<tr>-->
-                                        <!--<td>SE AS Capstone Project</td>-->
-                                        <!--<td>SE265.06</td>-->
-                                        <!--<td></td>-->
-                                        <!--<td><i class="material-icons" id="red-star">star_border</i></td>-->
-                                    <!--</tr>-->
-                                    <!--</tbody>-->
+                                <!--<tbody>-->
+                                <!--<tr>-->
+                                <!--<td>SE AS Capstone Project</td>-->
+                                <!--<td>SE265.06</td>-->
+                                <!--<td></td>-->
+                                <!--<td><i class="material-icons" id="red-star">star_border</i></td>-->
+                                <!--</tr>-->
+                                <!--</tbody>-->
                                 <!--</table>-->
 
                                 <hr/>
@@ -918,7 +905,7 @@
                 <div class="card railway z-depth-2">
                     <div class="card-image z-depth-1">
                         <div class="img-card-container">
-                            <img src="images/projects/protech/protech.jpg" height="190">
+                            <img src="images/projects/protech/protechs.jpg">
                         </div>
                     </div>
                     <div class="center-align activator">
@@ -1416,10 +1403,27 @@
     </section>
 
 
-
     <!-- Blog Section -->
     <section id="blog" class="section scrollspy">
         <h4 class="center-align railwayBold">Blogging!</h4>
+
+        <div class="row valign-wrapper" style="margin: 60px 0; padding: 0 20px;">
+            <div class="valign col s12 m6 l4">
+                <h5 class="center-align">Coming Soon!</h5>
+                <p>A blog section that will be both technical and personal.</p>
+                <p>It will feature details about the latest developer tools I'm using, different languages I'm currently
+                    learning.
+                    Along with taking you, the user, through the building of my past projects including languages in C#,
+                    C++ with detail write ups, example code, and project source code.</p>
+                <p>I'll also be contributing articles on what I'm currently doing in other aspects of technology, my
+                    different hobbies, as well as life.</p>
+            </div>
+            <div class="col s12 m6 l4 pull-l2">
+                <img src="https://www.git-tower.com/learn/content/04-build-your-own-blog/03-design/03-blog-layout-and-grid/wireframe-article@2x.jpg"
+                     class="responsive-img">
+            </div>
+        </div>
+
 
     </section> <!--/blog section -->
 
@@ -1477,7 +1481,7 @@
                 <div class="col s1">
                     <!-- HEX COLOR OF ICON IMAGE FOR TOOLTIP #238CC8 -->
                     <a href="https://www.linkedin.com/in/ian-arsenault-074a54b7" class="hvr-float tooltipped"
-                       data-tooltip-bg="#238CC8" data-tooltip-fg="#ffffff"
+                       data-tooltip-bg="#238CC8" data-tooltip-fg="#ffffff" target="_blank"
                        data-position="bottom" data-delay="50" data-tooltip="LinkedIn">
                         <img src="images/icons/linkedin.png" class="responsive-img">
                     </a>
@@ -1495,25 +1499,27 @@
                             </div>
                             <div class="row">
                                 <div class="input-field col s12">
-                                    <input id="name_of" placeholder="Mr. Bigglesworth" name="name" type="text"
+                                    <input id="name_of" placeholder="Joe Schmoe" name="name" type="text"
                                            class="validate" required="" aria-required="true" length="30">
-                                    <label for="name_of" data-error="Please fill in your name" data-success="Sucess!">Name</label>
+                                    <label for="name_of" data-error="Please fill in your name">Name</label>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="input-field col s12">
-                                    <input placeholder="Name@yourdomain.com" id="email_of" name="_replyto" type="text"
-                                           class="validate" required="" aria-required="true" length="48">
-                                    <label for="email_of" data-error="Please re-enter your email"
-                                           data-success="Success!">Email</label>
+                                    <input id="email_of" placeholder="example@yourdomain.com" type="text"
+                                           name="_replyto" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-z]{2,4}$"
+                                           title="Enter email address correctly ex. name@domain.com" class="validate"
+                                           required="" aria-required="true" length="48">
+                                    <label for="email_of"
+                                           data-erorr="Please fill in your email correctly ex name@domain.com"><b>Email</b></label>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="input-field col s12">
                                     <textarea placeholder="Write your message here!" id="message" name="message"
                                               class="materialize-textarea validate" required="" aria-required="true"
-                                              length="240"></textarea>
-                                    <label for="message" data-error="Please type in a message" data-success="Success!">Message</label>
+                                              length="240" minlength="3"></textarea>
+                                    <label for="message" data-error="Please type in a message">Message</label>
                                 </div>
                             </div>
 
