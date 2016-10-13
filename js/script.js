@@ -303,11 +303,8 @@ function hamburgerTransition() {
 
 function siteNewsAlert() {
     setTimeout(function () {
-        Materialize.toast('Newly designed website coming soon!', 6500, 'red white-text').fadeIn(5000);
+        Materialize.toast('Newly designed website coming soon! <br/> Updating old projects + adding new ones!', 6500, 'red white-text').fadeIn(5000);
     }, 5000);
-    setTimeout(function () {
-        Materialize.toast('Updating old projects + adding new ones!', 4500, 'red white-text');
-    }, 8000);
 
 }
 
