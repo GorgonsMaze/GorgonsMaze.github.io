@@ -942,8 +942,10 @@ p.bubble:after {
 }
 
 .btn-flat {
-    line-height:0!important;
-    height: 0!important;
+    /*line-height:0!important;*/
+    /*height: 0!important;*/
+    height: 23px;
+    line-height: 23px;
 }
 /* Card Reveal Button */
 .btn-floating:hover {
