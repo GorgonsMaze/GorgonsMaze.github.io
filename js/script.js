@@ -301,12 +301,12 @@ function hamburgerTransition() {
     });
 }
 
-function siteNewsAlert() {
-    setTimeout(function () {
-        Materialize.toast('Newly designed website coming soon! <br/> Updating old projects + adding new ones!', 6500, 'red white-text').fadeIn(5000);
-    }, 5000);
-
-}
+// function siteNewsAlert() {
+//     setTimeout(function () {
+//         Materialize.toast('Newly designed website coming soon! <br/> Updating old projects + adding new ones!', 6500, 'red white-text').fadeIn(5000);
+//     }, 5000);
+//
+// }
 
 function windowResize() {
     var $window = $(window);
@@ -321,8 +321,8 @@ function windowResize() {
 
 $(document).ready(function () {
     $(".main-content").fadeIn(1000);
-    // Function to alert user of site changes or news
-    siteNewsAlert();
+
+    //siteNewsAlert();
 
     // Window resize function
     windowResize();
