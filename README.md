@@ -16,18 +16,3 @@ Currently being built to host personal projects, write-ups about programs, and d
 * Fix Side-Nav hamburger>X animation to work with clicks outside transform button
 * Fix responsive issues with language chips in cards
 
-#To-Do's [Main]
-* Parallax text animation on load and scroll
-* Responsiveness
- * Social Media Icons
- * Tool Icons
- * Navigation Bar for scroll devices
- * modal on mobile devices
-* Project Section
-  * Pushpin side-bar with tabs or ajax load of project display cards
-* Blog Section
-  * Blog post with link to blog page/ blog site
-* Google Maps Scroll Issue's with full width/screen
-* Change icons of project card reveal
- 
-
