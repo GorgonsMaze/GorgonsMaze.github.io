@@ -7,19 +7,6 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css">
     <link rel="stylesheet" href="css/style.css">
-    <style type="text/css">
-        .header-image {
-            /*position: relative;*/
-            /*-webkit-background-size: 100% 100%;*/
-            /*-moz-background-size: 100% 100%;*/
-            /*-o-background-size: 100% 100%;*/
-            /*background-size: 100% 100%;*/
-            background-image: linear-gradient(rgba(0, 0, 0, 0.49),rgba(0, 0, 0, 0.89)),url('https://i.imgur.com/aG712Z2.jpg');
-        }
-        .fa-code {
-            font-size: 1.5em;
-        }
-    </style>
 </head>
 <body>
 <section class="hero is-large is-dark header-image">
@@ -33,25 +20,25 @@
               <span></span>
               <span></span>
             </span>
-            <div class="nav-right nav-menu">
+            <div id="nav-menu" class="nav-right nav-menu">
                 <a class="nav-item is-tab is-active">About</a>
                 <a class="nav-item is-tab">Projects</a>
                 <a class="nav-item is-tab">Blog</a>
-                <a class="nav-item is-tab">Contact</a>
+                <a class="nav-item is-tab" id="contact-btn">Contact</a>
             </div>
         </div>
     </nav>
 
-        <div class="hero-body">
-            <div class="container">
-                <h1 class="title">
-                    Ian Arsenault
-                </h1>
-                <h2 class="subtitle">
-                    Software Engineer
-                </h2>
-            </div>
+    <div class="hero-body">
+        <div class="container">
+            <h1 class="title">
+                Ian Arsenault
+            </h1>
+            <h2 class="subtitle">
+                Software Engineer
+            </h2>
         </div>
+    </div>
 
 </section>
 
@@ -96,7 +83,8 @@
                         Languages & Learning Tracks
                     </h1>
                     <h2 class="subtitle">
-                        List of languages, the number of projects, and current languages worked with in and out of school.
+                        List of languages, the number of projects, and current languages worked with in and out of
+                        school.
                     </h2>
                 </div>
             </div>
@@ -155,17 +143,61 @@
 <!-- Location -->
 <!-- End Location -->
 
+
+<!-- Contact-->
+<div class="modal" id="contact-modal">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+        <header class="modal-card-head">
+            <p class="modal-card-title">Contact Me</p>
+            <button class="delete"></button>
+        </header>
+        <section class="modal-card-body">
+
+        </section>
+        <footer class="modal-card-foot">
+            <div class="">
+                <a class="button is-dark">
+                    <span class="icon">
+                      <i class="fa fa-github"></i>
+                    </span>
+                    <span>GitHub</span>
+                </a>
+                <a class="button is-info">
+                    <span class="icon">
+                        <i class="fa fa-linkedin"></i>
+                    </span>
+                    <span>LinkedIn</span>
+                </a>
+                <a class="button is-danger close-contact">Lemme out of here!</a>
+            </div>
+        </footer>
+    </div>
+</div>
+<!-- End Contact -->
+
+<!-- Hire Me -->
+<div class="notification is-success has-text-centered">
+    <button class="delete"></button>
+    Hey! I'm currently looking for work! Please reach out with any job opportunities. - Ian
+</div>
+<!-- End Hire Me -->
+
 <footer class="footer">
     <div class="container">
         <div class="content has-text-centered">
             <p>
-                <span>
-                    <i class="fa fa-code" aria-hidden="true"></i>
+                <span class=>
+                    <i class="fa fa-code foot-icon" aria-hidden="true"></i>
                 </span>
-                by <a href="#!">Ian Arsenault</a>
+                with a
+                <span class="">
+                    <i class="fa fa-heart foot-icon" aria-hidden="true"></i>
+                </span>
+                by <a href="#!" class="link">Ian Arsenault</a>
             </p>
             <p>
-                <a class="icon" href="https://github.com/GorgonsMaze">
+                <a class="icon link" href="https://github.com/GorgonsMaze">
                     <i class="fa fa-github"></i>
                 </a>
             </p>
@@ -174,78 +206,9 @@
 </footer>
 
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js">
+</script><script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>
-<script type="text/javascript">
-    new Morris.Donut({
-        // ID of the element in which to draw the chart.
-        element: 'languages',
-        // Chart data records -- each entry in this array corresponds to a point on
-        // the chart.
-        data: [
-            { label: 'Javascript', value: 20 },
-            { label: 'HTML & CSS', value: 10 },
-            { label: 'JAVA', value: 5 },
-            { label: 'PHP', value: 5 },
-            { label: 'C#/ASP.NET', value: 4 }
-
-        ],
-        backgroundColor: '#ccc',
-        labelColor: '#000500',
-        colors: [
-            '#1f7135',
-            '#239a3b',
-            '#7bc96f',
-            '#c6e48b',
-            '#dcfa9e'
-        ]
-       // formatter: function (x) { return x + "%"}
-    });
-
-    new Morris.Donut({
-        // ID of the element in which to draw the chart.
-        element: 'serverLang',
-        // Chart data records -- each entry in this array corresponds to a point on
-        // the chart.
-        data: [
-            { label: 'SQL', value: 20 },
-            { label: 'MySQL', value: 10 }
-
-        ],
-        backgroundColor: '#ccc',
-        labelColor: '#000500',
-        colors: [
-            '#cd7106',
-            '#ff8d07'
-
-        ]
-        // formatter: function (x) { return x + "%"}
-    });
-
-    new Morris.Bar({
-        element: 'schoolLang',
-        data: [
-            { year: '2015', value: 2 },
-            { year: '2016', value: 5 },
-            { year: '2017', value: 8 }
-        ],
-        // The name of the data record attribute that contains x-values.
-        xkey: 'year',
-        // A list of names of data record attributes that contain y-values.
-        ykeys: ['value'],
-        labels: ['Languages being learned'],
-        hideHover: 'auto',
-        backgroundColor: '#ccc',
-        labelColor: '#000500',
-        barColors: [
-            '#549cc4',
-            '#239a3b',
-            '#7bc96f',
-            '#c6e48b',
-            '#dcfa9e'
-        ]
-    });
-</script>
+<script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>
