@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.0/css/bulma.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css">
+    <link rel="stylesheet" href="css/style.css">
     <style type="text/css">
         .header-image {
             /*position: relative;*/
@@ -13,7 +14,10 @@
             /*-moz-background-size: 100% 100%;*/
             /*-o-background-size: 100% 100%;*/
             /*background-size: 100% 100%;*/
-            background-image: linear-gradient(rgba(0, 0, 0, 0.49),rgba(0, 0, 0, 0.89)),url('https://i.imgur.com/eqzy27X.jpg');
+            background-image: linear-gradient(rgba(0, 0, 0, 0.49),rgba(0, 0, 0, 0.89)),url('https://i.imgur.com/aG712Z2.jpg');
+        }
+        .fa-code {
+            font-size: 1.5em;
         }
     </style>
 </head>
@@ -80,18 +84,29 @@
             </li>
         </ul>
     </div>
-
 </section>
 
-
+<!-- Skills -->
 <section class="section">
     <div class="container">
+        <section class="hero">
+            <div class="hero-body">
+                <div class="container">
+                    <h1 class="title">
+                        Languages & Learning Tracks
+                    </h1>
+                    <h2 class="subtitle">
+                        List of languages, the number of projects, and current languages worked with in and out of school.
+                    </h2>
+                </div>
+            </div>
+        </section>
         <div class="columns">
-            <div class="column is-6">
+            <div class="column is-4">
                 <div class="card">
                     <header class="card-header">
                         <p class="card-header-title">
-                            Programming languages
+                            Number of Projects by Language
                         </p>
                     </header>
                     <div class="card-content">
@@ -99,11 +114,11 @@
                     </div>
                 </div>
             </div>
-            <div class="column is-6">
+            <div class="column is-4">
                 <div class="card">
                     <header class="card-header">
                         <p class="card-header-title">
-                            Server Languages
+                            Server Side Projects
                         </p>
                     </header>
                     <div class="card-content">
@@ -111,15 +126,43 @@
                     </div>
                 </div>
             </div>
+            <div class="column is-4">
+                <div class="card">
+                    <header class="card-header">
+                        <p class="card-header-title">
+                            Languages being learned
+                        </p>
+                    </header>
+                    <div class="card-content">
+                        <div id="schoolLang" style="height: 250px;"></div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>
+<!-- End Skills -->
+
+<!-- Education -->
+<!-- End Education -->
+
+<!-- Resume -->
+<!-- End Resume -->
+
+<!-- Projects -->
+<!-- End Projects -->
+
+<!-- Location -->
+<!-- End Location -->
 
 <footer class="footer">
     <div class="container">
         <div class="content has-text-centered">
             <p>
-                Built by <a href="#!">Ian Arsenault</a>
+                <span>
+                    <i class="fa fa-code" aria-hidden="true"></i>
+                </span>
+                by <a href="#!">Ian Arsenault</a>
             </p>
             <p>
                 <a class="icon" href="https://github.com/GorgonsMaze">
@@ -173,13 +216,35 @@
         backgroundColor: '#ccc',
         labelColor: '#000500',
         colors: [
-            '#1f7135',
+            '#cd7106',
+            '#ff8d07'
+
+        ]
+        // formatter: function (x) { return x + "%"}
+    });
+
+    new Morris.Bar({
+        element: 'schoolLang',
+        data: [
+            { year: '2015', value: 2 },
+            { year: '2016', value: 5 },
+            { year: '2017', value: 8 }
+        ],
+        // The name of the data record attribute that contains x-values.
+        xkey: 'year',
+        // A list of names of data record attributes that contain y-values.
+        ykeys: ['value'],
+        labels: ['Languages being learned'],
+        hideHover: 'auto',
+        backgroundColor: '#ccc',
+        labelColor: '#000500',
+        barColors: [
+            '#549cc4',
             '#239a3b',
             '#7bc96f',
             '#c6e48b',
             '#dcfa9e'
         ]
-        // formatter: function (x) { return x + "%"}
     });
 </script>
 </body>

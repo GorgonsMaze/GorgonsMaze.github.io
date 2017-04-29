@@ -1,0 +1,13 @@
+.nav-item a.is-tab.is-active, a.nav-item.is-tab.is-active {
+    border-bottom: 3px solid #ff3708 !important;
+}
+.nav-item a.is-tab:hover,
+a.nav-item.is-tab:hover {
+    border-bottom-color: #ff3708;
+    border-top-color: transparent;
+}
+
+.tabs li.is-active a {
+    border-bottom-color: #ff3708;
+    color: #ff3708;
+}
