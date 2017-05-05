@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ian Arsenault</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.0/css/bulma.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -9,11 +10,11 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<section class="hero is-large is-dark header-image">
+<section class="hero is-large is-dark header-image" id="nav-hero-section">
     <nav class="nav has-shadow">
         <div class="container">
             <div class="nav-left">
-                <a class="nav-item">IanArsenault.me</a>
+                <a class="nav-item" id="nav-name">Ian Arsenault</a>
             </div>
             <span class="nav-toggle">
               <span></span>
@@ -30,19 +31,42 @@
     </nav>
 
     <div class="hero-body">
-        <div class="container">
-            <h1 class="title">
+        <div class="container has-text-centered">
+            <h1 class="title is-1">
                 Ian Arsenault
             </h1>
-            <h2 class="subtitle">
+            <h2 class="subtitle" id="description">
                 Software Engineer
             </h2>
+            <div class="bottom is-hidden-mobile">
+                <div class="mouse">
+                    <div class="mouse-wheel"></div>
+                </div>
+            </div>
         </div>
     </div>
 
 </section>
 
+<!-- About -->
 <section class="section">
+    <div class="container">
+        <div class="heading">
+            <h1 class="title">About</h1>
+        </div>
+        <div class="columns">
+            <div class="column is-4 is-offset-4">
+                <figure class="image is-340x340">
+                    <img src="http://placehold.it/340x340">
+                </figure>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End About -->
+
+<!-- About Full Details Tabs  --->
+<section class="section tabs-section">
     <div class="tabs is-centered is-boxed">
         <ul>
             <li class="is-active">
@@ -72,9 +96,10 @@
         </ul>
     </div>
 </section>
+<!-- About Full Details Tabs -->
 
 <!-- Skills -->
-<section class="section">
+<section class="section tab-section">
     <div class="container">
         <section class="hero">
             <div class="hero-body">
@@ -177,9 +202,9 @@
 <!-- End Contact -->
 
 <!-- Hire Me -->
-<div class="notification is-success has-text-centered">
+<div class="notification has-text-centered">
     <button class="delete"></button>
-    Hey! I'm currently looking for work! Please reach out with any job opportunities. - Ian
+    Hello, World! I'm currently looking for work. Please reach out with any job opportunities. - Ian
 </div>
 <!-- End Hire Me -->
 
@@ -190,7 +215,7 @@
                 <span class=>
                     <i class="fa fa-code foot-icon" aria-hidden="true"></i>
                 </span>
-                with a
+                with
                 <span class="">
                     <i class="fa fa-heart foot-icon" aria-hidden="true"></i>
                 </span>

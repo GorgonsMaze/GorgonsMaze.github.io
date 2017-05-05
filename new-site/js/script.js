@@ -1,5 +1,7 @@
 /**
- * Created by ianarsenault on 4/28/17.
+ * Created by Ian Arsenault
+ *
+ * Work in progress - unfinished code + not cleaned up
  */
 
 /** Nav drop Down toggle */
@@ -23,7 +25,20 @@ $(document).on('click', function (e) {
 });
 /** End Drop Down Nav functionality **/
 
+/** Subtitle display */
+var descriptionArr = [ "Student", "Dog Enthusiast", "Web Developer", "Food connoisseur", "Software Engineer"];
+var idx = 0;
 
+setInterval(function () {
+    $('#description').fadeOut(400, function () {
+       $("#description").text(descriptionArr[idx++]).fadeIn(400);
+    });
+    idx == descriptionArr.length ? idx = 0 : idx;
+}, 4000);
+
+/** End Subtitle display */
+
+/** Contact Modal */
 $('#contact-btn').on('click', function () {
     //alert("Clciked!@");
     $('#contact-modal').addClass('is-active').fadeIn(30000);
@@ -35,8 +50,9 @@ $('.modal-background, .modal-card-head .delete, .modal-card-foot .close-contact'
     $('#contact-modal').removeClass('is-active').fadeOut(500);
     $('body').removeClass('stop-scroll');
 });
+/** End Contact Modal */
 
-
+/** Morris Charts */
 new Morris.Donut({
     // ID of the element in which to draw the chart.
     element: 'languages',
@@ -105,3 +121,5 @@ new Morris.Bar({
         '#dcfa9e'
     ]
 });
+
+/** End Morris Charts */
