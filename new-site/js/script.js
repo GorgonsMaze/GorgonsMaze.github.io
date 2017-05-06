@@ -6,6 +6,21 @@
 
 /** TODO Fix modal background scroll **/
 
+/** Tab JS */
+$('.tabs ul li').on('click', function () {
+    //alert("Tab clicked");
+    var id = $(this).attr('data-tab');
+    //lert(id);
+    $('.tabs ul li').removeClass('is-active');
+    $('.tab-section').removeClass('current-tab');
+
+    $(this).addClass('is-active');
+    $('#' + id).addClass('current-tab');
+
+});
+
+/** End Tab Js */
+
 /** Nav drop Down toggle */
 
 var toggle = $('.nav-toggle');

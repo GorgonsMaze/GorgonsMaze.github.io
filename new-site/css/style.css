@@ -134,6 +134,10 @@ a.link {
 .tab-section {
     padding: 0 3rem 1.5rem 3rem!important;
     margin-bottom: 4rem;
+    display: none;
+}
+.tab-section.current-tab {
+    display: inherit;
 }
 
 .heading .title {
@@ -208,3 +212,6 @@ form .submit-btn:hover {
 .textarea.is-active {
     border-color: #8DA034!important;
 }
+
+/* Tabs Section */
+
