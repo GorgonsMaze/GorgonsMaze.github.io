@@ -108,14 +108,15 @@ a.link {
     color: #8DA034 !important;
 }
 
-.stop-scroll {
-    overflow: hidden;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-}
+/* Shoots user back to top when clicking modal */
+/*.stop-scroll {*/
+    /*overflow: hidden;*/
+    /*position: fixed;*/
+    /*top: 0;*/
+    /*left: 0;*/
+    /*right: 0;*/
+    /*bottom: 0;*/
+/*}*/
 
 .notification {
     background-color: #547b62;
@@ -156,4 +157,25 @@ a.link {
         /*box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/
         /*background-color: #000000;*/
     }
+}
+
+.view-projects-btn {
+
+    display: block;
+    margin: 3rem auto 0 0;
+}
+
+form .submit-btn {
+    background-color: #65716f;
+    color: #fff;
+    -webkit-transition: all 0.25s ease-in-out;
+    -moz-transition: all 0.25s ease-in-out;
+    -ms-transition: all 0.25s ease-in-out;
+    -o-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+}
+
+form .submit-btn:hover {
+    background-color: #575d5b;
+    color: #e2e2e2;
 }
