@@ -105,7 +105,7 @@ a.nav-item.is-tab:hover {
 }
 
 a.link {
-    color: #8DA034 !important;
+    color: #7e8f2e !important;
 }
 
 /* Shoots user back to top when clicking modal */
@@ -184,3 +184,27 @@ form .submit-btn:hover {
     margin-bottom: 3rem;
 }
 
+#fcc-logo {
+    height: 40px;
+    margin: 30px auto;
+}
+/* Neit logo in Education - About Me */
+#neit-logo {
+    height: 60px;
+    width: 295px;
+    margin:20px auto;
+}
+
+#hackr-logo {
+    height: 60px;
+    width: 295px;
+    margin: 20px auto;
+}
+
+.input:focus, .input.is-focused, .input:active, .input.is-active,
+.textarea:focus,
+.textarea.is-focused,
+.textarea:active,
+.textarea.is-active {
+    border-color: #8DA034!important;
+}
