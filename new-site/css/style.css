@@ -55,7 +55,7 @@ a.nav-item.is-tab:hover {
 
 .mouse .mouse-wheel {
     animation-name: wheeldrop;
-    animation-duration: 1s;
+    animation-duration: 1.3s;
     animation-timing-function: linear;
     animation-delay: 0s;
     animation-iteration-count: infinite;
@@ -65,11 +65,15 @@ a.nav-item.is-tab:hover {
 @-webkit-keyframes wheeldrop {
     0% {
         top: 5px;
-        opacity: 0;
+        opacity: 1;
     }
     30% {
         top: 10px;
         opacity: 1;
+    }
+    70% {
+        top: 15px;
+        opacity: 0.8;
     }
     100% {
         top: 20px;
@@ -128,4 +132,28 @@ a.link {
 }
 .tab-section {
     padding: 0 3rem 1.5rem 3rem!important;
+    margin-bottom: 4rem;
+}
+
+.heading .title {
+    margin-bottom: 3rem;
+}
+
+/* Set a size for our map container, the Google Map will take up 100% of this container */
+#map {
+    height: 400px;
+    width: 100%;
+    margin-bottom: 5rem;
+    /*box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/
+    /*background-color: #000000;*/
+}
+
+@media only screen and (max-width:992px){
+    /* styles for mobile browsers smaller than 480px; (iPhone) */
+    #map {
+        margin-top: 20px;
+        height: 510px;
+        /*box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/
+        /*background-color: #000000;*/
+    }
 }

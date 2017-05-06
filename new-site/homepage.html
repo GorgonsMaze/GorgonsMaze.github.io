@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Ian Arsenault</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.0/css/bulma.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -52,7 +52,7 @@
 <section class="section">
     <div class="container">
         <div class="heading">
-            <h1 class="title">About</h1>
+            <h1 class="title has-text-centered">About</h1>
         </div>
         <div class="columns">
             <div class="column is-4 is-offset-4">
@@ -61,7 +61,15 @@
                 </figure>
             </div>
         </div>
-    </div>
+        <div class="columns">
+            <div class="column is-half is-offset-3">
+                <div class="content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla accumsan, metus ultrices eleifend
+                        gravida, nulla nunc varius lectus, nec rutrum justo nibh eu lectus. Ut vulputate semper dui.
+                        Fusce erat odio, sollicitudin vel erat vel, interdum mattis neque.</p>
+                </div>
+            </div>
+        </div>
 </section>
 <!-- End About -->
 
@@ -87,12 +95,12 @@
                     <span>Resume</span>
                 </a>
             </li>
-            <li>
-                <a>
-                    <span class="icon is-small"><i class="fa fa-map-marker"></i></span>
-                    <span>Location</span>
-                </a>
-            </li>
+            <!--<li>-->
+                <!--<a>-->
+                    <!--<span class="icon is-small"><i class="fa fa-map-marker"></i></span>-->
+                    <!--<span>Location</span>-->
+                <!--</a>-->
+            <!--</li>-->
         </ul>
     </div>
 </section>
@@ -119,7 +127,7 @@
                 <div class="card">
                     <header class="card-header">
                         <p class="card-header-title">
-                            Number of Projects by Language
+                            Projects by Language
                         </p>
                     </header>
                     <div class="card-content">
@@ -166,6 +174,19 @@
 <!-- End Projects -->
 
 <!-- Location -->
+<!-- About -->
+<section class="section">
+    <div class="container">
+        <div class="heading">
+            <h1 class="title has-text-centered">Location</h1>
+        </div>
+        <div class="columns">
+            <div class="column is-8 is-offset-2">
+                <div id="map"></div>
+            </div>
+        </div>
+</section>
+<!-- End About -->
 <!-- End Location -->
 
 
@@ -232,8 +253,40 @@
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js">
-</script><script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+</script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>
 <script type="text/javascript" src="js/script.js"></script>
+<script type="text/javascript">
+    function initMap() {
+        var mapOptions = {
+            zoom: 10,
+            scrollwheel: false,
+            center: new google.maps.LatLng(41.82399, -71.41283)
+        };
+
+        // get the DOM element that will contain the map
+        var mapElement = document.getElementById('map');
+
+        // Create the map
+        var map = new google.maps.Map(mapElement, mapOptions);
+
+        /* Providence Marker */
+        var marker1 = new google.maps.Marker({
+            position: new google.maps.LatLng(41.82399, -71.41283),
+            map: map,
+            title: 'Somewhere around here!'
+        });
+
+
+    }
+</script>
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?v=3&key=AIzaSyAA4YVEtwYE0avddYGEfBNoWsXZNT-qkms&callback=initMap">
+</script>
+
+<!--<script async defer-->
+        <!--src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">-->
+<!--</script>-->
 </body>
 </html>
