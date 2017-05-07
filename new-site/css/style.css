@@ -238,3 +238,7 @@ form .submit-btn:hover {
 .up-btn:hover {
     background-color: rgba(0, 0, 0, 0.73);
 }
+
+.resume-img {
+    padding:1px;border:thin solid #000000;
+}

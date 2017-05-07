@@ -59,12 +59,7 @@ $('.tabs ul li').on('click', function () {
     $('#' + id).addClass('current-tab');
 
     if (id === "resume") {
-        $('#res').hide().fadeIn(2500);
-
-        $('#res').find("iframe").prop("src", function () {
-            return $(this).data("src");
-        })
-
+        $('#res').hide().fadeIn(1000);
     }
 
 });

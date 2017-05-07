@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.0/css/bulma.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css">
+    <link rel="stylesheet" href="css/zoom.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -59,7 +60,7 @@
         <div class="columns">
             <div class="column is-4 is-offset-4">
                 <figure class="image is-340x340">
-                    <img src="http://placehold.it/340x340">
+                    <img src="http://placehold.it/340x340" data-action="zoom">
                 </figure>
             </div>
         </div>
@@ -233,16 +234,16 @@
                         Resume
                     </h1>
                     <h2 class="subtitle">
-                        General background information including proficiencies and skill competences.
+                        General background information including proficiencies and competences.
                         For further details, please reach out.
                     </h2>
                 </div>
             </div>
         </section>
         <div class="columns">
-            <div class="column is-half is-offset-2">
+            <div class="column is-6 is-offset-3">
                 <figure class="image" id="res">
-                    <iframe height="900" width="800" data-src="images/OnlineResume.pdf"></iframe>
+                    <img src="images/OnlineResume.jpg" data-action="zoom" class="resume-img" >
                 </figure>
             </div>
         </div>
@@ -449,6 +450,8 @@ vyDI1C9kpQN6UgTc9EITCN0NlVlE3g==
 <script src="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>
 <script type="text/javascript" src="js/script.js"></script>
 <script type="text/javascript" src="js/form.js"></script>
+<script type="text/javascript" src="js/transition.js"></script>
+<script type="text/javascript" src="js/zoom.js"></script>
 <script type="text/javascript">
     function initMap() {
         var mapOptions = {
