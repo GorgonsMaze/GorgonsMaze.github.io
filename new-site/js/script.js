@@ -4,12 +4,15 @@
  * Work in progress - unfinished code + not cleaned up
  */
 
+
+
 /** TODO Fix modal background scroll **/
 /* ScrollTop  */
 $('.contact-nav').on('click', function () {
     //alert("contact button clicked!");
     $('html body').animate({
-        scrollTop: $('.contact-section').offset().top},
+            scrollTop: $('.contact-section').offset().top
+        },
         'slow');
 
 });
@@ -17,9 +20,32 @@ $('.contact-nav').on('click', function () {
 $('.about-nav, .mouse').on('click', function () {
     //alert("About nav clicked!");
     $('html body').animate({
-        scrollTop: $('.about-section').offset().top},
+            scrollTop: $('.about-section').offset().top
+        },
         'slow');
 });
+//
+// $(window).scroll(function () {
+//     var showBtnDiv = ('.tabs-section').scrollTop();
+//     if (showBtnDiv == 0) {
+//         alert("Scroll reach point to show btn");
+//     }
+//
+// });
+
+var distance = $('.skills-section').offset().top,
+    $window = $(window);
+
+$window.scroll(function() {
+    if ( $window.scrollTop() >= distance+200 ) {
+        //alert("Scroll point");
+        // Display scroll-to-top button
+    } else {
+        // Hide scroll-to-top button
+    }
+});
+
+/** End Scroll */
 
 /** Tab JS */
 $('.tabs ul li').on('click', function () {
@@ -33,7 +59,12 @@ $('.tabs ul li').on('click', function () {
     $('#' + id).addClass('current-tab');
 
     if (id === "resume") {
-        document.getElementById('res').src = "images/OnlineResume.pdf";
+        $('#res').hide().fadeIn(2500);
+
+        $('#res').find("iframe").prop("src", function () {
+            return $(this).data("src");
+        })
+
     }
 
 });
@@ -68,12 +99,12 @@ $(document).on('click', function (e) {
 /** End Drop Down Nav functionality **/
 
 /** Subtitle display */
-var descriptionArr = [ "Student", "Dog Enthusiast", "Web Developer", "Food Connoisseur", "Software Engineer", "Hockey Fan"];
+var descriptionArr = ["Student", "Dog Enthusiast", "Web Developer", "Food Connoisseur", "Software Engineer", "Hockey Fan"];
 var idx = 0;
 
 setInterval(function () {
     $('#description').fadeOut(400, function () {
-       $("#description").text(descriptionArr[idx++]).fadeIn(400);
+        $("#description").text(descriptionArr[idx++]).fadeIn(400);
     });
     idx == descriptionArr.length ? idx = 0 : idx;
 }, 4000);
@@ -101,11 +132,12 @@ new Morris.Donut({
     // Chart data records -- each entry in this array corresponds to a point on
     // the chart.
     data: [
-        {label: 'Javascript', value: 20},
-        {label: 'HTML & CSS', value: 10},
-        {label: 'JAVA', value: 5},
-        {label: 'PHP', value: 5},
-        {label: 'C#/ASP.NET', value: 4}
+        {label: 'Javascript', value: 14},
+        {label: 'HTML & CSS', value: 13},
+        {label: 'JAVA', value: 1},
+        {label: 'PHP', value: 6},
+        {label: 'C#/ASP.NET', value: 5}
+        // {label: 'Angular', value: 0}
 
     ],
     backgroundColor: '#ccc',
@@ -117,7 +149,6 @@ new Morris.Donut({
         '#c6e48b',
         '#dcfa9e'
     ]
-    // formatter: function (x) { return x + "%"}
 });
 
 new Morris.Donut({
@@ -126,8 +157,9 @@ new Morris.Donut({
     // Chart data records -- each entry in this array corresponds to a point on
     // the chart.
     data: [
-        {label: 'SQL', value: 20},
-        {label: 'MySQL', value: 10}
+        {label: 'SQL', value: 6},
+        {label: 'MySQL', value: 6}
+        // {lable: 'Nodejs', value: 0}
 
     ],
     backgroundColor: '#ccc',
