@@ -124,6 +124,7 @@ $('.modal-background, .modal-card-head .delete, .modal-card-foot .close-contact'
 new Morris.Donut({
     // ID of the element in which to draw the chart.
     element: 'languages',
+    resize: true,
     // Chart data records -- each entry in this array corresponds to a point on
     // the chart.
     data: [
@@ -147,8 +148,8 @@ new Morris.Donut({
 });
 
 new Morris.Donut({
-    // ID of the element in which to draw the chart.
     element: 'serverLang',
+    resize: true,
     // Chart data records -- each entry in this array corresponds to a point on
     // the chart.
     data: [
@@ -169,6 +170,7 @@ new Morris.Donut({
 
 new Morris.Bar({
     element: 'schoolLang',
+    resize: true,
     data: [
         {year: '2015', value: 2},
         {year: '2016', value: 5},
