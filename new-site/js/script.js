@@ -5,6 +5,21 @@
  */
 
 /** TODO Fix modal background scroll **/
+/* ScrollTop  */
+$('.contact-nav').on('click', function () {
+    //alert("contact button clicked!");
+    $('html body').animate({
+        scrollTop: $('.contact-section').offset().top},
+        'slow');
+
+});
+
+$('.about-nav, .mouse').on('click', function () {
+    //alert("About nav clicked!");
+    $('html body').animate({
+        scrollTop: $('.about-section').offset().top},
+        'slow');
+});
 
 /** Tab JS */
 $('.tabs ul li').on('click', function () {
@@ -17,9 +32,19 @@ $('.tabs ul li').on('click', function () {
     $(this).addClass('is-active');
     $('#' + id).addClass('current-tab');
 
+    if (id === "resume") {
+        document.getElementById('res').src = "images/OnlineResume.pdf";
+    }
+
 });
 
 /** End Tab Js */
+
+/**  Notification  **/
+$('.delete').on('click', function () {
+    $('.notification').css('display', 'none');
+});
+/** End Notification */
 
 /** Nav drop Down toggle */
 
@@ -43,7 +68,7 @@ $(document).on('click', function (e) {
 /** End Drop Down Nav functionality **/
 
 /** Subtitle display */
-var descriptionArr = [ "Student", "Dog Enthusiast", "Web Developer", "Food connoisseur", "Software Engineer"];
+var descriptionArr = [ "Student", "Dog Enthusiast", "Web Developer", "Food Connoisseur", "Software Engineer", "Hockey Fan"];
 var idx = 0;
 
 setInterval(function () {

@@ -19,7 +19,8 @@ a.nav-item.is-tab:hover {
 
 /** Fix issue with xl screen widths - adjust background image size to view */
 .header-image {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.49), rgba(0, 0, 0, 0.89)), url('https://i.imgur.com/aG712Z2.jpg');
+    /*background-image: linear-gradient(rgba(0, 0, 0, 0.49), rgba(0, 0, 0, 0.89)), url('https://i.imgur.com/aG712Z2.jpg');*/
+    background-image: linear-gradient(rgba(0, 0, 0, 0.49), rgba(0, 0, 0, 0.89)), url('../images/work.jpg');
 }
 
 @media screen and (min-width: 769px) {
@@ -137,7 +138,7 @@ a.link {
     display: none;
 }
 .tab-section.current-tab {
-    display: inherit;
+    display: block;
 }
 
 .heading .title {
