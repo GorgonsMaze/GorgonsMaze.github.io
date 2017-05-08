@@ -3,10 +3,8 @@
  *
  * Work in progress - unfinished code + not cleaned up
  */
-
-
-
 /** TODO Fix modal background scroll **/
+
 /* ScrollTop  */
 $('.contact-nav').on('click', function () {
     //alert("contact button clicked!");
@@ -14,7 +12,6 @@ $('.contact-nav').on('click', function () {
             scrollTop: $('.contact-section').offset().top
         },
         'slow');
-
 });
 
 $('.about-nav, .mouse').on('click', function () {
@@ -24,24 +21,21 @@ $('.about-nav, .mouse').on('click', function () {
         },
         'slow');
 });
-//
-// $(window).scroll(function () {
-//     var showBtnDiv = ('.tabs-section').scrollTop();
-//     if (showBtnDiv == 0) {
-//         alert("Scroll reach point to show btn");
-//     }
-//
-// });
+
+$('.up-btn').on('click', function () {
+    $('html body').animate({
+        scrollTop : '0px'
+    }, 'slow');
+});
 
 var distance = $('.skills-section').offset().top,
     $window = $(window);
 
 $window.scroll(function() {
     if ( $window.scrollTop() >= distance+200 ) {
-        //alert("Scroll point");
-        // Display scroll-to-top button
+        $('.up-btn').addClass('show-me');
     } else {
-        // Hide scroll-to-top button
+        $('.up-btn').removeClass('show-me');
     }
 });
 

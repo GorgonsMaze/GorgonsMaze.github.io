@@ -6,9 +6,36 @@
     border-bottom: 3px solid #CECB7E !important;
 }
 
+.nali {
+    display: inline-block;
+    padding-top: 16px;
+}
+
+.nali:after {
+    display: block;
+    content: '';
+    margin-top: 18px;
+    border-bottom: 1px solid #CECB7E;
+    -webkit-transform: scaleX(0);
+    -moz-transform: scaleX(0);
+    -ms-transform: scaleX(0);
+    -o-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: transform 250ms ease-in-out;
+    -moz-transition: transform 250ms ease-in-out;
+    -o-transition: transform 250ms ease-in-out;
+    transition: transform 250ms ease-in-out;
+}
+
+.nali:hover:after {
+    transform: scaleX(1);
+}
+
+
 .nav-item a.is-tab:hover,
 a.nav-item.is-tab:hover {
-    border-bottom-color: #CECB7E;
+    /*border-bottom-color: #CECB7E;*/
+    border-bottom-color: transparent;
     border-top-color: transparent;
 }
 
@@ -225,6 +252,7 @@ form .submit-btn:hover {
 }
 
 .up-btn {
+    opacity: 0;
     background-color: rgba(0, 0, 0, 0.23);
     position: fixed;
     right: 40px;
@@ -241,4 +269,8 @@ form .submit-btn:hover {
 
 .resume-img {
     padding:1px;border:thin solid #000000;
+}
+
+.show-me {
+    opacity: 1 !important;
 }
