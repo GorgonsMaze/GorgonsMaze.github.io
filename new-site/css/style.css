@@ -6,36 +6,38 @@
     border-bottom: 3px solid #CECB7E !important;
 }
 
-.nali {
-    display: inline-block;
-    padding-top: 16px;
-}
+/* TODO: Fix vertical text bug  when using nali class */
+/*.nali {*/
+    /*display: inline-block;*/
+    /*!*padding-top: 16px;*!*/
+    /*margin-bottom: -20px;*/
+/*}*/
 
-.nali:after {
-    display: block;
-    content: '';
-    margin-top: 18px;
-    border-bottom: 1px solid #CECB7E;
-    -webkit-transform: scaleX(0);
-    -moz-transform: scaleX(0);
-    -ms-transform: scaleX(0);
-    -o-transform: scaleX(0);
-    transform: scaleX(0);
-    -webkit-transition: transform 250ms ease-in-out;
-    -moz-transition: transform 250ms ease-in-out;
-    -o-transition: transform 250ms ease-in-out;
-    transition: transform 250ms ease-in-out;
-}
+/*.nali:after {*/
+    /*display: block;*/
+    /*content: '';*/
+    /*margin-top: 18px;*/
+    /*border-bottom: 1px solid #CECB7E;*/
+    /*-webkit-transform: scaleX(0);*/
+    /*-moz-transform: scaleX(0);*/
+    /*-ms-transform: scaleX(0);*/
+    /*-o-transform: scaleX(0);*/
+    /*transform: scaleX(0);*/
+    /*-webkit-transition: transform 250ms ease-in-out;*/
+    /*-moz-transition: transform 250ms ease-in-out;*/
+    /*-o-transition: transform 250ms ease-in-out;*/
+    /*transition: transform 250ms ease-in-out;*/
+/*}*/
 
-.nali:hover:after {
-    transform: scaleX(1);
-}
+/*.nali:hover:after {*/
+    /*transform: scaleX(1);*/
+/*}*/
 
 
 .nav-item a.is-tab:hover,
 a.nav-item.is-tab:hover {
-    /*border-bottom-color: #CECB7E;*/
-    border-bottom-color: transparent;
+    border-bottom-color: #CECB7E;
+    /*border-bottom-color: transparent;*/
     border-top-color: transparent;
 }
 
@@ -45,9 +47,25 @@ a.nav-item.is-tab:hover {
 }
 
 /** Fix issue with xl screen widths - adjust background image size to view */
+/*.header-image {*/
+    /*!*background-image: linear-gradient(rgba(0, 0, 0, 0.49), rgba(0, 0, 0, 0.89)), url('https://i.imgur.com/aG712Z2.jpg');*!*/
+    /*background-image: linear-gradient(rgba(0, 0, 0, 0.49), rgba(0, 0, 0, 0.89)), url('../images/work.jpg');*/
+/*}*/
+
+/** TODO: Fix background image positioning - image repeats */
 .header-image {
-    /*background-image: linear-gradient(rgba(0, 0, 0, 0.49), rgba(0, 0, 0, 0.89)), url('https://i.imgur.com/aG712Z2.jpg');*/
     background-image: linear-gradient(rgba(0, 0, 0, 0.49), rgba(0, 0, 0, 0.89)), url('../images/work.jpg');
+
+}
+
+#header-img-fade
+{
+    background: rgb(0, 0, 0);
+    transition: background 3.5s linear;
+    -webkit-transition: background 3.55s linear;
+    height: 100%;
+    width: 100%;
+
 }
 
 @media screen and (min-width: 769px) {

@@ -4,6 +4,10 @@
  * Work in progress - unfinished code + not cleaned up
  */
 /** TODO Fix modal background scroll **/
+// TODO: Create Edu grade table using Object
+
+// On page load fade out header background
+$('#header-img-fade').css('background', 'rgba(0, 0, 0, 0)');
 
 /* ScrollTop  */
 $('.contact-nav').on('click', function () {
