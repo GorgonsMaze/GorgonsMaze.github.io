@@ -118,6 +118,20 @@ $('.modal-background, .modal-card-head .delete, .modal-card-foot .close-contact'
 });
 /** End Contact Modal */
 
+/** Contact Modal */
+$('#gradebtn').on('click', function () {
+    //alert("Clciked!@");
+    $('#grademodal').addClass('is-active').fadeIn(30000);
+    $('body').addClass('stop-scroll');
+});
+
+$('.modal-background, .modal-card-head .delete, .modal-card-foot .close-contact').on('click', function () {
+    //alert("background clicked!");
+    $('#grademodal').removeClass('is-active').fadeOut(500);
+    $('body').removeClass('stop-scroll');
+});
+/** End Contact Modal */
+
 /** Morris Charts */
 new Morris.Donut({
     // ID of the element in which to draw the chart.
@@ -193,221 +207,247 @@ new Morris.Bar({
 
 /** End Morris Charts */
 
-/* Dynamic Grade Table **/
-
 function gradeTable() {
     var gradeObj = [
         {
             qtr: 1,
-            class: "IT Visual Communication",
+            course: "IT Visual Communication",
             id: "IT121.11",
             grade: "A",
             completed: "completed"
         },
         {
             qtr: 1,
-            class: "Technical Math I",
+            course: "Technical Math I",
             id: "MA125.41M",
             grade: "A",
             completed: "completed"
         },
         {
             qtr: 1,
-            class: "Computer & Network Fundamentals",
+            course: "Computer & Network Fundamentals",
             id: "NE115.11",
             grade: "A",
             completed: "completed"
         },
         {
             qtr: 1,
-            class: "Programming in C++",
+            course: "Programming in C++",
             id: "SE114.11",
             grade: "A",
             completed: "completed"
         },
         {
             qtr: 2,
-            class: "Windows Networking Essentials",
+            course: "Windows Networking Essentials",
             id: "NE121.12",
             grade: "A",
             completed: "completed"
         },
         {
             qtr: 2,
-            class: "HTML & Javascript",
+            course: "HTML & Javascript",
             id: "SE111.12",
             grade: "A",
             completed: "completed"
         },
         {
             qtr: 2,
-            class: "Intermediate Progr. Using C++",
+            course: "Intermediate Progr. Using C++",
             id: "SE124.12",
             grade: "A",
             completed: "completed"
         },
         {
             qtr: 3,
-            class: "Business Math",
+            course: "Business Math",
             id: "MA121.11M",
             grade: "A",
             completed: "completed"
         },
         {
             qtr: 3,
-            class: "Effective Team Managment & Projects",
+            course: "Effective Team Managment & Projects",
             id: "MGM115.13",
             grade: "A",
             completed: "completed"
         },
         {
             qtr: 3,
-            class: "Networking for Small Business",
+            course: "Networking for Small Business",
             id: "NE131.13",
             grade: "A",
             completed: "completed"
         },
         {
             qtr: 3,
-            class: "Database Management - SQL",
+            course: "Database Management - SQL",
             id: "SE133.13",
             grade: "A",
             completed: "completed"
         },
         {
             qtr: 4,
-            class: "Physics I & Lab",
+            course: "Physics I & Lab",
             id: "PHY200.02M",
             grade: "A",
             completed: "completed"
         },
-        { qtr: 4, class: "C#", id: "SE245.04", grade: "A", completed: "completed" },
         {
             qtr: 4,
-            class: "Systems Analysis & Design - UML",
+            course: "C#",
+            id: "SE245.04",
+            grade: "A",
+            completed: "completed"
+        },
+        {
+            qtr: 4,
+            course: "Systems Analysis & Design - UML",
             id: "SE252.04",
             grade: "A",
             completed: "completed"
         },
         {
             qtr: 4,
-            class: "Web Dev using PHP & MySQL",
+            course: "Web Dev using PHP & MySQL",
             id: "SE266.04",
             grade: "A",
             completed: "completed"
         },
         {
             qtr: 5,
-            class: "Advanced Javascript",
+            course: "Advanced Javascript",
             id: "SE241.15",
             grade: "A",
             completed: "completed"
         },
         {
             qtr: 5,
-            class: "Advanced C#",
+            course: "Advanced C#",
             id: "SE255.15",
             grade: "A",
             completed: "completed"
         },
         {
             qtr: 5,
-            class: "User Interface Design UI/UX",
+            course: "User Interface Design UI/UX",
             id: "SE264.05",
             grade: "A",
             completed: "completed"
         },
         {
             qtr: 6,
-            class: "IT Ethics & Professional Development",
+            course: "IT Ethics & Professional Development",
             id: "IT267.16",
             grade: "A",
             completed: "completed"
         },
         {
             qtr: 6,
-            class: "Intro to Information Security",
+            course: "Intro to Information Security",
             id: "NE267.16",
             grade: "A",
             completed: "completed"
         },
         {
             qtr: 6,
-            class: "SE AS Capstone Project",
+            course: "SE AS Capstone Project",
             id: "SE265.06",
             grade: "A",
             completed: "completed"
         },
         {
             qtr: 6,
-            class: "Web Development using ASP.NET",
+            course: "Web Development using ASP.NET",
             id: "SE256.06",
             grade: "A",
             completed: "completed"
         },
         {
             qtr: 7,
-            class: "Research Writing",
+            course: "Research Writing",
             id: "EN331.00C",
             grade: "A",
             completed: "completed"
         },
         {
             qtr: 7,
-            class: "Technical Math II",
+            course: "Technical Math II",
             id: "MA210.90M",
             grade: "A",
             completed: "completed"
         },
         {
             qtr: 7,
-            class: "Intro to Genetics & Evolution",
+            course: "Intro to Genetics & Evolution",
             id: "SCI350.95M",
             grade: "A",
             completed: "completed"
         },
         {
             qtr: 8,
-            class: "Database Management",
+            course: "Database Management",
             id: "IT378.57",
             grade: "N/A",
             completed: "in-session"
         },
         {
             qtr: 8,
-            class: "Advanced PHP Programming",
+            course: "Advanced PHP Programming",
             id: "SE396.57",
             grade: "N/A",
             completed: "in-session"
         },
         {
             qtr: 8,
-            class: "Java",
+            course: "Java",
             id: "SE385.57",
             grade: "N/A",
             completed: "in-session"
         }
     ];
 
-    // Todo CREATE TABLE USING gradeObj and cal function on load
-
-    //console.log(Object.keys(gradeObj).length);
-
     var length = gradeObj.length;
-    var quarter = "";
-    var cls = "";
-    var id = "";
-    var grade = "";
-    var completed = "";
+    var headerArray = ["Quarter", "Course", "ID", "Grade", "Status"];
 
-    for (var row = 0; row < length; row++) {
-        for (var col = 0; col < length; col++) {
+    var table = document.createElement('table');
+    table.className = 'table';
 
+    var columnCount = headerArray.length;
+
+    var row = table.insertRow(-1);
+
+    for (var i = 0; i < columnCount; i++) {
+        var headerCell = document.createElement('td');
+        headerCell.innerHTML = headerArray[i];
+        row.appendChild(headerCell);
+    }
+
+
+    for (var j = 0; j < length; j++) {
+        var objIndex = gradeObj[j];
+        row = table.insertRow(-1);
+        for (var key in objIndex) {
+            if (objIndex.hasOwnProperty(key)) {
+                var cell = row.insertCell(-1);
+                cell.innerHTML = objIndex[key];
+            }
         }
     }
 
-    return length;
+    var divTable = document.getElementById('gradeTable');
+    divTable.appendChild(table);
+
 }
 gradeTable();
 
-console.log(gradeTable());
+function showObjectValue(obj) {
+    var result = '';
+    for (var key in obj) {
+        if (obj.hasOwnProperty(key)) {
+            result += obj[key];
+        }
+    }
+
+    return result;
+}
