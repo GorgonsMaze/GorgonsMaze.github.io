@@ -28,15 +28,15 @@ $('.about-nav, .mouse').on('click', function () {
 
 $('.up-btn').on('click', function () {
     $('html body').animate({
-        scrollTop : '0px'
+        scrollTop: '0px'
     }, 'slow');
 });
 
 var distance = $('.skills-section').offset().top,
     $window = $(window);
 
-$window.scroll(function() {
-    if ( $window.scrollTop() >= distance+200 ) {
+$window.scroll(function () {
+    if ($window.scrollTop() >= distance + 200) {
         $('.up-btn').addClass('show-me');
     } else {
         $('.up-btn').removeClass('show-me');
@@ -192,3 +192,222 @@ new Morris.Bar({
 });
 
 /** End Morris Charts */
+
+/* Dynamic Grade Table **/
+
+function gradeTable() {
+    var gradeObj = [
+        {
+            qtr: 1,
+            class: "IT Visual Communication",
+            id: "IT121.11",
+            grade: "A",
+            completed: "completed"
+        },
+        {
+            qtr: 1,
+            class: "Technical Math I",
+            id: "MA125.41M",
+            grade: "A",
+            completed: "completed"
+        },
+        {
+            qtr: 1,
+            class: "Computer & Network Fundamentals",
+            id: "NE115.11",
+            grade: "A",
+            completed: "completed"
+        },
+        {
+            qtr: 1,
+            class: "Programming in C++",
+            id: "SE114.11",
+            grade: "A",
+            completed: "completed"
+        },
+        {
+            qtr: 2,
+            class: "Windows Networking Essentials",
+            id: "NE121.12",
+            grade: "A",
+            completed: "completed"
+        },
+        {
+            qtr: 2,
+            class: "HTML & Javascript",
+            id: "SE111.12",
+            grade: "A",
+            completed: "completed"
+        },
+        {
+            qtr: 2,
+            class: "Intermediate Progr. Using C++",
+            id: "SE124.12",
+            grade: "A",
+            completed: "completed"
+        },
+        {
+            qtr: 3,
+            class: "Business Math",
+            id: "MA121.11M",
+            grade: "A",
+            completed: "completed"
+        },
+        {
+            qtr: 3,
+            class: "Effective Team Managment & Projects",
+            id: "MGM115.13",
+            grade: "A",
+            completed: "completed"
+        },
+        {
+            qtr: 3,
+            class: "Networking for Small Business",
+            id: "NE131.13",
+            grade: "A",
+            completed: "completed"
+        },
+        {
+            qtr: 3,
+            class: "Database Management - SQL",
+            id: "SE133.13",
+            grade: "A",
+            completed: "completed"
+        },
+        {
+            qtr: 4,
+            class: "Physics I & Lab",
+            id: "PHY200.02M",
+            grade: "A",
+            completed: "completed"
+        },
+        { qtr: 4, class: "C#", id: "SE245.04", grade: "A", completed: "completed" },
+        {
+            qtr: 4,
+            class: "Systems Analysis & Design - UML",
+            id: "SE252.04",
+            grade: "A",
+            completed: "completed"
+        },
+        {
+            qtr: 4,
+            class: "Web Dev using PHP & MySQL",
+            id: "SE266.04",
+            grade: "A",
+            completed: "completed"
+        },
+        {
+            qtr: 5,
+            class: "Advanced Javascript",
+            id: "SE241.15",
+            grade: "A",
+            completed: "completed"
+        },
+        {
+            qtr: 5,
+            class: "Advanced C#",
+            id: "SE255.15",
+            grade: "A",
+            completed: "completed"
+        },
+        {
+            qtr: 5,
+            class: "User Interface Design UI/UX",
+            id: "SE264.05",
+            grade: "A",
+            completed: "completed"
+        },
+        {
+            qtr: 6,
+            class: "IT Ethics & Professional Development",
+            id: "IT267.16",
+            grade: "A",
+            completed: "completed"
+        },
+        {
+            qtr: 6,
+            class: "Intro to Information Security",
+            id: "NE267.16",
+            grade: "A",
+            completed: "completed"
+        },
+        {
+            qtr: 6,
+            class: "SE AS Capstone Project",
+            id: "SE265.06",
+            grade: "A",
+            completed: "completed"
+        },
+        {
+            qtr: 6,
+            class: "Web Development using ASP.NET",
+            id: "SE256.06",
+            grade: "A",
+            completed: "completed"
+        },
+        {
+            qtr: 7,
+            class: "Research Writing",
+            id: "EN331.00C",
+            grade: "A",
+            completed: "completed"
+        },
+        {
+            qtr: 7,
+            class: "Technical Math II",
+            id: "MA210.90M",
+            grade: "A",
+            completed: "completed"
+        },
+        {
+            qtr: 7,
+            class: "Intro to Genetics & Evolution",
+            id: "SCI350.95M",
+            grade: "A",
+            completed: "completed"
+        },
+        {
+            qtr: 8,
+            class: "Database Management",
+            id: "IT378.57",
+            grade: "N/A",
+            completed: "in-session"
+        },
+        {
+            qtr: 8,
+            class: "Advanced PHP Programming",
+            id: "SE396.57",
+            grade: "N/A",
+            completed: "in-session"
+        },
+        {
+            qtr: 8,
+            class: "Java",
+            id: "SE385.57",
+            grade: "N/A",
+            completed: "in-session"
+        }
+    ];
+
+    // Todo CREATE TABLE USING gradeObj and cal function on load
+
+    //console.log(Object.keys(gradeObj).length);
+
+    var length = gradeObj.length;
+    var quarter = "";
+    var cls = "";
+    var id = "";
+    var grade = "";
+    var completed = "";
+
+    for (var row = 0; row < length; row++) {
+        for (var col = 0; col < length; col++) {
+
+        }
+    }
+
+    return length;
+}
+gradeTable();
+
+console.log(gradeTable());
