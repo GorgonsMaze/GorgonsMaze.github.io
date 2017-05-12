@@ -331,3 +331,29 @@ form .submit-btn:hover {
 .white {
     color: #fff!important;
 }
+
+.course-table tr:hover {
+    background-color: #f8f5a1;
+}
+
+.course-table tr:first-child {
+    background-color: #009576;
+    color: #ffffff;;
+}
+
+@media screen and (min-width: 769px) {
+    .modal-card, .modal-content {
+        width: 700px!important;
+    }
+}
+
+.panel-tabs a.is-active {
+    border-bottom-color: #4a4a4a;
+    color: #363636!important;
+}
+.panel-tabs a {
+    color:#8DA034!important;
+}
+.panel-block.is-active .panel-icon {
+    color: #8DA034!important;
+}

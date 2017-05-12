@@ -4,30 +4,37 @@
  * Work in progress - unfinished code + not cleaned up
  */
 /** TODO Fix modal background scroll **/
-// TODO: Create Edu grade table using Object
+// TODO fix firefox scrollTop issue
+// TODO: Add search functionality to projects panel
+// TODO CLEAN UP THIS CODE!
 
 // On page load fade out header background
 $('#header-img-fade').css('background', 'rgba(0, 0, 0, 0)');
 
 /* ScrollTop  */
+function scrollToiD(divID) {
+    $('html, body').animate({
+        scrollTop: $('#' + divID).offset().top
+    }, 'slow');
+}
+
 $('.contact-nav').on('click', function () {
-    //alert("contact button clicked!");
-    $('html body').animate({
-            scrollTop: $('.contact-section').offset().top
-        },
-        'slow');
+    scrollToiD('contactsection');
+    return false;
 });
 
-$('.about-nav, .mouse').on('click', function () {
+$('.mouse').on('click', function () {
     //alert("About nav clicked!");
-    $('html body').animate({
-            scrollTop: $('.about-section').offset().top
-        },
-        'slow');
+    // $('html, body').animate({
+    //         scrollTop: $('.about-section').offset().top
+    //     },
+    //     'slow');
+    scrollToiD('about');
+    return false;
 });
 
 $('.up-btn').on('click', function () {
-    $('html body').animate({
+    $('html, body').animate({
         scrollTop: '0px'
     }, 'slow');
 });
@@ -125,7 +132,7 @@ $('#gradebtn').on('click', function () {
     $('body').addClass('stop-scroll');
 });
 
-$('.modal-background, .modal-card-head .delete, .modal-card-foot .close-contact').on('click', function () {
+$('.modal-background, .modal-card-head .delete, .modal-card-foot .close-grade').on('click', function () {
     //alert("background clicked!");
     $('#grademodal').removeClass('is-active').fadeOut(500);
     $('body').removeClass('stop-scroll');
@@ -214,196 +221,196 @@ function gradeTable() {
             course: "IT Visual Communication",
             id: "IT121.11",
             grade: "A",
-            completed: "completed"
+            status: "completed"
         },
         {
             qtr: 1,
             course: "Technical Math I",
             id: "MA125.41M",
             grade: "A",
-            completed: "completed"
+            status: "completed"
         },
         {
             qtr: 1,
             course: "Computer & Network Fundamentals",
             id: "NE115.11",
             grade: "A",
-            completed: "completed"
+            status: "completed"
         },
         {
             qtr: 1,
             course: "Programming in C++",
             id: "SE114.11",
             grade: "A",
-            completed: "completed"
+            status: "completed"
         },
         {
             qtr: 2,
             course: "Windows Networking Essentials",
             id: "NE121.12",
             grade: "A",
-            completed: "completed"
+            status: "completed"
         },
         {
             qtr: 2,
             course: "HTML & Javascript",
             id: "SE111.12",
             grade: "A",
-            completed: "completed"
+            status: "completed"
         },
         {
             qtr: 2,
             course: "Intermediate Progr. Using C++",
             id: "SE124.12",
             grade: "A",
-            completed: "completed"
+            status: "completed"
         },
         {
             qtr: 3,
             course: "Business Math",
             id: "MA121.11M",
             grade: "A",
-            completed: "completed"
+            status: "completed"
         },
         {
             qtr: 3,
             course: "Effective Team Managment & Projects",
             id: "MGM115.13",
             grade: "A",
-            completed: "completed"
+            status: "completed"
         },
         {
             qtr: 3,
             course: "Networking for Small Business",
             id: "NE131.13",
             grade: "A",
-            completed: "completed"
+            status: "completed"
         },
         {
             qtr: 3,
             course: "Database Management - SQL",
             id: "SE133.13",
             grade: "A",
-            completed: "completed"
+            status: "completed"
         },
         {
             qtr: 4,
             course: "Physics I & Lab",
             id: "PHY200.02M",
             grade: "A",
-            completed: "completed"
+            status: "completed"
         },
         {
             qtr: 4,
             course: "C#",
             id: "SE245.04",
             grade: "A",
-            completed: "completed"
+            status: "completed"
         },
         {
             qtr: 4,
             course: "Systems Analysis & Design - UML",
             id: "SE252.04",
             grade: "A",
-            completed: "completed"
+            status: "completed"
         },
         {
             qtr: 4,
             course: "Web Dev using PHP & MySQL",
             id: "SE266.04",
             grade: "A",
-            completed: "completed"
+            status: "completed"
         },
         {
             qtr: 5,
             course: "Advanced Javascript",
             id: "SE241.15",
             grade: "A",
-            completed: "completed"
+            status: "completed"
         },
         {
             qtr: 5,
             course: "Advanced C#",
             id: "SE255.15",
             grade: "A",
-            completed: "completed"
+            status: "completed"
         },
         {
             qtr: 5,
             course: "User Interface Design UI/UX",
             id: "SE264.05",
             grade: "A",
-            completed: "completed"
+            status: "completed"
         },
         {
             qtr: 6,
             course: "IT Ethics & Professional Development",
             id: "IT267.16",
             grade: "A",
-            completed: "completed"
+            status: "completed"
         },
         {
             qtr: 6,
             course: "Intro to Information Security",
             id: "NE267.16",
             grade: "A",
-            completed: "completed"
+            status: "completed"
         },
         {
             qtr: 6,
             course: "SE AS Capstone Project",
             id: "SE265.06",
             grade: "A",
-            completed: "completed"
+            status: "completed"
         },
         {
             qtr: 6,
             course: "Web Development using ASP.NET",
             id: "SE256.06",
             grade: "A",
-            completed: "completed"
+            status: "completed"
         },
         {
             qtr: 7,
             course: "Research Writing",
             id: "EN331.00C",
             grade: "A",
-            completed: "completed"
+            status: "completed"
         },
         {
             qtr: 7,
             course: "Technical Math II",
             id: "MA210.90M",
             grade: "A",
-            completed: "completed"
+            status: "completed"
         },
         {
             qtr: 7,
             course: "Intro to Genetics & Evolution",
             id: "SCI350.95M",
             grade: "A",
-            completed: "completed"
+            status: "completed"
         },
         {
             qtr: 8,
             course: "Database Management",
             id: "IT378.57",
             grade: "N/A",
-            completed: "in-session"
+            status: "in-session"
         },
         {
             qtr: 8,
             course: "Advanced PHP Programming",
             id: "SE396.57",
             grade: "N/A",
-            completed: "in-session"
+            status: "in-session"
         },
         {
             qtr: 8,
             course: "Java",
             id: "SE385.57",
             grade: "N/A",
-            completed: "in-session"
+            status: "in-session"
         }
     ];
 
@@ -411,7 +418,7 @@ function gradeTable() {
     var headerArray = ["Quarter", "Course", "ID", "Grade", "Status"];
 
     var table = document.createElement('table');
-    table.className = 'table';
+    table.className = 'table is-narrow course-table';
 
     var columnCount = headerArray.length;
 
