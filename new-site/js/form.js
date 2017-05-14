@@ -13,6 +13,8 @@ $(document).ready(function () {
             dataType: 'json',
             beforeSend: function () {
                 submit.attr('disabled', true).val('Sending message...');
+                // Todo: add is loading class here
+                //.is-loading
             },
             success: function (data) {
                 form[0].reset();

@@ -332,6 +332,10 @@ form .submit-btn:hover {
     color: #fff!important;
 }
 
+.grey {
+    background-color: #cccccc;
+}
+
 .course-table tr:hover {
     background-color: #f8f5a1;
 }
@@ -356,4 +360,10 @@ form .submit-btn:hover {
 }
 .panel-block.is-active .panel-icon {
     color: #8DA034!important;
+}
+
+.header-video {
+    -webkit-box-shadow: 0 4px 6px -6px #222;
+    -moz-box-shadow: 0 4px 6px -6px #222;
+    box-shadow: 0 4px 6px -6px #222;
 }
