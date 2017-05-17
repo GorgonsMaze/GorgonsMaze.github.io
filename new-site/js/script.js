@@ -118,7 +118,7 @@ $('#contact-btn').on('click', function () {
     $('body').addClass('stop-scroll');
 });
 
-$('.modal-background, .modal-card-head .delete, .modal-card-foot .close-contact').on('click', function () {
+$('.modal-background, .modal-card-head .delete, .modal-card-foot .close').on('click', function () {
     //alert("background clicked!");
     $('#contact-modal').removeClass('is-active').fadeOut(500);
     $('body').removeClass('stop-scroll');
@@ -448,6 +448,7 @@ function gradeTable() {
 }
 gradeTable();
 
+
 function showObjectValue(obj) {
     var result = '';
     for (var key in obj) {
@@ -458,3 +459,29 @@ function showObjectValue(obj) {
 
     return result;
 }
+
+
+/* Clipboard function */
+
+$('#copyPGPbtn').on('click', function () {
+   var $this = $(this);
+   $this.text('Copied');
+   setTimeout(function () {
+       $this.text('Copy');
+   }, 2000);
+});
+
+var clipboard = new Clipboard('#copyPGPbtn');
+
+clipboard.on('success', function(e) {
+    document.getElementById('#pgp').select();
+    console.info('Action:', e.action);
+    console.info('Text:', e.text);
+    e.clearSelection();
+});
+
+clipboard.on('error', function(e) {
+    console.error('Action:', e.action);
+    console.error('Trigger:', e.trigger);
+});
+
