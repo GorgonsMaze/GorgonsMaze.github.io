@@ -332,8 +332,8 @@ form .submit-btn:hover {
     color: #fff!important;
 }
 
-.grey {
-    background-color: #cccccc;
+.light-grey {
+    background-color: #f9f9f9;
 }
 
 .course-table tr:hover {
@@ -366,4 +366,12 @@ form .submit-btn:hover {
     -webkit-box-shadow: 0 4px 6px -6px #222;
     -moz-box-shadow: 0 4px 6px -6px #222;
     box-shadow: 0 4px 6px -6px #222;
+}
+
+.no-pointer {
+    pointer-events: none;
+}
+
+.blog-card-spacing {
+    margin: 30px 0;
 }

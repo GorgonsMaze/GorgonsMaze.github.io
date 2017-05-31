@@ -402,8 +402,8 @@ function gradeTable() {
             qtr: 8,
             course: "Advanced PHP Programming",
             id: "SE396.57",
-            grade: "N/A",
-            status: "in-session"
+            grade: "A",
+            status: "completed"
         },
         {
             qtr: 8,
@@ -411,7 +411,29 @@ function gradeTable() {
             id: "SE385.57",
             grade: "N/A",
             status: "in-session"
+        },
+        {
+            qtr: 9,
+            course: "Algorithms",
+            id: "SE394.58",
+            grade: "N/A",
+            status: "next-up"
+        },
+        {
+            qtr: 9,
+            course: "Design Patterns",
+            id: "SE402.68",
+            grade: "N/A",
+            status: "next-up"
+        },
+        {
+            qtr: 9,
+            course: "Android Development",
+            id: "SE391.58",
+            grade: "N/A",
+            status: "next-up"
         }
+
     ];
 
     var length = gradeObj.length;
