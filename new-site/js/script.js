@@ -395,8 +395,8 @@ function gradeTable() {
             qtr: 8,
             course: "Database Management",
             id: "IT378.57",
-            grade: "N/A",
-            status: "in-session"
+            grade: "A",
+            status: "completed"
         },
         {
             qtr: 8,
