@@ -9,3 +9,6 @@ Portfolio Website for Ian Arsenault.
 * Skills
 
 ###### Currently being rebuilt using [Bulma.io](http://bulma.io/)
+
+## TODO's
+* Add https 
