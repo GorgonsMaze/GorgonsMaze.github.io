@@ -150,6 +150,10 @@ a.nav-item.is-tab:hover {
     color: red;
 }
 
+.fa-eye {
+    margin-right:5px;
+}
+
 a.link {
     color: #7e8f2e !important;
 }
@@ -379,10 +383,19 @@ form .submit-btn:hover {
 .navbar-fixed {
     top:0;
     position: fixed;
-    z-index: 100;
+    z-index: 1100;
     width:100%;
 }
 
 .navbar-fixed-color {
     background: #3a3939!important;
+}
+
+.modal {
+    z-index: 1200!important;
+}
+
+.sub-background {
+    color: #000000;
+    background: #e9e9e9;
 }
