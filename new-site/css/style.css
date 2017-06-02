@@ -375,3 +375,14 @@ form .submit-btn:hover {
 .blog-card-spacing {
     margin: 30px 0;
 }
+
+.navbar-fixed {
+    top:0;
+    position: fixed;
+    z-index: 100;
+    width:100%;
+}
+
+.navbar-fixed-color {
+    background: #3a3939!important;
+}

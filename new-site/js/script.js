@@ -43,11 +43,19 @@ var distance = $('.skills-section').offset().top,
     $window = $(window);
 
 $window.scroll(function () {
+
     if ($window.scrollTop() >= distance + 200) {
         $('.up-btn').addClass('show-me');
     } else {
         $('.up-btn').removeClass('show-me');
     }
+
+    if ($window.scrollTop() >= $('#about').position().top - 60) {
+        $('#navbar').addClass('navbar-fixed navbar-fixed-color');
+    } else {
+        $('#navbar').removeClass('navbar-fixed navbar-fixed-color');
+    }
+
 });
 
 /** End Scroll */
@@ -409,8 +417,8 @@ function gradeTable() {
             qtr: 8,
             course: "Java",
             id: "SE385.57",
-            grade: "N/A",
-            status: "in-session"
+            grade: "A",
+            status: "completed"
         },
         {
             qtr: 9,
