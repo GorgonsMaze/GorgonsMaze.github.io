@@ -121,7 +121,8 @@ setInterval(function () {
 
 
 /** Contact Modal */
-$('#contact-btn').on('click', function () {
+$('#contact-btn').on('click', function (e) {
+    e.preventDefault();
     // alert("Clciked!@");
     $('#contact-modal').addClass('is-active').fadeIn(30000);
     $('body').addClass('stop-scroll');

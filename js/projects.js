@@ -5,8 +5,8 @@
 $(document).ready(function () {
 
 
-    $('#gpg-btn').on('click', function () {
-        // alert("Clciked!@");
+    $('#gpg-btn').on('click', function (e) {
+        e.preventDefault();
         $('#contact-modal').addClass('is-active').fadeIn(30000);
         $('body').addClass('stop-scroll');
     });
@@ -28,7 +28,6 @@ $(document).ready(function () {
     //     }
     // });
 
-// Panel width bug when set to fixed
 
     /* Clipboard function */
 
