@@ -168,18 +168,18 @@ a.link {
     /*bottom: 0;*/
 /*}*/
 
-.notification {
-    background-color: #547b62;
-    color: #fff5f7;
-    z-index: 10;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin-left: 10rem;
-    margin-right: 10rem;
-    margin-bottom: 0 !important;
-}
+/*.notification {*/
+    /*background-color: #547b62;*/
+    /*color: #fff5f7;*/
+    /*z-index: 10;*/
+    /*position: fixed;*/
+    /*bottom: 0;*/
+    /*left: 0;*/
+    /*right: 0;*/
+    /*margin-left: 10rem;*/
+    /*margin-right: 10rem;*/
+    /*margin-bottom: 0 !important;*/
+/*}*/
 .tabs-section {
     padding:3rem 1.5rem 0 1.5rem;
 }
@@ -404,4 +404,24 @@ form .submit-btn:hover {
     position: fixed;
     top: 0;
     width: auto;
+}
+
+#blogDefault {
+    z-index: 1300;
+    width: 170px;
+    position: fixed;
+    top: 60px;
+    right: 117px;
+    padding: .5rem .5rem;
+    display: none;
+}
+
+#blogDefaultProjects {
+    z-index: 1300;
+    width: 170px;
+    position: fixed;
+    top: 60px;
+    right: 23px;
+    padding: .5rem .5rem;
+    display: none;
 }

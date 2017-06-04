@@ -516,3 +516,9 @@ clipboard.on('error', function(e) {
     console.error('Trigger:', e.trigger);
 });
 
+
+$(document).on('mouseenter', '#blogNavBtn', function () {
+    $('#blogDefault').show();
+}).on('mouseleave', '#blogNavBtn', function () {
+    $('#blogDefault').hide();
+});

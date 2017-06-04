@@ -70,4 +70,11 @@ $(document).ready(function () {
         console.error('Trigger:', e.trigger);
     });
 
+    $(document).on('mouseenter', '#blogNavBtn', function () {
+        $('#blogDefaultProjects').show();
+    }).on('mouseleave', '#blogNavBtn', function () {
+        $('#blogDefaultProjects').hide();
+    });
+
+
 });
