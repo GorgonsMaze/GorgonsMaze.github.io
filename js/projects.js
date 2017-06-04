@@ -75,6 +75,12 @@ $(document).ready(function () {
     }).on('mouseleave', '#blogNavBtn', function () {
         $('#blogDefaultProjects').hide();
     });
+    
+    $('.panel-tabs a').on('click', function () {
+        var id = $(this).attr('data-tab');
+        $('.panel-tabs a').removeClass('is-active');
+        $('#' + id).addClass('is-active');
+    })
 
 
 });

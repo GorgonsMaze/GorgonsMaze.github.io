@@ -39,8 +39,8 @@ $('.up-btn').on('click', function () {
     }, 'slow');
 });
 
-var distance = $('.skills-section').offset().top,
-    $window = $(window);
+var distance = $('.skills-section').offset().top;
+var $window = $(window);
 
 $window.scroll(function () {
 

@@ -366,10 +366,15 @@ form .submit-btn:hover {
     color: #8DA034!important;
 }
 
+.panel-block.is-active {
+    border-left-color: #8DA034;
+}
+
 .header-video {
     -webkit-box-shadow: 0 4px 6px -6px #222;
     -moz-box-shadow: 0 4px 6px -6px #222;
     box-shadow: 0 4px 6px -6px #222;
+    margin-bottom: 2rem !important;
 }
 
 .no-pointer {
