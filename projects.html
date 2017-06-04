@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Ian Arsenault</title>
+    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.1/css/bulma.min.css">-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/bulma.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<section class="hero is-dark header-image">
+    <div id="header-img-fade">
+        <nav class="nav has-shadow">
+            <div class="container">
+                <div class="nav-left">
+                    <a class="nav-item" id="nav-name">Ian Arsenault</a>
+                </div>
+                <span class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+                </span>
+                <div id="nav-menu" class="nav-right nav-menu">
+                    <a class="nav-item is-tab about-nav" href="index.html">Home</a>
+                    <a class="nav-item is-tab is-active">Projects</a>
+                    <a class="nav-item is-tab nali" disabled id="blogNavBtn">Blog</a>
+                    <!--<a class="nav-item is-tab contact-nav">Contact</a>-->
+                </div>
+            </div>
+        </nav>
+
+        <div class="hero-body">
+            <div class="container">
+                <h1 class="title">
+                    Projects
+                </h1>
+                <h2 class="subtitle">
+                    Brief Project Overview
+                </h2>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<div class="notification is-success has-text-centered" id="blogDefaultProjects">Coming Soon</div>
+
+<section class="container">
+    <div class="columns">
+        <div class="column is-4">
+            <nav class="panel">
+                <p class="panel-heading">
+                    Projects
+                </p>
+                <div class="panel-block">
+                    <p class="control has-icons-left">
+                        <input class="input is-small" type="text" placeholder="Search">
+                        <span class="icon is-small is-left">
+                            <i class="fa fa-search"></i>
+                        </span>
+                    </p>
+                </div>
+                <p class="panel-tabs">
+                    <a class="is-active" data-tab="all" id="all">All</a>
+                    <a data-tab="javascript" id="javascript">Javascript</a>
+                </p>
+                <a class="panel-block is-active">
+                    <span class="panel-icon">
+                      <i class="fa fa-book"></i>
+                    </span>
+                    Ciphered
+                </a>
+            </nav>
+        </div>
+        <div class="column" id="ciphered-project">
+            <div class="content is-small">
+                <figure class="has-text-centered header-video">
+                    <video loop muted autoplay src="assets/cipheredwhite.mov"></video>
+                </figure>
+                <!--<h1 class="title is-2 has-text-centered">Uryyb, Jbeyq!</h1>-->
+                <p>Ciphered is a personal project I've been working on that involves simple encryption methods that have
+                    been used throughout
+                    the course of history. Currently there are two types that are functional. 1. Substitution Cipher 2.
+                    Vigenère Cipher which are
+                    both a type of polyalphabetic cipher.
+                </p>
+                <h2>Substitution Cipher</h2>
+                <p>The substitution cipher is a fairly simple way of encoding plaintext into ciphertext. It essentially
+                    replaces
+                    every plaintext character for a different ciphertext character. This type of cipher provides very
+                    little
+                    security, as it can be easily deciphered, especially when the message is long. The longer the
+                    message,
+                    the more common characters will be spotted.</p>
+                <h3>Caesar Cipher</h3>
+                <p>Caesar cipher is one of the earliest known ciphers. It's a simple substitution cipher which shifts a
+                    plaintext character
+                    N number of places. Essentially with a <span class="sub-background">Key Shift: 2 => A would become C, B would become D</span>,
+                    and so forth.</p>
+                <h4>Example:</h4>
+                <figure class="image">
+                    <img src="images/substitution.png">
+                </figure>
+                <br>
+                <h3>ROT13 Cipher</h3>
+                <p>ROT13 Cipher is a type of substitution cipher that has a set character offset of 13 places.</p>
+                <h4>Example:</h4>
+                <figure class="image">
+                    <img src="images/ROT13.png">
+                </figure>
+                <br><br>
+                <div class="has-text-centered">
+                    <a class="button is-large"><i class="fa fa-eye" aria-hidden="true"></i>  View Project</a>
+                </div>
+                <br><br>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+
+
+<div class="modal" id="contact-modal">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+        <header class="modal-card-head">
+            <p class="modal-card-title">GPG- Public Key</p>
+            <button class="delete"></button>
+        </header>
+        <section class="modal-card-body">
+                  <pre class="prettyprint has-text-centered" id="pgpText">
+            -----BEGIN PGP PUBLIC KEY BLOCK-----
+Comment: GPGTools - https://gpgtools.org
+
+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
+vyDI1C9kpQN6UgTc9EITCN0NlVlE3g==
+=1+dv
+-----END PGP PUBLIC KEY BLOCK-----
+        </pre>
+        </section>
+        <footer class="modal-card-foot">
+            <a class="button is-danger" id="copyPGP" data-clipboard-action="copy" data-clipboard-target="#pgpText">Copy</a>
+        </footer>
+    </div>
+</div>
+
+<footer class="footer">
+    <div class="container">
+        <div class="content has-text-centered">
+            <p>
+                <span class=>
+                    <i class="fa fa-code foot-icon" aria-hidden="true"></i>
+                </span>
+                with
+                <span class="">
+                    <i class="fa fa-heart foot-icon" aria-hidden="true"></i>
+                </span>
+                by <a class="link no-pointer">Ian Arsenault</a>
+            </p>
+            <p>
+                <a class="icon link" href="https://github.com/GorgonsMaze" target="_blank">
+                    <i class="fa fa-github"></i>
+                </a>
+
+                <a class="icon link" href="https://www.linkedin.com/in/ian-arsenault-074a54b7/" target="_blank">
+                    <i class="fa fa-linkedin" aria-hidden="true"></i>
+                </a>
+                <a class="icon link" href="#!" id="gpg-btn">
+                    <i class="fa fa-key" aria-hidden="true"></i>
+                </a>
+            </p>
+        </div>
+    </div>
+</footer>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js">
+</script>
+<script type="text/javascript" src="js/script.js"></script>
+<script type="text/javascript" src="js/projects.js"></script>
+<script type="text/javascript" src="js/clipboard.min.js"></script>
+</body>
+</html>

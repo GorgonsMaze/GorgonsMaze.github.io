@@ -1,431 +1,524 @@
 /**
- * Created by ianarsenault on 6/21/16.
+ * Created by Ian Arsenault
+ *
+ * Work in progress - unfinished code + not cleaned up
  */
+/** TODO Fix modal background scroll **/
+// TODO fix firefox scrollTop issue
+// TODO: Add search functionality to projects panel
+// TODO CLEAN UP THIS CODE!
 
-var skillsBar = function () {
-    // on button click refresh skills bar table animation
-    $("#skills-bar, #refresh-graph").on('click', function (e) {
-        /* Restart animation from beginning */
-        $("div").css({
-            width: ""
-        });
-        /* HTML CSS Progress Bar Animation */
-        $(".progress-bar-1").animate({
-            width: "85%"
-        }, 500);
-        /* Javacsript Progress Bar Animation */
-        $(".progress-bar-2").animate({
-            width: "68%"
-        }, 500);
-        /* C# Progress Bar Animation */
-        $(".progress-bar-3").animate({
-            width: "60%"
-        }, 500);
-        /* C++ Progress Bar Animation */
-        $(".progress-bar-4").animate({
-            width: "30%"
-        }, 500);
-        /* PHP MySQL Progress Bar Animation */
-        $(".progress-bar-5").animate({
-            width: "59%"
-        }, 500);
+// On page load fade out header background
+$('#header-img-fade').css('background', 'rgba(0, 0, 0, 0)');
 
-        e.preventDefault();
-    });
-};
-
-function aboutmeFades() {
-    /* Education Tab - Content Fade */
-    $("#education-bar").on('click', function () {
-        $("#education").fadeIn('slow');
-    });
-
-    /* Skills Tab Content Fade Section */
-    $("#skills-bar").on('click', function () {
-        $("#skill-card").fadeIn('slow');
-    });
-    $("#education-bar, #about-bar, #resume-bar, #google-map-tab").on('click', function () {
-        $("#skill-card").fadeOut();
-    });
-
-    /* About Me Tab - Content Fade Section */
-    $("#about-bar").on('click', function () {
-        $("#aboutme").fadeIn('slow');
-    });
-
-    /* Resume Tab - Content Fade Section */
-    $("#resume-bar").on('click', function () {
-        $("#resume").fadeIn('slow');
-    });
-
-    /* Location Tab - Content Fade Section */
-    $("#google-map-tab").on('click', function () {
-        $("#location").fadeIn('slow');
-    });
+/* ScrollTop  */
+function scrollToiD(divID) {
+    $('html, body').animate({
+        scrollTop: $('#' + divID).offset().top
+    }, 'slow');
 }
 
+$('.contact-nav').on('click', function () {
+    scrollToiD('contactsection');
+    return false;
+});
 
-function scaleVideoContainer() {
+$('.mouse').on('click', function () {
+    //alert("About nav clicked!");
+    // $('html, body').animate({
+    //         scrollTop: $('.about-section').offset().top
+    //     },
+    //     'slow');
+    scrollToiD('about');
+    return false;
+});
 
-    var height = $(window).height() + 5;
-    var unitHeight = parseInt(height) + 'px';
-    $('.homepage-hero-module').css('height', unitHeight);
+$('.up-btn').on('click', function () {
+    $('html, body').animate({
+        scrollTop: '0px'
+    }, 'slow');
+});
 
-}
+var distance = $('.skills-section').offset().top;
+var $window = $(window);
 
-function initBannerVideoSize(element) {
+$window.scroll(function () {
 
-    $(element).each(function () {
-        $(this).data('height', $(this).height());
-        $(this).data('width', $(this).width());
+    if ($window.scrollTop() >= distance + 200) {
+        $('.up-btn').addClass('show-me');
+    } else {
+        $('.up-btn').removeClass('show-me');
+    }
+
+    if ($window.scrollTop() >= $('#about').position().top - 60) {
+        $('#navbar').addClass('navbar-fixed navbar-fixed-color');
+    } else {
+        $('#navbar').removeClass('navbar-fixed navbar-fixed-color');
+    }
+
+});
+
+/** End Scroll */
+
+/** Tab JS */
+$('.tabs ul li').on('click', function () {
+    //alert("Tab clicked");
+    var id = $(this).attr('data-tab');
+    //lert(id);
+    $('.tabs ul li').removeClass('is-active');
+    $('.tab-section').removeClass('current-tab');
+
+    $(this).addClass('is-active');
+    $('#' + id).addClass('current-tab');
+
+    if (id === "resume") {
+        $('#res').hide().fadeIn(1000);
+    }
+
+});
+
+/** End Tab Js */
+
+/**  Notification  **/
+$('.delete').on('click', function () {
+    $('.notification').css('display', 'none');
+});
+/** End Notification */
+
+/** Nav drop Down toggle */
+
+var toggle = $('.nav-toggle');
+var menu = $('#nav-menu');
+
+$(toggle).on('click', function (e) {
+    e.stopPropagation();
+    $(this).toggleClass('is-active');
+    menu.toggleClass('is-active');
+});
+
+$(document).on('click', function (e) {
+    if (!$(e.target).closest('.nav').length) {
+        if (menu.is(":visible") && menu.hasClass('is-active')) {
+            $(menu).toggleClass('is-active');
+            $(toggle).toggleClass('is-active');
+        }
+    }
+});
+/** End Drop Down Nav functionality **/
+
+/** Subtitle display */
+var descriptionArr = ["Student", "Dog Enthusiast", "Web Developer", "Food Connoisseur", "Software Engineer", "Hockey Fan"];
+var idx = 0;
+
+setInterval(function () {
+    $('#description').fadeOut(400, function () {
+        $("#description").text(descriptionArr[idx++]).fadeIn(400);
     });
+    idx == descriptionArr.length ? idx = 0 : idx;
+}, 4000);
 
-    scaleBannerVideoSize(element);
+/** End Subtitle display */
 
-}
 
-function scaleBannerVideoSize(element) {
+/** Contact Modal */
+$('#contact-btn').on('click', function () {
+    // alert("Clciked!@");
+    $('#contact-modal').addClass('is-active').fadeIn(30000);
+    $('body').addClass('stop-scroll');
+});
 
-    var windowWidth = $(window).width(),
-        windowHeight = $(window).height() + 5,
-        videoWidth,
-        videoHeight;
+$('.modal-background, .modal-card-head .delete, .modal-card-foot .close').on('click', function () {
+    //alert("background clicked!");
+    $('#contact-modal').removeClass('is-active').fadeOut(500);
+    $('body').removeClass('stop-scroll');
+});
+/** End Contact Modal */
 
-    console.log(windowHeight);
+/** Contact Modal */
+$('#gradebtn').on('click', function () {
+    //alert("Clciked!@");
+    $('#grademodal').addClass('is-active').fadeIn(30000);
+    $('body').addClass('stop-scroll');
+});
 
-    $(element).each(function () {
-        var videoAspectRatio = $(this).data('height') / $(this).data('width');
+$('.modal-background, .modal-card-head .delete, .modal-card-foot .close-grade').on('click', function () {
+    //alert("background clicked!");
+    $('#grademodal').removeClass('is-active').fadeOut(500);
+    $('body').removeClass('stop-scroll');
+});
+/** End Contact Modal */
 
-        $(this).width(windowWidth);
+/** Morris Charts */
+new Morris.Donut({
+    // ID of the element in which to draw the chart.
+    element: 'languages',
+    resize: true,
+    // Chart data records -- each entry in this array corresponds to a point on
+    // the chart.
+    data: [
+        {label: 'Javascript', value: 14},
+        {label: 'HTML & CSS', value: 13},
+        {label: 'JAVA', value: 1},
+        {label: 'PHP', value: 6},
+        {label: 'C#/ASP.NET', value: 5}
+        // {label: 'Angular', value: 0}
 
-        if (windowWidth < 1000) {
-            videoHeight = windowHeight;
-            videoWidth = videoHeight / videoAspectRatio;
-            $(this).css({'margin-top': 0, 'margin-left': -(videoWidth - windowWidth) / 2 + 'px'});
+    ],
+    backgroundColor: '#ccc',
+    labelColor: '#000500',
+    colors: [
+        '#1f7135',
+        '#239a3b',
+        '#7bc96f',
+        '#c6e48b',
+        '#dcfa9e'
+    ]
+});
 
-            $(this).width(videoWidth).height(videoHeight);
+new Morris.Donut({
+    element: 'serverLang',
+    resize: true,
+    // Chart data records -- each entry in this array corresponds to a point on
+    // the chart.
+    data: [
+        {label: 'SQL', value: 6},
+        {label: 'MySQL', value: 6}
+        // {lable: 'Nodejs', value: 0}
+
+    ],
+    backgroundColor: '#ccc',
+    labelColor: '#000500',
+    colors: [
+        '#cd7106',
+        '#ff8d07'
+
+    ]
+    // formatter: function (x) { return x + "%"}
+});
+
+new Morris.Bar({
+    element: 'schoolLang',
+    resize: true,
+    data: [
+        {year: '2015', value: 2},
+        {year: '2016', value: 5},
+        {year: '2017', value: 8}
+    ],
+    // The name of the data record attribute that contains x-values.
+    xkey: 'year',
+    // A list of names of data record attributes that contain y-values.
+    ykeys: ['value'],
+    labels: ['Languages being learned'],
+    hideHover: 'auto',
+    backgroundColor: '#ccc',
+    labelColor: '#000500',
+    barColors: [
+        '#549cc4',
+        '#239a3b',
+        '#7bc96f',
+        '#c6e48b',
+        '#dcfa9e'
+    ]
+});
+
+/** End Morris Charts */
+
+function gradeTable() {
+    var gradeObj = [
+        {
+            qtr: 1,
+            course: "IT Visual Communication",
+            id: "IT121.11",
+            grade: "A",
+            status: "completed"
+        },
+        {
+            qtr: 1,
+            course: "Technical Math I",
+            id: "MA125.41M",
+            grade: "A",
+            status: "completed"
+        },
+        {
+            qtr: 1,
+            course: "Computer & Network Fundamentals",
+            id: "NE115.11",
+            grade: "A",
+            status: "completed"
+        },
+        {
+            qtr: 1,
+            course: "Programming in C++",
+            id: "SE114.11",
+            grade: "A",
+            status: "completed"
+        },
+        {
+            qtr: 2,
+            course: "Windows Networking Essentials",
+            id: "NE121.12",
+            grade: "A",
+            status: "completed"
+        },
+        {
+            qtr: 2,
+            course: "HTML & Javascript",
+            id: "SE111.12",
+            grade: "A",
+            status: "completed"
+        },
+        {
+            qtr: 2,
+            course: "Intermediate Progr. Using C++",
+            id: "SE124.12",
+            grade: "A",
+            status: "completed"
+        },
+        {
+            qtr: 3,
+            course: "Business Math",
+            id: "MA121.11M",
+            grade: "A",
+            status: "completed"
+        },
+        {
+            qtr: 3,
+            course: "Effective Team Managment & Projects",
+            id: "MGM115.13",
+            grade: "A",
+            status: "completed"
+        },
+        {
+            qtr: 3,
+            course: "Networking for Small Business",
+            id: "NE131.13",
+            grade: "A",
+            status: "completed"
+        },
+        {
+            qtr: 3,
+            course: "Database Management - SQL",
+            id: "SE133.13",
+            grade: "A",
+            status: "completed"
+        },
+        {
+            qtr: 4,
+            course: "Physics I & Lab",
+            id: "PHY200.02M",
+            grade: "A",
+            status: "completed"
+        },
+        {
+            qtr: 4,
+            course: "C#",
+            id: "SE245.04",
+            grade: "A",
+            status: "completed"
+        },
+        {
+            qtr: 4,
+            course: "Systems Analysis & Design - UML",
+            id: "SE252.04",
+            grade: "A",
+            status: "completed"
+        },
+        {
+            qtr: 4,
+            course: "Web Dev using PHP & MySQL",
+            id: "SE266.04",
+            grade: "A",
+            status: "completed"
+        },
+        {
+            qtr: 5,
+            course: "Advanced Javascript",
+            id: "SE241.15",
+            grade: "A",
+            status: "completed"
+        },
+        {
+            qtr: 5,
+            course: "Advanced C#",
+            id: "SE255.15",
+            grade: "A",
+            status: "completed"
+        },
+        {
+            qtr: 5,
+            course: "User Interface Design UI/UX",
+            id: "SE264.05",
+            grade: "A",
+            status: "completed"
+        },
+        {
+            qtr: 6,
+            course: "IT Ethics & Professional Development",
+            id: "IT267.16",
+            grade: "A",
+            status: "completed"
+        },
+        {
+            qtr: 6,
+            course: "Intro to Information Security",
+            id: "NE267.16",
+            grade: "A",
+            status: "completed"
+        },
+        {
+            qtr: 6,
+            course: "SE AS Capstone Project",
+            id: "SE265.06",
+            grade: "A",
+            status: "completed"
+        },
+        {
+            qtr: 6,
+            course: "Web Development using ASP.NET",
+            id: "SE256.06",
+            grade: "A",
+            status: "completed"
+        },
+        {
+            qtr: 7,
+            course: "Research Writing",
+            id: "EN331.00C",
+            grade: "A",
+            status: "completed"
+        },
+        {
+            qtr: 7,
+            course: "Technical Math II",
+            id: "MA210.90M",
+            grade: "A",
+            status: "completed"
+        },
+        {
+            qtr: 7,
+            course: "Intro to Genetics & Evolution",
+            id: "SCI350.95M",
+            grade: "A",
+            status: "completed"
+        },
+        {
+            qtr: 8,
+            course: "Database Management",
+            id: "IT378.57",
+            grade: "A",
+            status: "completed"
+        },
+        {
+            qtr: 8,
+            course: "Advanced PHP Programming",
+            id: "SE396.57",
+            grade: "A",
+            status: "completed"
+        },
+        {
+            qtr: 8,
+            course: "Java",
+            id: "SE385.57",
+            grade: "A",
+            status: "completed"
+        },
+        {
+            qtr: 9,
+            course: "Algorithms",
+            id: "SE394.58",
+            grade: "N/A",
+            status: "next-up"
+        },
+        {
+            qtr: 9,
+            course: "Design Patterns",
+            id: "SE402.68",
+            grade: "N/A",
+            status: "next-up"
+        },
+        {
+            qtr: 9,
+            course: "Android Development",
+            id: "SE391.58",
+            grade: "N/A",
+            status: "next-up"
         }
 
-        $('.homepage-hero-module .video-container video').addClass('fadeIn animated');
+    ];
 
-    });
+    var length = gradeObj.length;
+    var headerArray = ["Quarter", "Course", "ID", "Grade", "Status"];
 
-}
+    var table = document.createElement('table');
+    table.className = 'table is-narrow course-table';
+
+    var columnCount = headerArray.length;
+
+    var row = table.insertRow(-1);
+
+    for (var i = 0; i < columnCount; i++) {
+        var headerCell = document.createElement('td');
+        headerCell.innerHTML = headerArray[i];
+        row.appendChild(headerCell);
+    }
 
 
-function devicons() {
-    /* Tools */
-    $(".devicon-html5-plain").hover(function () {
-        $('#html5-text').fadeIn().addClass('animated');
-
-    }, function () {
-        $('#html5-text').fadeOut().removeClass('animated');
-    });
-
-    $(".devicon-css3-plain").hover(function () {
-        $('#css3-text').fadeIn().addClass('animated');
-    }, function () {
-        $('#css3-text').fadeOut().removeClass('animated');
-    });
-
-    $(".devicon-javascript-plain").hover(function () {
-        $('#javascript-text').fadeIn().addClass('animated');
-
-    }, function () {
-        $('#javascript-text').fadeOut().removeClass('animated');
-    });
-
-    $(".devicon-jquery-plain").hover(function () {
-        $('#jquery-text').fadeIn().addClass('animated');
-
-    }, function () {
-        $('#jquery-text').fadeOut().removeClass('animated');
-    });
-    $(".devicon-bootstrap-plain ").hover(function () {
-        $('#bootstrap-text').fadeIn().addClass('animated');
-    }, function () {
-        $('#bootstrap-text').fadeOut().removeClass('animated');
-    });
-    $(".devicon-cplusplus-plain").hover(function () {
-        $('#cplusplus-text').fadeIn().addClass('animated');
-    }, function () {
-        $('#cplusplus-text').fadeOut().removeClass('animated');
-    });
-    $(".devicon-csharp-plain").hover(function () {
-        $('#csharp-text').fadeIn().addClass('animated');
-    }, function () {
-        $('#csharp-text').fadeOut().removeClass('animated');
-    });
-    $(".devicon-github-plain").hover(function () {
-        $('#github-text').fadeIn().addClass('animated');
-    }, function () {
-        $('#github-text').fadeOut().removeClass('animated');
-    });
-    $(".devicon-git-plain").hover(function () {
-        $('#git-text').fadeIn().addClass('animated');
-    }, function () {
-        $('#git-text').fadeOut().removeClass('animated');
-    });
-    $(".devicon-dot-net-plain").hover(function () {
-        $('#aspnet-text').fadeIn().addClass('animated');
-    }, function () {
-        $('#aspnet-text').fadeOut().removeClass('animated');
-    });
-    /*$(".devicon-foundation-plain").hover(function () {
-     $('#foundation-text').fadeIn().addClass('animated');
-     }, function () {
-     $('#foundation-text').fadeOut().removeClass('animated');
-     });*/
-    $(".devicon-php-plain").hover(function () {
-        $('#php-text').fadeIn().addClass('animated');
-    }, function () {
-        $('#php-text').fadeOut().removeClass('animated');
-    });
-    $(".devicon-mysql-plain").hover(function () {
-        $('#mysql-text').fadeIn().addClass('animated');
-    }, function () {
-        $('#mysql-text').fadeOut().removeClass('animated');
-    });
-    /*$(".devicon-sass-original").hover(function () {
-     $('#sass-text').fadeIn().addClass('animated');
-     }, function () {
-     $('#sass-text').fadeOut().removeClass('animated');
-     });
-     $(".devicon-illustrator-line").hover(function () {
-     $('#illustrator-text').fadeIn().addClass('animated');
-     }, function () {
-     $('#illustrator-text').fadeOut().removeClass('animated');
-     });*/
-    $(".devicon-trello-plain").hover(function () {
-        $('#trello-text').fadeIn().addClass('animated');
-    }, function () {
-        $('#trello-text').fadeOut().removeClass('animated');
-    });
-    $(".devicon-jetbrains-plain").hover(function () {
-        $('#jetbrains-text').fadeIn().addClass('animated');
-    }, function () {
-        $('#jetbrains-text').fadeOut().removeClass('animated');
-    });
-    $(".devicon-photoshop-line").hover(function () {
-        $('#photoshop-text').fadeIn().addClass('animated');
-    }, function () {
-        $('#photoshop-text').fadeOut().removeClass('animated');
-    });
-    $(".devicons-materializecss").hover(function () {
-        $('#materialize-text').fadeIn().addClass('animated');
-    }, function () {
-        $('#materialize-text').fadeOut().removeClass('animated');
-    });
-}
-
-function tooltipColor() {
-    /* Function to change color of tooltips */
-    $(".tooltipped").hover(function () {
-        var tooltipId = $(this).data('tooltip-id');
-        var fg = $(this).data('tooltip-fg');
-        var bg = $(this).data('tooltip-bg');
-        $('#' + tooltipId).css({
-            backgroundColor: bg,
-            color: fg
-        });
-    });
-}
-
-function navbarScroll() {
-
-    /* Fixed Navbar Scroll */
-    var lastScrollTop = 0;
-    var navbar = $('.navbar-fixed');
-    $(window).scroll(function () {
-        var y = $(this).scrollTop();
-        // If scrolltop point is greater than last scroll position
-        if (y > lastScrollTop) {
-            // scrolling down code
-            //alert("down");
-            // Change navbar opacity to almost transparent
-            navbar.css({
-                //visibility: "hidden",
-                transition: "opacity 0.5s linear",
-                opacity: 0.2
-            });
-        } else {
-            // scrolling up code
-            //alert("up");
-            // If it's scrolling up lose opacity
-            navbar.css({
-                visibility: "visible",
-                transition: "opacity 0.5s linear",
-                opacity: 1
-            });
-
-        }
-        // If scroll point  is at the same last scrollpoint after .5 seconds lose opacity
-        lastScrollTop = y;
-        var scrolly = $('body').scrollTop();
-        setTimeout(function () {
-            if (scrolly == $('body').scrollTop()) {
-                navbar.css({
-                    visibility: "visible",
-                    transition: "opacity 0.5s linear",
-                    opacity: 1
-                });
+    for (var j = 0; j < length; j++) {
+        var objIndex = gradeObj[j];
+        row = table.insertRow(-1);
+        for (var key in objIndex) {
+            if (objIndex.hasOwnProperty(key)) {
+                var cell = row.insertCell(-1);
+                cell.innerHTML = objIndex[key];
             }
-        }, 500);
-
-        /*  Bottom right hand corner button - Scroll to top function
-         *   will appear when window scroll reaches a certain point
-         *   - added animation to when it comes into view ********/
-        if (y > 600) {
-            $("#fixBotRight").fadeIn().addClass("animated fadeInDown");
-
-        } else {
-            $("#fixBotRight").fadeOut();
         }
+    }
 
-        console.log($(window).scrollTop() == ($(document).height() - $(window).height()));
-
-    });
+    var divTable = document.getElementById('gradeTable');
+    divTable.appendChild(table);
 
 }
+gradeTable();
 
-function hamburgerTransition() {
-    /* On Side-nav Hamburger click > transition to X button */
-    $(".hammy").on('click', function () {
-        $(".hammy").removeClass('rotateIn').addClass('rotateOut');
-        $(".xedOut").show();
-    });
-    /* On side-nav X click transition > back to Hamburger icon */
-    $(".xedOut").on('click', function () {
-        $(".xedOut").hide();
-        $(".hammy").removeClass('rotateOut').addClass('rotateIn');
-    });
+
+function showObjectValue(obj) {
+    var result = '';
+    for (var key in obj) {
+        if (obj.hasOwnProperty(key)) {
+            result += obj[key];
+        }
+    }
+
+    return result;
 }
 
-// function siteNewsAlert() {
-//     setTimeout(function () {
-//         Materialize.toast('Newly designed website coming soon! <br/> Updating old projects + adding new ones!', 6500, 'red white-text').fadeIn(5000);
-//     }, 5000);
-//
-// }
 
-function windowResize() {
-    var $window = $(window);
-    $window.on('resize', function () {
-        if ($window.width() >= 1400) {
-            $("#projects").addClass('container');
-        } else {
-            $("#projects").removeClass('container');
-        }
-    }).resize(); // resize will run this code automatically on load
-}
+/* Clipboard function */
 
-$(document).ready(function () {
-    $(".main-content").fadeIn(1000);
+$('#copyPGPbtn').on('click', function () {
+   var $this = $(this);
+   $this.text('Copied');
+   setTimeout(function () {
+       $this.text('Copy');
+   }, 2000);
+});
 
-    //siteNewsAlert();
+var clipboard = new Clipboard('#copyPGPbtn');
 
-    // Window resize function
-    windowResize();
+clipboard.on('success', function(e) {
+    document.getElementById('#pgp').select();
+    console.info('Action:', e.action);
+    console.info('Text:', e.text);
+    e.clearSelection();
+});
 
-    // Hide side-nav X
-    $(".xedOut").hide();
-
-    // Parallax initialization
-    $('.parallax').parallax();
-
-    // Tabs initialization
-    $('ul.tabs').tabs();
-
-    // Modal Initialization
-    $('.modal-trigger').leanModal();
-
-    // About Me Section fade-in's
-    aboutmeFades();
-
-    // Skillsbar animation
-    skillsBar();
-
-    // Scrolling function for navbar and fixed scrollTop button
-    navbarScroll();
-
-    /* Icon text fades on load */
-    $(".icon-text").fadeOut();
-
-    // Devicon/tool function that hides/fades-in icons
-    devicons();
-
-    // Tooltip color change function
-    tooltipColor();
-
-    // Transition function for hamburger icon
-    hamburgerTransition();
-
-    // Carousel Initialization */
-    $('.carousel').carousel();
-    // Initializes drop down nav buttons
-    $(".dropdown-button").dropdown();
-    // Side-nav on mobile Initialization
-    //$(".button-collapse").sideNav();
-    $('.button-collapse').sideNav({
-            closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
-        }
-    );
-    // Accordian Initialization
-    $('.collapsible').collapsible({
-        accordion: false // false changes collapsible behavior to expandable instead of accordion
-    });
-    // Close side-nav bar on 'x' click
-    $("#exit").on('click', function () {
-        // Hide sideNav
-        $('.button-collapse').sideNav('hide');
-    });
-    // Scrollspy function
-    $('.scrollspy').scrollSpy();
-    //$('.scrollspy').scrollSpy({'scrollOffset': 400});
-
-    // for HTML5 "required" attribute
-    $("select[required]").css({
-        display: "inline",
-        height: 0,
-        padding: 0,
-        width: 0
-    });
+clipboard.on('error', function(e) {
+    console.error('Action:', e.action);
+    console.error('Trigger:', e.trigger);
+});
 
 
-    /* Hero Video */
-    scaleVideoContainer();
-
-    initBannerVideoSize('.video-container .poster img');
-    initBannerVideoSize('.video-container .filter');
-    initBannerVideoSize('.video-container video');
-
-    $(window).on('resize', function () {
-        scaleVideoContainer();
-        scaleBannerVideoSize('.video-container .poster img');
-        scaleBannerVideoSize('.video-container .filter');
-        scaleBannerVideoSize('.video-container video');
-    });
-
-    /* For the animate method to work you need to link
-     jquery-color  https://cdnjs.com/libraries/jquery-color
-
-     $(".tooltipped").hover(function() {
-     var tooltipId = $(this).data('tooltip-id');
-     var fg = $(this).data('tooltip-fg');
-     var bg = $(this).data('tooltip-bg');
-     $('#' + tooltipId).animate({
-     backgroundColor: bg,
-     color: fg
-     });
-     }); */
-
-
-    //$('.button-collapse').sideNav({ closeOnClick: true });
-    /*$(".progress-bar").animate( {
-     width: "100%"
-     }, 200 );*/
-    //$("nav").hide();
-
-    // hides scroll-to-top button
-    //$("#fixBotRight").hide();
+$(document).on('mouseenter', '#blogNavBtn', function () {
+    $('#blogDefault').show();
+}).on('mouseleave', '#blogNavBtn', function () {
+    $('#blogDefault').hide();
 });

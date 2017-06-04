@@ -1,1636 +1,519 @@
 <!DOCTYPE html>
-<!--
-
-8888888                          d8888                                               888888
-  888                           d88888                                               888888
-  888                          d88P888                                               888888
-  888   8888b. 88888b.        d88P 888888d888.d8888b  .d88b. 88888b.  8888b. 888  888888888888
-  888      "88b888 "88b      d88P  888888P"  88K     d8P  Y8b888 "88b    "88b888  888888888
-  888  .d888888888  888     d88P   888888    "Y8888b.88888888888  888.d888888888  888888888
-  888  888  888888  888    d8888888888888         X88Y8b.    888  888888  888Y88b 888888Y88b.
-8888888"Y888888888  888   d88P     888888     88888P' "Y8888 888  888"Y888888 "Y88888888 "Y888
--->
-<html>
+<html lang="en">
 <head>
-    <title>Ian Arsenault | Providence RI</title>
-    <!-- Broswer Tab Logo -->
-    <!--<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />-->
-    <link rel="shortcut icon" type="image/x-icon" href="images/assets/ian.ico"/>
-    <!--Import Google Icon Font-
-    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">-->
-    <link rel="stylesheet" type="text/css" href="font/material-design-icons/Material-Design-Icons.eot"/>
-    <!--Import materialize.css-->
-    <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css" media="screen,projection"/>
-    <!-- Raleway Font -->
-    <link href="https://fonts.googleapis.com/css?family=Raleway:400,800" rel="stylesheet">
-    <!-- Parisienne Font -->
-    <link href='https://fonts.googleapis.com/css?family=Parisienne' rel='stylesheet' type='text/css'>
-    <!-- Kristi Font -->
-    <link href='https://fonts.googleapis.com/css?family=Kristi' rel='stylesheet' type='text/css'>
-    <!-- Devicon  -->
-    <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/devicons/1.8.0/css/devicons.min.css" rel="stylesheet"
-          type="text/css">
-    <!-- My stylesheet -->
-    <link type="text/css" rel="stylesheet" href="css/style.css"/>
-    <!--Let browser know website is optimized for mobile-->
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <script async defer
-            src="https://maps.googleapis.com/maps/api/js?v=3&key=AIzaSyAA4YVEtwYE0avddYGEfBNoWsXZNT-qkms&sensor=false&callback=initMap"></script>
-    <!--maps.googleapis.com/maps/api/js?v=3&key={your key}&sensor=false-->
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
-    <script type="text/javascript">
-        function initTabMap() {
-            //  Basic options for google map
-            var mapOptions1 = {
-                // Zoomed in level
-                zoom: 10,
-                scrollwheel: false,
-                // The latitude and longitude to center map
-                center: new google.maps.LatLng(41.82399, -71.41283), // New York
-
-                // Map Styling
-                styles: [{
-                    "featureType": "all",
-                    "elementType": "labels",
-                    "stylers": [{"visibility": "on"}]
-                }, {
-                    "featureType": "all",
-                    "elementType": "labels.text.fill",
-                    "stylers": [{"saturation": 36}, {"color": "#000000"}, {"lightness": 40}]
-                }, {
-                    "featureType": "all",
-                    "elementType": "labels.text.stroke",
-                    "stylers": [{"visibility": "on"}, {"color": "#000000"}, {"lightness": 16}]
-                }, {
-                    "featureType": "all",
-                    "elementType": "labels.icon",
-                    "stylers": [{"visibility": "off"}]
-                }, {
-                    "featureType": "administrative",
-                    "elementType": "geometry.fill",
-                    "stylers": [{"color": "#000000"}, {"lightness": 20}]
-                }, {
-                    "featureType": "administrative",
-                    "elementType": "geometry.stroke",
-                    "stylers": [{"color": "#000000"}, {"lightness": 17}, {"weight": 1.2}]
-                }, {
-                    "featureType": "administrative.locality",
-                    "elementType": "labels.text.fill",
-                    "stylers": [{"color": "#c4c4c4"}]
-                }, {
-                    "featureType": "administrative.neighborhood",
-                    "elementType": "labels.text.fill",
-                    "stylers": [{"color": "#707070"}]
-                }, {
-                    "featureType": "landscape",
-                    "elementType": "geometry",
-                    "stylers": [{"color": "#000000"}, {"lightness": 20}]
-                }, {
-                    "featureType": "poi",
-                    "elementType": "geometry",
-                    "stylers": [{"color": "#000000"}, {"lightness": 21}, {"visibility": "on"}]
-                }, {
-                    "featureType": "poi.business",
-                    "elementType": "geometry",
-                    "stylers": [{"visibility": "on"}]
-                }, {
-                    "featureType": "road.highway",
-                    "elementType": "geometry.fill",
-                    "stylers": [{"color": "#be2026"}, {"lightness": "0"}, {"visibility": "on"}]
-                }, {
-                    "featureType": "road.highway",
-                    "elementType": "geometry.stroke",
-                    "stylers": [{"visibility": "off"}]
-                }, {
-                    "featureType": "road.highway",
-                    "elementType": "labels.text.fill",
-                    "stylers": [{"visibility": "off"}]
-                }, {
-                    "featureType": "road.highway",
-                    "elementType": "labels.text.stroke",
-                    "stylers": [{"visibility": "off"}, {"hue": "#ff000a"}]
-                }, {
-                    "featureType": "road.arterial",
-                    "elementType": "geometry",
-                    "stylers": [{"color": "#000000"}, {"lightness": 18}]
-                }, {
-                    "featureType": "road.arterial",
-                    "elementType": "geometry.fill",
-                    "stylers": [{"color": "#575757"}]
-                }, {
-                    "featureType": "road.arterial",
-                    "elementType": "labels.text.fill",
-                    "stylers": [{"color": "#ffffff"}]
-                }, {
-                    "featureType": "road.arterial",
-                    "elementType": "labels.text.stroke",
-                    "stylers": [{"color": "#2c2c2c"}]
-                }, {
-                    "featureType": "road.local",
-                    "elementType": "geometry",
-                    "stylers": [{"color": "#000000"}, {"lightness": 16}]
-                }, {
-                    "featureType": "road.local",
-                    "elementType": "labels.text.fill",
-                    "stylers": [{"color": "#999999"}]
-                }, {
-                    "featureType": "road.local",
-                    "elementType": "labels.text.stroke",
-                    "stylers": [{"saturation": "-52"}]
-                }, {
-                    "featureType": "transit",
-                    "elementType": "geometry",
-                    "stylers": [{"color": "#000000"}, {"lightness": 19}]
-                }, {
-                    "featureType": "water",
-                    "elementType": "geometry",
-                    "stylers": [{"color": "#000000"}, {"lightness": 17}]
-                }]
-            };
-
-            // get the DOM element that will contain the 2nd map
-            var mapElement1 = document.getElementById('map_2');
-
-            // Create the Google Map using our element and options defined above
-            var map1 = new google.maps.Map(mapElement1, mapOptions1);
-            /* Tab Map */
-
-            /* Providence Marker */
-            var marker1 = new google.maps.Marker({
-                position: new google.maps.LatLng(41.82399, -71.41283),
-                map: map1,
-                title: 'Somewhere around here!'
-            });
-        }
-
-        function init() {
-            // Basic options for google map
-            var mapOptions = {
-                // Zoomed in level
-                zoom: 10,
-                scrollwheel: false,
-
-                // The latitude and longitude to center the map
-                center: new google.maps.LatLng(41.82399, -71.41283), // New York
-
-                // Styling
-                styles: [{
-                    "featureType": "all",
-                    "elementType": "labels",
-                    "stylers": [{"visibility": "on"}]
-                }, {
-                    "featureType": "all",
-                    "elementType": "labels.text.fill",
-                    "stylers": [{"saturation": 36}, {"color": "#000000"}, {"lightness": 40}]
-                }, {
-                    "featureType": "all",
-                    "elementType": "labels.text.stroke",
-                    "stylers": [{"visibility": "on"}, {"color": "#000000"}, {"lightness": 16}]
-                }, {
-                    "featureType": "all",
-                    "elementType": "labels.icon",
-                    "stylers": [{"visibility": "off"}]
-                }, {
-                    "featureType": "administrative",
-                    "elementType": "geometry.fill",
-                    "stylers": [{"color": "#000000"}, {"lightness": 20}]
-                }, {
-                    "featureType": "administrative",
-                    "elementType": "geometry.stroke",
-                    "stylers": [{"color": "#000000"}, {"lightness": 17}, {"weight": 1.2}]
-                }, {
-                    "featureType": "administrative.locality",
-                    "elementType": "labels.text.fill",
-                    "stylers": [{"color": "#c4c4c4"}]
-                }, {
-                    "featureType": "administrative.neighborhood",
-                    "elementType": "labels.text.fill",
-                    "stylers": [{"color": "#707070"}]
-                }, {
-                    "featureType": "landscape",
-                    "elementType": "geometry",
-                    "stylers": [{"color": "#000000"}, {"lightness": 20}]
-                }, {
-                    "featureType": "poi",
-                    "elementType": "geometry",
-                    "stylers": [{"color": "#000000"}, {"lightness": 21}, {"visibility": "on"}]
-                }, {
-                    "featureType": "poi.business",
-                    "elementType": "geometry",
-                    "stylers": [{"visibility": "on"}]
-                }, {
-                    "featureType": "road.highway",
-                    "elementType": "geometry.fill",
-                    "stylers": [{"color": "#be2026"}, {"lightness": "0"}, {"visibility": "on"}]
-                }, {
-                    "featureType": "road.highway",
-                    "elementType": "geometry.stroke",
-                    "stylers": [{"visibility": "off"}]
-                }, {
-                    "featureType": "road.highway",
-                    "elementType": "labels.text.fill",
-                    "stylers": [{"visibility": "off"}]
-                }, {
-                    "featureType": "road.highway",
-                    "elementType": "labels.text.stroke",
-                    "stylers": [{"visibility": "off"}, {"hue": "#ff000a"}]
-                }, {
-                    "featureType": "road.arterial",
-                    "elementType": "geometry",
-                    "stylers": [{"color": "#000000"}, {"lightness": 18}]
-                }, {
-                    "featureType": "road.arterial",
-                    "elementType": "geometry.fill",
-                    "stylers": [{"color": "#575757"}]
-                }, {
-                    "featureType": "road.arterial",
-                    "elementType": "labels.text.fill",
-                    "stylers": [{"color": "#ffffff"}]
-                }, {
-                    "featureType": "road.arterial",
-                    "elementType": "labels.text.stroke",
-                    "stylers": [{"color": "#2c2c2c"}]
-                }, {
-                    "featureType": "road.local",
-                    "elementType": "geometry",
-                    "stylers": [{"color": "#000000"}, {"lightness": 16}]
-                }, {
-                    "featureType": "road.local",
-                    "elementType": "labels.text.fill",
-                    "stylers": [{"color": "#999999"}]
-                }, {
-                    "featureType": "road.local",
-                    "elementType": "labels.text.stroke",
-                    "stylers": [{"saturation": "-52"}]
-                }, {
-                    "featureType": "transit",
-                    "elementType": "geometry",
-                    "stylers": [{"color": "#000000"}, {"lightness": 19}]
-                }, {
-                    "featureType": "water",
-                    "elementType": "geometry",
-                    "stylers": [{"color": "#000000"}, {"lightness": 17}]
-                }]
-            };
-
-            // get the DOM element that will contain the map
-            var mapElement = document.getElementById('map');
-
-            // Create the map
-            var map = new google.maps.Map(mapElement, mapOptions);
-
-            /* Providence Marker */
-            var marker1 = new google.maps.Marker({
-                position: new google.maps.LatLng(41.82399, -71.41283),
-                map: map,
-                title: 'Somewhere around here!'
-            });
-
-            google.maps.event.addListener(map, 'mousedown', function (event) {
-                this.setOptions({scrollwheel: true});
-            });
-
-            google.maps.event.addListener(map, 'mouseover', function (event) {
-                self = this;
-                timer = setTimeout(function () {
-                    self.setOptions({scrollwheel: true});
-                }, 1000);
-            });
-
-            google.maps.event.addListener(map, 'mouseout', function (event) {
-                this.setOptions({scrollwheel: false});
-                clearTimeout(timer);
-            });
-
-        }
-
-        // Intializes 2nd  hidden google map on tab click
-        function waitForMap() {
-            setTimeout(function () {
-                if ($('#phone6s').is(':visible')) {
-                    initTabMap();
-                } else {
-                    waitForMap();
-                }
-            }, 100);
-        }
-
-        waitForMap();
-
-        // When the window has finished loading create our google map below
-        google.maps.event.addDomListener(window, 'load', init);
-
-    </script>
+    <title>Ian Arsenault</title>
+    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.1/css/bulma.min.css">-->
+    <link rel="stylesheet" href="css/bulma.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css">
+    <link rel="stylesheet" href="css/zoom.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
-<!-- MAIN CONTENT -->
-<div class="main-content">
-    <!-- Begin Navbar -->
-    <div class="navbar-fixed scrollspy" id="top-scroll">
-        <nav class="white">
-            <div class="nav-wrapper">
-                <!-- <img id="logo" src="images/assets/ian.jpg"> -->
-                <a href="#!" class="black-text brand-logo railwayBold" id="navLogo">ianarsenault.i0</a>
-                <a href="#" data-activates="mobile-demo" class="button-collapse hambrgr" id="hamburger"><i
-                        class="material-icons hammy animated">menu</i><span
-                        class="xedOut animated rotateIn rotateOut"><i class="fa fa-times fa-3x" aria-hidden="true"></i></span></a>
-                <ul class="right hide-on-med-and-down railway navlist scroll-content" id="navSize">
-                    <li><a href="#about" class="navLnkColor tooltipped fart" data-position="bottom" data-delay="50"
-                           data-tooltip="Resume + Education + Location & More!">About</a></li>
-                    <li><a href="#projects" class="navLnkColor">Projects</a></li>
-                    <li><a href="#tools" class="navLnkColor">Tools</a></li>
-                    <li><a href="#blog" class="navLnkColor">Blog</a></li>
-                    <li><a href="#contact" class="navLnkColor">Contact</a></li>
-
-                </ul>
-                <ul class="side-nav white z-depth-0" id="mobile-demo">
-                    <!-- only have if side-nav doens't have nav above/hamburger showing -->
-                    <!--<li class="right-align"><a href="#" id="exit"><span id="close-hvr">X</span></a></li>-->
-                    <li><a href="#about" id="side-navBtns">About</a></li>
-                    <li><a href="#projects" id="side-navBtns">Projects <span class="side-badge"></span> <span
-                            class="new badge">4</span></a></li>
-                    <li><a href="#tools" id="side-navBtns">Tools</a></li>
-                    <li><a href="#blog" id="side-navBtns">Blog</a></li>
-                    <li><a href="#contact" id="side-navBtns">Contact</a></li>
-                </ul>
+<!-- Nav  / Hero -->
+<section class="hero is-large is-dark header-image" id="nav-hero-section">
+    <div id="header-img-fade">
+        <nav class="nav has-shadow" id="navbar">
+            <div class="container">
+                <div class="nav-left">
+                    <a class="nav-item" id="nav-name">Ian Arsenault</a>
+                </div>
+                <span class="nav-toggle">
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
+                <div id="nav-menu" class="nav-right nav-menu">
+                    <a class="nav-item is-tab is-active">Home</a>
+                    <a class="nav-item is-tab nali" href="projects.html">Projects</a>
+                    <a class="nav-item is-tab nali" disabled id="blogNavBtn">Blog</a>
+                    <a class="nav-item is-tab nali contact-nav">Contact</a>
+                </div>
             </div>
         </nav>
-    </div> <!-- / nav-bar -->
-    <!-- Parallax Container -->
-    <div class="parallax-container valign-wrapper">
-        <div class="para-text valign center-block">
-            <h1 class="railway white-text parisienne center-align cursive-hdr">Monsieur Arsenault</h1>
-            <div class="center-align">
-                <h4 class="railwayBold white-text plain-txt">Software Engineering + Web Development Student</h4>
-            </div>
-        </div>
-        <div class="parallax">
-            <!-- Low Poly Landscape design by Stephani Stutz - Switzerland
-            http://stephaniestutz.ch https://www.facebook.com/stephaniestutzart# -->
-            <img src="https://cdn3.artstation.com/p/assets/images/images/000/802/383/large/stephanie-stutz-the-red-mountains-by-toilettenmassaker-d6dux3c.jpg?1433405705">
-        </div>
-    </div><!-- end of Parallax Container -->
 
-    <div class="container">
-        <!-- About Me Section -->
-        <section id="about" class="section scrollspy">
-            <div class="row">
-                <div class="row" id="about-tab-row">
-                    <div class="col s12 railwayBold">
-                        <ul class="tabs scrollable">
-                            <li class="tab col s3"><a href="#education" id="education-bar"><i
-                                    class="fa fa-graduation-cap hide-on-small-and-down" aria-hidden="true"></i>
-                                Education</a></li>
-                            <li class="tab col s3"><a href="#skills" id="skills-bar"><i
-                                    class="fa fa-bar-chart hide-on-small-and-down" aria-hidden="true"></i>
-                                Skills</a></li>
-                            <li class="tab col s3"><a class="active" href="#aboutme" id="about-bar"><i
-                                    class="fa fa-user-secret hide-on-small-and-down" aria-hidden="true"></i>
-                                About <span class="hide-on-small-and-down">Me</span></a></li>
-                            <li class="tab col s3"><a href="#resume" id="resume-bar"><i
-                                    class="fa fa-cogs hide-on-small-and-down" aria-hidden="true"></i>
-                                Resume</a></li>
-                            <li class="tab col s3"><a href="#location" id="google-map-tab"><i
-                                    class="fa fa-home hide-on-small-and-down" aria-hidden="true"></i>
-                                Location</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="row">
-                    <div id="education" class="col s12">
-                        <div class="row railway">
-                            <div class="col s10 offset-s1 m6 l6 btm-padding">
-                                <div class="center-align">
-                                    <img src="images/school/neitlogo.jpg" class="responsive-img"
-                                         id="neit-logo"/>
-                                </div>
-                                <p class="edu-content">Currently enrolled in the IT-Software Engineering program at
-                                    NEIT, where I've been
-                                    adamantly learning about many different topics in the web development and software
-                                    engineering world. I've maintained
-                                    a accumulative GPA of 3.9+/4.0 every semester and have been inducted into the Phi
-                                    Theta Kappa Honor Society</p>
-                                <div class="center-align hide-on-med-and-up">
-                                    <!-- Modal Trigger for course list of NEIT-->
-                                    <a class="modal-trigger waves-effect waves-light btn red" href="#modal1">Courses
-                                        Completed <i class="material-icons right">list</i></a>
-                                </div>
-                            </div><!-- /neit column -->
-                            <div class="col s10 offset-s1 m6 l6 btm-padding">
-                                <div class="center-align">
-                                    <img src="images/school/fcc.jpg"
-                                         class="responsive-img" id="fcc-logo">
-                                </div>
-                                <p class="edu-content">In my free time I've been keeping up with Free Code Camp's course
-                                    for Full-Stack Web Development.
-                                    I'm currently about 60% through the Front-End Course, working on the Front-End
-                                    projects and Algorithm Challenges.
-                                    You can check my projects and algorithm solutions by clicking the link below</p>
-                                <div class="center-align hide-on-med-and-up">
-                                    <a href="https://www.freecodecamp.com/gorgonsmaze" target="_blank"
-                                       class="waves-effect waves-light btn red">FCC Profile <i
-                                            class="material-icons right">portrait</i></a>
-                                </div>
-                            </div>
+        <div class="hero-body">
+            <div class="container has-text-centered">
+                <h1 class="title is-1">
+                    < Ian Arsenault />
+                </h1>
+                <h2 class="subtitle" id="description">
+                    Software Engineer
+                </h2>
+                <div class="bottom is-hidden-mobile">
+                    <a>
+                        <div class="mouse">
+                            <div class="mouse-wheel"></div>
                         </div>
-
-
-                        <!-- Education Buttons for medium and up display -->
-                        <div class="row hide-on-small-and-down" style="margin-bottom: 50px;">
-                            <!-- NEIT Button - on large -->
-                            <div class="col m6 l6">
-                                <div class="center-align">
-                                    <a class="modal-trigger waves-effect waves-light btn red" href="#modal1">Courses
-                                        Completed <i class="material-icons right">list</i></a>
-
-                                </div>
-                            </div>
-                            <!-- FCC Button - on large -->
-                            <div class="col m6 l6">
-                                <div class="center-align">
-                                    <a href="https://www.freecodecamp.com/gorgonsmaze" target="_blank"
-                                       class="waves-effect waves-light btn red">FCC Profile <i
-                                            class="material-icons right">portrait</i></a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col s10 offset-s1 m6 l6 btm-padding">
-                                <div class="center-align">
-                                    <img src="images/school/codecademy.jpg"
-                                         class="responsive-img"
-                                         id="codecademy-logo"/>
-                                </div>
-                                <p class="edu-content">Codecademy is something I use whenever I want to get a quick
-                                    refresher
-                                    on a particular programming language.
-                                    It's very easy to use, and it's fun to go through the whole curriculumn. So far I've
-                                    completed 5 skills, and just started learning React.JS</p>
-                                <div class="center-align hide-on-med-and-up">
-                                    <a class="waves-effect waves-light btn red"
-                                       href="https://www.codecademy.com/IanArsenault" target="_blank">Codecademy Profile
-                                        <i class="material-icons right">portrait</i></a>
-                                </div>
-                            </div>
-
-                            <div class="col s10 offset-s1 m6 l6 btm-padding">
-                                <div class="center-align">
-                                    <img src="images/school/hackerrank.jpg"
-                                         class="responsive-img" id="hackr-logo">
-                                </div>
-                                <p class="edu-content">HackerRank is an extraordinary tool for me, as it's what many
-                                    tech
-                                    companies are using to find the best applicatis for software jobs. Since getting my
-                                    Associates degree
-                                    I've been practicing on it every day.</p>
-                                <div class="center-align hide-on-med-and-up">
-                                    <a href="https://www.hackerrank.com/zzzian" target="_blank"
-                                       class="waves-effect waves-light btn red">HackerRank Profile <i
-                                            class="material-icons right">portrait</i></a>
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <!-- Education Buttons for medium and up display -->
-                        <div class="row hide-on-small-and-down">
-                            <!-- NEIT Button - on large -->
-                            <div class="col m6 l6">
-                                <div class="center-align">
-                                    <a class="waves-effect waves-light btn red"
-                                       href="https://www.codecademy.com/IanArsenault" target="_blank">Codecademy Profile
-                                        <i class="material-icons right">portrait</i></a>
-                                </div>
-                            </div>
-                            <!-- FCC Button - on large -->
-                            <div class="col m6 l6">
-                                <div class="center-align">
-                                    <a href="https://www.hackerrank.com/zzzian" target="_blank"
-                                       class="waves-effect waves-light btn red">HackerRank Profile <i
-                                            class="material-icons right">portrait</i></a>
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <!-- Modal Structure -->
-                        <div id="modal1" class="modal modal-fixed-footer">
-                            <div class="modal-content">
-                                <!-- Modal Heading -->
-                                <div class="center-align">
-                                    <h4>IT Software Engineering - Associates</h4>
-                                    <p>Associate in Science - <i>09/22/2016</i></p>
-                                    <h6>Status Key:</h6>
-                                    <div class="row">
-                                        <div class="col s6 right-align">
-                                            <p><i class="material-icons icon-star-center" id="red-star">star_border</i>
-                                                = Completed</p>
-                                        </div>
-                                        <div class="col s6 left-align">
-                                            <p><i class="material-icons icon-star-center"
-                                                  id="orange-star">star_border</i> = Currently in session</p>
-                                        </div>
-                                    </div><!-- end of Modal Heading -->
-                                </div>
-                                <!--<hr/>-->
-                                <!--&lt;!&ndash; Start of Current- Session Course Table &ndash;&gt;-->
-                                <!--<h5 class="course-head center-align">Currently In-Session:</h5>-->
-                                <!--<table class="centered striped">-->
-                                <!--<thead>-->
-                                <!--<tr>-->
-                                <!--<th data-field="course">Course</th>-->
-                                <!--<th data-field="course-id">ID</th>-->
-                                <!--<th data-field="grade">Grade</th>-->
-                                <!--<th data-field="status">Status</th>-->
-                                <!--</tr>-->
-                                <!--</thead>-->
-
-                                <!--<tbody>-->
-                                <!--<tr>-->
-                                <!--<td>SE AS Capstone Project</td>-->
-                                <!--<td>SE265.06</td>-->
-                                <!--<td></td>-->
-                                <!--<td><i class="material-icons" id="red-star">star_border</i></td>-->
-                                <!--</tr>-->
-                                <!--</tbody>-->
-                                <!--</table>-->
-
-                                <hr/>
-
-                                <!-- Completed Courses -->
-
-                                <div class="center-align">
-                                    <h5 class="course-head">Completed Courses:</h5>
-                                    <p>Courses are listed in order of completion from top down</p>
-                                </div>
-
-                                <!-- Courses Table - Modal -->
-                                <table class="striped centered">
-                                    <thead>
-                                    <tr>
-                                        <th data-field="course">Course</th>
-                                        <th data-field="course-id">ID</th>
-                                        <th data-field="grade">Grade</th>
-                                        <th data-field="status">Status</th>
-                                    </tr>
-                                    </thead>
-
-                                    <tbody>
-                                    <tr>
-                                        <td>IT Visual Communication</td>
-                                        <td>IT121.11</td>
-                                        <td>A</td>
-                                        <td><i class="material-icons" id="red-star">star_border</i></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Tech Math</td>
-                                        <td>MA125.41M</td>
-                                        <td>A</td>
-                                        <td><i class="material-icons" id="red-star">star_border</i></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Computer & Network Fundamentals</td>
-                                        <td>NE115.11</td>
-                                        <td>A</td>
-                                        <td><i class="material-icons" id="red-star">star_border</i></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Programming in C++</td>
-                                        <td>SE114.11</td>
-                                        <td>A</td>
-                                        <td><i class="material-icons" id="red-star">star_border</i></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Windows Networking Essentials</td>
-                                        <td>NE121.12</td>
-                                        <td>A</td>
-                                        <td><i class="material-icons" id="red-star">star_border</i></td>
-                                    </tr>
-                                    <tr>
-                                        <td>HTML and Javascript</td>
-                                        <td>SE111.12</td>
-                                        <td>A</td>
-                                        <td><i class="material-icons" id="red-star">star_border</i></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Intermediate Prog. Using C++</td>
-                                        <td>SE124.12</td>
-                                        <td>A</td>
-                                        <td><i class="material-icons" id="red-star">star_border</i></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Business Math</td>
-                                        <td>MA121.11M</td>
-                                        <td>A</td>
-                                        <td><i class="material-icons" id="red-star">star_border</i></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Effective Team Managment & Projects</td>
-                                        <td>MGM115.13</td>
-                                        <td>A</td>
-                                        <td><i class="material-icons" id="red-star">star_border</i></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Networking for Small Business</td>
-                                        <td>NE131.13</td>
-                                        <td>A</td>
-                                        <td><i class="material-icons" id="red-star">star_border</i></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Database Management - SQL</td>
-                                        <td>SE133.13</td>
-                                        <td>A</td>
-                                        <td><i class="material-icons" id="red-star">star_border</i></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Physics I & Lab</td>
-                                        <td>PHY200.02M</td>
-                                        <td>A</td>
-                                        <td><i class="material-icons" id="red-star">star_border</i></td>
-                                    </tr>
-                                    <tr>
-                                        <td>C#</td>
-                                        <td>SE245.04</td>
-                                        <td>A</td>
-                                        <td><i class="material-icons" id="red-star">star_border</i></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Systems Analysis & Design - UML</td>
-                                        <td>SE252.04</td>
-                                        <td>A</td>
-                                        <td><i class="material-icons" id="red-star">star_border</i></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Web Dev using PHP & MySQL</td>
-                                        <td>SE266.04</td>
-                                        <td>A</td>
-                                        <td><i class="material-icons" id="red-star">star_border</i></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Advanced Javascript</td>
-                                        <td>SE241.15</td>
-                                        <td>A</td>
-                                        <td><i class="material-icons" id="red-star">star_border</i></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Advanced C#</td>
-                                        <td>SE255.15</td>
-                                        <td>A</td>
-                                        <td><i class="material-icons" id="red-star">star_border</i></td>
-                                    </tr>
-                                    <tr>
-                                        <td>User Interface Design UI/UX</td>
-                                        <td>SE264.05</td>
-                                        <td>A</td>
-                                        <td><i class="material-icons" id="red-star">star_border</i></td>
-                                    </tr>
-                                    <tr>
-                                        <td>IT Ethics & Professional Development</td>
-                                        <td>IT267.16</td>
-                                        <td>A</td>
-                                        <td><i class="material-icons" id="red-star">star_border</i></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Intro to Information Security</td>
-                                        <td>NE267.16</td>
-                                        <td>A</td>
-                                        <td><i class="material-icons" id="red-star">star_border</i></td>
-                                    </tr>
-                                    <tr>
-                                        <td>SE AS Capstone Project</td>
-                                        <td>SE265.06</td>
-                                        <td>A</td>
-                                        <td><i class="material-icons" id="red-star">star_border</i></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Web Development using ASP.NET</td>
-                                        <td>SE256.06</td>
-                                        <td>A</td>
-                                        <td><i class="material-icons" id="red-star">star_border</i></td>
-                                    </tr>
-                                    </tbody>
-                                </table><!-- end Complete Course List -->
-
-                            </div>
-                            <div class="modal-footer">
-                                <a href="#!"
-                                   class="modal-action modal-close waves-effect waves-light btn-flat red white-text">Exit</a>
-                            </div>
-                        </div><!-- end of Modal table -->
-
-                    </div>
-
-                    <div id="skills" class="col s12">
-                        <div class="row">
-
-
-                            <div class="card shadow-hvr z-depth-2" id="skill-card">
-                                <div class="card-content">
-
-                                    <!-- Skill Table -->
-                                    <table class="centered">
-                                        <thead>
-                                        <tr>
-                                            <th class="x-space" data-field="skill">Skill</th>
-                                            <th class="center-align" data-field="noob">Noob</th>
-                                            <th class="center-align" data-field="beginner">Beginner</th>
-                                            <th class="center-align" data-field="intermediate">Intermediate</th>
-                                            <th class="center-align" data-field="expert">Expert</th>
-                                            <th class="center-align" data-field="master">Master</th>
-                                        </tr>
-                                        </thead>
-
-                                        <tbody class="railway">
-                                        <tr>
-                                            <td class="x-space">HTML/CSS</td>
-                                            <td colspan="3">
-                                                <div class="progress">
-                                                    <div class="progress-bar-1"></div>
-                                                </div>
-                                            </td>
-                                            <td></td>
-                                            <td></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Javascript</td>
-                                            <td colspan="3">
-                                                <div class="progress">
-                                                    <div class="progress-bar-2"></div>
-                                                </div>
-                                            </td>
-                                            <td></td>
-                                            <td></td>
-                                        </tr>
-                                        <tr>
-                                            <td>C#</td>
-                                            <td colspan="3">
-                                                <div class="progress">
-                                                    <div class="progress-bar-3"></div>
-                                                </div>
-                                            </td>
-                                            <td></td>
-                                        </tr>
-                                        <tr>
-                                            <td>ASP.NET</td>
-                                            <td colspan="2">
-                                                <div class="progress">
-                                                    <div class="progress-bar-4"></div>
-                                                </div>
-                                            </td>
-                                            <td></td>
-                                        </tr>
-                                        <tr>
-                                            <td>PHP + MySQL</td>
-                                            <td colspan="2">
-                                                <div class="progress">
-                                                    <div class="progress-bar-5"></div>
-                                                </div>
-                                            </td>
-                                            <td></td>
-                                        </tr>
-                                        </tbody>
-                                    </table> <!-- /skill table -->
-
-
-                                </div>
-                                <div class="card-action center-align">
-                                    <a href="#" class="" id="refresh-graph">Replay Graph Animation</a>
-                                </div>
-                            </div>
-
-                        </div><!-- /row-->
-                    </div><!-- /skill tab -->
-
-                    <div id="aboutme" class="col s12">
-                        <div class="row railway">
-                            <div class="col s8 offset-s2">
-                                <div class="card blue-grey darken-4 z-depth-2 shadow-hvr" id="background-card">
-                                    <div class="card white black-text">
-                                        <div class="card-content grey-transition">
-                                            <!--<div class="center-align">
-                                                <i class="material-icons md-48">person</i>
-                                            </div>-->
-                                            <h5 class="center-align">Hello, World!</h5>
-                                            <br/>
-                                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;My name is Ian, and I'm an aspiring
-                                                software engineer + web developer. I started programming back in 2015,
-                                                and have grown to enjoy pushing myself when it comes to learning new
-                                                languages, techniques, and trying out different developer tools.
-                                                I also have a deep motivation and love for trying to solve problems with
-                                                code. I'm currently majoring in IT - Software Engineering, and received
-                                                my Associate in Science this past fall <i>Sept. 2016</i>.</p>
-                                            <br/>
-                                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;In my free time I enjoy reading books about
-                                                different aspects of technology, such as cyber security,
-                                                programming, and the history of encryption. When I'm not programming,
-                                                you can find me hiking the trails, watching the Bruins, and playing
-                                                Battlefield on PS4.</p>
-                                            <br/>
-                                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If you'd like to get in touch about a job
-                                                opportunity, or if you think I'd be a good fit at your company, feel
-                                                free to contact me by clicking the contact button below.</p>
-                                            <p class="center-align">-<span class="kristi signature">Ian Arsenault</span>
-                                            </p>
-
-                                        </div>
-                                        <div class="card-action">
-                                            <div class="center-align">
-                                                <a href="#message-me"
-                                                   class="btn waves-effect waves-light red section scrollspy"
-                                                   name="action">Contact Me
-                                                    <i class="material-icons right">send</i>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div id="resume" class="col s12">
-                        <div class="row">
-                            <div class="col s12">
-                                <div class="card">
-                                    <div class="card-content black-text resume-display">
-                                        <embed src="images/assets/WebIanResume.pdf" width="100%" height="100%"></embed>
-                                    </div>
-                                    <div class="card-action center-align">
-                                        <!-- Check the download functionality in all browsers before live -->
-                                        <a href="images/assets/WebIanResume.pdf" download="IanArsenaultResume">Download
-                                            Resume <i class="fa fa-file-pdf-o" aria-hidden="true"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div id="location" class="col s12">
-                        <div class="row">
-                            <div class="grey-block">
-                                <div id="map_2"></div>
-                                <img id="phone6s" src="images/assets/iphone.png" alt="iphone6s"
-                                     class="hoverable-dark-2"/>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div> <!--  /row -->
-        </section> <!-- /about me -->
-    </div><!-- End container -->
-
-    <!-- Test for projects and a-side nav bar -->
-    <!--<div class="section">
-        <div class="row">
-            <div class="col l3 grey">
-                kjlkljkl
-            </div>
-            <div class="col l9 yellow">
-                kjlkjkljlk
-            </div>
-        </div>
-    </div>-->
-
-    <!-- Project Section -->
-    <section id="projects" class="section scrollspy">
-        <h4 class="center-align railwayBold">Projects</h4>
-
-        <div class="row">
-            <div class="col s10 offset-s1 m6 offset-m3 l4 offset-l4">
-                <div class="card railway z-depth-2">
-                    <div class="card-image z-depth-1">
-                        <div class="img-card-container">
-                            <img src="images/projects/protech/protechs.jpg">
-                        </div>
-                    </div>
-                    <div class="center-align activator">
-                        <a class="btn-floating btn-large waves-effect waves-light btn-card-hvr" id="card-hvr-btn"><i
-                                class="material-icons hvr-bob">add</i></a>
-                    </div>
-                    <div class="card-content center-align">
-                        <h5 class=" activator grey-text text-darken-4">Protech Solutions</h5>
-
-                    </div>
-                    <div class="card-reveal">
-                        <span class="card-title grey-text text-darken-4">Protech Solutions <a
-                                class="btn-floating btn waves-effect waves-light transparent z-depth-1 right"><i
-                                class="material-icons right red-text">close</i></a></span>
-                        <p>Website for a technology company that allows customers to find information about the products
-                            as well as purchase and download a Electronic Health Records Application.</p>
-                        <p><a href="http://ianarsenault.me/CapstoneOverview/" target="_blank">Project Documentation</a>
-                        </p>
-                        <div id="card-footer">
-                            <div class="chip">
-                                <img src="images/chipicons/html5logo.png" alt="HTML5  chip">
-                                HTML5
-                            </div>
-                            <div class="chip">
-                                <img src="images/chipicons/csslogo.png" alt="CSS chip">
-                                CSS3
-                            </div>
-                            <div class="chip">
-                                <img src="images/chipicons/jquerylogo.png" alt="Jquery chip">
-                                jQuery
-                            </div>
-                            <div class="chip">
-                                <img src="images/chipicons/javascriptlogo.svg" alt="Javascript chip">
-                                Javascript
-                            </div>
-                            <div class="chip">
-                                <img src="images/chipicons/phplogo.png" alt="PHP chip">
-                                PHP
-                            </div>
-                            <div class="chip">
-                                <img src="images/chipicons/mysqllogo.png" alt="MySQL chip">
-                                MySQL
-                            </div>
-                            <div class="chip">
-                                <img src="images/chipicons/materializelogo.png" alt="Materialize CSS chip">
-                                Materialize CSS
-                            </div>
-                            <div class="chip">
-                                <img src="images/chipicons/csharplogo.png" alt="C-Sharp chip">
-                                C#
-                            </div>
-                            <div class="chip">
-                                <img src="images/chipicons/sqllogo.png" alt="SQL chip">
-                                SQL
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-action center-align">
-                        <a href="http://ict.neit.edu/001241129/public_html/ASCapstoneProject/index.php" target="_blank">View
-                            Project</a>
-                        <a href="https://github.com/GorgonsMaze/ASCapstoneProject" target="_blank">Source Code</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <!-- Testing Card -->
-            <div class="col s10 offset-s1 m6 l4">
-                <div class="card railway z-depth-2">
-                    <div class="card-image z-depth-1">
-                        <div class="img-card-container">
-                            <img src="images/projects/grid/grid-comp-white.png">
-                        </div>
-                    </div>
-                    <div class="center-align activator">
-                        <a class="btn-floating btn-large waves-effect waves-light btn-card-hvr" id="card-hvr-btn"><i
-                                class="material-icons hvr-bob">add</i></a>
-                    </div>
-                    <div class="card-content center-align">
-                        <h5 class=" activator grey-text text-darken-4">Random Grid Generator</h5>
-
-                    </div>
-                    <div class="card-reveal">
-                        <span class="card-title grey-text text-darken-4">Random Grid Generator<a
-                                class="btn-floating btn waves-effect waves-light transparent z-depth-1 right"><i
-                                class="material-icons right red-text">close</i></a></span>
-                        <p>On this project I was tasked to create a form that allows the user to submit a number between
-                            1 and 100, which would then create a grid of rows and columns based on the number the user
-                            inputs.
-                            Also, If the random number is a multiple of 2 we display the cell blue. If the random number
-                            that's
-                            displayed in each cell is a multiple of 3 we display the cell red.
-                        </p>
-                        <div id="card-footer">
-                            <div class="chip">
-                                <img src="images/chipicons/html5logo.png" alt="HTML5  chip">
-                                HTML5
-                            </div>
-                            <div class="chip">
-                                <img src="images/chipicons/csslogo.png" alt="CSS chip">
-                                CSS3
-                            </div>
-                            <div class="chip">
-                                <img src="images/chipicons/javascriptlogo.svg" alt="Javascript chip">
-                                Javascript
-                            </div>
-                            <div class="chip">
-                                <img src="images/chipicons/materializelogo.png" alt="Materialize CSS chip">
-                                Materialize CSS
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-action center-align">
-                        <a href="http://ianarsenault.me/random-grid-generator/" target="_blank">View Project</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Testing Card -->
-            <div class="col s10 offset-s1 m6 l4">
-                <div class="card railway z-depth-2">
-                    <div class="card-image z-depth-1">
-                        <div class="img-card-container">
-                            <img src="images/projects/math/math-white.png">
-                        </div>
-                    </div>
-                    <div class="center-align activator">
-                        <a class="btn-floating btn-large waves-effect waves-light  z-depth-3 btn-card-hvr"
-                           id="card-hvr-btn"><i class="material-icons hvr-bob">add</i></a>
-                    </div>
-                    <div class="card-content center-align">
-                        <h5 class=" activator grey-text text-darken-4">Basic Arithmetic Quiz</h5>
-
-                    </div>
-                    <div class="card-reveal">
-                        <span class="card-title grey-text text-darken-4">Basic Arithmetic Quiz<a
-                                class="btn-floating btn waves-effect waves-light transparent z-depth-1 right"><i
-                                class="material-icons right red-text">close</i></a></span>
-                        <p>Program that dynamically creates 20 random basic arithmetic problems. Displaying the final
-                            grade + number of correct problems solved.</p>
-                        <p><b><i>To-Do's:</i></b> Need to fix issue with showing score if form isn't completed</p>
-                        <div id="card-footer">
-                            <div class="chip">
-                                <img src="images/chipicons/html5logo.png" alt="HTML5  chip">
-                                HTML5
-                            </div>
-                            <div class="chip">
-                                <img src="images/chipicons/csslogo.png" alt="CSS chip">
-                                CSS3
-                            </div>
-                            <div class="chip">
-                                <img src="images/chipicons/javascriptlogo.svg" alt="Javascript chip">
-                                Javascript
-                            </div>
-                            <div class="chip">
-                                <img src="images/chipicons/materializelogo.png" alt="Materialize CSS chip">
-                                Materialize CSS
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-action center-align">
-                        <a href="#!" class="btn-flat disabled">Coming Soon</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Testing Card -->
-            <div class="col s10 offset-s1 m6 l4">
-                <div class="card railway z-depth-2">
-                    <div class="card-image z-depth-1">
-                        <div class="img-card-container">
-                            <img src="images/projects/canvas-race/race-comp-white.png">
-                        </div>
-                    </div>
-                    <div class="center-align activator">
-                        <a class="btn-floating btn-large waves-effect waves-light  z-depth-3 btn-card-hvr"
-                           id="card-hvr-btn"><i class="material-icons hvr-bob">add</i></a>
-                    </div>
-                    <div class="card-content center-align">
-                        <h5 class=" activator grey-text text-darken-4">Canvas Car Race</h5>
-
-                    </div>
-                    <div class="card-reveal">
-                        <span class="card-title grey-text text-darken-4">Canvas Car Race<a
-                                class="btn-floating btn waves-effect waves-light transparent z-depth-1 right"><i
-                                class="material-icons right red-text">close</i></a></span>
-                        <p>A program that uses HTML5 Canvas and Javascript to display an interactive racing game. Which
-                            keeps the scores of who wins each race using local storage.</p>
-                        <p><b><i>To-Do's:</i></b> Need to fix some bugs + allow for user to clear scoreboard on click
-                        </p>
-                        <div id="card-footer">
-                            <div class="chip">
-                                <img src="images/chipicons/html5logo.png" alt="HTML5  chip">
-                                HTML5
-                            </div>
-                            <div class="chip">
-                                <img src="images/chipicons/csslogo.png" alt="CSS chip">
-                                CSS3
-                            </div>
-                            <div class="chip">
-                                <img src="images/chipicons/javascriptlogo.svg" alt="Javascript chip">
-                                Javascript
-                            </div>
-                            <div class="chip">
-                                <img src="images/chipicons/jquerylogo.png" alt="Jquery chip">
-                                jQuery
-                            </div>
-                            <div class="chip">
-                                <img src="images/chipicons/materializelogo.png" alt="Materialize CSS chip">
-                                Materialize CSS
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-action center-align">
-                        <a href="http://ict.neit.edu/001241129/public_html/se251/ianawebsite/assignments/Assignment6/Lab7.html"
-                           target="_blank<!---->">View Project</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Testing Card -->
-            <div class="col s10 offset-s1 m6 l4">
-                <div class="card railway z-depth-2">
-                    <div class="card-image z-depth-1">
-                        <div class="img-card-container">
-                            <img src="images/projects/mylifedb/mylfie.jpg">
-                        </div>
-                    </div>
-                    <div class="center-align activator">
-                        <a class="btn-floating btn-large waves-effect waves-light  z-depth-3 btn-card-hvr"
-                           id="card-hvr-btn"><i class="material-icons hvr-bob">add</i></a>
-                    </div>
-                    <div class="card-content center-align">
-                        <h5 class=" activator grey-text text-darken-4">To-Do Profile Database</h5>
-
-                    </div>
-                    <div class="card-reveal">
-                        <span class="card-title grey-text text-darken-4">To-Do Profile Database<a
-                                class="btn-floating btn waves-effect waves-light transparent z-depth-1 right"><i
-                                class="material-icons right red-text">close</i></a></span>
-                        <p>The website is being built to host users to-do profiles. Where the can add + update + delete
-                            existing <i>To-Do's</i> Also working on a way to allow users to upload photos to host their
-                            own
-                            image library.</p>
-                        <p><b>Note:</b> If you want to login to the <i>To-Do</i> profile you can use the following</p>
-                        <p><b>Username:</b> ian &nbsp; <b>Password:</b> password</p>
-                        <p><b><i>To-Do's:</i></b> Fix Sign-up issues + AJAX for <i>To-Do</i> form data display</p>
-                        <div id="card-footer">
-                            <div class="chip">
-                                <img src="images/chipicons/html5logo.png" alt="HTML5  chip">
-                                HTML5
-                            </div>
-                            <div class="chip">
-                                <img src="images/chipicons/csslogo.png" alt="CSS chip">
-                                CSS3
-                            </div>
-                            <div class="chip">
-                                <img src="images/chipicons/javascriptlogo.svg" alt="Javascript chip">
-                                Javascript
-                            </div>
-                            <div class="chip">
-                                <img src="images/chipicons/jquerylogo.png" alt="Jquery chip">
-                                jQuery
-                            </div>
-                            <div class="chip">
-                                <img src="images/chipicons/materializelogo.png" alt="Materialize CSS chip">
-                                Materialize CSS
-                            </div>
-                            <div class="chip">
-                                <img src="images/chipicons/phplogo.png" alt="PHP chip">
-                                PHP
-                            </div>
-                            <div class="chip">
-                                <img src="images/chipicons/mysqllogo.png" alt="MySQL chip">
-                                MySQL
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-action center-align">
-                        <a href="http://ict.neit.edu/001241129/public_html/se251/ianawebsite/assignments/FinalProject/index.php"
-                           target="_blank">View Project</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Testing Card -->
-            <div class="col s10 offset-s1 m6 l4">
-                <div class="card railway z-depth-2">
-                    <div class="card-image z-depth-1">
-                        <div class="img-card-container">
-                            <img src="images/projects/actorportal/actorsportal.jpg">
-                        </div>
-                    </div>
-                    <div class="center-align activator">
-                        <a class="btn-floating btn-large waves-effect waves-light  z-depth-3 btn-card-hvr"
-                           id="card-hvr-btn"><i class="material-icons hvr-bob">add</i></a>
-                    </div>
-                    <div class="card-content center-align">
-                        <h5 class=" activator grey-text text-darken-4">Actors Portal Storage</h5>
-
-                    </div>
-                    <div class="card-reveal">
-                        <span class="card-title grey-text text-darken-4">Actors Portal Storage<a
-                                class="btn-floating btn waves-effect waves-light transparent z-depth-1 right"><i
-                                class="material-icons right red-text">close</i></a></span>
-                        <p>A website that allows for the user to input basica actor information, and use JSON to store
-                            the form data in a table of links for each actor. Allowing for the data to be pulled back
-                            into the form to update or delete.</p>
-                        <p><b><i>To-Do's:</i></b> Fix the bootstrap styling + update to PHP MySQL</p>
-                        <div id="card-footer">
-                            <div class="chip">
-                                <img src="images/chipicons/html5logo.png" alt="HTML5  chip">
-                                HTML5
-                            </div>
-                            <div class="chip">
-                                <img src="images/chipicons/csslogo.png" alt="CSS chip">
-                                CSS3
-                            </div>
-                            <div class="chip">
-                                <img src="images/chipicons/javascriptlogo.svg" alt="Javascript chip">
-                                Javascript
-                            </div>
-                            <div class="chip">
-                                <img src="images/chipicons/bootstraplogo.png" alt="Bootstrap chip">
-                                Bootsrap
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-action center-align">
-                        <a href="http://ict.neit.edu/001241129/public_html/se251/ianawebsite/assignments/Assignment5/Lab6A/Assignment6A.html"
-                           target="_blank">View Project</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Testing Card -->
-            <div class="col s10 offset-s1 m6 l4">
-                <div class="card railway z-depth-2">
-                    <div class="card-image z-depth-1 hoverable">
-                        <div class="img-card-container">
-                            <img src="images/projects/division/division-safe-house.png">
-                        </div>
-                    </div>
-                    <div class="center-align activator">
-                        <a class="btn-floating btn-large waves-effect waves-light  z-depth-3 btn-card-hvr"
-                           id="card-hvr-btn"><i class="material-icons hvr-bob">description</i></a>
-                    </div>
-                    <div class="card-content center-align">
-                        <h5 class=" activator grey-text text-darken-4">The Division Safehouse</h5>
-
-                    </div>
-                    <div class="card-reveal">
-                        <span class="card-title grey-text text-darken-4">The Division Safehouse<a
-                                class="btn-floating btn waves-effect waves-light transparent z-depth-1 right"><i
-                                class="material-icons right red-text">close</i></a></span>
-                        <p>A website the encompasses all things <i>The Division</i> (a video game). Allows user to learn
-                            about
-                            gear and weapons, news & updates, screenshots, and more. Also has a page where players
-                            can post their gamertag and find other people to team with on game missions and Raids.</p>
-                        <p><b><i>To-Do's:</i></b> Fix Looking For Group page + update site to PHP MySQL to store user
-                            information</p>
-                        <div id="card-footer">
-                            <div class="chip">
-                                <img src="images/chipicons/html5logo.png" alt="HTML5  chip">
-                                HTML5
-                            </div>
-                            <div class="chip">
-                                <img src="images/chipicons/csslogo.png" alt="CSS chip">
-                                CSS3
-                            </div>
-                            <div class="chip">
-                                <img src="images/chipicons/javascriptlogo.svg" alt="Javascript chip">
-                                Javascript
-                            </div>
-                            <div class="chip">
-                                <img src="images/chipicons/jquerylogo.png" alt="Jquery chip">
-                                jQuery
-                            </div>
-                            <div class="chip">
-                                <img src="images/chipicons/materializelogo.png" alt="Materialize CSS chip">
-                                Materialize CSS
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-action center-align">
-                        <a href="http://ict.neit.edu/001241129/public_html/TheDivisionSafeHouse/index.html"
-                           target="_blank">View Project</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="center-align">
-            <ul class="pagination">
-                <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
-                <li class="active"><a href="#!">1</a></li>
-                <li class="waves-effect"><a href="#!">2</a></li>
-                <li class="waves-effect"><a href="#!">3</a></li>
-                <li class="waves-effect"><a href="#!">4</a></li>
-                <li class="waves-effect"><a href="#!">5</a></li>
-                <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
-            </ul>
-        </div>
-    </section> <!-- /project section -->
-
-    <section class="section">
-        <!-- Begin Parallax -->
-        <div class="parallax-container-tools" id="tools-parallax">
-            <div class="parallax">
-                <!--<img src="https://d3ui957tjb5bqd.cloudfront.net/images/screenshots/products/49/493/493536/jzjca5equ11cyyzycacltapl7mljeufervd0hpipu2vefiqyqdkcu1wtqf3mzd81-o.jpg?1432150718" alt="brickwall">-->
-                <img src="images/assets/brickred.jpg" alt="brickwall">
-
-                <!-- Tools Section -->
-                <h4 class="railway white-text railwayBold center-align" id="tool-header">Tools</h4>
-                <section id="tools" class="section scrollspy">
-                    <div class="row" id="tool-row">
-                        <div class="col s3 tool-icons center-align" id="html-tool">
-                            <i class="devicon-html5-plain colored large hvr-float"></i>
-                            <div class="icon-text fadeInDown" id="html5-text">
-                                <div class="center-align">HTML5</div>
-                            </div>
-                        </div>
-                        <div class="col s3 tool-icons center-align">
-                            <i class="devicon-css3-plain colored large hvr-float"></i>
-                            <div class="icon-text fadeInDown" id="css3-text">CSS3</div>
-                        </div>
-                        <div class="col s3 tool-icons center-align">
-                            <i class="devicon-javascript-plain colored large hvr-float"></i>
-                            <div class="icon-text fadeInDown" id="javascript-text">Javascript</div>
-                        </div>
-                        <div class="col s3 tool-icons center-align">
-                            <i class="devicon-jquery-plain colored large hvr-float"></i>
-                            <div class="icon-text fadeInDown" id="jquery-text">jQuery</div>
-                        </div>
-                    </div>
-                    <div class="row railway" id="tool-row">
-                        <div class="col s3 tool-icons center-align">
-                            <i class="devicon-bootstrap-plain colored large hvr-float"></i>
-                            <div class="icon-text" id="bootstrap-text">Bootstrap</div>
-                        </div>
-                        <div class="col s3 tool-icons center-align">
-                            <i class="devicon-cplusplus-plain colored large hvr-float"></i>
-                            <div class="icon-text" id="cplusplus-text">C++</div>
-                        </div>
-                        <div class="col s3 tool-icons center-align">
-                            <i class="devicon-csharp-plain colored large hvr-float"></i>
-                            <div class="icon-text" id="csharp-text">C#</div>
-                        </div>
-                        <div class="col s3 tool-icons center-align">
-                            <i class="devicon-github-plain colored large hvr-float"></i>
-                            <div class="icon-text" id="github-text">Github</div>
-                        </div>
-                    </div>
-                    <div class="row railway" id="tool-row">
-                        <div class="col s3 tool-icons center-align">
-                            <i class="devicon-git-plain colored large hvr-float"></i>
-                            <div class="icon-text" id="git-text">Git</div>
-                        </div>
-                        <div class="col s3 tool-icons center-align">
-                            <i class="devicon-dot-net-plain colored large hvr-float"></i>
-                            <div class="icon-text" id="aspnet-text">ASP.NET</div>
-                        </div>
-                        <div class="col s3 tool-icons center-align">
-                            <i class="devicon-php-plain colored large hvr-float"></i>
-                            <div class="icon-text" id="php-text">PHP</div>
-                        </div>
-                        <div class="col s3 tool-icons center-align">
-                            <i class="devicon-mysql-plain colored large hvr-float"></i>
-                            <div class="icon-text" id="mysql-text">MySQL</div>
-                        </div>
-                    </div>
-                    <div class="row railway" id="tool-row">
-                        <div class="col s3 tool-icons center-align">
-                            <i class="devicon-jetbrains-plain colored large hvr-float"></i>
-                            <div class="icon-text" id="jetbrains-text">Webstorm</div>
-                        </div>
-                        <div class="col s3 tool-icons center-align">
-                            <i class="devicon-trello-plain colored large hvr-float"></i>
-                            <div class="icon-text" id="trello-text">Trello</div>
-                        </div>
-                        <div class="col s3 tool-icons center-align">
-                            <i class="devicon-photoshop-line colored large hvr-float"></i>
-                            <div class="icon-text" id="photoshop-text">Adobe Photoshop</div>
-                        </div>
-                        <div class="col s3 center-align tool-icons">
-                            <i class="devicons devicons-materializecss large hvr-float"></i>
-                            <div class="icon-text" id="materialize-text">Materialize CSS</div>
-                        </div>
-                    </div>
-
-                </section> <!-- /tool section -->
-            </div> <!-- end parallax -->
-        </div><!-- end parallax container -->
-    </section>
-
-
-    <!-- Blog Section -->
-    <section id="blog" class="section scrollspy">
-        <h4 class="center-align railwayBold">Blogging!</h4>
-
-        <div class="row valign-wrapper" style="margin: 60px 0; padding: 0 20px;">
-            <div class="valign col s12 m6 l4">
-                <h5 class="center-align">Coming Soon!</h5>
-                <p>A blog section that will be both technical and personal.</p>
-                <p>It will feature details about the latest developer tools I'm using, different languages I'm currently
-                    learning.
-                    Along with taking you, the user, through the building of my past projects including languages in C#,
-                    C++ with detail write ups, example code, and project source code.</p>
-                <p>I'll also be contributing articles on what I'm currently doing in other aspects of technology, my
-                    different hobbies, as well as life.</p>
-            </div>
-            <div class="col s12 m6 l4 pull-l2">
-                <img src="https://www.git-tower.com/learn/content/04-build-your-own-blog/03-design/03-blog-layout-and-grid/wireframe-article@2x.jpg"
-                     class="responsive-img">
-            </div>
-        </div>
-
-
-    </section> <!--/blog section -->
-
-    <div class="container">
-    </div> <!-- END CONTAINER -->
-
-
-    <!--
-    <div class="homepage-hero-module">
-        <div class="video-container">
-            <div class="title-container center-align">
-                <h2 class="railwayBold">Projects</h2>
-                <h5>3 New projects including write-ups about particular programs</h5>
-            </div>
-            <video autoplay loop class="fillWidth">
-                <source src="video/Aloha-Mundo/MP4/Aloha-Mundo.mp4" type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser.
-                <source src="video/Aloha-Mundo/WEBM/Aloha-Mundo.webm" type="video/webm" />Your browser does not support the video tag. I suggest you upgrade your browser.
-            </video>
-        </div>
-    </div>-->
-
-
-    <!-- Contact Me Section -->
-    <section id="contact" class="section scrollspy">
-        <div class="center-align">
-            <h4 class="railwayBold">Contact Me</h4>
-        </div>
-        <!-- Container of Social Media  Icons -->
-        <div class="">
-            <div class="row soc-icon-row">
-                <div class="col s1 offset-s4">
-                    <!-- HEX COLOR OF ICON IMAGE FOR TOOLTIP #3F91CB -->
-                    <a href="https://github.com/GorgonsMaze" target="_blank" class="hvr-float tooltipped"
-                       data-tooltip-bg="#3F91CB" data-tooltip-fg="#ffffff" data-position="bottom" data-delay="50"
-                       data-tooltip="Github">
-                        <img src="images/icons/github.png" class="responsive-img">
                     </a>
-                </div>
-                <div class="col s1">
-                    <!-- HEX COLOR OF ICON IMAGE FOR TOOLTIP #482C16 -->
-                    <a href="https://www.freecodecamp.com/gorgonsmaze" target="_blank" class="hvr-float tooltipped"
-                       data-tooltip-bg="#482C16"
-                       data-tooltip-fg="#ffffff" data-position="bottom" data-delay="50" data-tooltip="Free Code Camp">
-                        <img src="images/icons/FCC.png" class="responsive-img">
-                    </a>
-                </div>
-                <div class="col s1">
-                    <!-- HEX COLOR OF ICON IMAGE FOR TOOLTIP #40BFF5 -->
-                    <a href="https://twitter.com/ianarsnau" target="_blank" class="hvr-float tooltipped"
-                       data-tooltip-bg="#40BFF5"
-                       data-tooltip-fg="white" data-position="bottom" data-delay="50" data-tooltip=@ianarsnau>
-                        <img src="images/icons/twitter.png" class="responsive-img">
-                    </a>
-                </div>
-                <div class="col s1">
-                    <!-- HEX COLOR OF ICON IMAGE FOR TOOLTIP #238CC8 -->
-                    <a href="https://www.linkedin.com/in/ian-arsenault-074a54b7" class="hvr-float tooltipped"
-                       data-tooltip-bg="#238CC8" data-tooltip-fg="#ffffff" target="_blank"
-                       data-position="bottom" data-delay="50" data-tooltip="LinkedIn">
-                        <img src="images/icons/linkedin.png" class="responsive-img">
-                    </a>
-                </div>
-            </div>
-
-            <!-- CONTACT ME FORM -->
-            <div class="row scrollspy" id="message-me">
-                <div class="col s12 m8 offset-m2 l6 form-padding">
-                    <div class="card white card-form z-depth-2">
-                        <form class="col s12 contact-form" action="https://formspree.io/ian_arsenault@protonmail.com"
-                              method="POST">
-                            <div class="row center-align railwayBold">
-                                <h5>Send me a message</h5>
-                            </div>
-                            <div class="row">
-                                <div class="input-field col s12">
-                                    <input id="name_of" placeholder="Joe Schmoe" name="name" type="text"
-                                           class="validate" required="" aria-required="true" length="30">
-                                    <label for="name_of" data-error="Please fill in your name">Name</label>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="input-field col s12">
-                                    <input id="email_of" placeholder="example@yourdomain.com" type="text"
-                                           name="_replyto" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-z]{2,4}$"
-                                           title="Enter email address correctly ex. name@domain.com" class="validate"
-                                           required="" aria-required="true" length="48">
-                                    <label for="email_of"
-                                           data-erorr="Please fill in your email correctly ex name@domain.com"><b>Email</b></label>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="input-field col s12">
-                                    <textarea placeholder="Write your message here!" id="message" name="message"
-                                              class="materialize-textarea validate" required="" aria-required="true"
-                                              length="240" minlength="3"></textarea>
-                                    <label for="message" data-error="Please type in a message">Message</label>
-                                </div>
-                            </div>
-
-                            <div class="center-align">
-                                <button class="btn waves-effect waves-light red" type="submit" value="Send">Send
-                                    <i class="material-icons right">send</i>
-                                </button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-                <!-- GOOGLE MAP -->
-                <div class="col s12 m12 l6 map-padding">
-                    <div id="map"></div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- Floating button bottom right = scroll back to top on click -->
-    <div class="fixed-action-btn" style="bottom: 25px; right: 24px; z-index: 1000;" id="fixBotRight">
-        <a href="#top-scroll" class="btn-floating btn-large waves-effect waves-light red s-top-btn">
-            <i class="large material-icons">navigation</i>
-        </a>
-    </div> <!-- end floating button -->
-
-    <!-- Banner Footer -->
-    <img class="responsive-img center-block" src="images/assets/ian-banner.jpg">
-
-    <!-- Bottom-sheet Modal Trigger Button-->
-    <div class="center-align">
-        <!--<i class="material-icons red-text md-36">view_comfy</i>-->
-        <a class="waves-effect waves-light btn modal-trigger transparent red-text" id="btn-small" href="#modal2">Credits
-        </a>
-    </div>
-
-
-    <!-- Modal Structure -->
-    <div id="modal2" class="modal bottom-sheet">
-        <div class="center-align">
-            <a class="waves-effect waves-light btn modal-trigger modal-action modal-close white z-depth-0"
-               id="bottom-modal-btn" href="#modal2"><i class="material-icons red-text md-36">more_horiz</i></a>
-        </div>
-
-        <div class="modal-content">
-            <div class="row">
-                <h4 class="center-align railwayBold">Credits</h4>
-                <div class="col s12 m4 offset-m2">
-                    <div class="col s3">
-                        <!-- Credit for art due to Stephani Stutz Graphic Artist, Zürich, Switzerland http://stephaniestutz.ch/ -->
-                        <img class="responsive-img" src="images/assets/red-mountains.jpg"
-                             alt="Stephanie Stutz Red Mountains Low Poly"/>
-                    </div>
-                    <div class="col s9">
-                        <div class="valign-wrapper">
-                            <div class="valign">
-                                <a class="center-align" href="http://stephaniestutz.ch/">Stephanie Stutz</a>
-                                <p>Graphic Artist, Zurich, Switzerland</p>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="col s12 m4 offset-m1">
-                    <div class="col s3">
-                        <img class="responsive-img ban-img-foot" src="images/assets/ian-banner.jpg"
-                             alt="Red Polygon Banner"/>
-                    </div>
-                    <div class="col s9">
-                        <div class="valign-wrapper">
-                            <div class="valign">
-                                <a class="center-align" href="http://www.freepik.com/free-photos-vectors/banner">Banner
-                                    vector designed by Freepik</a>
-                                <p>Free Vector and Photo website</p>
-                            </div>
-                        </div>
-                    </div>
-
                 </div>
             </div>
         </div>
     </div>
-</div><!-- end main content -->
+</section>
+<!-- End Nav / Hero -->
+
+<div class="notification is-success has-text-centered" id="blogDefault">Coming Soon</div>
+
+<!-- About -->
+<section class="section about-section" id="about">
+    <div class="container">
+        <div class="heading">
+            <h1 class="title has-text-centered">About</h1>
+        </div>
+        <div class="columns">
+            <div class="column is-4 is-offset-4">
+                <figure class="image is-340x340 img-cont">
+                    <!--<img src="http://placehold.it/340x340">-->
+                    <img src="images/ian.jpg">
+                    <div class="overlay">
+                        <div class="text">
+                            <a href="https://github.com/GorgonsMaze" class="white" target="_blank">
+                                <i class="fa fa-github fa-2x" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                </figure>
+            </div>
+        </div>
+        <div class="columns">
+            <div class="column is-half is-offset-3">
+                <div class="content">
+                    <p class="has-text-centered">I am a motivated individual who is interested in software development. I enjoy building web
+                        applications using a variety of technologies. My main focus right now is learning to become a
+                        full-stack developer.
+                    </p>
+                </div>
+            </div>
+        </div>
+</section>
+<!-- End About -->
+
+<!-- About Full Details Tabs  --->
+<section class="section tabs-section">
+    <div class="tabs is-centered is-boxed">
+        <ul>
+            <li class="is-active" data-tab="skills">
+                <a>
+                    <span class="icon is-small"><i class="fa fa-signal"></i></span>
+                    <span>Skills</span>
+                </a>
+            </li>
+            <li data-tab="education">
+                <a>
+                    <span class="icon is-small"><i class="fa fa-graduation-cap"></i></span>
+                    <span>Education</span>
+                </a>
+            </li>
+            <li data-tab="resume">
+                <a>
+                    <span class="icon is-small"><i class="fa fa-file-text"></i></span>
+                    <span>Resume</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</section>
+<!-- About Full Details Tabs -->
+
+<!-- Skills -->
+<section class="section tab-section current-tab skills-section" id="skills">
+    <div class="container">
+        <section class="hero">
+            <div class="hero-body">
+                <div class="container">
+                    <h1 class="title">
+                        Languages & Learning Tracks
+                    </h1>
+                    <h2 class="subtitle">
+                        List of languages, the number of projects, and current languages worked with in and out of
+                        school.
+                    </h2>
+                </div>
+            </div>
+        </section>
+        <div class="columns">
+            <div class="column is-4">
+                <div class="card">
+                    <header class="card-header">
+                        <p class="card-header-title">
+                            Projects by Language
+                        </p>
+                    </header>
+                    <div class="card-content">
+                        <div id="languages" style="height: 250px;"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="column is-4">
+                <div class="card">
+                    <header class="card-header">
+                        <p class="card-header-title">
+                            Server Side Projects
+                        </p>
+                    </header>
+                    <div class="card-content">
+                        <div id="serverLang" style="height: 250px;"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="column is-4">
+                <div class="card">
+                    <header class="card-header">
+                        <p class="card-header-title">
+                            Languages being learned
+                        </p>
+                    </header>
+                    <div class="card-content">
+                        <div id="schoolLang" style="height: 250px;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <a class="button is-large is-light view-projects-btn" href="projects.html">View Projects</a>
+    </div>
+</section>
+<!-- End Skills -->
+
+<!-- Education -->
+<section class="section tab-section" id="education">
+    <div class="container">
+        <section class="hero">
+            <div class="hero-body">
+                <div class="container">
+                    <h1 class="title">
+                        Education & Coding Practice
+                    </h1>
+                    <h2 class="subtitle">
+                        I'm currently pursuing my Bachelors in Science at New England Institute of Technology. I also
+                        enjoy
+                        utilizing MOOC's and other free online courses that help in my learning of web development and
+                        software engineering.
+                    </h2>
+                </div>
+            </div>
+        </section>
+        <div class="columns">
+            <div class="column is-4">
+                <div class="card">
+                    <div class="card-content">
+                        <figure class="image">
+                            <img id="neit-logo" src="images/neitlogo.jpg" align="middle">
+                        </figure>
+                    </div>
+                    <footer class="card-footer">
+                        <a class="card-footer-item link" id="gradebtn">Course List</a>
+                    </footer>
+                </div>
+                <div class="modal" id="grademodal">
+                    <div class="modal-background"></div>
+                    <div class="modal-card">
+                        <header class="modal-card-head">
+                            <p class="modal-card-title">Course List</p>
+                            <button class="delete"></button>
+                        </header>
+                        <section class="modal-card-body">
+                            <div id="gradeTable"></div>
+                        </section>
+                        <footer class="modal-card-foot">
+                            <a class="button close-grade">Close</a>
+                        </footer>
+                    </div>
+                </div>
+
+            </div>
+            <div class="column is-4">
+                <div class="card">
+                    <div class="card-content">
+                        <figure class="image">
+                            <img id="fcc-logo" src="images/fcc.jpg" align="middle"/>
+                        </figure>
+                    </div>
+                    <footer class="card-footer">
+                        <a class="card-footer-item link" href="https://www.freecodecamp.com/gorgonsmaze"
+                           target="_blank">Profile</a>
+                    </footer>
+                </div>
+            </div>
+            <div class="column is-4">
+                <div class="card">
+                    <div class="card-content">
+                        <figure class="image">
+                            <img id="hackr-logo" src="images/hackerrank.jpg" align="middle">
+                        </figure>
+                    </div>
+                    <footer class="card-footer">
+                        <a class="card-footer-item link" href="https://www.hackerrank.com/zzzian" target="_blank">Profile</a>
+                    </footer>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Education -->
+
+<!-- Resume -->
+<section class="section tab-section" id="resume">
+    <div class="container">
+        <section class="hero">
+            <div class="hero-body">
+                <div class="container">
+                    <h1 class="title">
+                        Resume
+                    </h1>
+                    <h2 class="subtitle">
+                        General background information including proficiencies and competences.
+                        For further details, please reach out.
+                    </h2>
+                </div>
+            </div>
+        </section>
+        <div class="columns">
+            <div class="column is-6 is-offset-3">
+                <figure class="image" id="res">
+                    <img src="images/OnlineResume.jpg" data-action="zoom" class="resume-img">
+                </figure>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Resume -->
+
+<!-- Location -->
+<section class="section">
+    <div class="container">
+        <div class="heading">
+            <h1 class="title has-text-centered is-2">Location</h1>
+        </div>
+        <div class="columns">
+            <div class="column is-8 is-offset-2">
+                <div id="map"></div>
+            </div>
+        </div>
+</section>
+<!-- End Location -->
+
+<!-- Contact Section -->
+<section class="section contact-section" id="contactsection">
+    <div class="container">
+        <div class="heading">
+            <h1 class="title has-text-centered is-2">Contact Me</h1>
+            <!--<h2 class="subtitle">-->
+            <!--A simple container to divide your page into <strong>sections</strong>, like the one you're currently-->
+            <!--reading-->
+            <!--</h2>-->
+        </div>
+        <!-- Form Column -->
+        <div class="columns">
+            <div class="column is-10 is-offset-1">
+                <form id="contact-form" action="//formspree.io/ian_arsenault@protonmail.com" method="post">
+                    <div class="columns is-multiline">
+                        <div class="column is-4">
+                            <div class="field">
+                                <label class="label">Name</label>
+                                <p class="control">
+                                    <input class="input" type="text" name="name" placeholder="Enter name" required>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="column is-4">
+                            <div class="field">
+                                <label class="label">Email</label>
+                                <p class="control">
+                                    <input class="input" type="email" name="email" placeholder="Enter email address"
+                                           required>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="column is-4">
+                            <div class="field">
+                                <label class="label">Subject</label>
+                                <p class="control">
+                                    <input class="input" type="text" name="subject" placeholder="Subject " required>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="column is-12">
+                            <div class="field">
+                                <label class="label">Message</label>
+                                <p class="control">
+                                    <textarea class="textarea" name="message" placeholder="Your message goes here...."
+                                              required></textarea>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- CONFIG -->
+                    <input class="is-hidden" type="text" name="_gotcha">
+                    <input type="hidden" name="_subject" value="Subject">
+                    <input type="hidden" name="_cc" value="email@cc.com">
+                    <!-- /CONFIG -->
+                    <div class="field is-grouped">
+                        <p class="control">
+                            <input class="button submit-btn" type="submit" value="Submit">
+                        </p>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- End Form Column-->
+    </div>
+</section>
+<!-- End Contact Section -->
+
+<a class="button up-btn"><i class="fa fa-arrow-up" aria-hidden="true"></i></a>
 
 
-<!--Import jQuery before materialize.js-->
-<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+<div class="modal" id="contact-modal">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+        <header class="modal-card-head">
+            <p class="modal-card-title">GPG- Public Key</p>
+            <button class="delete"></button>
+        </header>
+        <section class="modal-card-body">
+                  <pre class="prettyprint has-text-centered" id="pgp">
+            -----BEGIN PGP PUBLIC KEY BLOCK-----
+Comment: GPGTools - https://gpgtools.org
+
+mQINBFcZpDwBEADfrwzrJgB7fipYuk6aawNms03Gv6gc9Cp+W8XXQX9P6C6CyAsa
+jkbPkw57CIY4JTRha+01yQGa5m0sjl09NYF+jkdT8ppcbNOpS/qYOX2eTL7p2BQU
+w/S6JftLboARs3OC+uCv4iyn+40rU9nxAvq4x2ZxgPM/RJSaXdwGRzOqoEdFg17r
+qkjJjh8LVoiSmZb0+SUbxfcUTIxnwWdX0KDtdUMpg0PuQw4qogN+EQP7v1k1h0wT
+jycvucEuG3p2v+/42ZIF3SOT59NZ6xX/eDLJS/UEKKwiuBu9+ARSkHHPMc51BqEL
+iEkwPCoMg65hKC6hSPxnVyUqfuVzVAhTa8yXoDYM8MrFhmmJdOQ3O2W85b4IfYyT
+PRm9L5q3hIjppDV7A76wKxZAiof1xFewo7+4U1J6lBUARBrn3NznCx4P1UHfAqBR
+77FwX9qiwGIXYnAwHfsM7twa4hl5ZZ0qdIof47JYifKZDRc0fi2HQBJ9i1auLH/Q
+XUXnfwv3wUBF1PR0+2L/a0OFKQqbEFlu3tl58lPjZOyzP0J87khf7yPbf/4Y0Do0
+Tpu0CIAa3GIBLT/3C9FD/oCz9CruvTGMwepoI+rClCty0mmHb3GyQORz5HpVybDz
+jMiaW37HmCbFgPILGEInxSdto42RsiCMHxOLjDCsenB5HO1Ocg26d+eV8wARAQAB
+tCxJYW4gQXJzZW5hdWx0IDxJYW5fQXJzZW5hdWx0QHByb3Rvbm1haWwuY29tPokC
+PQQTAQoAJwUCVxmkPAIbAwUJB4YfgAULCQgHAwUVCgkICwUWAgMBAAIeAQIXgAAK
+CRDKHtTV94EnWQJsEADS3z7OBOEfpgJlze+3NCGqqDQ/vecr6hDEv0AIkT/wRm2t
+1Wkx1+5vJSQZ9xtXli4La4XvhjFwHlvv9WDSh0msASVJwiTYk0CUIJ0xqvDsx2Ta
+oqP5urvKaSSveM/PzZRwTZnxlBumYuUWz93FlRTBCVdX5tHml+KCoSmcsAJs6IKG
+tD2GpOLV5ROtz5eKrKoUT3k9vbFEr4WkYvpShGEyTTR5fPHfVq47siD+k6Hzy4qI
+ohloZUTHfanRC3NZgNlcAwhVGIy4U+DagX6JFVYP80tYNlQjsKG04MDrXrOyljWo
+fWk6OOoxsl9SNc+ia83z4jCVecK0sa0jdVtGVWufFqSFR2EBjz5AGEY/Xxk0qmeI
+b3cLTacK/9Juj2N1D3B7KlBc5O5ZbWTOAwVYpLuPkn1hdp//tjhUgpL8Sl8LVIWW
+8cr2xsXsMnm3wBW1Phj+U97rc1jNR+ddyhiikVN8+s65x9uLMi3yi6UCQnn6ariq
+K9OaPrBF+hUUoVAVhmz4DpPOxYwSQ6Fq1P7eRI+4sD0b0MWK/5Z2zCKAEuA+jeuv
+2qT+oFzn59ZKSDeAFOz8QEydetvMuwhTvzFeMipRtsC6p0pTGytUUY1BRuJ2sk1+
+p6IG9hmPx9sMTlsKZh6OkJV4GaKQmR7cfJTNtY0kKttKNANx9bNvGSA5xdAFY7kC
+DQRXGaQ8ARAAvuxILBE6GV6Lxhu3PaNN3Aga/jUe+Vwz9FejrCMHXmmo8O/rB08l
+/lAV2mds7uNW+dbK2l9gQ15/hfJB9/SvYVmyXNvR540Iar5LlLrZtwxMTw/mTyUL
+V1ur5ZhrE2Z4pbSmPHUMZaZkAvPzCKbYZwGbi4VmXtTGGZjmrAQXcZVn9q0aSm05
+6+RPgbmV5y5ywZv7zenuDt+HhKCp5t/zhsx2K/UMoZyDz0W6rkM7bpw48Pn83c6X
+S1HUs1TeRqqHX+BBMXPZoLu5xCn8omYuRk+BliZIWCyXZpZUMMJPxhXmIdsK7hzL
+UZkjC0+w2tJKoS3Q7+FbU7nR2YS4bMGwdKJFQzhjPelux+++aH8KZx0tlS5aIfPd
+ncqV5OTH83oIMto8g1+X8kNEn7ZQDR3ymEg1gY0fP5GExsHhkVg65iChoMl297uP
+ZaU+HTQjcOFLEHaLgMpNIHLBJs90KLO6FuPVW/RzbyyOOdxwcfShn6bkX3FAguQ7
+qTSLemKz0BVV+CXLo5fHBPhJp27glPQuXmxtf/VPBITCpCoxDeORRBvXDNEcCSpp
+WoorhEqYmf0EXG/PEWu/hxcWfPMBNr9Kk2m3pHclK9hq4a6/sobVp/XO5R9D1MGT
+3QuJCLxFITBJzvS8FljZAL+Svyfj1+KRZ9oqbAMFniF1+mm208rF09kAEQEAAYkC
+JQQYAQoADwUCVxmkPAIbDAUJB4YfgAAKCRDKHtTV94EnWQzmEACmjYKktluojW4Q
+NkrIPDSZM0XukSVAum/Qb+VvRVmZTsQ2V8MVh7uko1iky62KE5jNqO6D9SJ/PBCK
+zmTB0ABeZotY0yYEwH/7AO9wzeXuniGncJ93yDQmEy/+fg02AVK63o1O4+Ikx/Kt
+nWS6Ta+s5uMOFmfQEMAIispLilYhAeEYHrSmuWjppEDKf9+A3Ac8oZkvxE31oTSw
+FgcaP9kNTRLLOUZ/2mlGbnOyki6zybQI/l9tANxkpKgY3jZN4dTdI12is+6kUFIc
+ubJZxlR+6f8lZuQQTXFeR2hP21OCT8rBhFv+5ryNQRZlw3qG+MUR6KwTattiT2vM
+derUZ1CV2QMAfaup9kngg0+IVtWETH2f7BeNAynGRPjO6I4WOEAPjdMQrRPjg+0c
+6iWz3OgLQX7shbNs0KE78y65PDDVIbgRBH2/hFqWozQI4X2GeMlCL7QeJTewFPdu
+cCo9HIv3kfApA7xO8SsiuORM0Wh4LvfMe8eWe/yHeynMz8DP1BUrw2dHnNuyVnNa
+YowwO9NAecLnIu7jBc0yfPuYetT+HPEw/Ywl+G1Q9muZDt/Rwe1l2f5p5Vtmjve/
+pgB5jJpXHQB7g5ZHsmVDOUwXhejhtsN9zp+wQJ4Lu397kh5sG0ekoOopFso62lM2
+vyDI1C9kpQN6UgTc9EITCN0NlVlE3g==
+=1+dv
+-----END PGP PUBLIC KEY BLOCK-----
+        </pre>
+        </section>
+        <footer class="modal-card-foot">
+            <a class="button is-danger" id="copyPGPbtn" data-clipboard-action="copy" data-clipboard-target="#pgp">Copy</a>
+        </footer>
+    </div>
+</div>
+
+
+<!-- Hire Me -->
+<!--<div class="notification has-text-centered">-->
+    <!--<button class="delete"></button>-->
+    <!--Hello, World! I'm currently looking for work. Please reach out with any job opportunities. - Ian-->
+<!--</div>-->
+<!-- End Hire Me -->
+
+<footer class="footer">
+    <div class="container">
+        <div class="content has-text-centered">
+            <p>
+                <span class=>
+                    <i class="fa fa-code foot-icon" aria-hidden="true"></i>
+                </span>
+                with
+                <span class="">
+                    <i class="fa fa-heart foot-icon" aria-hidden="true"></i>
+                </span>
+                by <a class="link no-pointer">Ian Arsenault</a>
+            </p>
+            <p>
+                <a class="icon link" href="https://github.com/GorgonsMaze" target="_blank">
+                    <i class="fa fa-github"></i>
+                </a>
+
+                <a class="icon link" href="https://www.linkedin.com/in/ian-arsenault-074a54b7/" target="_blank">
+                    <i class="fa fa-linkedin" aria-hidden="true"></i>
+                </a>
+                <a class="icon link" href="#!" id="contact-btn">
+                    <i class="fa fa-key" aria-hidden="true"></i>
+                </a>
+            </p>
+        </div>
+    </div>
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js">
+</script>
+<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>
+<script type="text/javascript" src="js/clipboard.min.js"></script>
 <script type="text/javascript" src="js/script.js"></script>
-<!-- Fonts Awesome -->
-<script src="https://use.fontawesome.com/351ac21fcd.js"></script>
+<script type="text/javascript" src="js/form.js"></script>
+<script type="text/javascript" src="js/transition.js"></script>
+<script type="text/javascript" src="js/zoom.js"></script>
 
-<script>
-    (function (i, s, o, g, r, a, m) {
-        i['GoogleAnalyticsObject'] = r;
-        i[r] = i[r] || function () {
-                    (i[r].q = i[r].q || []).push(arguments)
-                }, i[r].l = 1 * new Date();
-        a = s.createElement(o),
-                m = s.getElementsByTagName(o)[0];
-        a.async = 1;
-        a.src = g;
-        m.parentNode.insertBefore(a, m)
-    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+<script type="text/javascript">
+    function initMap() {
+        var mapOptions = {
+            zoom: 10,
+            scrollwheel: false,
+            center: new google.maps.LatLng(41.82399, -71.41283)
+        };
 
-    ga('create', 'UA-81735550-1', 'auto');
-    ga('send', 'pageview');
+        // get the DOM element that will contain the map
+        var mapElement = document.getElementById('map');
 
+        // Create the map
+        var map = new google.maps.Map(mapElement, mapOptions);
+
+        /* Providence Marker */
+        var marker1 = new google.maps.Marker({
+            position: new google.maps.LatLng(41.82399, -71.41283),
+            map: map,
+            title: 'Somewhere around here!'
+        });
+
+
+    }
+</script>
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?v=3&key=AIzaSyAA4YVEtwYE0avddYGEfBNoWsXZNT-qkms&callback=initMap">
 </script>
 
+<!--<script async defer-->
+<!--src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">-->
+<!--</script>-->
 </body>
 </html>
