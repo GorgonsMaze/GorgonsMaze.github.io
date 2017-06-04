@@ -119,9 +119,10 @@ setInterval(function () {
 
 /** End Subtitle display */
 
+
 /** Contact Modal */
 $('#contact-btn').on('click', function () {
-    //alert("Clciked!@");
+    // alert("Clciked!@");
     $('#contact-modal').addClass('is-active').fadeIn(30000);
     $('body').addClass('stop-scroll');
 });
