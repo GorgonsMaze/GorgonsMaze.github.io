@@ -161,8 +161,9 @@ new Morris.Donut({
         {label: 'HTML & CSS', value: 13},
         {label: 'JAVA', value: 1},
         {label: 'PHP', value: 6},
-        {label: 'C#/ASP.NET', value: 5}
-        // {label: 'Angular', value: 0}
+        {label: 'C#', value: 3},
+        {label: 'ASP.NET', value: 1},
+        {label: 'Android', value: 1}
 
     ],
     backgroundColor: '#ccc',
@@ -427,19 +428,42 @@ function gradeTable() {
             course: "Algorithms",
             id: "SE394.58",
             grade: "N/A",
-            status: "next-up"
+            status: "In-Session"
         },
         {
             qtr: 9,
             course: "Design Patterns",
             id: "SE402.68",
             grade: "N/A",
-            status: "next-up"
+            status: "In-Session"
         },
         {
             qtr: 9,
             course: "Android Development",
             id: "SE391.58",
+            grade: "N/A",
+            status: "In-Session"
+        },
+
+
+        {
+            qtr: 10,
+            course: "Advanced SQL",
+            id: "SE398.58",
+            grade: "N/A",
+            status: "next-up"
+        },
+        {
+            qtr: 10,
+            course: "Open-Source Web Development",
+            id: "SE373.68",
+            grade: "N/A",
+            status: "next-up"
+        },
+        {
+            qtr: 10,
+            course: "Web Services",
+            id: "SE426.58",
             grade: "N/A",
             status: "next-up"
         }
