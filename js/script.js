@@ -478,13 +478,17 @@ function gradeTable() {
 
     var columnCount = headerArray.length;
 
-    var row = table.insertRow(-1);
+    var header = table.createTHead();
+
+     var row;
+
 
     for (var i = 0; i < columnCount; i++) {
-        var headerCell = document.createElement('td');
+        var headerCell = document.createElement('th');
         headerCell.innerHTML = headerArray[i];
-        row.appendChild(headerCell);
+        header.appendChild(headerCell);
     }
+
 
 
     for (var j = 0; j < length; j++) {
@@ -496,6 +500,8 @@ function gradeTable() {
                 cell.innerHTML = objIndex[key];
             }
         }
+
+
     }
 
     var divTable = document.getElementById('gradeTable');

@@ -344,9 +344,9 @@ form .submit-btn:hover {
     background-color: #f8f5a1;
 }
 
-.course-table tr:first-child {
+.course-table thead th {
     background-color: #009576;
-    color: #ffffff;;
+    color: #ffffff;
 }
 
 @media screen and (min-width: 769px) {
