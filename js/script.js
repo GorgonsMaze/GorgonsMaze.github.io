@@ -107,7 +107,7 @@ $(document).on('click', function (e) {
 /** End Drop Down Nav functionality **/
 
 /** Subtitle display */
-var descriptionArr = ["Student", "Dog Enthusiast", "Web Developer", "Food Connoisseur", "Software Engineer", "Hockey Fan"];
+var descriptionArr = ["Student", "Web Developer", "Software Engineer", "Hockey Fan"];
 var idx = 0;
 
 setInterval(function () {
@@ -184,15 +184,17 @@ new Morris.Donut({
     // the chart.
     data: [
         {label: 'SQL', value: 6},
-        {label: 'MySQL', value: 6}
-        // {lable: 'Nodejs', value: 0}
+        {label: 'MySQL', value: 6},
+        {label: 'NoSQL', value: 1}
 
     ],
     backgroundColor: '#ccc',
     labelColor: '#000500',
     colors: [
         '#cd7106',
-        '#ff8d07'
+        '#ff8d07',
+        '#b36309',
+
 
     ]
     // formatter: function (x) { return x + "%"}
@@ -427,22 +429,22 @@ function gradeTable() {
             qtr: 9,
             course: "Algorithms",
             id: "SE394.58",
-            grade: "N/A",
-            status: "In-Session"
+            grade: "A",
+            status: "completed"
         },
         {
             qtr: 9,
             course: "Design Patterns",
             id: "SE402.68",
-            grade: "N/A",
-            status: "In-Session"
+            grade: "A",
+            status: "completed"
         },
         {
             qtr: 9,
             course: "Android Development",
             id: "SE391.58",
-            grade: "N/A",
-            status: "In-Session"
+            grade: "A",
+            status: "completed"
         },
 
 
@@ -451,21 +453,21 @@ function gradeTable() {
             course: "Advanced SQL",
             id: "SE398.58",
             grade: "N/A",
-            status: "next-up"
+            status: "in-session"
         },
         {
             qtr: 10,
             course: "Open-Source Web Development",
             id: "SE373.68",
             grade: "N/A",
-            status: "next-up"
+            status: "in-session"
         },
         {
             qtr: 10,
             course: "Web Services",
             id: "SE426.58",
             grade: "N/A",
-            status: "next-up"
+            status: "in-session"
         }
 
     ];
